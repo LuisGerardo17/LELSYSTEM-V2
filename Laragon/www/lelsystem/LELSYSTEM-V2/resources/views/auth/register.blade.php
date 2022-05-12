@@ -1,5 +1,5 @@
 @extends('layouts.app')
 @section('title', 'Register')
 @section('content')
-<h1>  Bienbenido  a la aplicacion</h1>
+<h1> REGISTER</h1>
 @endsection
