@@ -6,7 +6,7 @@ use App\Http\Controllers\SessionsController;
 
 
 Route::get('/', function () {
-    return view('home');
+    return view('home.homepage');
 });
 
 //CREACIÓN DE RUTAS PARA EL HOME PAGE
@@ -17,6 +17,6 @@ Route::get('/homepage.oferta', [App\Http\Controllers\Oferta::class, 'index'])->n
 Route::get('/homepage.contactos', [App\Http\Controllers\Contactos::class, 'index'])->name('contactos');
 Route::get('/homepage.admisiones', [App\Http\Controllers\Admisiones::class, 'index'])->name('admisiones');
 
-Route::get('/auth.login', [App\Http\Controllers\SessionsController::class, 'create'])->name('login');
-Route::get('/auth.register', [App\Http\Controllers\RegisterController::class, 'create'])->name('register');
+Route::get('/auth.login', [App\Http\Controllers\SessionsController::class, 'index'])->name('login');
+Route::get('/auth.register', [App\Http\Controllers\RegisterController::class, 'index'])->name('register');
 
