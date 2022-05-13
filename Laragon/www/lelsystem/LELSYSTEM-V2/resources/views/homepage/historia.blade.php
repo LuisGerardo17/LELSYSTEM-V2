@@ -105,7 +105,7 @@
      <main>
 		<nav aria-label="breadcrumb">
 			<ol class="breadcrumb ">
-				<li class="breadcrumb-item"><a href="/homepage">Principal</a></li>
+				<li class="breadcrumb-item"><a href="/">Principal</a></li>
 				<li class="breadcrumb-item active" aria-current="page">Historia</li>
 			</ol>
 		</nav>
@@ -185,7 +185,7 @@
 					<div class="widget-body">
 						<center>
 							<p class="text-right">
-								Copyright &copy; 2022. Designed by @LEL.SYSTEM
+								Copyright &copy; 2022. Designed by @LELSYSTEM
 							</p>
 						</center>
 					</div>
