@@ -45,7 +45,10 @@
 						<a class="nav-link marign" href="{{route('admisiones')}}">Admisiones</a>
 					</li>
 					<li class="nav-item sesiones">
-						<a class="nav-link marign colorq" href="{{route('login')}}">Dashboard</a>
+						<a class="nav-link marign colorq" href="{{route('login')}}">Login</a>
+					</li>
+					<li class="nav-item sesiones">
+						<a class="nav-link marign colorq" href="{{route('register')}}">Register</a>
 					</li>
 				</ul>
 			</nav>
@@ -58,7 +61,7 @@
 					<a href="../index.html">
 						<img src="../img/logo.jpeg" width="150px" alt="">
 					</a>
-					<!--<p class="bajologo">@LEL.SYSTEM</p>-->
+					<!--<p class="bajologo">@LELSYSTEM</p>-->
 					<button class="navbar-toggler boton" type="button" data-bs-toggle="offcanvas"
 						data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
 						<img src="../img/menu.png" class="posicionq" alt="">
@@ -95,7 +98,7 @@
 									<a class="blancooo" href="{{route('admisiones')}}">Admisiones</a>
 								</li>
 								<li class="nav-item ">
-									<center><a class="blanco sesionesbajos" href="{{route('login')}}">Dashboard</a></center>
+									<center><a class="blanco sesionesbajos" href="{{route('login')}}">Login</a></center>
 								</li>
 							</ul>
 
@@ -108,7 +111,7 @@
 	<main>
 		<nav aria-label="breadcrumb">
 			<ol class="breadcrumb ">
-				<li class="breadcrumb-item"><a href="/homepage">Principal</a></li>
+				<li class="breadcrumb-item"><a href="/">Principal</a></li>
 				<li class="breadcrumb-item active" aria-current="page">Contactanos</li>
 			</ol>
 		</nav>
