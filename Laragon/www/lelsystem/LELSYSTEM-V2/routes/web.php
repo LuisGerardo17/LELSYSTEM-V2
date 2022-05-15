@@ -22,3 +22,8 @@ Route::get('/auth.register', [App\Http\Controllers\RegisterController::class, 'i
 
 //HOME
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('homepage');
+
+//CREACIÓN DE RUTAS PARA DOCENTE
+Route::get('/docente.informatica', [App\Http\Controllers\InformaticaController::class, 'index'])->name('informatica');
+Route::get('/docente.mecanica', [App\Http\Controllers\MecanicaController::class, 'index'])->name('mecanica');
+Route::get('/docente.electricidad', [App\Http\Controllers\ElectricidadController::class, 'index'])->name('electricidad');
