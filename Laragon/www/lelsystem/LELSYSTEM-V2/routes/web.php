@@ -20,8 +20,8 @@ Route::get('/homepage.admisiones', [App\Http\Controllers\Admisiones::class, 'ind
 Route::get('/auth.login', [App\Http\Controllers\SessionsController::class, 'index'])->name('login');
 Route::get('/auth.register', [App\Http\Controllers\RegisterController::class, 'index'])->name('register');
 
-//HOME
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('homepage');
+//Register
+Route::post('/register', [RegisterController::class, 'store'])->name('register.store');
 
 //CREACIÓN DE RUTAS PARA DOCENTE
 Route::get('/docente.informatica', [App\Http\Controllers\InformaticaController::class, 'index'])->name('informatica');
