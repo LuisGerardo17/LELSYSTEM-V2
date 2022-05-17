@@ -18,5 +18,8 @@ class RegisterController extends Controller
         $user = User::create(request(['name','email','password']));
         auth()
 
+
+        
+
     }
 }
