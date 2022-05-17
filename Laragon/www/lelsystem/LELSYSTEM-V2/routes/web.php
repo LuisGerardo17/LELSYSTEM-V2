@@ -17,11 +17,11 @@ Route::get('/homepage.oferta', [App\Http\Controllers\Oferta::class, 'index'])->n
 Route::get('/homepage.contactos', [App\Http\Controllers\Contactos::class, 'index'])->name('contactos');
 Route::get('/homepage.admisiones', [App\Http\Controllers\Admisiones::class, 'index'])->name('admisiones');
 
-Route::get('/auth.login', [App\Http\Controllers\SessionsController::class, 'index'])->name('login');
-Route::get('/auth.register', [App\Http\Controllers\RegisterController::class, 'index'])->name('register');
+Route::get('/homepage.login', [App\Http\Controllers\SessionsController::class, 'index'])->name('login');
+Route::get('/homepage.register', [App\Http\Controllers\RegisterController::class, 'index'])->name('register');
 
 //Register
-Route::post('/register', [RegisterController::class, 'store'])->name('register.store');
+ Route::post('/register', [RegisterController::class, 'store'])->name('register.store');
 
 //CREACIÓN DE RUTAS PARA DOCENTE
 Route::get('/docente.informatica', [App\Http\Controllers\InformaticaController::class, 'index'])->name('informatica');

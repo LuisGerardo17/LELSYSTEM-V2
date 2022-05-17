@@ -16,7 +16,8 @@ class RegisterController extends Controller
     public function store(){
       
         $user = User::create(request(['name','email','password']));
-        auth()
+        auth()->login($user);
+        
 
 
         
