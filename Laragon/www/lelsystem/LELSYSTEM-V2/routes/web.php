@@ -9,7 +9,7 @@ Route::get('/', function () {
     return view('home.homepage');
 });
 
-//CREACIÓN DE RUTAS PARA EL HOME PAGE
+//CREACIÓN DE RUTAS PARA EL HOMEPAGE
 
 Route::get('/homepage.historia', [App\Http\Controllers\Historia::class, 'index'])->name('historia');
 Route::get('/homepage.vision', [App\Http\Controllers\vision::class, 'index'])->name('vision');
@@ -27,3 +27,6 @@ Route::post('/register', [RegisterController::class, 'store'])->name('register.s
 Route::get('/docente.informatica', [App\Http\Controllers\InformaticaController::class, 'index'])->name('informatica');
 Route::get('/docente.mecanica', [App\Http\Controllers\MecanicaController::class, 'index'])->name('mecanica');
 Route::get('/docente.electricidad', [App\Http\Controllers\ElectricidadController::class, 'index'])->name('electricidad');
+
+//Administrador 
+Route::get('/administrador.admin', [App\Http\Controllers\AdministradorController::class, 'index'])->name('admin');
