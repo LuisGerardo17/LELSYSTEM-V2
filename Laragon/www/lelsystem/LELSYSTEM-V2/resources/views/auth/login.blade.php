@@ -5,30 +5,27 @@
 <div class="margint">
         <div class="row">
             <div class="col fondocol">
-                <div class="text-end">
-                    <p>@LELSYSTEM</p>
-                </div>
-                <h2 class="text-center text-3xl font-bold">Login</h2>
+              <h2 class="text-center text-3xl font-bold">Login</h2>
                 <!--login-->
-                <form action="{{ route('login') }}" method="POST">
+                <form action="{{ route('login') }}" method="POST" class="formulario">
                     @csrf
                     <div class="mb-4">
-                        <label for="text" class="form-label">Correo
+                        <label for="text" class="form-label">Correo</label>
                         <input type="email" name="email" id ="email"  placeholder="Email" class="form-control">
-                       </label>
+                       
                    </div>
                    
                     <div class="mb-4">
-                        <label for="password" class="form-label">Contraseña
+                        <label for="password" class="form-label">Contraseña </label>
                         <input type="password" name="password"  id="password" placeholder="password"  class="form-control">
-                        </label>
+                     
                      </div>
                     <div class="d-grid mb-3">
                         <button type="submit" class="btn btn-dark">Iniciar Sesión</button>
                     </div>
                 </form>
                 <div class="my-3">
-                   <span> ¿ Deseas regresar a la página principal?</span> <a href="{{ route('homepage') }}" class="volver">VOLVER</a>
+                   <span> ¿ Deseas regresar a la página principal?</span> <a href="" class="volver">VOLVER</a>
                 </div>
             </div>
             <div class="col-5 fondocol2 d-none d-lg-block">

@@ -6,34 +6,32 @@
 <div class="margint">
     <div class="row">
         <div class="col fondocol">
-            <div class="text-end">
-                <p>@LELSYSTEM</p>
-            </div>
+            
             <h2 class="text-center text-3xl font-bold">Register</h2>
             <!--login-->
             <form action="{{ route('login') }}" method="POST">
                @csrf
                 <div class="mb-4">
-                    <label for="text" class="form-label">Nombre
+                    <label for="text" class="form-label">Nombre</label>
                     <input type="text" name="name" id ="name"  placeholder="Nombre" class="form-control">
-                   </label>
+                   
                  </div>
                 <div class="mb-4">
-                    <label for="text" class="form-label">Correo
+                    <label for="text" class="form-label">Correo</label>
                     <input type="email" name="email" id ="email"  placeholder="Email" class="form-control">
-                   </label>
+                   
                  </div>
                
                 <div class="mb-4">
-                    <label for="password" class="form-label">Contraseña
+                    <label for="password" class="form-label">Contraseña</label>
                     <input type="password" name="password"  id="password" placeholder="password"  class="form-control">
-                    </label>
+                    
                 </div>
 
                 <div class="mb-4">
-                    <label for="password" class="form-label">Confirmar  Contraseña
+                    <label for="password" class="form-label">Confirmar  Contraseña</label>
                     <input type="password" name="password_confirmation"  id="password_confirmation" placeholder="Confirmar Contraseña"  class="form-control">
-                    </label>
+                    
                 </div>
 
                 <div class="d-grid mb-3">
@@ -41,7 +39,7 @@
                 </div>
             </form>
             <div class="my-3">
-               <span> ¿ Deseas regresar a la página principal?</span> <a href="{{ route('homepage')}}" class="volver">VOLVER</a>
+               <span> ¿ Deseas regresar a la página principal?</span> <a href="" class="volver">VOLVER</a>
             </div>
         </div>
         <div class="col-5 fondocol2 d-none d-lg-block">
