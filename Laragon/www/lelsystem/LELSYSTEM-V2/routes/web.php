@@ -21,7 +21,7 @@ Route::get('/auth.login', [App\Http\Controllers\SessionsController::class, 'inde
 Route::get('/auth.register', [App\Http\Controllers\RegisterController::class, 'index'])->name('register');
 
 //Register
-Route::post('/register', [RegisterController::class, 'store'])->name('register.store');
+Route::post('/auth.register', [App\Http\Controllers\RegisterController::class, 'store'])->name('register.store');
 
 //CREACIÓN DE RUTAS PARA DOCENTE
 Route::get('/docente.informatica', [App\Http\Controllers\InformaticaController::class, 'index'])->name('informatica');

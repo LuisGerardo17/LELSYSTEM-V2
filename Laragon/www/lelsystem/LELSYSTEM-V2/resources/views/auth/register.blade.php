@@ -9,7 +9,7 @@
             
             <h2 class="text-center text-3xl font-bold">Register</h2>
             <!--login-->
-            <form action="{{ route('login') }}" method="POST">
+            <form action="" method="POST">
                @csrf
                 <div class="mb-4">
                     <label for="text" class="form-label">Nombre</label>
