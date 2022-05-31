@@ -7,7 +7,7 @@ use App\Models\User;
 
 class RegisterController extends Controller
 {
-    public function index(){
+    public function create(){
          return view('auth.register');
 
     }
@@ -20,3 +20,7 @@ class RegisterController extends Controller
         return redirect()->view('administrador.admin');
     }
 }
+
+
+
+
