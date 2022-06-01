@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\User;
 
 class SessionsController extends Controller
 {
@@ -10,4 +11,24 @@ class SessionsController extends Controller
         return view('auth.login');
 
    }
+
+    
+    public function store() {
+    if(auth()->attempt(request(['email','password'])) == false) {
+        return back()->withErrors([
+          'message' => 'The mail or password is incorrect please try again'
+        ]);
+
+    }
+          return redirect()->to('administrador.admin');
+    }
+
+    public function destroy() {
+       auth()->logout();
+
+       return redirect()->to('administrador.admin')
+
+    }
+
+
 }

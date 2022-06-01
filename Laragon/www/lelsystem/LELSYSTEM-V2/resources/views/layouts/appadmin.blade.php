@@ -18,7 +18,7 @@
             <a href="#" class="logo"><b>PLATAFORMA @LELSYSTEM MODULO ADMINISTRADOR</b></a>
             <nav class="lista">
                 <ul>
-                    <li class="naa"><a href="#"><h5><b>cerrar sesion</b> </h5> </a>
+                    <li class="naa"><a href="/"><h5><b>Cerrar Sesión</b> </h5> </a>
                         
                     </li>
                     <i class="cerrar icon ion-md-person"></i>
@@ -44,7 +44,7 @@
                     <div class="col">
                         <a href="Gestionar usuarios.html">
                             <div class="card carda" style="width: 18rem;">
-                                <img src="../img/usuarios.png" class="card-img-top" height="250px" alt="...">
+                                <img src="static/img/usuarios.png" class="card-img-top" height="250px" alt="...">
                                 <hr>
                                 <div class="card-body">
                                     <h5 class="btn btn-dark">GESTIONAR USUARIOS</h5>
@@ -55,7 +55,7 @@
                     <div class="col">
                         <a href="curso.html">
                             <div class="card carda" style="width: 18rem;">
-                                <img src="../img/curso-virtual-removebg-preview.png" height="250px" class="card-img-top" alt="...">
+                                <img src="static/img/curso-virtual-removebg-preview.png" height="250px" class="card-img-top" alt="...">
                                 <hr>
                                 <div class="card-body">
                                     <h5 class="btn btn-dark">GESTIONAR CURSOS</h5>
@@ -68,7 +68,7 @@
                     <div class="col">
                         <a href="items.html">
                             <div class="card carda" style="width: 18rem;">
-                                <img src="../img/internet-removebg-preview.png" height="250px" class="card-img-top" alt="...">
+                                <img src="static/img/internet-removebg-preview.png" height="250px" class="card-img-top" alt="...">
                                 <hr>
                                 <div class="card-body">
                                     <h5 class="btn btn-dark">GESTIONAR ACTIVIDADES</h5>
@@ -79,7 +79,7 @@
                     <div class="col">
                         <a href="recursos.html">
                             <div class="card carda" style="width: 18rem;">
-                                <img src="../img/recursos-removebg-preview.png" height="250px" class="card-img-top" alt="...">
+                                <img src="static/img/recursos-removebg-preview.png" height="250px" class="card-img-top" alt="...">
                                 <hr>
                                 <div class="card-body">
                                     <h5 class="btn btn-dark">GESTIONAR RECURSOS</h5>
@@ -114,7 +114,7 @@
 
 
             <div class="text-center p-3" style="background-color: rgb(5, 5, 5);">
-                © 2022 LELSISTEM:
+                © 2022 LELSYSTEM:
                 <a class="text-white" href="https://mdbootstrap.com/">LELSYSTEM.com</a>
             </div>
         </footer>

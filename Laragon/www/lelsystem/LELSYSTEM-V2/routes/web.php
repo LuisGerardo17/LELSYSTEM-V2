@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\SessionsController;
+use App\Http\Controllers\AdministradorController;
 use App\Http\Controllers\HomeController;
 
 Route::get('/', function () {
@@ -22,6 +23,7 @@ Route::get('/auth.register', [App\Http\Controllers\RegisterController::class, 'c
 
 //Register
 Route::post('/auth.register', [App\Http\Controllers\RegisterController::class, 'store'])->name('register.store');
+Route::post('/auth.login', [App\Http\Controllers\SessionsController::class, 'store'])->name('login.store');
 
 //CREACIÓN DE RUTAS PARA DOCENTE
 Route::get('/docente.informatica', [App\Http\Controllers\InformaticaController::class, 'index'])->name('informatica');
