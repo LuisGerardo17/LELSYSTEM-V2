@@ -8,10 +8,10 @@ use App\Http\Controllers\HomeController;
 
 Route::get('/', function () {
     return view('home.homepage');
-});
+})->middleware('auth');
 
 //CREACIÓN DE RUTAS PARA EL HOMEPAGE
-
+Route::get('/home.homepage', [App\Http\Controllers\HomeController::class, 'index'])->name('homepage');
 Route::get('/homepage.historia', [App\Http\Controllers\Historia::class, 'index'])->name('historia');
 Route::get('/homepage.vision', [App\Http\Controllers\vision::class, 'index'])->name('vision');
 Route::get('/homepage.oferta', [App\Http\Controllers\Oferta::class, 'index'])->name('oferta');
@@ -21,9 +21,10 @@ Route::get('/homepage.admisiones', [App\Http\Controllers\Admisiones::class, 'ind
 Route::get('/auth.login', [App\Http\Controllers\SessionsController::class, 'create'])->name('login');
 Route::get('/auth.register', [App\Http\Controllers\RegisterController::class, 'create'])->name('register');
 
-//Register
+//Register y Login
 Route::post('/auth.register', [App\Http\Controllers\RegisterController::class, 'store'])->name('register.store');
 Route::post('/auth.login', [App\Http\Controllers\SessionsController::class, 'store'])->name('login.store');
+Route::get('/logout', [App\Http\Controllers\SessionsController::class, 'destroy'])->name('login.destroy');
 
 //CREACIÓN DE RUTAS PARA DOCENTE
 Route::get('/docente.informatica', [App\Http\Controllers\InformaticaController::class, 'index'])->name('informatica');

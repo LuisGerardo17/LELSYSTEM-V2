@@ -14,18 +14,24 @@
                 <div class="mb-4">
                     <label for="text" class="form-label">Nombre</label>
                     <input type="text" name="name" id ="name"  placeholder="Nombre" class="form-control">
-                   
+                    @error('name')
+                    <p class ="border border-red-500 rounded-md bg-red-100 w-full text-red-600 p-2 my-2">*{{$message}}</p>
+                    @enderror
                  </div>
                 <div class="mb-4">
                     <label for="text" class="form-label">Correo</label>
                     <input type="email" name="email" id ="email"  placeholder="Email" class="form-control">
-                   
+                    @error('email')
+                    <p class ="border border-red-500 rounded-md bg-red-100 w-full text-red-600 p-2 my-2">*{{$message}}</p>
+                    @enderror
                  </div>
                
                 <div class="mb-4">
                     <label for="password" class="form-label">Contraseña</label>
                     <input type="password" name="password"  id="password" placeholder="password"  class="form-control">
-                    
+                    @error('password')
+                    <p class ="border border-red-500 rounded-md bg-red-100 w-full text-red-600 p-2 my-2">*{{$message}}</p>
+                    @enderror
                 </div>
 
                 <div class="mb-4">

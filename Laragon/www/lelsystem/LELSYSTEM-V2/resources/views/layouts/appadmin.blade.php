@@ -18,11 +18,24 @@
             <a href="#" class="logo"><b>PLATAFORMA @LELSYSTEM MODULO ADMINISTRADOR</b></a>
             <nav class="lista">
                 <ul>
-                    <li class="naa"><a href="/"><h5><b>Cerrar Sesión</b> </h5> </a>
+                    @if(auth()->check())
+                      <li class ="mx-8">
+                        <p class="text-xl">Welcome <b>{{auth()->user()->name}}</b></p>
+                      </li>
+                      <li class="naa"><a href="{{route('login.destroy')}}"><h5><b>Log Out</b> </h5> </a>
                         
-                    </li>
-                    <i class="cerrar icon ion-md-person"></i>
-                </ul>
+                      </li>
+                      <i class="cerrar icon ion-md-person"></i>
+                
+                    @else
+                       <li class="nav-item sesiones">
+                        <a class="nav-link marign colorq" href="{{route('login')}}">Login</a>
+                      </li>
+                      <li class="nav-item sesiones">
+                        <a class="nav-link marign colorq" href="{{route('register')}}">Register</a>
+                      </li>
+                   @endif
+             </ul>
                 
             </nav>
         </div>

@@ -26,7 +26,7 @@ class SessionsController extends Controller
     public function destroy() {
        auth()->logout();
 
-       return redirect()->to('administrador.admin')
+       return redirect()->to('/');
 
     }
 

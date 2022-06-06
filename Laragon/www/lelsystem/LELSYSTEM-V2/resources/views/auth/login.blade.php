@@ -22,11 +22,10 @@
                      </div>
 
                      @error('message')
-                     <p class ="border border-red-500 rounded-md bg-red-100 w-full text-red-600 p-2 my-2">* Error</p>
-                     
-                     
+                     <p class ="border border-red-500 rounded-md bg-red-100 w-full text-red-600 p-2 my-2">*{{$message}}</p>
                      @enderror
-                    <div class="d-grid mb-3">
+                    
+                     <div class="d-grid mb-3">
                         <button type="submit" class="btn btn-dark">Iniciar Sesión</button>
                     </div>
                 </form>
