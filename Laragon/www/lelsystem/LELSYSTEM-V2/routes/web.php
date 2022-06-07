@@ -32,4 +32,6 @@ Route::get('/docente.mecanica', [App\Http\Controllers\MecanicaController::class,
 Route::get('/docente.electricidad', [App\Http\Controllers\ElectricidadController::class, 'index'])->name('electricidad');
 
 //Administrador 
-Route::get('/administrador.admin', [App\Http\Controllers\AdministradorController::class, 'index'])->name('admin');
+Route::get('/administrador.admin', [App\Http\Controllers\AdministradorController::class, 'index'])
+->middleware('auth.admin')
+->name('admin.index');
