@@ -26,9 +26,8 @@ class SessionsController extends Controller
             return redirect()->to('/');
         }
  
-
-    }
-          return redirect()->to('administrador.admin');
+       }
+          
     }
 
     public function destroy() {
