@@ -41,7 +41,7 @@
                 </div>
 
                 <div class="d-grid mb-3">
-                    <button type="submit" class="btn btn-dark">Iniciar Sesión</button>
+                    <button type="submit" class="btn btn-dark">Registrarse</button>
                 </div>
             </form>
             <div class="my-3">

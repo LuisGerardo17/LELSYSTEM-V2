@@ -1,0 +1,93 @@
+
+body{
+    background: url(../img/dondo2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    
+    
+}
+
+.logo{
+    letter-spacing: 2px;
+    font-size: 1rem;;
+}
+
+.cabecera{
+    background-color: rgb(62, 65, 68);
+    color: white;
+    padding: 2rem;
+}
+.cabecera a{
+    color: rgb(238, 241, 243);
+    text-decoration: none;
+}
+.logo-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.lista ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.lista ul li{
+    display: inline-block;
+}
+.lista ul li a{
+    display: block;
+    padding: 0.5rem;
+    transition: all 0.5s linear;
+}
+.lista ul li a:hover{
+    background-color: rgb(105, 103, 103);
+}
+.btn{
+    border-radius: 4px;
+}
+.malla{
+    font-family: times;
+    font-size: 1.9rem;
+}
+nav li ul {
+    display: none;
+    position:absolute;
+    min-width: 170px;
+}
+nav ul li {
+    position: relative;
+}
+nav li:hover > ul{
+    display:block;
+    visibility: visible;
+}
+nav ul li ul{
+    background-color: rgb(62, 65, 68);
+    border: 1px solid rgb(62, 65, 68);
+    line-height: unset;
+
+}
+.cerrar{
+    float: right;
+    font-size: 40px;
+    margin-left: 10px;
+}
+.naa{
+    margin-top: 10px;
+}
+.lista ul li a:hover{
+    background-color: rgb(105, 103, 103);
+    border-radius: 20px;
+}
+main{
+    background-color: rgba(255, 255, 255, 0.562);
+}
+.carda{
+    background-image: url(../img/playa-con-nieve_3840x2400_xtrafondos.com.jpg);
+    background-position: center;
+}
+.bx{
+    font-size: 70px;
+}

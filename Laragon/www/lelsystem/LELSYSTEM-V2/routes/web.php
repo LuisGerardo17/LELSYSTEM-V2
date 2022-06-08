@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\SessionsController;
 use App\Http\Controllers\AdministradorController;
+use App\Http\Controllers\DocenteController;
 use App\Http\Controllers\HomeController;
 
 Route::get('/', function () {
@@ -35,3 +36,9 @@ Route::get('/docente.electricidad', [App\Http\Controllers\ElectricidadController
 Route::get('/administrador.admin', [App\Http\Controllers\AdministradorController::class, 'index'])
 ->middleware('auth.admin')
 ->name('admin.index');
+
+
+//Docente
+Route::get('/docente.docente', [App\Http\Controllers\DocenteController::class, 'index'])
+->middleware('auth.docente')
+->name('docente.index');

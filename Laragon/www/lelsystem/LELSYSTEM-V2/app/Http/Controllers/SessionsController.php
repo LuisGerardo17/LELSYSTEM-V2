@@ -21,8 +21,15 @@ class SessionsController extends Controller
 
     } else {
         if(auth()->user()->role == 'admin'){
+
             return redirect()->to('administrador.admin');
-        } else {
+            
+        } elseif(auth()->user()->role == 'docente'){
+
+            return redirect()->to('docente.docente');
+        }
+        
+        else {
             return redirect()->to('/');
         }
  
