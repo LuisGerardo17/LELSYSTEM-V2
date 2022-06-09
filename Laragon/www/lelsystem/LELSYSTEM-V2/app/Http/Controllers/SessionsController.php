@@ -27,7 +27,10 @@ class SessionsController extends Controller
         } elseif(auth()->user()->role == 'docente'){
 
             return redirect()->to('docente.docente');
-        }
+        } elseif(auth()->user()->role == 'estudiante'){
+
+            return redirect()->to('estudiante.estudiante');
+         }
         
         else {
             return redirect()->to('/');

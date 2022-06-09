@@ -5,6 +5,7 @@ use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\SessionsController;
 use App\Http\Controllers\AdministradorController;
 use App\Http\Controllers\DocenteController;
+use App\Http\Controllers\EstudianteController;
 use App\Http\Controllers\HomeController;
 
 Route::get('/', function () {
@@ -42,3 +43,8 @@ Route::get('/administrador.admin', [App\Http\Controllers\AdministradorController
 Route::get('/docente.docente', [App\Http\Controllers\DocenteController::class, 'index'])
 ->middleware('auth.docente')
 ->name('docente.index');
+
+//Estudiante
+Route::get('/estudiante.estudiante', [App\Http\Controllers\EstudianteController::class, 'index'])
+->middleware('auth.estudiante')
+->name('estudiante.index');
