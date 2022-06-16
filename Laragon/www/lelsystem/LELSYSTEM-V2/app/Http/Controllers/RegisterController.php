@@ -19,12 +19,16 @@ class RegisterController extends Controller
       
         $this->validate(request(),[
           'name'=>'required',
+          'username'=>'required',
+          'ci'=>'required',
           'email'=>'required|email',
           'password'=>'required|confirmed',
+          'rol'=>'required',
+          'imagen'=>'required',
           
         ]);
         
-        $user = User::create(request(['name','email','password']));
+        $user = User::create(request(['name','username','ci','email','password','rol','imagen']));
         auth()->login($user);
         return redirect()->to('administrador.admin');
     }
