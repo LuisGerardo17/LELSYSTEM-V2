@@ -10,21 +10,25 @@
                 <form action="{{ route('login') }}" method="POST" class="formulario">
                     @csrf
                     <div class="mb-4">
-                        <label for="text" class="form-label">Correo</label>
-                        <input type="email" name="email" id ="email"  placeholder="Email" class="form-control">
-                       
-                   </div>
+                        <label for="modo" class="form-label">Modo</label>
+                        <input type="modo" name="modo" id ="modo"  placeholder="Modo" class="form-control">
+                    </div>
                    
                     <div class="mb-4">
+                        <label for="usuario" class="form-label">Usuario </label>
+                        <input type="text" name="usuario"  id="usuario" placeholder="Usuario"  class="form-control">
+                    </div>
+
+                    <div class="mb-4">
                         <label for="password" class="form-label">Contraseña </label>
-                        <input type="password" name="password"  id="password" placeholder="password"  class="form-control">
-                     
-                     </div>
+                        <input type="password" name="password"  id="password" placeholder="Cntraseña"  class="form-control">
+                    </div>
 
                      @error('message')
                      <p class ="border border-red-500 rounded-md bg-red-100 w-full text-red-600 p-2 my-2">*{{$message}}</p>
                      @enderror
                     
+
                      <div class="d-grid mb-3">
                         <button type="submit" class="btn btn-dark">Iniciar Sesión</button>
                     </div>

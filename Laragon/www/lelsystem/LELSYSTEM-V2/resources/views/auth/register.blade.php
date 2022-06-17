@@ -73,7 +73,7 @@
                       <label for="rol" class="form-label">Rol</label>
                       <select name="rol" id="rol" class="form-control"> 
                        <option select disabled >Elige el rol para este usuario</option>
-                         @foreach ($roles as role)
+                         @foreach [$roles as role]
                          <option value="{{$role->id}}">{{$role->name}}</option>
                          @endforeach
                       </select>

@@ -14,20 +14,20 @@ class SessionsController extends Controller
 
     
     public function store() {
-    if(auth()->attempt(request(['email','password'])) == false) {
+    if(auth()->attempt(request(['rol','ci','password'])) == false) {
         return back()->withErrors([
-          'message' => 'The mail or password is incorrect please try again'
+          'message' => 'The rol, ci or password is incorrect please try again'
         ]);
 
     } else {
-        if(auth()->user()->role == 'admin'){
+        if(auth()->user()->role == 'ADMINISTRADOR'){
 
             return redirect()->to('administrador.admin');
             
-        } elseif(auth()->user()->role == 'docente'){
+        } elseif(auth()->user()->role == 'DOCENTE'){
 
             return redirect()->to('docente.docente');
-        } elseif(auth()->user()->role == 'estudiante'){
+        } elseif(auth()->user()->role == 'ESTUDIANTE'){
 
             return redirect()->to('estudiante.estudiante');
          }

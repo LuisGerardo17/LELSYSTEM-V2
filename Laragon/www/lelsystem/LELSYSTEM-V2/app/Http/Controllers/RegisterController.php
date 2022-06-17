@@ -10,11 +10,13 @@ use Illuminate\Support\Facades\Validator;
 class RegisterController extends Controller
 {
     public function create() {
+         
+
          return view('auth.register');
 
-    }
+}
 
-
+ 
     public function store(){
       
         $this->validate(request(),[
