@@ -9,14 +9,15 @@
                 <!--login-->
                 <form action="{{ route('login') }}" method="POST" class="formulario">
                     @csrf
+                    /*
                     <div class="mb-4">
                         <label for="modo" class="form-label">Modo</label>
                         <input type="modo" name="modo" id ="modo"  placeholder="Modo" class="form-control">
                     </div>
-                   
+                   */
                     <div class="mb-4">
-                        <label for="usuario" class="form-label">Usuario </label>
-                        <input type="text" name="usuario"  id="usuario" placeholder="Usuario"  class="form-control">
+                        <label for="correo" class="form-label">Correo</label>
+                        <input type="email" name="correo"  id="correo" placeholder="Correo"  class="form-control">
                     </div>
 
                     <div class="mb-4">
