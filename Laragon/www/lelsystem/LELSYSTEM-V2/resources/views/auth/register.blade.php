@@ -9,7 +9,7 @@
             
             <h2 class="text-center text-3xl font-bold">Register</h2>
             <!--login-->
-            <form action="" method="POST"  enctype="multipart/form-data"> // ARA AGREGAR UNA IMAGEN SE PONE enctype
+            <form action="" method="POST"  enctype=""> // ARA AGREGAR UNA IMAGEN SE PONE enctype
                @csrf
                <div class = "row">
                    <!--
