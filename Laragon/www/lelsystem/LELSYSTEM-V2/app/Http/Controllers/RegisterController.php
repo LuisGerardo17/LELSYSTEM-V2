@@ -14,10 +14,10 @@ class RegisterController extends Controller
 
 }
 
- 
     public function store(){
       
-        $this->validate(request(),[
+        $this->validate(request(),
+          [
           'username'=>'required',
           'email'=>'required|email',
           'password'=>'required|confirmed'
