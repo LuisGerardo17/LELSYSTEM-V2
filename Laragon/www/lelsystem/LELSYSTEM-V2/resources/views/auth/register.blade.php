@@ -11,16 +11,14 @@
             <!--login-->
             <form action="" method="POST"  enctype=""> // ARA AGREGAR UNA IMAGEN SE PONE enctype
                @csrf
-               <div class = "row">
-                   <!--
-                   <div class="mb-4">
-                      <label for="text" class="form-label">Nombre completo</label>
-                      <input type="text" name="name" id ="name"  placeholder="Nombre" class="form-control">
-                      @error('name')
-                      <p class ="border border-red-500 rounded-md bg-red-100 w-full text-red-600 p-2 my-2">*{{$message}}</p>
-                      @enderror
-                     </div>
-                    -->
+                 <div class="mb-4">
+                    <label for="text" class="form-label">Nombre completo</label>
+                    <input type="text" name="name" id ="name"  placeholder="Nombre" class="form-control">
+                     @error('name')
+                    <p class ="border border-red-500 rounded-md bg-red-100 w-full text-red-600 p-2 my-2">*{{$message}}</p>
+                   @enderror
+                 </div>
+                    
                  <div class="mb-4">
                     <label for="text" class="form-label">Nombre de usuario</label>
                     <input type="text" name="username" id ="username"  placeholder="Nombre de usuario" class="form-control">
@@ -29,7 +27,7 @@
                     @enderror
                  </div>
                 
-               </div>
+               
               <!--
                 <div class="row">
                     <div class="mb-4">
