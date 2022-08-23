@@ -6,21 +6,21 @@
 <div class="margint">
     <div class="row">
         <div class="col fondocol">
-            
+
             <h2 class="text-center text-3xl font-bold">Register</h2>
             <!--login-->
             <form action="" method="POST"  enctype="multipart/form-data"> // ARA AGREGAR UNA IMAGEN SE PONE enctype
                @csrf
                <div class = "row">
-                   /*
-                   <div class="mb-4">
+
+                 <div class="mb-4">
                       <label for="text" class="form-label">Nombre completo</label>
                       <input type="text" name="name" id ="name"  placeholder="Nombre" class="form-control">
                       @error('name')
                       <p class ="border border-red-500 rounded-md bg-red-100 w-full text-red-600 p-2 my-2">*{{$message}}</p>
                       @enderror
-                     </div>
-                    */
+                 </div>
+
                  <div class="mb-4">
                     <label for="text" class="form-label">Nombre de usuario</label>
                     <input type="text" name="username" id ="username"  placeholder="Nombre de usuario" class="form-control">
@@ -28,18 +28,9 @@
                     <p class ="border border-red-500 rounded-md bg-red-100 w-full text-red-600 p-2 my-2">*{{$message}}</p>
                     @enderror
                  </div>
-                
+
                </div>
-                /*
-                <div class="row">
-                    <div class="mb-4">
-                        <label for="text" class="form-label">Cédula</label>
-                        <input type="text" name="ci" id ="ci"  placeholder="Cédula de identidad" class="form-control">
-                        @error('ci')
-                        <p class ="border border-red-500 rounded-md bg-red-100 w-full text-red-600 p-2 my-2">*{{$message}}</p>
-                        @enderror
-                     </div>
-                  */
+
                     <div class="mb-4">
                           <label for="text" class="form-label">Correo</label>
                           <input type="email" name="email" id ="email"  placeholder="Email" class="form-control">
@@ -48,7 +39,7 @@
                           @enderror
                     </div>
                 </div>
-                 
+
                 <div class="row">
 
                     <div class="mb-4">
@@ -58,33 +49,32 @@
                       <p class ="border border-red-500 rounded-md bg-red-100 w-full text-red-600 p-2 my-2">*{{$message}}</p>
                       @enderror
                     </div>
-                
+
                   <div class="mb-4">
                      <label for="password" class="form-label">Confirmar  Contraseña</label>
                      <input type="password" name="password_confirmation"  id="password_confirmation" placeholder="Confirmar Contraseña"  class="form-control">
-                    
-                    </div>
 
-               </div>
-              /*
+                    </div>
+                </div>
+
                <div class="row">
                   <div class="mb-4">
                       <label for="rol" class="form-label">Rol</label>
-                      <select name="rol" id="rol" class="form-control"> 
+                      <select name="rol" id="rol" class="form-control">
                        <option select disabled >Elige el rol para este usuario</option>
                          @foreach [$roles as role]
                          <option value="{{$role->id}}">{{$role->name}}</option>
                          @endforeach
                       </select>
                      </div>
-                     
+
                    <div class="mb-4">
                        <label for="imagen" class="form-label">Imagen</label>
                       <input type="file" name="imagen"  id="imagen" placeholder="Subir imagen"  class="form-control">
                     </div>
 
                  </div>
-              */
+
 
               <div class=row>
                  <div class="d-grid mb-3">
@@ -94,9 +84,8 @@
                     <button type="submit" class="btn btn-dark">Cancelar</button>
                   </div>
 
+         </div>
 
-                </div>
-                  
             </form>
             <div class="my-3">
                <span> ¿ Deseas regresar a la página principal?</span> <a href="" class="volver">VOLVER</a>

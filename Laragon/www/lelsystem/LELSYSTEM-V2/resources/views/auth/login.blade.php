@@ -9,12 +9,7 @@
                 <!--login-->
                 <form action="{{ route('login') }}" method="POST" class="formulario">
                     @csrf
-                    /*
-                    <div class="mb-4">
-                        <label for="modo" class="form-label">Modo</label>
-                        <input type="modo" name="modo" id ="modo"  placeholder="Modo" class="form-control">
-                    </div>
-                   */
+
                     <div class="mb-4">
                         <label for="correo" class="form-label">Correo</label>
                         <input type="email" name="correo"  id="correo" placeholder="Correo"  class="form-control">
@@ -28,7 +23,7 @@
                      @error('message')
                      <p class ="border border-red-500 rounded-md bg-red-100 w-full text-red-600 p-2 my-2">*{{$message}}</p>
                      @enderror
-                    
+
 
                      <div class="d-grid mb-3">
                         <button type="submit" class="btn btn-dark">Iniciar Sesión</button>
@@ -48,6 +43,7 @@
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous">
     </script>
-      
+
 
 @endsection
+leonardog.mh@outlook.com
