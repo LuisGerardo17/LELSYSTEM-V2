@@ -20,13 +20,17 @@
     <!-- ESTILOS CSS -->
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
 	<link rel="stylesheet" href="{{ asset('static/css/estilos.css') }}"/>
-    <link rel="stylesheet" href="{{ asset('static/css/login.css') }}"/>
 
     <!-- Tailwind CSS Link -->
-    <link rel="stylesheet" 
+    <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.1/tailwind.min.css">
-    
+
 </head>
+<style>
+    body{
+        background-color: black
+    }
+</style>
 <body>
     <div id="fondo">
         <img src="static/img/logo5.png" class="logo" width="135px" alt="">
@@ -47,7 +51,8 @@
         </nav>
         <br><br><br><br>
     </div>
- @yield('content')
-    
+@yield('content')
+
+
 </body>
 </html>
