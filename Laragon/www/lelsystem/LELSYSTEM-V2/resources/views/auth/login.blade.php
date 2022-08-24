@@ -9,12 +9,12 @@
                 <!--login-->
                 <form action="{{ route('login') }}" method="POST" class="formulario">
                     @csrf
-                    /*
-                    <div class="mb-4">
+                   <!--
+                      <div class="mb-4">
                         <label for="modo" class="form-label">Modo</label>
                         <input type="modo" name="modo" id ="modo"  placeholder="Modo" class="form-control">
-                    </div>
-                   */
+                      </div>
+                    -->
                     <div class="mb-4">
                         <label for="correo" class="form-label">Correo</label>
                         <input type="email" name="correo"  id="correo" placeholder="Correo"  class="form-control">

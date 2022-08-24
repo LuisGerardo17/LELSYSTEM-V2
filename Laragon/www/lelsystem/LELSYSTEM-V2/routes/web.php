@@ -21,7 +21,7 @@ Route::get('/homepage.contactos', [App\Http\Controllers\Contactos::class, 'index
 Route::get('/homepage.admisiones', [App\Http\Controllers\Admisiones::class, 'index'])->name('admisiones');
 
 Route::get('/auth.login', [App\Http\Controllers\SessionsController::class, 'create'])->name('login');
-Route::get('/auth.register', [App\Http\Controllers\RegisterController::class, 'create'])->name('register');
+Route::get('/auth.register', [App\Http\Controllers\RegisterController::class, 'index'])->name('register');
 
 //Register y Login
 Route::post('/auth.register', [App\Http\Controllers\RegisterController::class, 'store'])->name('register.store');
@@ -33,7 +33,7 @@ Route::get('/docente.informatica', [App\Http\Controllers\InformaticaController::
 Route::get('/docente.mecanica', [App\Http\Controllers\MecanicaController::class, 'index'])->name('mecanica');
 Route::get('/docente.electricidad', [App\Http\Controllers\ElectricidadController::class, 'index'])->name('electricidad');
 
-//Administrador 
+//Administrador
 Route::get('/administrador.admin', [App\Http\Controllers\AdministradorController::class, 'index'])
 ->middleware('auth.admin')
 ->name('admin.index');

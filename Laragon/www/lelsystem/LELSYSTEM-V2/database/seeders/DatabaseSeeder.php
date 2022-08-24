@@ -16,10 +16,10 @@ class DatabaseSeeder extends Seeder
     {
         // \App\Models\User::factory(10)->create();
           $user = new User;
-          $user->name = 'Admin';
+          $user->username = 'Admin';
           $user->email = 'gerardo17@gmail.com';
           $user->password = 'potosi1988';
-          $user->role = 'admin';
+        
 
          $user ->save();
         
