@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateActividadesTable extends Migration
+class CreateDocentesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,10 @@ class CreateActividadesTable extends Migration
      */
     public function up()
     {
-        Schema::create('actividades', function (Blueprint $table) {
-            $table->id('codigo_actividad')->unique();
-            $table->string('nombre_actividad');
-            $table->string('descripcion');
+        Schema::create('docentes', function (Blueprint $table) {
+            $table->id('id_docente')->unique();
+            $table->string('cedula',10);
+            $table->foreign('cedula')->references('cedula')->on('usuarios');
             $table->timestamps();
         });
     }
@@ -28,6 +28,6 @@ class CreateActividadesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('actividades');
+        Schema::dropIfExists('docentes');
     }
 }
