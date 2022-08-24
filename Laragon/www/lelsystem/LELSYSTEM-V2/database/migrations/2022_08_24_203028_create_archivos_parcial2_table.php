@@ -17,9 +17,9 @@ class CreateArchivosParcial2Table extends Migration
             $table->id('id_archivo_parcial2')->unique();
             $table->float('nota');
             $table->unsignedInteger('id_matricula');
-            $table->foreign('id_matricula')->references('matriculas')->con('id_matricula');
+            $table->foreign('id_matricula')->references('id_matricula')->on('matriculas');
             $table->unsignedInteger('id_cursos_actividades');
-            $table->foreign('id_cursos_actividades')->references('cursos_actividades')->con('id_cursos_actividades');
+            $table->foreign('id_cursos_actividades')->references('id_cursos_actividades')->on('cursos_actividades');
             $table->float('promedio2');
             $table->timestamps();
         });

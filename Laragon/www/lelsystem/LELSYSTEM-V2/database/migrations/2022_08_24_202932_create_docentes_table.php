@@ -15,8 +15,8 @@ class CreateDocentesTable extends Migration
     {
         Schema::create('docentes', function (Blueprint $table) {
             $table->id('id_docente')->unique();
-            $table->unsignedInteger('cedula');
-            $table->foreign('cedula')->references('usuarios')->con('cedula');
+            $table->unsignedString('cedula');
+            $table->foreign('cedula')->references('cedula')->on('usuarios');
             $table->timestamps();
         });
     }
