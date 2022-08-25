@@ -38,8 +38,44 @@ Route::get('/administrador.admin', [App\Http\Controllers\AdministradorController
 ->middleware('auth.admin')
 ->name('admin.index');
 
-Route::get('/admingg',function (){
+Route::get('/admin.home',function (){
     return view('admin.admin.home');
+});
+Route::get('/admin.admin',function (){
+    return view('admin.admin.admin');
+});
+Route::get('/admin.index',function (){
+    return view('admin.admin.index');
+});
+Route::get('/admin.payments',function (){
+    return view('admin.admin.payments');
+});
+Route::get('/admin.period',function (){
+    return view('admin.admin.period');
+});
+Route::get('/admin.registration',function (){
+    return view('admin.admin.registration');
+});
+Route::get('/admin.representative',function (){
+    return view('admin.admin.representative');
+});
+Route::get('/admin.salon',function (){
+    return view('admin.admin.salon');
+});
+Route::get('/admin.school',function (){
+    return view('admin.admin.school');
+});
+Route::get('/admin.section',function (){
+    return view('admin.admin.section');
+});
+Route::get('/admin.student',function (){
+    return view('admin.admin.student');
+});
+Route::get('/admin.subject',function (){
+    return view('admin.admin.subject');
+});
+Route::get('/admin.teacher',function (){
+    return view('admin.admin.teacher');
 });
 
 
