@@ -15,7 +15,7 @@ Route::get("/logincreadopormi",function (){
 Route::get("/loginregister",function (){
     return view("miscambios.registro");
 });
-Route::get("/loginhpage",function (){
+Route::get("/loginhpage22",function (){
     return view("miscambios.hpage");
 });
 //Fin Anshelo Proaño
