@@ -38,6 +38,10 @@ Route::get('/administrador.admin', [App\Http\Controllers\AdministradorController
 ->middleware('auth.admin')
 ->name('admin.index');
 
+Route::get('/admingg',function (){
+    return view('admin.admin.home');
+});
+
 
 //Docente
 Route::get('/docente.docente', [App\Http\Controllers\DocenteController::class, 'index'])

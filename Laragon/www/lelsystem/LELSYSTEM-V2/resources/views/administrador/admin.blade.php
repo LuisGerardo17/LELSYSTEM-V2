@@ -56,6 +56,7 @@
                                     </div>
 
 
+<<<<<<< HEAD
                                     <div class="col-md-4 col-xl-4">
                                         <div class="card bg-c-green order-card">
                                             <div class="card-block">
@@ -95,3 +96,6 @@
     </section>
 
 @endsection
+=======
+@endsection
+>>>>>>> d542d156f3337896f692d1c3700c3b1945fdadec
