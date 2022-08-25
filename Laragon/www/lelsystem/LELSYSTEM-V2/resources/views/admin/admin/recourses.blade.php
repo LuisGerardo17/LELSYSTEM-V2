@@ -1,11 +1,11 @@
 @extends('admin.layouts.admin')
 
-@section('titulo','Representative')
+@section('titulo','Teacher')
 @section('contenido')
 		<!-- Content page -->
 		<div class="container-fluid">
 			<div class="page-header">
-			  <h1 class="text-titles"><i class="zmdi zmdi-balance zmdi-hc-fw"></i> Users <small>Representative</small></h1>
+			  <h1 class="text-titles"><i class="zmdi zmdi-font zmdi-hc-fw"></i>  Users <small>Teacher</small></h1>
 			</div>
 			<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse voluptas reiciendis tempora voluptatum eius porro ipsa quae voluptates officiis sapiente sunt dolorem, velit quos a qui nobis sed, dignissimos possimus!</p>
 		</div>
@@ -43,8 +43,12 @@
 											  <input class="form-control" type="text">
 											</div>
 											<div class="form-group label-floating">
-											  <label class="control-label">Occupation</label>
+											  <label class="control-label">Specialty</label>
 											  <input class="form-control" type="text">
+											</div>
+											<div class="form-group">
+											  <label class="control-label">Birthday</label>
+											  <input class="form-control" type="date">
 											</div>
 											<div class="form-group">
 										        <label class="control-label">Gender</label>
@@ -52,6 +56,13 @@
 										          <option>Male</option>
 										          <option>Female</option>
 										        </select>
+										    </div>
+											<div class="form-group">
+										      <label class="control-label">Photo</label>
+										      <div>
+										        <input type="text" readonly="" class="form-control" placeholder="Browse...">
+										        <input type="file" >
+										      </div>
 										    </div>
 										    <p class="text-center">
 										    	<button href="#!" class="btn btn-info btn-raised btn-sm"><i class="zmdi zmdi-floppy"></i> Save</button>
@@ -72,7 +83,8 @@
 											<th class="text-center">Address</th>
 											<th class="text-center">Email</th>
 											<th class="text-center">Phone</th>
-											<th class="text-center">Occupation</th>
+											<th class="text-center">Specialty</th>
+											<th class="text-center">Birthday</th>
 											<th class="text-center">Gender</th>
 											<th class="text-center">Update</th>
 											<th class="text-center">Delete</th>
@@ -86,7 +98,8 @@
 											<td>El Salvador</td>
 											<td>carlos@gmail.com</td>
 											<td>+50312345678</td>
-											<td>Web Developer</td>
+											<td>IT</td>
+											<td>07/03/1997</td>
 											<td>Male</td>
 											<td><a href="#!" class="btn btn-success btn-raised btn-xs"><i class="zmdi zmdi-refresh"></i></a></td>
 											<td><a href="#!" class="btn btn-danger btn-raised btn-xs"><i class="zmdi zmdi-delete"></i></a></td>
@@ -99,6 +112,7 @@
 											<td>alicia@gmail.com</td>
 											<td>+50312345678</td>
 											<td>Social Work</td>
+											<td>23/07/1997</td>
 											<td>Female</td>
 											<td><a href="#!" class="btn btn-success btn-raised btn-xs"><i class="zmdi zmdi-refresh"></i></a></td>
 											<td><a href="#!" class="btn btn-danger btn-raised btn-xs"><i class="zmdi zmdi-delete"></i></a></td>
@@ -106,11 +120,12 @@
 										<tr>
 											<td>3</td>
 											<td>Sarai</td>
-											<td>Mercado</td>
+											<td>Lopez</td>
 											<td>El Salvador</td>
 											<td>sarai@gmail.com</td>
 											<td>+50312345678</td>
 											<td>Lawyer</td>
+											<td>10/09/1991</td>
 											<td>Female</td>
 											<td><a href="#!" class="btn btn-success btn-raised btn-xs"><i class="zmdi zmdi-refresh"></i></a></td>
 											<td><a href="#!" class="btn btn-danger btn-raised btn-xs"><i class="zmdi zmdi-delete"></i></a></td>
@@ -123,18 +138,7 @@
 											<td>alba@gmail.com</td>
 											<td>+50312345678</td>
 											<td>Designer</td>
-											<td>Female</td>
-											<td><a href="#!" class="btn btn-success btn-raised btn-xs"><i class="zmdi zmdi-refresh"></i></a></td>
-											<td><a href="#!" class="btn btn-danger btn-raised btn-xs"><i class="zmdi zmdi-delete"></i></a></td>
-										</tr>
-										<tr>
-											<td>5</td>
-											<td>Claudia</td>
-											<td>Rodriguez</td>
-											<td>El Salvador</td>
-											<td>claudia@gmail.com</td>
-											<td>+50312345678</td>
-											<td>Lawyer</td>
+											<td>19/04/1993</td>
 											<td>Female</td>
 											<td><a href="#!" class="btn btn-success btn-raised btn-xs"><i class="zmdi zmdi-refresh"></i></a></td>
 											<td><a href="#!" class="btn btn-danger btn-raised btn-xs"><i class="zmdi zmdi-delete"></i></a></td>
@@ -157,4 +161,5 @@
 			</div>
 		</div>
 	</section>
-    @endsection
+
+@endsection
