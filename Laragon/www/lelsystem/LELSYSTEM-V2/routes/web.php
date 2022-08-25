@@ -58,18 +58,18 @@ Route::get('/admin.period',function (){
 Route::get('/admin.registration',function (){
     return view('admin.admin.registration');
 })->name('registration');
-Route::get('/admin.representative',function (){
-    return view('admin.admin.representative');
-})->name('representative');
+Route::get('/admin.curse',function (){
+    return view('admin.admin.curse');
+})->name('curse');
 Route::get('/admin.salon',function (){
     return view('admin.admin.salon');
 })->name('salon');
 Route::get('/admin.school',function (){
     return view('admin.admin.school');
 })->name('school');
-Route::get('/admin.section',function (){
-    return view('admin.admin.section');
-})->name('section');
+Route::get('/admin.activities',function (){
+    return view('admin.admin.activities');
+})->name('activities');
 Route::get('/admin.student',function (){
     return view('admin.admin.student');
 })->name('student');
