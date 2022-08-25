@@ -13,7 +13,7 @@
 		<div class="full-box dashboard-sideBar-ct">
 			<!--SideBar Title -->
 			<div class="full-box text-uppercase text-center text-titles dashboard-sideBar-title">
-				company <i class="zmdi zmdi-close btn-menu-dashboard visible-xs"></i>
+				lealsystem <i class="zmdi zmdi-close btn-menu-dashboard visible-xs"></i>
 			</div>
 			<!-- SideBar User info -->
 			<div class="full-box dashboard-sideBar-UserInfo">
@@ -54,7 +54,7 @@
                     <a href="{{ Route('curse') }}"><i class="zmdi zmdi-balance zmdi-hc-fw"></i> Administrar curso</a>
                 </li>
                 <li>
-                    <a href="{{ Route('admin') }}"><i class="zmdi zmdi-font zmdi-hc-fw"></i> Administrar Recursos</a>
+                    <a href="{{ Route('recourses') }}"><i class="zmdi zmdi-font zmdi-hc-fw"></i> Administrar Recursos</a>
                 </li>
 
 
