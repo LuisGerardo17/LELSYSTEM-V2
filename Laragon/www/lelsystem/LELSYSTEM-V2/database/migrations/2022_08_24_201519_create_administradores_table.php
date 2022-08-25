@@ -15,8 +15,8 @@ class CreateAdministradoresTable extends Migration
     {
         Schema::create('administradores', function (Blueprint $table) {
             $table->id('id_administradores')->unique();
-            $table->unsignedInteger('cedula');
-            $table->foreign('cedula')->references('usuarios')->con('cedula');
+            $table->string('cedula');
+            $table->foreign('cedula')->references('cedula')->on('usuarios');
             $table->timestamps();
         });
     }

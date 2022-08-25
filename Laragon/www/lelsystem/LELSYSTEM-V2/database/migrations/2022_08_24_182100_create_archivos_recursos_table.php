@@ -17,7 +17,7 @@ class CreateArchivosRecursosTable extends Migration
             $table->id('id_archivo_curso')->unique();
             $table->string('nombre_archivo',255);
             $table->string('codigo_curso',5);
-            $table->bigInteger('codigo_recurso');
+            $table->string('codigo_recurso',5);
             $table->foreign('codigo_curso')->references('codigo_curso')->on('cursos');
             $table->foreign('codigo_recurso')->references('codigo_recurso')->on('recursos');
         });

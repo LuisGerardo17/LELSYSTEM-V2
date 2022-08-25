@@ -14,7 +14,7 @@ class CreateSemestresTable extends Migration
     public function up()
     {
         Schema::create('semestres', function (Blueprint $table) {
-            $table->id('id_semestre')->unique();
+            $table->id('id_semestre')->primary()->unique();
             $table->double('nota');
             $table->bolean('estado');
             $table->unsignedInteger('id_matricula');

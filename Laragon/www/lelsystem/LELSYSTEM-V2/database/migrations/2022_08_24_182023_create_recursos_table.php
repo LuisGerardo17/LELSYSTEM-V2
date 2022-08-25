@@ -14,7 +14,7 @@ class CreateRecursosTable extends Migration
     public function up()
     {
         Schema::create('recursos', function (Blueprint $table) {
-            $table->id('codigo_recurso')->unique();
+            $table->string('codigo_recurso',5)->primary()->unique();
             $table->string('nombre_recurso',5);
             $table->string('descripcion',5);
             $table->bigInteger('id_tipo_archivo');
