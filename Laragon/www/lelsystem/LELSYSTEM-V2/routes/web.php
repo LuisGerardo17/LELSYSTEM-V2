@@ -8,6 +8,18 @@ use App\Http\Controllers\DocenteController;
 use App\Http\Controllers\EstudianteController;
 use App\Http\Controllers\HomeController;
 
+//Anshelo Proaño
+Route::get("/logincreadopormi",function (){
+    return view("miscambios.login");
+});
+Route::get("/loginregister",function (){
+    return view("miscambios.registro");
+});
+Route::get("/loginhpage",function (){
+    return view("miscambios.hpage");
+});
+//Fin Anshelo Proaño
+
 Route::get('/', function () {
    // session(['hola'=>['hola1',2]]);//session([variablenombre=>dato en la variable])
     //session()->forget('hola');//elimina esa variable
@@ -63,18 +75,18 @@ Route::get('/admin.period',function (){
 Route::get('/admin.registration',function (){
     return view('admin.admin.registration');
 })->name('registration');
-Route::get('/admin.representative',function (){
-    return view('admin.admin.representative');
-})->name('representative');
+Route::get('/admin.curse',function (){
+    return view('admin.admin.curse');
+})->name('curse');
 Route::get('/admin.salon',function (){
     return view('admin.admin.salon');
 })->name('salon');
 Route::get('/admin.school',function (){
     return view('admin.admin.school');
 })->name('school');
-Route::get('/admin.section',function (){
-    return view('admin.admin.section');
-})->name('section');
+Route::get('/admin.activities',function (){
+    return view('admin.admin.activities');
+})->name('activities');
 Route::get('/admin.student',function (){
     return view('admin.admin.student');
 })->name('student');
