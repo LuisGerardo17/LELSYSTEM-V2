@@ -61,33 +61,15 @@ Route::get('/admin.admin',function (){
 Route::get('/admin.index',function (){
     return view('admin.admin.index');
 })->name('index');
-Route::get('/admin.payments',function (){
-    return view('admin.admin.payments');
-})->name('payments');
-Route::get('/admin.period',function (){
-    return view('admin.admin.period');
-})->name('period');
-Route::get('/admin.registration',function (){
-    return view('admin.admin.registration');
-})->name('registration');
 Route::get('/admin.curse',function (){
     return view('admin.admin.curse');
 })->name('curse');
-Route::get('/admin.salon',function (){
-    return view('admin.admin.salon');
-})->name('salon');
-Route::get('/admin.school',function (){
-    return view('admin.admin.school');
-})->name('school');
 Route::get('/admin.activities',function (){
     return view('admin.admin.activities');
 })->name('activities');
-Route::get('/admin.student',function (){
-    return view('admin.admin.student');
-})->name('student');
-Route::get('/admin.subject',function (){
-    return view('admin.admin.subject');
-})->name('subject');
+Route::get('/admin.recourses',function (){
+    return view('admin.admin.recourses');
+})->name('recourses');
 Route::get('/admin.teacher',function (){
     return view('admin.admin.teacher');
 })->name('teacher');
