@@ -30,7 +30,7 @@
 
                         <div class="mb-4">
                             <label for="password" class="form-label">Contraseña </label>
-                            <input type="password" name="password"  id="password" placeholder="Cntraseña"  class="form-control">
+                            <input type="password" name="contraseña"  id="password" placeholder="Contraseña"  class="form-control">
                         </div>
 
                         @error('message')
