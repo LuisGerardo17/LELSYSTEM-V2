@@ -1,4 +1,7 @@
+@extends('admin.layouts.admin')
 
+@section('titulo','Student')
+@section('contenido')
 		<!-- Content page -->
 		<div class="container-fluid">
 			<div class="page-header">
@@ -187,4 +190,4 @@
 			</div>
 		</div>
 	</section>
-
+    @endsection

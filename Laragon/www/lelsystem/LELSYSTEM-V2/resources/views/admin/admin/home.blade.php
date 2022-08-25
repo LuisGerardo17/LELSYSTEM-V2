@@ -1,6 +1,8 @@
-@include('admin.layouts.adminCabeza')
-	<!-- Content page-->
+@extends('admin.layouts.admin')
 
+@section('titulo','Inicio')
+
+@section('contenido')
 		<!-- Content page -->
 		<div class="container-fluid">
 			<div class="page-header">
@@ -119,9 +121,5 @@
 
 		</div>
 	</section>
-
-
-
-
-@include('admin.layouts.adminpies')
+@endsection
 
