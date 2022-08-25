@@ -21,8 +21,10 @@ Route::get("/loginhpage",function (){
 //Fin Anshelo Proaño
 
 Route::get('/', function () {
-    return view('home.homepage');
-})->middleware('auth');
+    session(['hola'=>['hola1',2]]);//session([variablenombre=>dato en la variable])
+    session()->forget('hola');//elimina esa variable
+    return view('welcome');
+});
 
 //CREACIÓN DE RUTAS PARA EL HOMEPAGE
 Route::get('/home.homepage', [App\Http\Controllers\HomeController::class, 'index'])->name('homepage');
@@ -49,6 +51,46 @@ Route::get('/docente.electricidad', [App\Http\Controllers\ElectricidadController
 Route::get('/administrador.admin', [App\Http\Controllers\AdministradorController::class, 'index'])
 ->middleware('auth.admin')
 ->name('admin.index');
+
+Route::get('/admin.home',function (){
+    return view('admin.admin.home');
+})->name('home');
+Route::get('/admin.admin',function (){
+    return view('admin.admin.admin');
+})->name('admin');
+Route::get('/admin.index',function (){
+    return view('admin.admin.index');
+})->name('index');
+Route::get('/admin.payments',function (){
+    return view('admin.admin.payments');
+})->name('payments');
+Route::get('/admin.period',function (){
+    return view('admin.admin.period');
+})->name('period');
+Route::get('/admin.registration',function (){
+    return view('admin.admin.registration');
+})->name('registration');
+Route::get('/admin.representative',function (){
+    return view('admin.admin.representative');
+})->name('representative');
+Route::get('/admin.salon',function (){
+    return view('admin.admin.salon');
+})->name('salon');
+Route::get('/admin.school',function (){
+    return view('admin.admin.school');
+})->name('school');
+Route::get('/admin.section',function (){
+    return view('admin.admin.section');
+})->name('section');
+Route::get('/admin.student',function (){
+    return view('admin.admin.student');
+})->name('student');
+Route::get('/admin.subject',function (){
+    return view('admin.admin.subject');
+})->name('subject');
+Route::get('/admin.teacher',function (){
+    return view('admin.admin.teacher');
+})->name('teacher');
 
 
 //Docente
