@@ -22,6 +22,8 @@ class CreateUsuariosTable extends Migration
             $table->string('contrasena')->unique();
             $table->string('telefono');
             $table->string('imagen');
+            $table->string('rol');
+
             $table->timestamps();
         });
     }
