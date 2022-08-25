@@ -8,6 +8,18 @@ use App\Http\Controllers\DocenteController;
 use App\Http\Controllers\EstudianteController;
 use App\Http\Controllers\HomeController;
 
+//Anshelo Proaño
+Route::get("/logincreadopormi",function (){
+    return view("miscambios.login");
+});
+Route::get("/loginregister",function (){
+    return view("miscambios.registro");
+});
+Route::get("/loginhpage",function (){
+    return view("miscambios.hpage");
+});
+//Fin Anshelo Proaño
+
 Route::get('/', function () {
     return view('home.homepage');
 })->middleware('auth');
