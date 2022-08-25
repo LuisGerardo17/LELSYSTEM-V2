@@ -37,7 +37,7 @@
 			<!-- SideBar Menu -->
 			<ul class="list-unstyled full-box dashboard-sideBar-Menu">
 				<li>
-					<a href="home.html">
+					<a href="{{ Route('home') }}">
 						<i class="zmdi zmdi-view-dashboard zmdi-hc-fw"></i> Dashboard
 					</a>
 				</li>
