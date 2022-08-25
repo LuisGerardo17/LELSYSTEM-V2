@@ -15,6 +15,7 @@
 					<ul class="nav nav-tabs" style="margin-bottom: 15px;">
 					  	<li class="active"><a href="#new" data-toggle="tab">New</a></li>
 					  	<li><a href="#list" data-toggle="tab">List</a></li>
+                        <li><a href="#list" data-toggle="tab">hola</a></li>
 					</ul>
 					<div id="myTabContent" class="tab-content">
 						<div class="tab-pane fade active in" id="new">
