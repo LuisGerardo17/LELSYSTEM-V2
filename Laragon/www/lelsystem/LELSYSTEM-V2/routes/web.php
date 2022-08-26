@@ -42,7 +42,7 @@ Route::get('/homepage',function (){
 
     //activities
     Route::get('/admin.activities',function (){
-        return view('admin.admin.activities');
+        return view('admin.activities.activities');
     })->name('activities');
 
     Route::get('/adminEdit',function (){
@@ -60,7 +60,7 @@ Route::get('/homepage',function (){
 
     //courses
     Route::get('/admin.curse',function (){
-        return view('admin.admin.curse');
+        return view('admin.courses.curse');
     })->name('curse');
 
     Route::get('/CourseEdit',function (){
