@@ -10,27 +10,28 @@
     <div class="login-box">
         <img class="avatar" src="static/img/logo5.png" alt="">
         <h1>REGISTRATE AQUÍ</h1>
-        <form>
+        <form action='' method='POST'>
+            @csrf 
             <label for="cedula">Cédula</label>
-            <input type="text" placeholder="Ingrese Cédula">
+            <input type="text" name='cedula' placeholder="Ingrese Cédula">
         
             <label for="nombre">Nombres</label>
-            <input type="text" placeholder="Ingrese Nombres">
+            <input type="text" name='nombres' placeholder="Ingrese Nombres">
            
             <label for="apellido">Apellidos</label>
-            <input type="text" placeholder="Ingrese Apellidos">
+            <input type="text" name='apellidos' placeholder="Ingrese Apellidos">
 
             <label for="username">Correo</label>
-            <input type="text" placeholder="Ingrese Correo">
+            <input type="text" name='correo' placeholder="Ingrese Correo">
 
             <label for="dirección">Dirección</label>
-            <input type="text" placeholder="Ingrese Dirección">
+            <input type="text" name='direccion' placeholder="Ingrese Dirección">
 
             <label for="telefono">Telefono</label>
-            <input type="text" placeholder="Ingrese Telefono celular">
+            <input type="text" name='telefono' placeholder="Ingrese Telefono celular">
 
             <label for="password">Contraseña</label>
-            <input type="password" placeholder="Ingrese contraseña">
+            <input type="password" name='contrasena' placeholder="Ingrese contraseña">
 
             <label for="imagen">Imagen</label>
             <input type="file" name="imagen"  id="imagen" placeholder="Subir imagen"  class="form-control">
@@ -42,7 +43,7 @@
                 <option value="administrador">Administrador</option>
             </select>
             
-            <input type="submit" value="Registrarse">
+            <input type="submit" name='registro' value="Registrarse">
 
         </form>
     </div>

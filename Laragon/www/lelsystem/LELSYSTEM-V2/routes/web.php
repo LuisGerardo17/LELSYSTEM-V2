@@ -7,6 +7,7 @@ use App\Http\Controllers\AdministradorController;
 use App\Http\Controllers\DocenteController;
 use App\Http\Controllers\EstudianteController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\RegistroEstudiantesController;
 
 //Anshelo Proaño
 Route::get("/logincreadopormi",function (){
@@ -81,6 +82,7 @@ Route::get('/docente.docente', [App\Http\Controllers\DocenteController::class, '
 ->name('docente.index');
 
 //Estudiante
-Route::get('/estudiante.estudiante', [App\Http\Controllers\EstudianteController::class, 'index'])
+/*Route::get('/estudiante.estudiante', [App\Http\Controllers\EstudianteController::class, 'index'])
 ->middleware('auth.estudiante')
-->name('estudiante.index');
+->name('estudiante.index');*/
+Route::resource('estudiante-registro',RegistroEstudiantesController::class);

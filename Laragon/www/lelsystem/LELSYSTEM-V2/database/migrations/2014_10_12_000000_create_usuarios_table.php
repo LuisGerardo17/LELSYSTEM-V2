@@ -23,7 +23,6 @@ class CreateUsuariosTable extends Migration
             $table->string('telefono');
             $table->string('imagen');
             $table->string('rol');
-
             $table->timestamps();
         });
     }
