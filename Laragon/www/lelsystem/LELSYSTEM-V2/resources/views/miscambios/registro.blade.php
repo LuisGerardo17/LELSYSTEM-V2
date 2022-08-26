@@ -12,7 +12,7 @@
     <div class="login-box">
         <img class="avatar" src="static/img/logo5.png" alt="">
         <h1>REGISTRATE AQUÍ</h1>
-        <form action="" method="POST" enctype="multipart/form-data">
+        <form action="{{ url('estudiante-registro') }}" method="POST" enctype="multipart/form-data">
             @csrf
             <label for="cedula">Cédula</label>
             <input type="text" name='cedula' placeholder="Ingrese Cédula">

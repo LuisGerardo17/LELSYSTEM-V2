@@ -36,7 +36,9 @@ class RegistroEstudiantesController extends Controller
     public function store(Request $request)
     {
         $datosEmpleado=request()->except('_token');
+        $datosEmpleado['mama']='hola';//ingresa solo ese dato ['mama'=>'hola]->array principal, esto no crea un nuevo array
         dd($datosEmpleado);
+
     }
 
     /**

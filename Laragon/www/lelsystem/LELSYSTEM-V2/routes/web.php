@@ -36,37 +36,67 @@ Route::get('/admin.admin.admin', [App\Http\Controllers\AdministradorController::
 ->middleware('auth.admin')
 ->name('admin.index');
 
-Route::get('/adminEdit',function (){
-    return view('admin.teacher.teacherEdit');
-});
-
 Route::get('/homepage',function (){
     return view('home');
 })->name('home');
 
-Route::get('/admin.admin',function (){
-    return view('admin.admin.admin');
-})->name('admin');
+    //activities
+    Route::get('/admin.activities',function (){
+        return view('admin.admin.activities');
+    })->name('activities');
 
+    Route::get('/adminEdit',function (){
+        return view('admin.teacher.teacherEdit');
+    });
+
+    //admin
+    Route::get('/admin.admin',function (){
+        return view('admin.admin.admin');
+    })->name('admin');
+
+    Route::get('/adminEdit',function (){
+        return view('admin.teacher.teacherEdit');
+    });
+
+    //courses
+    Route::get('/admin.curse',function (){
+        return view('admin.admin.curse');
+    })->name('curse');
+
+    Route::get('/adminEdit',function (){
+        return view('admin.teacher.teacherEdit');
+    });
+
+    //resourses
+    Route::get('/admin.recourses',function (){
+        return view('admin.admin.recourses');
+    })->name('recourses');
+
+    Route::get('/adminEdit',function (){
+        return view('admin.teacher.teacherEdit');
+    });
+
+    //teacher
+    Route::get('/admin.teacher',function (){
+        return view('admin.admin.teacher');
+    })->name('teacher');
+
+    Route::get('/adminEdit',function (){
+        return view('admin.teacher.teacherEdit');
+    });
+
+    
 Route::get('/admin.index',function (){
     return view('admin.admin.index');
 })->name('index');
 
-Route::get('/admin.curse',function (){
-    return view('admin.admin.curse');
-})->name('curse');
 
-Route::get('/admin.activities',function (){
-    return view('admin.admin.activities');
-})->name('activities');
 
-Route::get('/admin.recourses',function (){
-    return view('admin.admin.recourses');
-})->name('recourses');
 
-Route::get('/admin.teacher',function (){
-    return view('admin.admin.teacher');
-})->name('teacher');
+
+
+
+
 
 
 //Docente
@@ -79,3 +109,7 @@ Route::get('/docente.docente', [App\Http\Controllers\DocenteController::class, '
 ->middleware('auth.estudiante')
 ->name('estudiante.index');*/
 Route::resource('estudiante-registro',RegistroEstudiantesController::class);
+
+Route::get('/hola',function (){
+    return view('miscambios.registro');
+});
