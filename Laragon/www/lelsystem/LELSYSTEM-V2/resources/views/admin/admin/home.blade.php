@@ -63,7 +63,7 @@
 					Recursos
 				</div>
 				<div class="full-box tile-icon text-center">
-					<i class="zmdi zmdi-balance zmdi-hc-fw"></i>
+					<i class="zmdi zmdi-font zmdi-hc-fw"></i>
 				</div>
 				<div class="full-box tile-number text-titles">
 					<p class="full-box">70</p>
@@ -75,7 +75,7 @@
 					Actividades
 				</div>
 				<div class="full-box tile-icon text-center">
-					<i class="zmdi zmdi-balance zmdi-hc-fw"></i>
+					<i class="zmdi zmdi-book zmdi-hc-fw"></i>
 				</div>
 				<div class="full-box tile-number text-titles">
 					<p class="full-box">70</p>
