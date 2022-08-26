@@ -18,12 +18,21 @@ Route::get("/loginregister",function (){
 Route::get("/loginhpage",function (){
     return view("miscambios.hpage");
 });
+
+Route::get("/login",function (){
+    return view("auth.login");
+});
+
+
+Route::get("/register",function (){
+    return view("auth.register");
+});
 //Fin Anshelo Proaño
 
 Route::get('/', function () {
    // session(['hola'=>['hola1',2]]);//session([variablenombre=>dato en la variable])
     //session()->forget('hola');//elimina esa variable
-    return view('welcome');
+    return view('miscambios.hpage');
 });
 
 //CREACIÓN DE RUTAS PARA EL HOMEPAGE
@@ -35,12 +44,12 @@ Route::get('/homepage.contactos', [App\Http\Controllers\Contactos::class, 'index
 Route::get('/homepage.admisiones', [App\Http\Controllers\Admisiones::class, 'index'])->name('admisiones');
 
 //Route::get('/auth.login', [App\Http\Controllers\SessionsController::class, 'create'])->name('login');
-Route::get('/auth.register', [App\Http\Controllers\RegisterController::class, 'index'])->name('register');
+//Route::get('/auth.register', [App\Http\Controllers\RegisterController::class, 'index'])->name('register');
 
 //Register y Login
 Route::post('/auth.register', [App\Http\Controllers\RegisterController::class, 'store'])->name('register.store');
 //Route::post('/auth.login', [App\Http\Controllers\SessionsController::class, 'store'])->name('login.store');
-Route::get('/logout', [App\Http\Controllers\SessionsController::class, 'destroy'])->name('login.destroy');
+//Route::get('/logout', [App\Http\Controllers\SessionsController::class, 'destroy'])->name('login.destroy');
 
 //CREACIÓN DE RUTAS PARA DOCENTE
 Route::get('/docente.informatica', [App\Http\Controllers\InformaticaController::class, 'index'])->name('informatica');
@@ -56,10 +65,6 @@ Route::get('/admin.home',function (){
     return view('admin.admin.home');
 })->name('home');
 
-
-Route::get('/auth.login',function (){
-    return view('auth.login');
-})->name('home');
 Route::get('/admin.admin',function (){
     return view('admin.admin.admin');
 })->name('admin');
