@@ -50,7 +50,7 @@
 											<td>El Salvador</td>
 											<td>carlos@gmail.com</td>
 											<td>+50312345678</td>
-											<td><a href="#!" class="btn btn-success btn-raised btn-xs"><i class="zmdi zmdi-refresh"></i></a></td>
+											<td><a href="{{ Route('adminEdit') }}" class="btn btn-success btn-raised btn-xs"><i class="zmdi zmdi-refresh"></i></a></td>
 											<td><a href="#!" class="btn btn-danger btn-raised btn-xs"><i class="zmdi zmdi-delete"></i></a></td>
 										</tr>
 										<tr>

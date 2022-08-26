@@ -13,7 +13,7 @@
 			<div class="row">
 				<div class="col-xs-12">
 					<ul class="nav nav-tabs" style="margin-bottom: 15px;">
-                        <li><a href="#" data-toggle="tab">Volver</a></li>
+                        <li><a href="{{ Route('teacher') }}">Volver</a></li>
 					  	<li class="active"><a href="#new" data-toggle="tab">Editar</a></li>
 
 					</ul>

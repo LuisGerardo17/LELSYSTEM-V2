@@ -169,7 +169,7 @@ body, html{
 }
 .dashboard-sideBar-Menu > li > a > i.zmdi-caret-down{
 	line-height: 50px;
-	transition: all .3s ease-in-out; 
+	transition: all .3s ease-in-out;
 }
 .dashboard-sideBar-Menu > li > a{
 	padding: 0 15px;
@@ -224,7 +224,7 @@ body, html{
 	outline: none;
 }
 .dashboard-Navbar{
-	background-color: #000;
+	background-color: rgb(43, 151, 146) ; /*navbar*/
 	overflow: hidden;
 }
 .dashboard-Navbar > ul >li,

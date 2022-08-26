@@ -22,7 +22,7 @@
 					<figcaption class="text-center text-titles">User Name</figcaption>
 				</figure>
 				<ul class="full-box list-unstyled text-center">
-					
+
 					<li>
 						<a href="#!" class="btn-exit-system">
 							<i class="zmdi zmdi-power"></i>
@@ -33,7 +33,7 @@
 			<!-- SideBar Menu -->
 			<ul class="list-unstyled full-box dashboard-sideBar-Menu">
 				<li>
-					<a href="{{ Route('home') }}">
+					<a href="{{ Route('adminHome') }}">
 						<i class="zmdi zmdi-view-dashboard zmdi-hc-fw"></i> Dashboard
 					</a>
 				</li>

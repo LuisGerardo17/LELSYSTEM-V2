@@ -37,8 +37,8 @@ Route::get('/admin.admin.admin', [App\Http\Controllers\AdministradorController::
 ->name('admin.index');
 
 Route::get('/homepage',function (){
-    return view('home');
-})->name('home');
+    return view('admin.home');
+})->name('adminHome');
 
     //activities
     Route::get('/admin.activities',function (){
