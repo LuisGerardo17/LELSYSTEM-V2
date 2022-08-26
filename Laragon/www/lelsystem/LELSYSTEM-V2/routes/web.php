@@ -63,7 +63,7 @@ Route::get('/admin.admin.admin', [App\Http\Controllers\AdministradorController::
 ->name('admin.index');
 
 Route::get('/adminEdit',function (){
-    return view('admin.admin.adminEdit');
+    return view('admin.teacher.teacherEdit');
 });
 
 Route::get('/admin.home',function (){

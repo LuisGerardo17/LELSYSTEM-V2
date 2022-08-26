@@ -11,7 +11,8 @@
         <img class="avatar" src="static/img/logo5.png" alt="">
         <h1>REGISTRATE AQUÍ</h1>
 
-        <form action="" method="POST"  enctype="">
+        <form action="{{ url('estudiante-registro') }}" method="POST"  enctype="">
+            @csrf
             <label for="cedula">Cédula</label>
             <input type="text" placeholder="Ingrese Cédula">
 
@@ -43,8 +44,8 @@
                 <option value="docente">Docente</option>
                 <option value="administrador">Administrador</option>
             </select>
-            
-            <input type="submit" name='registro' value="Registrarse">
+
+            <input type="submit" value="Registrarse">
 
         </form>
     </div>
