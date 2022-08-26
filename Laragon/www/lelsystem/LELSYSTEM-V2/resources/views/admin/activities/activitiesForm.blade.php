@@ -1,12 +1,13 @@
 @extends('admin.layouts.admin')
-@section('titulo','Admin')
+
+@section('titulo','Section')
 @section('contenido')
 		<!-- Content page -->
 		<div class="container-fluid">
 			<div class="page-header">
-			  <h1 class="text-titles"><i class="zmdi zmdi-account zmdi-hc-fw"></i> Administrador <small>Administrador</small></h1>
+			  <h1 class="text-titles"><i class="zmdi zmdi-book zmdi-hc-fw"></i> Actividades <small>Activities</small></h1>
 			</div>
-			<p class="lead">Un administrador es una persona con visión, que es capaz de aplicar y desarrollar todos los conocimientos acerca de la planeación, organización, dirección y control empresarial, donde sus objetivos están en la misma dirección de las metas y propósitos de la institución.</p>
+			<p class="lead">Las actividades son todas aquellas tareas o labores que cada individuo ejerce diariamente, están las actividades laborales, las actividades escolares, las actividades recreativas, las actividades físicas, etc.</p>
 		</div>
 		<div class="container-fluid">
 			<div class="row">
@@ -21,7 +22,31 @@
 								<div class="row">
 									<div class="col-xs-12 col-md-10 col-md-offset-1">
 									    <form action="">
-									    	@include('admin.admin.adminForm')
+									    	<div class="form-group label-floating">
+											  <label class="control-label">Name</label>
+											  <input class="form-control" type="text">
+											</div>
+											<div class="form-group label-floating">
+											  <label class="control-label">Section</label>
+											  <input class="form-control" type="text">
+											</div>
+											<div class="form-group">
+										      <label class="control-label">Status</label>
+										        <select class="form-control">
+										          <option>Active</option>
+										          <option>Disable</option>
+										        </select>
+										    </div>
+											<div class="form-group">
+										      <label class="control-label">Year</label>
+										        <select class="form-control">
+										          <option>2017</option>
+										          <option>2016</option>
+										        </select>
+										    </div>
+										    <p class="text-center">
+										    	<button href="#!" class="btn btn-info btn-raised btn-sm"><i class="zmdi zmdi-floppy"></i> Save</button>
+										    </p>
 									    </form>
 									</div>
 								</div>
@@ -34,10 +59,9 @@
 										<tr>
 											<th class="text-center">#</th>
 											<th class="text-center">Name</th>
-											<th class="text-center">Last Name</th>
-											<th class="text-center">Address</th>
-											<th class="text-center">Email</th>
-											<th class="text-center">Phone</th>
+											<th class="text-center">Section</th>
+											<th class="text-center">Status</th>
+											<th class="text-center">Year</th>
 											<th class="text-center">Update</th>
 											<th class="text-center">Delete</th>
 										</tr>
@@ -45,41 +69,28 @@
 									<tbody>
 										<tr>
 											<td>1</td>
-											<td>Carlos</td>
-											<td>Alfaro</td>
-											<td>El Salvador</td>
-											<td>carlos@gmail.com</td>
-											<td>+50312345678</td>
+											<td>First</td>
+											<td>A</td>
+											<td>Active</td>
+											<td>2017</td>
 											<td><a href="#!" class="btn btn-success btn-raised btn-xs"><i class="zmdi zmdi-refresh"></i></a></td>
 											<td><a href="#!" class="btn btn-danger btn-raised btn-xs"><i class="zmdi zmdi-delete"></i></a></td>
 										</tr>
 										<tr>
 											<td>2</td>
-											<td>Alicia</td>
-											<td>Melendez</td>
-											<td>El Salvador</td>
-											<td>alicia@gmail.com</td>
-											<td>+50312345678</td>
+											<td>First</td>
+											<td>B</td>
+											<td>Active</td>
+											<td>2017</td>
 											<td><a href="#!" class="btn btn-success btn-raised btn-xs"><i class="zmdi zmdi-refresh"></i></a></td>
 											<td><a href="#!" class="btn btn-danger btn-raised btn-xs"><i class="zmdi zmdi-delete"></i></a></td>
 										</tr>
 										<tr>
 											<td>3</td>
-											<td>Sarai</td>
-											<td>Lopez</td>
-											<td>El Salvador</td>
-											<td>sarai@gmail.com</td>
-											<td>+50312345678</td>
-											<td><a href="#!" class="btn btn-success btn-raised btn-xs"><i class="zmdi zmdi-refresh"></i></a></td>
-											<td><a href="#!" class="btn btn-danger btn-raised btn-xs"><i class="zmdi zmdi-delete"></i></a></td>
-										</tr>
-										<tr>
-											<td>4</td>
-											<td>Alba</td>
-											<td>Bonilla</td>
-											<td>El Salvador</td>
-											<td>alba@gmail.com</td>
-											<td>+50312345678</td>
+											<td>Third</td>
+											<td>A</td>
+											<td>Active</td>
+											<td>2017</td>
 											<td><a href="#!" class="btn btn-success btn-raised btn-xs"><i class="zmdi zmdi-refresh"></i></a></td>
 											<td><a href="#!" class="btn btn-danger btn-raised btn-xs"><i class="zmdi zmdi-delete"></i></a></td>
 										</tr>
@@ -102,4 +113,4 @@
 		</div>
 	</section>
 
-@endsection
+    @endsection

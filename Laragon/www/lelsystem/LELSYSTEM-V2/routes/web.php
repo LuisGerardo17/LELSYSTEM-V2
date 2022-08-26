@@ -62,6 +62,10 @@ Route::get('/admin.admin.admin', [App\Http\Controllers\AdministradorController::
 ->middleware('auth.admin')
 ->name('admin.index');
 
+Route::get('/adminEdit',function (){
+    return view('admin.admin.adminEdit');
+});
+
 Route::get('/admin.home',function (){
     return view('admin.admin.home');
 })->name('home');
