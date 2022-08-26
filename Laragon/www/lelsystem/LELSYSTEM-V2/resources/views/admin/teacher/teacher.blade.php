@@ -34,6 +34,7 @@
 									<thead>
 										<tr>
 											<th class="text-center">#</th>
+                                            <th class="text-center">Foto</th>
 											<th class="text-center">Name</th>
 											<th class="text-center">Last Name</th>
 											<th class="text-center">Address</th>
@@ -49,6 +50,7 @@
 									<tbody>
 										<tr>
 											<td>1</td>
+                                            <td><img src="{{ asset('admin/assets/img/avatar.jpg') }}" alt="" width="40px"></td>
 											<td>Carlos</td>
 											<td>Alfaro</td>
 											<td>El Salvador</td>
@@ -62,6 +64,7 @@
 										</tr>
 										<tr>
 											<td>2</td>
+                                            <td><img src="{{ asset('admin/assets/img/avatar.jpg') }}" alt="" width="40px"></td>
 											<td>Alicia</td>
 											<td>Melendez</td>
 											<td>El Salvador</td>
@@ -75,6 +78,7 @@
 										</tr>
 										<tr>
 											<td>3</td>
+                                            <td><img src="{{ asset('admin/assets/img/avatar.jpg') }}" alt="" width="40px"></td>
 											<td>Sarai</td>
 											<td>Lopez</td>
 											<td>El Salvador</td>
@@ -88,6 +92,7 @@
 										</tr>
 										<tr>
 											<td>4</td>
+                                            <td><img src="{{ asset('admin/assets/img/avatar.jpg') }}" alt="" width="40px"></td>
 											<td>Alba</td>
 											<td>Bonilla</td>
 											<td>El Salvador</td>
