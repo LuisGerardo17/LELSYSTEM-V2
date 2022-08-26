@@ -8,35 +8,35 @@ use App\Models\User;
 class SessionsController extends Controller
 {
     public function create(){
-        return view('auth.login');
+        return view('miscambios.login');
 
    }
 
   public function store() {
-    if(auth()->attempt(request(['username','email','password'])) == false) {
+    if(auth()->attempt(request(['correo','contrasena'])) == false) {
         return back()->withErrors([
-          'message' => 'The username, email or password is incorrect please try again'
+          'message' => 'El correo or contraseña esta incorrecto porfavor ingresa nuevamente'
         ]);
 
     } else {
-        if(auth()->user()->role == 'admin'){
+        if(auth()->user()->rol == 'Administrador'){
 
-            return redirect()->to('administrador.admin');
-            
-        } elseif(auth()->user()->role == 'docente'){
+            return redirect()->to('admin.admin.admin');
+
+        } elseif(auth()->user()->rol == 'Docente'){
 
             return redirect()->to('docente.docente');
-        } elseif(auth()->user()->role == 'estudiante'){
+        } elseif(auth()->user()->rol == 'Estudiante'){
 
             return redirect()->to('estudiante.estudiante');
          }
-        
+
         else {
             return redirect()->to('/');
         }
- 
+
        }
-          
+
     }
 
     public function destroy() {

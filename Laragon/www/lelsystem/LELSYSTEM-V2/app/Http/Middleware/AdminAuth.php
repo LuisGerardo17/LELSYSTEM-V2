@@ -17,10 +17,10 @@ class AdminAuth
     public function handle(Request $request, Closure $next)
     {
         if(auth()->check()){
-            if(auth()->user()->role == 'admin'){
+            if(auth()->user()->rol == 'Administrador'){
                 return $next($request);
                 }
             }
-        return redirect()->to('administrador.admin');
+        return redirect()->to('admin.admin.admin');
     }
 }

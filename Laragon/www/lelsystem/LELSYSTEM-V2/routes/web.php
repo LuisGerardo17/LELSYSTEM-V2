@@ -18,12 +18,21 @@ Route::get("/loginregister",function (){
 Route::get("/loginhpage",function (){
     return view("miscambios.hpage");
 });
+
+Route::get("/login",function (){
+    return view("auth.login");
+});
+
+
+Route::get("/register",function (){
+    return view("auth.register");
+});
 //Fin Anshelo Proaño
 
 Route::get('/', function () {
-    session(['hola'=>['hola1',2]]);//session([variablenombre=>dato en la variable])
-    session()->forget('hola');//elimina esa variable
-    return view('welcome');
+   // session(['hola'=>['hola1',2]]);//session([variablenombre=>dato en la variable])
+    //session()->forget('hola');//elimina esa variable
+    return view('home');
 });
 
 //CREACIÓN DE RUTAS PARA EL HOMEPAGE
@@ -48,13 +57,14 @@ Route::get('/docente.mecanica', [App\Http\Controllers\MecanicaController::class,
 Route::get('/docente.electricidad', [App\Http\Controllers\ElectricidadController::class, 'index'])->name('electricidad');
 
 //Administrador
-Route::get('/administrador.admin', [App\Http\Controllers\AdministradorController::class, 'index'])
+Route::get('/admin.admin.admin', [App\Http\Controllers\AdministradorController::class, 'index'])
 ->middleware('auth.admin')
 ->name('admin.index');
 
 Route::get('/admin.home',function (){
     return view('admin.admin.home');
 })->name('home');
+
 Route::get('/admin.admin',function (){
     return view('admin.admin.admin');
 })->name('admin');
