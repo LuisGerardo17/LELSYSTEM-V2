@@ -35,7 +35,8 @@ class RegistroEstudiantesController extends Controller
      */
     public function store(Request $request)
     {
-        $datos_Estudiantes=request();
+        $datosEmpleado=request()->except('_token');
+        dd($datosEmpleado);
     }
 
     /**
