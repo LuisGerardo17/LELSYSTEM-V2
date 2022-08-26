@@ -20,6 +20,7 @@ class CreateUsuariosTable extends Migration
             $table->string('correo')->unique();
             $table->string('direccion');
             $table->string('contrasena')->unique();
+            $table->timestamp('contrasena_verified_at')->nullable();
             $table->string('telefono');
             $table->string('imagen');
             $table->string('rol');

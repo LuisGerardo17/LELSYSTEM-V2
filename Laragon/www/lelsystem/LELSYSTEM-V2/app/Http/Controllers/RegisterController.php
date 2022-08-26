@@ -14,7 +14,7 @@ class RegisterController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index() {
+    public function create() {
 
        // $roles['roles']=[['id'=>1,'name'=>'hola'],['id'=>3,'name'=>'hola2']];
 

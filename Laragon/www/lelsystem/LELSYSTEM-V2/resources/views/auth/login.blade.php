@@ -1,4 +1,4 @@
-@extends('layouts1.app')
+@extends('layouts.app')
 @section('title', 'Login')
 @section('content')
 
@@ -10,7 +10,7 @@
               <h2 class="text-center text-3xl font-bold">Login</h2>
                 <!--login-->
                     <form action="{{ route('login') }}" method="POST" class="formulario">
-                       
+
 
                      </form>
                 <div class="my-3">
