@@ -5,7 +5,9 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Archivos_parcial1 extends Model
+class ListadoEstudiantes extends Model
 {
     use HasFactory;
+
+    protected $table = 'listado_estudiantes';
 }
