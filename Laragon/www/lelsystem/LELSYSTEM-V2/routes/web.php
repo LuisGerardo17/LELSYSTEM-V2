@@ -63,29 +63,29 @@ Route::get('/homepage',function (){
         return view('admin.admin.curse');
     })->name('curse');
 
-    Route::get('/adminEdit',function (){
-        return view('admin.teacher.teacherEdit');
-    });
+    Route::get('/CourseEdit',function (){
+        return view('admin.courses.curseEdit');
+    })->name('curseEdit');
 
     //resourses
     Route::get('/admin.recourses',function (){
-        return view('admin.admin.recourses');
+        return view('admin.resourses.recourses');
     })->name('recourses');
 
-    Route::get('/adminEdit',function (){
-        return view('admin.teacher.teacherEdit');
-    });
+    Route::get('/ResoursesEdit',function (){
+        return view('admin.resourses.recoursesEdit');
+    })->name('recoursesEdit');
 
     //teacher
     Route::get('/admin.teacher',function (){
-        return view('admin.admin.teacher');
+        return view('admin.teacher.teacher');
     })->name('teacher');
 
-    Route::get('/adminEdit',function (){
+    Route::get('/TeacherEdit',function (){
         return view('admin.teacher.teacherEdit');
-    });
+    })->name('teacherEdit');
 
-    
+
 Route::get('/admin.index',function (){
     return view('admin.admin.index');
 })->name('index');
