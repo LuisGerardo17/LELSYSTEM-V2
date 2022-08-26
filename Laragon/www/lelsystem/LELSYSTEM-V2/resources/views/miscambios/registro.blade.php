@@ -11,13 +11,13 @@
         <img class="avatar" src="static/img/logo5.png" alt="">
         <h1>REGISTRATE AQUÍ</h1>
 
-        <form action="" method="POST"  enctype="">
+        <form action="" method="POST"  enctype="multipart/form-data">
+            @csrf
             <label for="cedula">Cédula</label>
-            <input type="text" placeholder="Ingrese Cédula">
+            <input type="text" name='cedula' placeholder="Ingrese Cédula">
 
             <label for="nombre">Nombres</label>
-            <input type="text" placeholder="Ingrese Nombres">
-
+            <input type="text" name='nombres' placeholder="Ingrese Nombres">
 
             <label for="apellido">Apellidos</label>
             <input type="text" name='apellidos' placeholder="Ingrese Apellidos">
@@ -34,17 +34,13 @@
             <label for="password">Contraseña</label>
             <input type="password" name='contrasena' placeholder="Ingrese contraseña">
 
+            <label for="password">Confirmar Contraseña</label>
+            <input type="password" name='contrasena_verified_at' placeholder="Vuelva a ingresar su contraseña">
+
             <label for="imagen">Imagen</label>
             <input type="file" name="imagen"  id="imagen" placeholder="Subir imagen"  class="form-control">
-
-            <label for="rol">Rol</label>
-            <select class="selec" name="rol" id="rol">
-                <option value="estudiante">Estudiante</option>
-                <option value="docente">Docente</option>
-                <option value="administrador">Administrador</option>
-            </select>
             
-            <input type="submit" name='registro' value="Registrarse">
+            <input type="submit" value="Registrarse">
 
         </form>
     </div>
