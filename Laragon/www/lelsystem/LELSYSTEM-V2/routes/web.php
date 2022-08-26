@@ -69,18 +69,23 @@ Route::get('/admin.home',function (){
 Route::get('/admin.admin',function (){
     return view('admin.admin.admin');
 })->name('admin');
+
 Route::get('/admin.index',function (){
     return view('admin.admin.index');
 })->name('index');
+
 Route::get('/admin.curse',function (){
     return view('admin.admin.curse');
 })->name('curse');
+
 Route::get('/admin.activities',function (){
     return view('admin.admin.activities');
 })->name('activities');
+
 Route::get('/admin.recourses',function (){
     return view('admin.admin.recourses');
 })->name('recourses');
+
 Route::get('/admin.teacher',function (){
     return view('admin.admin.teacher');
 })->name('teacher');
