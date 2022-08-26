@@ -62,6 +62,10 @@ Route::get('/admin.admin.admin', [App\Http\Controllers\AdministradorController::
 ->middleware('auth.admin')
 ->name('admin.index');
 
+Route::get('/adminEdit',function (){
+    return view('admin.teacher.teacherEdit');
+});
+
 Route::get('/admin.home',function (){
     return view('admin.admin.home');
 })->name('home');
@@ -69,18 +73,23 @@ Route::get('/admin.home',function (){
 Route::get('/admin.admin',function (){
     return view('admin.admin.admin');
 })->name('admin');
+
 Route::get('/admin.index',function (){
     return view('admin.admin.index');
 })->name('index');
+
 Route::get('/admin.curse',function (){
     return view('admin.admin.curse');
 })->name('curse');
+
 Route::get('/admin.activities',function (){
     return view('admin.admin.activities');
 })->name('activities');
+
 Route::get('/admin.recourses',function (){
     return view('admin.admin.recourses');
 })->name('recourses');
+
 Route::get('/admin.teacher',function (){
     return view('admin.admin.teacher');
 })->name('teacher');

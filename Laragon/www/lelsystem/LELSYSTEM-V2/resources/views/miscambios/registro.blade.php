@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>LELSYSTEM-REGISTRO</title>
     <link rel="stylesheet" type="text/css" href="{{ asset('static/css/login/styles2.css') }}">
 </head>
+
 <body>
 
     <div class="login-box">
         <img class="avatar" src="static/img/logo5.png" alt="">
         <h1>REGISTRATE AQUÍ</h1>
-
-        <form action="" method="POST"  enctype="multipart/form-data">
+        <form action="" method="POST" enctype="multipart/form-data">
             @csrf
             <label for="cedula">Cédula</label>
             <input type="text" name='cedula' placeholder="Ingrese Cédula">
@@ -38,8 +39,7 @@
             <input type="password" name='contrasena_verified_at' placeholder="Vuelva a ingresar su contraseña">
 
             <label for="imagen">Imagen</label>
-            <input type="file" name="imagen"  id="imagen" placeholder="Subir imagen"  class="form-control">
-            
+            <input type="file" name="imagen" id="imagen" placeholder="Subir imagen" class="form-control">
             <input type="submit" value="Registrarse">
 
         </form>
@@ -53,4 +53,5 @@
     </a>
 
 </body>
+
 </html>
