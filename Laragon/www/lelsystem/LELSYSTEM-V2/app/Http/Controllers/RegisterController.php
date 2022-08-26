@@ -15,10 +15,7 @@ class RegisterController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function create() {
-
-       // $roles['roles']=[['id'=>1,'name'=>'hola'],['id'=>3,'name'=>'hola2']];
-
-        return view('auth.register');
+     return view('auth.register');
 
 }
 

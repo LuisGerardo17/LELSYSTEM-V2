@@ -8,8 +8,8 @@
         <div class="col fondocol">
 
             <h2 class="text-center text-3xl font-bold">Register</h2>
-            <!--login-->
-            <form action="" method="POST"  enctype=""> // ARA AGREGAR UNA IMAGEN SE PONE enctype
+
+            <form action="" method="POST"  enctype="">
                @csrf
 
                <label for="cedula">Cédula</label>
@@ -49,7 +49,7 @@
                <span> ¿ Deseas regresar a la página principal?</span> <a href="" class="volver">VOLVER</a>
             </div>
         </div>
-       
+
     </div>
 </div>
 
