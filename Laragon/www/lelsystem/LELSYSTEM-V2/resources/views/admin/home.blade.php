@@ -19,7 +19,7 @@
 				</div>
 				<div class="full-box tile-number text-titles">
 					<p class="full-box">7</p>
-					<small>Register</small>
+					<small>Registros</small>
 				</div>
 			</article>
 			<article class="full-box tile">
@@ -31,7 +31,7 @@
 				</div>
 				<div class="full-box tile-number text-titles">
 					<p class="full-box">10</p>
-					<small>Register</small>
+					<small>Registros</small>
 				</div>
 			</article>
 			<article class="full-box tile">
@@ -43,7 +43,7 @@
 				</div>
 				<div class="full-box tile-number text-titles">
 					<p class="full-box">70</p>
-					<small>Register</small>
+					<small>Registros</small>
 				</div>
 			</article>
 			<article class="full-box tile">
@@ -55,7 +55,7 @@
 				</div>
 				<div class="full-box tile-number text-titles">
 					<p class="full-box">70</p>
-					<small>Register</small>
+					<small>Registros</small>
 				</div>
 			</article>
             <article class="full-box tile">
@@ -67,7 +67,7 @@
 				</div>
 				<div class="full-box tile-number text-titles">
 					<p class="full-box">70</p>
-					<small>Register</small>
+					<small>Registros</small>
 				</div>
 			</article>
             <article class="full-box tile">
@@ -79,7 +79,7 @@
 				</div>
 				<div class="full-box tile-number text-titles">
 					<p class="full-box">70</p>
-					<small>Register</small>
+					<small>Registros</small>
 				</div>
 			</article>
 		</div>
