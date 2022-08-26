@@ -98,9 +98,9 @@
 				      	<i class="zmdi zmdi-alert-triangle"></i>
 				    </div>
 				    <div class="row-content">
-				      	<div class="least-content">17m</div>
-				      	<h4 class="list-group-item-heading">Tile with a label</h4>
-				      	<p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus.</p>
+				      	<div class="least-content">3m</div>
+				      	<h4 class="list-group-item-heading">INGLES Yavirac.</h4>
+				      	<p class="list-group-item-text">ACTUALIZACION ASIGNADA</p>
 				    </div>
 			  	</div>
 			  	<div class="list-group-separator"></div>
@@ -110,8 +110,9 @@
 				    </div>
 				    <div class="row-content">
 				      	<div class="least-content">15m</div>
-				      	<h4 class="list-group-item-heading">Tile with a label</h4>
-				      	<p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus.</p>
+				      	<h4 class="list-group-item-heading">Canva</h4>
+				      	<p class="list-group-item-text">Gana un premio con un diseño deslumbrante.</p>
+				      	<p class="list-group-item-text">#CanvaDesignChallenge.</p>
 				    </div>
 			  	</div>
 			  	<div class="list-group-separator"></div>
@@ -120,9 +121,9 @@
 				      	<i class="zmdi zmdi-help"></i>
 				    </div>
 				    <div class="row-content">
-				      	<div class="least-content">10m</div>
-				      	<h4 class="list-group-item-heading">Tile with a label</h4>
-				      	<p class="list-group-item-text">Maecenas sed diam eget risus varius blandit.</p>
+				      	<div class="least-content">27m</div>
+				      	<h4 class="list-group-item-heading">evaluadionc</h4>
+				      	<p class="list-group-item-text">EVALUACION DOCENTE.</p>
 				    </div>
 				</div>
 			  	<div class="list-group-separator"></div>
@@ -132,8 +133,8 @@
 				    </div>
 				    <div class="row-content">
 				      	<div class="least-content">8m</div>
-				      	<h4 class="list-group-item-heading">Tile with a label</h4>
-				      	<p class="list-group-item-text">Maecenas sed diam eget risus varius blandit.</p>
+				      	<h4 class="list-group-item-heading">Google</h4>
+				      	<p class="list-group-item-text">Alerta de seguridad.</p>
 				    </div>
 			  	</div>
 			</div>
