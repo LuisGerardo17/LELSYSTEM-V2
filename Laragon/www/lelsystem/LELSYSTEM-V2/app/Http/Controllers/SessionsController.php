@@ -8,9 +8,8 @@ use App\Models\User;
 class SessionsController extends Controller
 {
     public function create(){
-        return view('miscambios.login');
-
-   }
+        return view('auth.login');
+}
 
   public function store() {
     if(auth()->attempt(request(['correo','contrasena'])) == false) {

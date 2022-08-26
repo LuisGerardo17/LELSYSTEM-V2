@@ -9,32 +9,6 @@ use App\Http\Controllers\EstudianteController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\RegistroEstudiantesController;
 
-//Anshelo Proaño
-Route::get("/logincreadopormi",function (){
-    return view("miscambios.login");
-});
-Route::get("/loginregister",function (){
-    return view("miscambios.registro");
-});
-Route::get("/loginhpage",function (){
-    return view("miscambios.hpage");
-});
-
-Route::get("/login",function (){
-    return view("auth.login");
-});
-
-
-Route::get("/register",function (){
-    return view("auth.register");
-});
-//Fin Anshelo Proaño
-
-Route::get('/', function () {
-   // session(['hola'=>['hola1',2]]);//session([variablenombre=>dato en la variable])
-    //session()->forget('hola');//elimina esa variable
-    return view('home');
-});
 
 //CREACIÓN DE RUTAS PARA EL HOMEPAGE
 Route::get('/home.homepage', [App\Http\Controllers\HomeController::class, 'index'])->name('homepage');
@@ -45,7 +19,7 @@ Route::get('/homepage.contactos', [App\Http\Controllers\Contactos::class, 'index
 Route::get('/homepage.admisiones', [App\Http\Controllers\Admisiones::class, 'index'])->name('admisiones');
 
 Route::get('/auth.login', [App\Http\Controllers\SessionsController::class, 'create'])->name('login');
-Route::get('/auth.register', [App\Http\Controllers\RegisterController::class, 'index'])->name('register');
+Route::get('/auth.register', [App\Http\Controllers\RegisterController::class, 'create'])->name('register');
 
 //Register y Login
 Route::post('/auth.register', [App\Http\Controllers\RegisterController::class, 'store'])->name('register.store');
@@ -66,8 +40,8 @@ Route::get('/adminEdit',function (){
     return view('admin.teacher.teacherEdit');
 });
 
-Route::get('/admin.home',function (){
-    return view('admin.admin.home');
+Route::get('/homepage',function (){
+    return view('home');
 })->name('home');
 
 Route::get('/admin.admin',function (){
