@@ -7,12 +7,8 @@ use App\Http\Controllers\AdministradorController;
 use App\Http\Controllers\DocenteController;
 use App\Http\Controllers\EstudianteController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\RegistroEstudiantesController;
 
-Route::get('/', function () {
-   // session(['hola'=>['hola1',2]]);//session([variablenombre=>dato en la variable])
-    //session()->forget('hola');//elimina esa variable
-    return view('home');
-});
 
 //CREACIÓN DE RUTAS PARA EL HOMEPAGE
 Route::get('/home.homepage', [App\Http\Controllers\HomeController::class, 'index'])->name('homepage');
@@ -40,25 +36,34 @@ Route::get('/admin.admin.admin', [App\Http\Controllers\AdministradorController::
 ->middleware('auth.admin')
 ->name('admin.index');
 
-Route::get('/admin.home',function (){
-    return view('admin.admin.home');
+Route::get('/adminEdit',function (){
+    return view('admin.admin.adminEdit');
+});
+
+Route::get('/homepage',function (){
+    return view('home');
 })->name('home');
 
 Route::get('/admin.admin',function (){
     return view('admin.admin.admin');
 })->name('admin');
+
 Route::get('/admin.index',function (){
     return view('admin.admin.index');
 })->name('index');
+
 Route::get('/admin.curse',function (){
     return view('admin.admin.curse');
 })->name('curse');
+
 Route::get('/admin.activities',function (){
     return view('admin.admin.activities');
 })->name('activities');
+
 Route::get('/admin.recourses',function (){
     return view('admin.admin.recourses');
 })->name('recourses');
+
 Route::get('/admin.teacher',function (){
     return view('admin.admin.teacher');
 })->name('teacher');
@@ -70,6 +75,7 @@ Route::get('/docente.docente', [App\Http\Controllers\DocenteController::class, '
 ->name('docente.index');
 
 //Estudiante
-Route::get('/estudiante.estudiante', [App\Http\Controllers\EstudianteController::class, 'index'])
+/*Route::get('/estudiante.estudiante', [App\Http\Controllers\EstudianteController::class, 'index'])
 ->middleware('auth.estudiante')
-->name('estudiante.index');
+->name('estudiante.index');*/
+Route::resource('estudiante-registro',RegistroEstudiantesController::class);

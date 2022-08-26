@@ -22,51 +22,7 @@
 								<div class="row">
 									<div class="col-xs-12 col-md-10 col-md-offset-1">
 									    <form action="">
-									    	<div class="form-group label-floating">
-											  <label class="control-label">Name</label>
-											  <input class="form-control" type="text">
-											</div>
-											<div class="form-group label-floating">
-											  <label class="control-label">Last Name</label>
-											  <input class="form-control" type="text">
-											</div>
-											<div class="form-group label-floating">
-											  <label class="control-label">Address</label>
-											  <textarea class="form-control"></textarea>
-											</div>
-											<div class="form-group label-floating">
-											  <label class="control-label">Email</label>
-											  <input class="form-control" type="text">
-											</div>
-											<div class="form-group label-floating">
-											  <label class="control-label">Phone</label>
-											  <input class="form-control" type="text">
-											</div>
-											<div class="form-group label-floating">
-											  <label class="control-label">Specialty</label>
-											  <input class="form-control" type="text">
-											</div>
-											<div class="form-group">
-											  <label class="control-label">Birthday</label>
-											  <input class="form-control" type="date">
-											</div>
-											<div class="form-group">
-										        <label class="control-label">Gender</label>
-										        <select class="form-control">
-										          <option>Male</option>
-										          <option>Female</option>
-										        </select>
-										    </div>
-											<div class="form-group">
-										      <label class="control-label">Photo</label>
-										      <div>
-										        <input type="text" readonly="" class="form-control" placeholder="Browse...">
-										        <input type="file" >
-										      </div>
-										    </div>
-										    <p class="text-center">
-										    	<button href="#!" class="btn btn-info btn-raised btn-sm"><i class="zmdi zmdi-floppy"></i> Save</button>
-										    </p>
+									    	@include('admin.teacher.teacherForm')
 									    </form>
 									</div>
 								</div>
