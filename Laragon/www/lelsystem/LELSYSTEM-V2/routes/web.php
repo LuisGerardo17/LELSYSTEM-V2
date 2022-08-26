@@ -46,8 +46,8 @@ Route::get('/homepage',function (){
     })->name('activities');
 
     Route::get('/adminEdit',function (){
-        return view('admin.teacher.teacherEdit');
-    });
+        return view('admin.activities.activitiesEdit');
+    })->name('activitiesEdit');
 
     //admin
     Route::get('/admin.admin',function (){
@@ -55,8 +55,8 @@ Route::get('/homepage',function (){
     })->name('admin');
 
     Route::get('/adminEdit',function (){
-        return view('admin.teacher.teacherEdit');
-    });
+        return view('admin.admin.adminEdit');
+    })->name('adminEdit');
 
     //courses
     Route::get('/admin.curse',function (){
