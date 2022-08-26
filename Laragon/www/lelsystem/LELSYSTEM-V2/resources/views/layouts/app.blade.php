@@ -44,10 +44,10 @@
 						<a class="nav-link marign" href="{{route('admisiones')}}">Admisiones</a>
 					</li>
 					<li class="nav-item sesiones">
-						<a class="nav-link marign colorq" href="http://127.0.0.1:8000/logincreadopormi?#">Login</a>
+						<a class="nav-link marign colorq" href="{{route('login')}}">Login</a>
                     </li>
 					<li class="nav-item sesiones">
-						<a class="nav-link marign colorq" href="http://127.0.0.1:8000/loginregister">Registrate</a>
+						<a class="nav-link marign colorq" href="{{route('register')}}">Registrate</a>
                     </li>
                 </ul>
 			</nav>

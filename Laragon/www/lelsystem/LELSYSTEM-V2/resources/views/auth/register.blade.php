@@ -1,5 +1,3 @@
-
-
 @extends('layouts.app')
 @section('title', 'Register')
 @section('content')
@@ -13,99 +11,45 @@
             <!--login-->
             <form action="" method="POST"  enctype=""> // ARA AGREGAR UNA IMAGEN SE PONE enctype
                @csrf
-                 <div class="mb-4">
-                    <label for="text" class="form-label">Nombre completo</label>
-                    <input type="text" name="name" id ="name"  placeholder="Nombre" class="form-control">
-                     @error('name')
-                    <p class ="border border-red-500 rounded-md bg-red-100 w-full text-red-600 p-2 my-2">*{{$message}}</p>
-                   @enderror
-                 </div>
 
-                 <div class="mb-4">
-                    <label for="text" class="form-label">Nombre de usuario</label>
-                    <input type="text" name="username" id ="username"  placeholder="Nombre de usuario" class="form-control">
-                    @error('username')
-                    <p class ="border border-red-500 rounded-md bg-red-100 w-full text-red-600 p-2 my-2">*{{$message}}</p>
-                    @enderror
-                 </div>
+               <label for="cedula">Cédula</label>
+               <input type="text" placeholder="Ingrese Cédula">
 
+               <label for="nombre">Nombres</label>
+               <input type="text" placeholder="Ingrese Nombres">
 
-              <!--
-                <div class="row">
-                    <div class="mb-4">
-                        <label for="text" class="form-label">Cédula</label>
-                        <input type="text" name="ci" id ="ci"  placeholder="Cédula de identidad" class="form-control">
-                        @error('ci')
-                        <p class ="border border-red-500 rounded-md bg-red-100 w-full text-red-600 p-2 my-2">*{{$message}}</p>
-                        @enderror
-                     </div>
-              -->
-                    <div class="mb-4">
-                          <label for="text" class="form-label">Correo</label>
-                          <input type="email" name="email" id ="email"  placeholder="Email" class="form-control">
-                           @error('email')
-                          <p class ="border border-red-500 rounded-md bg-red-100 w-full text-red-600 p-2 my-2">*{{$message}}</p>
-                          @enderror
-                    </div>
-                </div>
+               <label for="apellido">Apellidos</label>
+               <input type="text" placeholder="Ingrese Apellidos">
 
-                <div class="row">
+               <label for="username">Correo</label>
+               <input type="text" placeholder="Ingrese Correo">
 
-                    <div class="mb-4">
-                      <label for="password" class="form-label">Contraseña</label>
-                      <input type="password" name="password"  id="password" placeholder="password"  class="form-control">
-                      @error('password')
-                      <p class ="border border-red-500 rounded-md bg-red-100 w-full text-red-600 p-2 my-2">*{{$message}}</p>
-                      @enderror
-                    </div>
+               <label for="dirección">Dirección</label>
+               <input type="text" placeholder="Ingrese Dirección">
 
-                  <div class="mb-4">
-                     <label for="password" class="form-label">Confirmar  Contraseña</label>
-                     <input type="password" name="password_confirmation"  id="password_confirmation" placeholder="Confirmar Contraseña"  class="form-control">
+               <label for="telefono">Telefono</label>
+               <input type="text" placeholder="Ingrese Telefono celular">
 
-                    </div>
+               <label for="password">Contraseña</label>
+               <input type="password" placeholder="Ingrese contraseña">
 
-               </div>
+               <label for="imagen">Imagen</label>
+               <input type="file" name="imagen"  id="imagen" placeholder="Subir imagen"  class="form-control">
 
-               <div class="row">
-                  <div class="mb-4">
-                      <label for="rol" class="form-label">Rol</label>
-                      <select name="rol" id="rol" class="form-control">
-                       <option select disabled >Elige el rol para este usuario</option>
-                       @for ($i=0;$i<count($roles);$i++)
-                       <option value="{{ $roles[$i]['id'] }}">{{ $roles[$i]['name']}}</option>
-                       @endfor
-                      </select>
+               <label for="rol">Rol</label>
+               <select class="selec" name="rol" id="rol">
+                   <option value="estudiante">Estudiante</option>
+                   <option value="docente">Docente</option>
+                   <option value="administrador">Administrador</option>
+               </select>
 
-                     </div>
-
-                   <div class="mb-4">
-                       <label for="imagen" class="form-label">Imagen</label>
-                      <input type="file" name="imagen"  id="imagen" placeholder="Subir imagen"  class="form-control">
-                    </div>
-
-                 </div>
-
-
-              <div class="row">
-                 <div class="d-grid mb-3">
-                    <button type="submit" class="btn btn-dark">Registrarse</button>
-                  </div>
-                  <div class="d-grid mb-3">
-                    <button type="submit" class="btn btn-dark">Cancelar</button>
-                  </div>
-
-
-                </div>
-
+               <input type="submit" value="Registrarse">
             </form>
             <div class="my-3">
                <span> ¿ Deseas regresar a la página principal?</span> <a href="" class="volver">VOLVER</a>
             </div>
         </div>
-        <div class="col-5 fondocol2 d-none d-lg-block">
-            <img src="img/logo-remove.png" class="imagen" alt="">
-        </div>
+       
     </div>
 </div>
 

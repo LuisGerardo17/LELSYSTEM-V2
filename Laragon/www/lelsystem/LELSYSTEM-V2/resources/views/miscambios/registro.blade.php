@@ -3,21 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <title>LELSYSTEM-REGISTRO</title>
-    <link rel="stylesheet" type="text/css" href="{{ asset('static/css/login/styles2.css') }}">   
+    <link rel="stylesheet" type="text/css" href="{{ asset('static/css/login/styles2.css') }}">
 </head>
 <body>
-    
+
     <div class="login-box">
         <img class="avatar" src="static/img/logo5.png" alt="">
         <h1>REGISTRATE AQUÍ</h1>
-        <form action='' method='POST'>
-            @csrf 
+
+        <form action="" method="POST"  enctype="">
             <label for="cedula">Cédula</label>
-            <input type="text" name='cedula' placeholder="Ingrese Cédula">
-        
+            <input type="text" placeholder="Ingrese Cédula">
+
             <label for="nombre">Nombres</label>
-            <input type="text" name='nombres' placeholder="Ingrese Nombres">
-           
+            <input type="text" placeholder="Ingrese Nombres">
+
+
             <label for="apellido">Apellidos</label>
             <input type="text" name='apellidos' placeholder="Ingrese Apellidos">
 
@@ -50,7 +51,7 @@
 
     <a href="http://127.0.0.1:8000/logincreadopormi?#">
         <input class="home" type="submit" value="Login">
-    </a>    
+    </a>
     <a href="http://127.0.0.1:8000/loginhpage">
         <input class="home" type="submit" value="Homepage">
     </a>
