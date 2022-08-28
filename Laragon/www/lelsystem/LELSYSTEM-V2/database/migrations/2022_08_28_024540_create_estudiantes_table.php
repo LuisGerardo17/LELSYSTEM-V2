@@ -15,8 +15,8 @@ class CreateEstudiantesTable extends Migration
     {
         Schema::create('estudiantes', function (Blueprint $table) {
             $table->id('id_estudiante')->unique();
-            $table->string('cedula');
-            $table->foreign('cedula')->references('cedula')->con('usuarios');
+            $table->string('cedula',10);
+            $table->foreign('cedula')->references('cedula')->on('users');
             $table->timestamps();
         });
     }
@@ -30,4 +30,5 @@ class CreateEstudiantesTable extends Migration
     {
         Schema::dropIfExists('estudiantes');
     }
+
 }

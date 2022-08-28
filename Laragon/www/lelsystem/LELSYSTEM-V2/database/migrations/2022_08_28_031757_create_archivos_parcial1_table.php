@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateArchivosParcial2Table extends Migration
+class CreateArchivosParcial1Table extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,15 @@ class CreateArchivosParcial2Table extends Migration
      */
     public function up()
     {
-        Schema::create('archivos_parcial2', function (Blueprint $table) {
-            $table->id('id_archivo_parcial2')->primary()->unique();
-            $table->float('nota');
+        Schema::create('archivos_parcial1', function (Blueprint $table) {
+            $table->id('id_archivo_parcial1')->unique();
+            $table->string('nombre_archivo',250);
+            $table->double('nota');
+            $table->double('promedio1');
             $table->unsignedInteger('id_matricula');
             $table->foreign('id_matricula')->references('id_matricula')->on('matriculas');
             $table->unsignedInteger('id_cursos_actividades');
             $table->foreign('id_cursos_actividades')->references('id_cursos_actividades')->on('cursos_actividades');
-            $table->float('promedio2');
             $table->timestamps();
         });
     }
@@ -32,6 +33,6 @@ class CreateArchivosParcial2Table extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('archivos_parcial2');
+        Schema::dropIfExists('archivos_parcial1');
     }
 }

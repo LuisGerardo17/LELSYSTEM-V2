@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateAdministradoresTable extends Migration
+class CreateTipoArchivosTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,9 @@ class CreateAdministradoresTable extends Migration
      */
     public function up()
     {
-        Schema::create('administradores', function (Blueprint $table) {
-            $table->id('id_administradores')->unique();
-            $table->string('cedula');
-            $table->foreign('cedula')->references('cedula')->on('usuarios');
+        Schema::create('tipo_archivos', function (Blueprint $table) {
+            $table->id('id_tipo_archivo')->unique();
+            $table->string('tipo',5);
             $table->timestamps();
         });
     }
@@ -28,6 +27,6 @@ class CreateAdministradoresTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('administradores');
+        Schema::dropIfExists('tipo_archivos');
     }
 }

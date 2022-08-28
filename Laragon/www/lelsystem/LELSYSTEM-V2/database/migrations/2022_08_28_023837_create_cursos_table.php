@@ -1,5 +1,5 @@
 <?php
-//Enrique Mera
+
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -20,8 +20,9 @@ class CreateCursosTable extends Migration
             $table->date('fecha_inicio');
             $table->date('fecha_fin');
             $table->boolean('activo');
-            $table->integer('id_docente');
+            $table->bigInteger('id_docente');
             $table->foreign('id_docente')->references('id_docente')->on('docentes');
+            $table->timestamps();
         });
     }
 

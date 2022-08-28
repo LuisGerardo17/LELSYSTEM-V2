@@ -1,10 +1,10 @@
 <?php
-//Enrique Mera
+
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateTipoArchivosTable extends Migration
+class CreateDocentesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,11 @@ class CreateTipoArchivosTable extends Migration
      */
     public function up()
     {
-        Schema::create('tipo_archivos', function (Blueprint $table) {
-            $table->id('id_tipo_archivo')->primary()->unique();
-            $table->string('tipo',5);
+        Schema::create('docentes', function (Blueprint $table) {
+            $table->id('id_docente')->unique();
+            $table->string('cedula',10);
+            $table->foreign('cedula')->references('cedula')->on('users');
+            $table->timestamps();
         });
     }
 
@@ -26,6 +28,6 @@ class CreateTipoArchivosTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tipo_archivos');
+        Schema::dropIfExists('docentes');
     }
 }

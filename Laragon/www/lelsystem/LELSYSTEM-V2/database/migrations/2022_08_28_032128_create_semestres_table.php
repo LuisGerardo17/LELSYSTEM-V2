@@ -14,16 +14,17 @@ class CreateSemestresTable extends Migration
     public function up()
     {
         Schema::create('semestres', function (Blueprint $table) {
-            $table->id('id_semestre')->primary()->unique();
+            $table->id('id_semestre')->unique();
             $table->double('nota');
-            $table->bolean('estado');
-            $table->unsignedInteger('id_matricula');
+            $table->boolean('estado');
+            $table->bigInteger('id_matricula');
             $table->foreign('id_matricula')->references('id_matricula')->on('matriculas');
-            $table->unsignedInteger('id_archivo_parcial1');
+            $table->bigInteger('id_archivo_parcial1');
             $table->foreign('id_archivo_parcial1')->references('id_archivo_parcial1')->on('archivos_parcial1');
-            $table->unsignedInteger('id_archivo_parcial2');
+            $table->bigInteger('id_archivo_parcial2');
             $table->foreign('id_archivo_parcial2')->references('id_archivo_parcial2')->on('archivos_parcial2');
             $table->timestamps();
+
         });
     }
 

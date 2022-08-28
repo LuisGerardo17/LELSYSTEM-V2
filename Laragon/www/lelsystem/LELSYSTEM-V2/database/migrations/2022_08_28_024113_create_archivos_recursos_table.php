@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateMatriculasTable extends Migration
+class CreateArchivosRecursosTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,13 @@ class CreateMatriculasTable extends Migration
      */
     public function up()
     {
-        Schema::create('matriculas', function (Blueprint $table) {
-            $table->id('id_matricula')->unique();
-            $table->string('codigo_curso');
+        Schema::create('archivos_recursos', function (Blueprint $table) {
+            $table->id('id_archivo_curso')->unique();
+            $table->string('nombre_archivo',255);
+            $table->string('codigo_curso',5);
+            $table->bigInteger('codigo_recurso');
             $table->foreign('codigo_curso')->references('codigo_curso')->on('cursos');
-            $table->unsignedInteger('id_estudiante');
-            $table->foreign('id_estudiante')->references('id_estudiante')->on('estudiantes');
-            $table->bolean('activo');
+            $table->foreign('codigo_recurso')->references('codigo_recurso')->on('recursos');
             $table->timestamps();
         });
     }
@@ -31,6 +31,6 @@ class CreateMatriculasTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('matriculas');
+        Schema::dropIfExists('archivos_recursos');
     }
 }
