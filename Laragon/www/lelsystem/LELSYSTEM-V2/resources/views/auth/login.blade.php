@@ -5,14 +5,19 @@
 <div class="login-box">
     <img class="avatar" src="static/img/logo5.png" alt="">
     <h1>LOGIN</h1>
-    <form>
+    <form method="POST" action="">
+        @csrf
         <label for="username">Correo</label>
         <input type="text" placeholder="Ingrese correo">
 
         <label for="password">Contraseña</label>
         <input type="password" placeholder="Ingrese contraseña">
 
-        <input type="submit" value="Iniciar Sesión">
+        @error('message')
+         <p class="border border-red-500 round-md bg-red-100 w-full text-red-600 p-2 my-2">* Error </p>
+        @enderror
+
+        <buton type="submit">Enviar</buton>
 
         <a href="#">¿Olvidaste tu contraseña?</a><br>
         <a href="{{route('register')}}">Registrate aquí</a>

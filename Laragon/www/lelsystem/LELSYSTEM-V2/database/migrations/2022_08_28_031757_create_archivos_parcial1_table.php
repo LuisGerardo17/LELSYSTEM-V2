@@ -22,8 +22,6 @@ class CreateArchivosParcial1Table extends Migration
             $table->foreign('id_matricula')->references('id_matricula')->on('matriculas');
             $table->unsignedInteger('id_cursos_actividades');
             $table->foreign('id_cursos_actividades')->references('id_cursos_actividades')->on('cursos_actividades');
-
-
             $table->timestamps();
         });
     }

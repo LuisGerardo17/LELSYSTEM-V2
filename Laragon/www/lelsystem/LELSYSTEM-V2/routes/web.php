@@ -37,8 +37,8 @@ Route::get('/admin.admin.admin', [App\Http\Controllers\AdministradorController::
 ->name('admin.index');
 
 Route::get('/homepage',function (){
-    return view('admin.home');
-})->name('adminHome');
+    return view('home');
+})->name('home');
 
     //activities
     Route::get('/admin.activities',function (){
@@ -93,12 +93,6 @@ Route::get('/admin.index',function (){
 
 
 
-
-
-
-
-
-
 //Docente
 Route::get('/docente.docente', [App\Http\Controllers\DocenteController::class, 'index'])
 ->middleware('auth.docente')
@@ -112,4 +106,8 @@ Route::resource('estudiante-registro',RegistroEstudiantesController::class);
 
 Route::get('/hola',function (){
     return view('miscambios.registro');
+});
+
+Route::get('/',function (){
+    return view('admin.admin.admin');
 });

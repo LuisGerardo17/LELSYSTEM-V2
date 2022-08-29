@@ -3,7 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
-use App\Models\Usuarios;
+use App\Models\User;
 
 class DatabaseSeeder extends Seeder
 {
@@ -15,13 +15,11 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         // \App\Models\User::factory(10)->create();
-          $usuarios = new Usuarios;
-          $usuarios->nombres = 'Luis Gerardo';
-          $usuarios->correo = 'gerardo17@gmail.com';
-          $usuarios->contrasena = 'potosi1988';
-
-
-         $usuarios ->save();
+          $user = new User;
+          $user->nombres = 'Luis Gerardo';
+          $user->correo = 'gerardo17@gmail.com';
+          $user->contrasena = 'potosi1988';
+         $user ->save();
 
 
     }

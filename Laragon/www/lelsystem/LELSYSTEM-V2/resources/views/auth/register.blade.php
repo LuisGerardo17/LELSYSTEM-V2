@@ -6,39 +6,43 @@
     <img class="avatar" src="static/img/logo5.png" alt="">
     <h1>REGISTRATE AQUÍ</h1>
     <form action="" method="POST"  enctype="">
+        @csrf
         <label for="cedula">Cédula</label>
-        <input type="text" placeholder="Ingrese Cédula">
+        <input type="text"  id = 'cedula' name='cedula' placeholder="Ingrese Cédula">
 
         <label for="nombre">Nombres</label>
-        <input type="text" placeholder="Ingrese Nombres">
+        <input type="text"  id = 'nombres' name='nombres' placeholder="Ingrese Nombres">
 
         <label for="apellido">Apellidos</label>
-        <input type="text" placeholder="Ingrese Apellidos">
+        <input type="text"   id = 'apellidos' name='apellidos' placeholder="Ingrese Apellidos">
 
-        <label for="username">Correo</label>
-        <input type="text" placeholder="Ingrese Correo">
+        <label for="correo">Correo</label>
+        <input type="email"  id ='correo' name='correo' placeholder="Ingrese Correo">
 
         <label for="dirección">Dirección</label>
-        <input type="text" placeholder="Ingrese Dirección">
+        <input type="text" id='direccion' name='direccion' placeholder="Ingrese Dirección">
 
         <label for="telefono">Telefono</label>
-        <input type="text" placeholder="Ingrese Telefono celular">
+        <input type="text"  id='telefono' name='telefono' placeholder="Ingrese Telefono celular">
 
         <label for="password">Contraseña</label>
-        <input type="password" placeholder="Ingrese contraseña">
+        <input type="password" id = 'contrasena' name='contrasena' placeholder="Ingrese contraseña">
+
+        <label for="password">Confirmar contraseña</label>
+        <input type="password" id= 'contrasena' name='password_confirmation' placeholder="Ingrese contraseña">
 
         <label for="imagen">Imagen</label>
         <input type="file" name="imagen"  id="imagen" placeholder="Subir imagen"  class="form-control">
 
         <label for="rol">Rol</label>
         <select class="selec" name="rol" id="rol">
-            <option value="estudiante">Estudiante</option>
-            <option value="docente">Docente</option>
-            <option value="administrador">Administrador</option>
+            <option value="Estudiante">Estudiante</option>
+            <option value="Docente">Docente</option>
+            <option value="Administrador">Administrador</option>
         </select>
 
-        <input type="submit" value="Registrarse">
 
+           <button type="submit" class="btn btn-primary">Enviar</button>
     </form>
 </div>
 
