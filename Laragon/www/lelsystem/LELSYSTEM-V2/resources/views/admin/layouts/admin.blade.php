@@ -122,7 +122,7 @@
 				    </div>
 				    <div class="row-content">
 				      	<div class="least-content">27m</div>
-				      	<h4 class="list-group-item-heading">evaluadionc</h4>
+				      	<h4 class="list-group-item-heading">evaluacionc</h4>
 				      	<p class="list-group-item-text">EVALUACION DOCENTE.</p>
 				    </div>
 				</div>
@@ -147,11 +147,11 @@
           <div class="modal-content">
               <div class="modal-header">
                   <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                  <h4 class="modal-title">Help</h4>
+                  <h4 class="modal-title">Ayuda</h4>
               </div>
               <div class="modal-body">
                   <p>
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt beatae esse velit ipsa sunt incidunt aut voluptas, nihil reiciendis maiores eaque hic vitae saepe voluptatibus. Ratione veritatis a unde autem!
+                      Si tienes problemas con la plataforma o aparecen errores permanentes, por favor contactarse con el administrador para poder solucionarlo, para contactarse presione en el siguiente link. <a href="{{ Route('admin') }}">Ayuda</a>
                   </p>
               </div>
                 <div class="modal-footer">
