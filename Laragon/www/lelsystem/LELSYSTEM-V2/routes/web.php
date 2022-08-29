@@ -36,9 +36,9 @@ Route::get('/admin.admin.admin', [App\Http\Controllers\AdministradorController::
 ->middleware('auth.admin')
 ->name('admin.index');
 
-Route::get('/homepage',function (){
-    return view('home');
-})->name('home');
+Route::get('/homeadmin',function (){
+    return view('admin.home');
+})->name('adminHome');
 
     //activities
     Route::get('/admin.activities',function (){
@@ -104,10 +104,4 @@ Route::get('/docente.docente', [App\Http\Controllers\DocenteController::class, '
 ->name('estudiante.index');*/
 Route::resource('estudiante-registro',RegistroEstudiantesController::class);
 
-Route::get('/hola',function (){
-    return view('miscambios.registro');
-});
 
-Route::get('/',function (){
-    return view('admin.admin.admin');
-});
