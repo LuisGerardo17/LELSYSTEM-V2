@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateActividadesTable extends Migration
+class CreateTipoArchivosTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,9 @@ class CreateActividadesTable extends Migration
      */
     public function up()
     {
-        Schema::create('actividades', function (Blueprint $table) {
-            $table->string('codigo_actividad')->primary()->unique();
-            $table->string('nombre_actividad');
-            $table->string('descripcion');
+        Schema::create('tipo_archivos', function (Blueprint $table) {
+            $table->id('id_tipo_archivo')->unique();
+            $table->string('tipo',5);
             $table->timestamps();
         });
     }
@@ -28,6 +27,6 @@ class CreateActividadesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('actividades');
+        Schema::dropIfExists('tipo_archivos');
     }
 }

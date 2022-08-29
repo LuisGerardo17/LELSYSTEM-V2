@@ -9,9 +9,9 @@ class UserController extends Controller
 {
     public function index()
     {
-       $users = User::all();
-       return view('usuarios',['users'=>$users]);
+       $user = User::all();
+       return view('nombres',['user'=>$user]);
 
     }
-    
+
 }

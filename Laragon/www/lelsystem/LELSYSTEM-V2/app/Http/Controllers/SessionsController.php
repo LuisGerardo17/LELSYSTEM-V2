@@ -14,7 +14,7 @@ class SessionsController extends Controller
   public function store() {
     if(auth()->attempt(request(['correo','contrasena'])) == false) {
         return back()->withErrors([
-          'message' => 'El correo or contraseña esta incorrecto porfavor ingresa nuevamente'
+          'message' => 'El correo o contraseña esta incorrecto porfavor ingresa nuevamente'
         ]);
 
     } else {

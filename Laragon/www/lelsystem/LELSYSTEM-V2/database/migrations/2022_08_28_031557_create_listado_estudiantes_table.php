@@ -19,7 +19,6 @@ class CreateListadoEstudiantesTable extends Migration
             $table->string('descripcion', 20);
             $table->unsignedInteger('id_matricula');
             $table->foreign('id_matricula')->references('id_matricula')->on('matriculas');
-
             $table->timestamps();
         });
     }

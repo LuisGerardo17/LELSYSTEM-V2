@@ -37,8 +37,8 @@ Route::get('/admin.admin.admin', [App\Http\Controllers\AdministradorController::
 ->name('admin.index');
 
 Route::get('/homepage',function (){
-    return view('admin.home');
-})->name('adminHome');
+    return view('home');
+})->name('home');
 
     //activities
     Route::get('/admin.activities',function (){
@@ -89,12 +89,6 @@ Route::get('/homepage',function (){
 Route::get('/admin.index',function (){
     return view('admin.admin.index');
 })->name('index');
-
-
-
-
-
-
 
 
 

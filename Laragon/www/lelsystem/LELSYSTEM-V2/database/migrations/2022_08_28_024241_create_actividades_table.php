@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateAdministradoresTable extends Migration
+class CreateActividadesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,11 @@ class CreateAdministradoresTable extends Migration
      */
     public function up()
     {
-        Schema::create('administradores', function (Blueprint $table) {
-            $table->id('id_administradores')->unique();
-            $table->string('cedula',10);
-            $table->foreign('cedula')->references('cedula')->on('usuarios');
+        Schema::create('actividades', function (Blueprint $table) {
+            $table->id('id_actividad')->unique();
+            $table->string('codigo_actividad',5)->unique();
+            $table->string('nombre_actividad',100);
+            $table->string('descripcion');
             $table->timestamps();
         });
     }
@@ -28,6 +29,6 @@ class CreateAdministradoresTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('administradores');
+        Schema::dropIfExists('actividades');
     }
 }

@@ -15,9 +15,10 @@ class CreateMatriculasTable extends Migration
     {
         Schema::create('matriculas', function (Blueprint $table) {
             $table->id('id_matricula')->unique();
-            $table->string('codigo_curso');
-            $table->foreign('codigo_curso')->references('codigo_curso')->on('cursos');
-            $table->bigInteger('id_estudiante');
+            $table->string('codigo_matricula',10)->unique();
+            $table->unsignedInteger('id_curso');
+            $table->foreign('id_curso')->references('id_curso')->on('cursos');
+            $table->unsignedInteger('id_estudiante');
             $table->foreign('id_estudiante')->references('id_estudiante')->on('estudiantes');
             $table->boolean('activo');
             $table->timestamps();
