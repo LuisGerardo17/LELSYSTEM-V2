@@ -9,6 +9,9 @@ use App\Http\Controllers\EstudianteController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\RegistroEstudiantesController;
 
+Route::get('/homepage',function (){
+    return view('home');
+})->name('home');
 
 //CREACIÓN DE RUTAS PARA EL HOMEPAGE
 Route::get('/home.homepage', [App\Http\Controllers\HomeController::class, 'index'])->name('homepage');
