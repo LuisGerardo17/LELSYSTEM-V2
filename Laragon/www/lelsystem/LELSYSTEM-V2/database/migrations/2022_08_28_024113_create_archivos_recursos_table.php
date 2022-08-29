@@ -15,11 +15,11 @@ class CreateArchivosRecursosTable extends Migration
     {
         Schema::create('archivos_recursos', function (Blueprint $table) {
             $table->id('id_archivo_curso')->unique();
-            $table->string('nombre_archivo',255);
-            $table->string('codigo_curso',5);
-            $table->bigInteger('codigo_recurso');
-            $table->foreign('codigo_curso')->references('codigo_curso')->on('cursos');
-            $table->foreign('codigo_recurso')->references('codigo_recurso')->on('recursos');
+            $table->string('nombre_archivo',1000)->unique();
+            $table->unsignedInteger('id_curso');
+            $table->foreign('id_curso')->references('id_curso')->on('cursos');
+            $table->unsignedInteger('id_recurso');
+            $table->foreign('id_recurso')->references('id_recurso')->on('recursos');
             $table->timestamps();
         });
     }
