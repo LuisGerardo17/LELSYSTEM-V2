@@ -2,47 +2,77 @@
 @section('title', 'Register')
 @section('content')
 
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+
 <div class="login-box">
     <img class="avatar" src="static/img/logo5.png" alt="">
     <h1>REGISTRATE AQUÍ</h1>
-    <form action="" method="POST"  enctype="">
+    <form class="row g-3 needs-validation" novalidate>
         @csrf
-        <label for="cedula">Cédula</label>
-        <input type="text"  id = 'cedula' name='cedula' placeholder="Ingrese Cédula">
+        <div class="col-md-4">
+          <label for="validationCustom01" class="form-label">Cédula</label>
+          <input type="text" class="form-control" id="validationCustom01" placeholder="Ingrese Cédula" required>
+        </div>
 
-        <label for="nombre">Nombres</label>
-        <input type="text"  id = 'nombres' name='nombres' placeholder="Ingrese Nombres">
+        <div class="col-md-4">
+          <label for="validationCustom02" class="form-label">Nombres</label>
+          <input type="text" class="form-control" id="validationCustom02" placeholder="Ingrese Nombres" required>
+        </div>
 
-        <label for="apellido">Apellidos</label>
-        <input type="text"   id = 'apellidos' name='apellidos' placeholder="Ingrese Apellidos">
+        <div class="col-md-4">
+            <label for="validationCustom02" class="form-label">Apellidos</label>
+            <input type="text" class="form-control" id="validationCustom02" placeholder="Ingrese Apellidos" required>
+        </div>
 
-        <label for="correo">Correo</label>
-        <input type="email"  id ='correo' name='correo' placeholder="Ingrese Correo">
+        <div class="col-md-6">
+            <label for="validationCustom03" class="form-label">Dirección</label>
+            <input type="text" class="form-control" id="validationCustom03" placeholder="Calle principal N. y calle secundaria" required>
+        </div>
 
-        <label for="dirección">Dirección</label>
-        <input type="text" id='direccion' name='direccion' placeholder="Ingrese Dirección">
+        <div class="col-md-6">
+            <label for="validationCustom03" class="form-label">Teléfono</label>
+            <div class="input-group has-validation">
+                <span class="input-group-text" id="inputGroupPrepend">+593</span>
+                <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" placeholder="999999999" required>
+            </div>
+        </div>
 
-        <label for="telefono">Telefono</label>
-        <input type="text"  id='telefono' name='telefono' placeholder="Ingrese Telefono celular">
+        <div class="col-md-6">
+          <label for="validationCustomUsername" class="form-label">Correo</label>
+          <div class="input-group has-validation">
+            <span class="input-group-text" id="inputGroupPrepend">@</span>
+            <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" placeholder="example.1@yavirac.edu.ec" required>
+          </div>
+        </div>
 
-        <label for="password">Contraseña</label>
-        <input type="password" id = 'contrasena' name='contrasena' placeholder="Ingrese contraseña">
+        <div class="col-md-3">
+            <label for="validationCustom03" class="form-label">Contraseña</label>
+            <input type="password" class="form-control" id="validationCustom03" placeholder="Contraseña" required>
+        </div>
 
-        <label for="password">Confirmar contraseña</label>
-        <input type="password" id= 'contrasena' name='password_confirmation' placeholder="Ingrese contraseña">
+        <div class="col-md-3">
+            <label for="validationCustom03" class="form-label">Confirmar Contraseña</label>
+            <input type="password" class="form-control" id="validationCustom03" placeholder="Contraseña" required>
+        </div>
 
-        <label for="imagen">Imagen</label>
-        <input type="file" name="imagen"  id="imagen" placeholder="Subir imagen"  class="form-control">
-
-        <label for="rol">Rol</label>
-        <select class="selec" name="rol" id="rol">
+        <div class="col-md-6">
+          <label for="validationCustom04" class="form-label">Rol</label>
+          <select class="form-select" id="validationCustom04" required>
             <option value="Estudiante">Estudiante</option>
             <option value="Docente">Docente</option>
             <option value="Administrador">Administrador</option>
-        </select>
+          </select>
+        </div>
+        
+        <div class="col-md-6">
+          <label for="validationCustom05" class="form-label">Imágen</label>
+          <input type="file" class="form-control" id="validationCustom05" required>
+        </div>
 
-
-           <button type="submit" class="btn btn-primary">Enviar</button>
+        <div class="col-12">
+          <button class="btn btn-primary" type="submit">Enviar</button>
+        </div>
     </form>
 </div>
 
