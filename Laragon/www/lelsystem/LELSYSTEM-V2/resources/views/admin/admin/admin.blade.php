@@ -20,9 +20,11 @@
 							<div class="container-fluid">
 								<div class="row">
 									<div class="col-xs-12 col-md-10 col-md-offset-1">
-									    <form action="">
+									    <form action="{{ url('admin/admin') }}" method="post" enctype="multipart/form-data">
+                                            @csrf
 									    	@include('admin.admin.adminForm')
 									    </form>
+
 									</div>
 								</div>
 							</div>
@@ -52,7 +54,7 @@
 											<td>El Salvador</td>
 											<td>carlos@gmail.com</td>
 											<td>+50312345678</td>
-											<td><a href="{{ Route('adminEdit') }}" class="btn btn-success btn-raised btn-xs"><i class="zmdi zmdi-refresh"></i></a></td>
+											<td><a href="" class="btn btn-success btn-raised btn-xs"><i class="zmdi zmdi-refresh"></i></a></td>
 											<td><a href="#!" class="btn btn-danger btn-raised btn-xs"><i class="zmdi zmdi-delete"></i></a></td>
 										</tr>
 										<tr>

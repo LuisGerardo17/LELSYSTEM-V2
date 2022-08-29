@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\SessionsController;
@@ -35,9 +36,7 @@ Route::get('/docente.mecanica', [App\Http\Controllers\MecanicaController::class,
 Route::get('/docente.electricidad', [App\Http\Controllers\ElectricidadController::class, 'index'])->name('electricidad');
 
 //Administrador
-Route::get('/admin.admin.admin', [App\Http\Controllers\AdministradorController::class, 'index'])
-->middleware('auth.admin')
-->name('admin.index');
+
 
 Route::get('/homeadmin',function (){
     return view('admin.home');
@@ -53,13 +52,13 @@ Route::get('/homeadmin',function (){
     })->name('activitiesEdit');
 
     //admin
-    Route::get('/admin.admin',function (){
+    /*Route::get('/admin.admin',function (){
         return view('admin.admin.admin');
     })->name('admin');
 
     Route::get('/adminEdit',function (){
         return view('admin.admin.adminEdit');
-    })->name('adminEdit');
+    })->name('adminEdit');*/
 
     //courses
     Route::get('/admin.curse',function (){
@@ -106,5 +105,8 @@ Route::get('/docente.docente', [App\Http\Controllers\DocenteController::class, '
 ->middleware('auth.estudiante')
 ->name('estudiante.index');*/
 Route::resource('estudiante-registro',RegistroEstudiantesController::class);
+
+//admin
+Route::resource('admin.admin',AdminController::class);
 
 
