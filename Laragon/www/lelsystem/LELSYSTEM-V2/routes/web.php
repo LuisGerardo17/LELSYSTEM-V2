@@ -9,6 +9,9 @@ use App\Http\Controllers\EstudianteController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\RegistroEstudiantesController;
 
+Route::get('/homepage',function (){
+    return view('home');
+})->name('home');
 
 //CREACIÓN DE RUTAS PARA EL HOMEPAGE
 Route::get('/home.homepage', [App\Http\Controllers\HomeController::class, 'index'])->name('homepage');
@@ -36,9 +39,9 @@ Route::get('/admin.admin.admin', [App\Http\Controllers\AdministradorController::
 ->middleware('auth.admin')
 ->name('admin.index');
 
-Route::get('/homepage',function (){
-    return view('home');
-})->name('home');
+Route::get('/homeadmin',function (){
+    return view('admin.home');
+})->name('adminHome');
 
     //activities
     Route::get('/admin.activities',function (){
@@ -104,6 +107,4 @@ Route::get('/docente.docente', [App\Http\Controllers\DocenteController::class, '
 ->name('estudiante.index');*/
 Route::resource('estudiante-registro',RegistroEstudiantesController::class);
 
-Route::get('/hola',function (){
-    return view('miscambios.registro');
-});
+
