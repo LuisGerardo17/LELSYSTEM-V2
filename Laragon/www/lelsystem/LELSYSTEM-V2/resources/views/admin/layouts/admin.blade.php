@@ -38,7 +38,7 @@
 					</a>
 				</li>
                 <li>
-                    <a href="{{ Route('admin') }}"><i class="zmdi zmdi-account zmdi-hc-fw"></i> Administrar Admin</a>
+                    <a href="{{ url('admin/admin') }}"><i class="zmdi zmdi-account zmdi-hc-fw"></i> Administrar Admin</a>
                 </li>
                 <li>
                     <a href="{{ Route('teacher') }}"><i class="zmdi zmdi-male-alt zmdi-hc-fw"></i> Administrar docente</a>
@@ -151,7 +151,7 @@
               </div>
               <div class="modal-body">
                   <p>
-                      Si tienes problemas con la plataforma o aparecen errores permanentes, por favor contactarse con el administrador para poder solucionarlo, para contactarse presione en el siguiente link. <a href="{{ Route('admin') }}">Ayuda</a>
+                      Si tienes problemas con la plataforma o aparecen errores permanentes, por favor contactarse con el administrador para poder solucionarlo, para contactarse presione en el siguiente link. <a href="">Ayuda</a>
                   </p>
               </div>
                 <div class="modal-footer">
