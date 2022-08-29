@@ -41,10 +41,11 @@ class AdminController extends Controller
             if($request->hasFile('imagen')){
                 $datosAdmin['imagen']=$request->file('imagen')->store('uploadsAdmin','public');
             }
+            dd($contraseña);
         }else{
             dd('error');
         }
-        
+
 
     }
 
