@@ -33,23 +33,23 @@ class TeacherController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store()
+    public function store(Request $request)
     {
-        $datosprofe=Request()->all();
+        $datosDocente=Request()->except('_token');
 
-        /*if($datosTeacher['contrasena']==$datosTeacher['contrasena_verified_at']){
+        if($datosDocente['contrasena']==$datosDocente['contrasena_verified_at']){
             if($request->hasFile('imagen')){
-                $datosTeacher['imagen']=$request->file('imagen')->store('uploadsTeacher','public');
-            }*/
-            //$datosTeacher['rol']='Teacher';
-            //User::insert($datosTeacher);
-            //notify()->preset('registrado');
-            //return view('admin.teacher.teacher');
-            dd($datosprofe);
-        /*}else{
+                $datosDocente['imagen']=$request->file('imagen')->store('uploadsTeacher','public');
+            }
+            $datosDocente['rol']='Teacher';
+            User::insert($datosDocente);
+            notify()->preset('registrado');
+            return view('admin.teacher.teacher');
+            dd($datosDocente);
+        }else{
             notify()->preset('error');
-            //return view('admin.teacher.teacher');
-        }*/
+            return view('admin.teacher.teacher');
+        }
     }
 
 
