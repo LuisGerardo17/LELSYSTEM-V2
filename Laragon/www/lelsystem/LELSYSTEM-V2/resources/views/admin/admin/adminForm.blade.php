@@ -29,7 +29,7 @@
   </div>
   <div class="form-group label-floating">
       <label class="control-label">Confirmar Contraseña</label>
-      <input class="form-control" type="password" name="confirmarContraseña">
+      <input class="form-control" type="password" name="contrasena_verified_at">
     </div>
   <div class="form-group">
     <div>

@@ -37,17 +37,18 @@ class AdminController extends Controller
     public function store(Request $request)
     {
         $datosAdmin=$request->except('_token');
-        $contraseña=$datosAdmin['contrasena'].'-'.$datosAdmin['confirmarContraseña'];
-        if($datosAdmin['contrasena']==$datosAdmin['confirmarContraseña']){
+        if($datosAdmin['contrasena']==$datosAdmin['contrasena_verified_at']){
             if($request->hasFile('imagen')){
                 $datosAdmin['imagen']=$request->file('imagen')->store('uploadsAdmin','public');
             }
+            $datosAdmin['rol']='Administrador';
+
+            User::insert($datosAdmin);
             notify()->preset('registrado');
             return view('admin.admin.admin');
         }else{
             notify()->preset('error');
             return view('admin.admin.admin');
-
         }
 
 
