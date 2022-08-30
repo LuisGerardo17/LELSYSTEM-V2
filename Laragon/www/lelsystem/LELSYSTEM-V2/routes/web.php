@@ -80,13 +80,13 @@ Route::get('/homeadmin',function (){
     })->name('recoursesEdit');
 
     //teacher
-    Route::get('/admin.teacher',function (){
+    /*Route::get('/admin.teacher',function (){
         return view('admin.teacher.teacher');
     })->name('teacher');
 
     Route::get('/TeacherEdit',function (){
         return view('admin.teacher.teacherEdit');
-    })->name('teacherEdit');
+    })->name('teacherEdit');*/
 
 
 Route::get('/admin.index',function (){

@@ -33,9 +33,9 @@ class TeacherController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store()
     {
-        $datosTeacher=$request()->all();
+        $datosprofe=Request()->all();
 
         /*if($datosTeacher['contrasena']==$datosTeacher['contrasena_verified_at']){
             if($request->hasFile('imagen')){
@@ -45,13 +45,13 @@ class TeacherController extends Controller
             //User::insert($datosTeacher);
             //notify()->preset('registrado');
             //return view('admin.teacher.teacher');
-            dd($datosTeacher);
+            dd($datosprofe);
         /*}else{
             notify()->preset('error');
             //return view('admin.teacher.teacher');
         }*/
     }
-        
+
 
     /**
      * Display the specified resource.
