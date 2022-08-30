@@ -53,7 +53,7 @@
                     <a href="{{ url('admin/admin') }}"><i class="zmdi zmdi-account zmdi-hc-fw"></i> Administrar Admin</a>
                 </li>
                 <li>
-                    <a href="{{ url('admin/teacher') }}"><i class="zmdi zmdi-male-alt zmdi-hc-fw"></i> Administrar docente</a>
+                    <a href="{{ url('Teacher/Teacher') }}"><i class="zmdi zmdi-male-alt zmdi-hc-fw"></i> Administrar docente</a>
                 </li>
                 <li>
                     <a href="{{ Route('activities') }}"><i class="zmdi zmdi-book zmdi-hc-fw"></i> Administrar actividad</a>

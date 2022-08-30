@@ -100,7 +100,7 @@ Route::get('/admin.index',function (){
 Route::get('/docente.docente', [App\Http\Controllers\DocenteController::class, 'index'])
 ->middleware('auth.docente')
 ->name('docente.index');
-Route::resource('Teacher/Teacher',TeacherController::class);
+Route::resource('Teacher.Teacher',TeacherController::class);
 //Estudiante
 /*Route::get('/estudiante.estudiante', [App\Http\Controllers\EstudianteController::class, 'index'])
 ->middleware('auth.estudiante')
