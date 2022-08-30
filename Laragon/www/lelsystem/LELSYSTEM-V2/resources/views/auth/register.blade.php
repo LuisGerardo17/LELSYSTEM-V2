@@ -53,7 +53,7 @@
 
         <div class="col-md-3">
             <label for="validationCustom03" class="form-label">Confirmar Contraseña</label>
-            <input type="password" class="form-control" name="contrasena" id="validationCustom03" placeholder="Contraseña" required>
+            <input type="password" class="form-control" name="contrasena_verified_at" id="validationCustom03" placeholder="Contraseña" required>
         </div>
 
         <div class="col-md-6">
