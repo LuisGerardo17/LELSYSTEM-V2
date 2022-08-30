@@ -75,3 +75,20 @@ body {
     color: #fff;
     transform: scale(1.15);
 }
+
+.home {
+    background: #00f;
+    border: none;
+    border-radius: 50px;
+    margin-top: 20px;
+    margin-right: 20px;
+    font-size: 18px;
+    color: #fff;
+    width: 120px;
+    height: 40px;
+    float: right;
+}
+
+.home:hover {
+    transform: scale(1.05);
+}
