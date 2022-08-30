@@ -47,7 +47,7 @@ class AdminController extends Controller
         }else{
             notify()->preset('error');
             return view('admin.admin.admin');
-            
+
         }
 
 
