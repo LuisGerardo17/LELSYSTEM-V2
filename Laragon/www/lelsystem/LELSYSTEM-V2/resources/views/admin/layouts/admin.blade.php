@@ -4,10 +4,21 @@
 	<title>@yield('titulo')</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-	<link rel="stylesheet" href="{{ asset('admin/css/main.css') }}">
     @notifyCss
+    <link rel="stylesheet" href="{{ asset('admin/css/main.css') }}">
+
 </head>
+
+
+
 <body>
+
+
+
+
+
+
+
     <!-- SideBar -->
 	<section class="full-box cover dashboard-sideBar">
 		<div class="full-box dashboard-sideBar-bg btn-menu-dashboard"></div>
@@ -58,9 +69,9 @@
 			</ul>
 		</div>
 	</section>
-    <section class="full-box dashboard-contentPage">
+    <section class="full-box dashboard-contentPage"><!--fondo arreglar-->
 		<!-- NavBar -->
-		<nav class="full-box dashboard-Navbar">
+		<nav class="full-box dashboard-Navbar ">
 			<ul class="full-box list-unstyled text-right">
 				<li class="pull-left">
 					<a href="#!" class="btn-menu-dashboard"><i class="zmdi zmdi-more-vert"></i></a>
@@ -172,7 +183,7 @@
 	<script>
 		$.material.init();
 	</script>
-    @notifyJs
-    <x:notify-messages />
+@notifyJs
+
 </body>
 </html>

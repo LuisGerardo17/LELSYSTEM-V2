@@ -1,7 +1,9 @@
+
 @extends('admin.layouts.admin')
 @section('titulo','Admin')
 @section('contenido')
 		<!-- Content page -->
+
 		<div class="container-fluid">
 			<div class="page-header">
 			  <h1 class="text-titles"><i class="zmdi zmdi-account zmdi-hc-fw"></i> Administrador <small>Administrador</small></h1>
@@ -29,6 +31,8 @@
 								</div>
 							</div>
 						</div>
+
+                        <x:notify-messages/>
 					  	<div class="tab-pane fade" id="list">
 							<div class="table-responsive">
 								<table class="table table-hover text-center">

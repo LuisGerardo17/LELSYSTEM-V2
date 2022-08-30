@@ -14,6 +14,7 @@ class AdminController extends Controller
      */
     public function index()
     {
+
         return view('admin.admin.admin');
     }
 
@@ -41,9 +42,12 @@ class AdminController extends Controller
             if($request->hasFile('imagen')){
                 $datosAdmin['imagen']=$request->file('imagen')->store('uploadsAdmin','public');
             }
-            dd($contraseña);
+            notify()->preset('registrado');
+            return view('admin.admin.admin');
         }else{
-            dd('error');
+            notify()->preset('error');
+            return view('admin.admin.admin');
+            
         }
 
 

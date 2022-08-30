@@ -83,6 +83,7 @@ body, html{
 	top: 0;
 	height: 100%;
 	transition: all .3s ease-in-out;
+    z-index: -1000;
 }
 /*sideBar*/
 .dashboard-sideBar,
@@ -212,7 +213,7 @@ body, html{
 /*contentPage*/
 .dashboard-contentPage{
 	right: 0;
-	z-index: 1;
+	z-index: 0;
 	padding-left: 270px;
 }
 .dashboard-Navbar,

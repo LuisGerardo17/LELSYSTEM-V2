@@ -9,7 +9,7 @@ return [
     |
     | You can change the theme of notifications by specifying the desired theme.
     | By default the theme light is activated, but you can change it by
-    | specifying the dark mode. To change theme, update the global variable to `dark`
+    | specifying the dark mode. To change theme, update the global variable to `dark`,'light'
     |
     */
 
@@ -55,6 +55,18 @@ return [
             'type'    => 'success',
             'model'   => 'connect',
             'title'   => 'User Updated',
+        ],
+        'registrado' => [
+            'message' => 'Usuario registrado con exito.',
+            'type'    => 'success',
+            'model'   => 'toast',
+            'title'   => 'Listo',
+        ],
+        'error' => [
+            'message' => 'Error al registrar compruebe los datos.',
+            'type'    => 'error',
+            'model'   => 'toast',
+            'title'   => 'Error',
         ],
     ],
 
