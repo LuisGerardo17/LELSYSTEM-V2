@@ -64,13 +64,19 @@ body{
 
  .desplegable button:hover{
      transform: scale(1.15);
- }
+}
+
  .menua{
      background-color: rgba(0, 0, 0, 0.801);
  }
+
  .color{
-     color: white;
+     color: #fff;
  }
+.color:hover{
+    background: transparent;
+}
+
  .imgSlider{
      height: 570px;
      object-fit: fill;

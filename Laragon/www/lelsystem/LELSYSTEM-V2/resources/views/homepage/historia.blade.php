@@ -152,14 +152,16 @@
 				<div class="row">
 
 					<div class="col-md widget">
+						<center>
 						<h3 class="widget-title">Contactanos</h3>
 						<div class="widget-body">
 							<p>+593 999999999<br>
-								<a href="mailto:esy.mera@yavirac.edu.ec"><i
+								<a href="mailto:esy.mera@yavirac.edu.ec"><br><i
 										class='bx bxl-gmail border-icon'></i></a><br>
 
 							</p>
 						</div>
+						</center>
 					</div>
 
 					<div class="col-md widget">
