@@ -60,7 +60,11 @@
 
             <input type="password" class="form-control" name="contrasena_verified_at" id="validationCustom03" placeholder="Contraseña" required>
 
+
+            <input type="password" class="form-control" name="contrasena_verified_at" id="validationCustom03" placeholder="Contraseña" required>
+
           
+
         </div>
 
         <div class="col-md-6">

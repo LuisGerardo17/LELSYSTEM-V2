@@ -78,13 +78,13 @@ body{
 }
 
  .imgSlider{
-     height: 570px;
-     object-fit: fill;
+    height: 570px;
+    object-fit: fill;
      
  }
   
  .imgPag{
-    background-color: black;
+    background-color: #000;
     display: flex;
 }
 .imgPag:hover{
