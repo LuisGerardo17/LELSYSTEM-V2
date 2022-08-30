@@ -20,7 +20,7 @@ class CreateUsersTable extends Migration
             $table->string('apellidos');
             $table->string('correo')->unique();
             $table->string('direccion');
-            $table->string('contrasena')->unique();
+            $table->string('contrasena');
             $table->string('contrasena_verified_at')->nullable();
             $table->string('telefono');
             $table->string('imagen');

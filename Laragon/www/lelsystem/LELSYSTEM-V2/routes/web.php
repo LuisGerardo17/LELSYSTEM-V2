@@ -52,14 +52,14 @@ Route::get('/homeadmin',function (){
         return view('admin.activities.activitiesEdit');
     })->name('activitiesEdit');
 
-    //admin
-    /*Route::get('/admin.admin',function (){
+
+    Route::get('/admin.admin',function (){
         return view('admin.admin.admin');
     })->name('admin');
 
     Route::get('/adminEdit',function (){
         return view('admin.admin.adminEdit');
-    })->name('adminEdit');*/
+    })->name('adminEdit');
 
     //courses
     Route::get('/admin.curse',function (){
