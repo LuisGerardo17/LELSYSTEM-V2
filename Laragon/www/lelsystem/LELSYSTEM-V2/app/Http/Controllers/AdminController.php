@@ -15,8 +15,8 @@ class AdminController extends Controller
      */
     public function index()
     {
-
-        return view('admin.admin.admin');
+        $administradores=Administradores::paginate(2);
+        return view('admin.admin.admin',compact('administradores'));
     }
 
     /**
@@ -47,11 +47,11 @@ class AdminController extends Controller
             User::insert($datosAdmin);
             Administradores::insert(['cedula'=>$datosAdmin['cedula']]);
             notify()->preset('registrado');
-            return view('admin.admin.admin');
+            return redirect('admin/admin');
 
         }else{
             notify()->preset('error');
-            return view('admin.admin.admin');
+            return redirect('admin/admin');
         }
 
 

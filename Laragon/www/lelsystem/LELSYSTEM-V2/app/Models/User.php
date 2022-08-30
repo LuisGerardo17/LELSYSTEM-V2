@@ -12,6 +12,8 @@ class User extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
 
+
+
     /**
      * The attributes that are mass assignable.
      *
@@ -51,5 +53,10 @@ class User extends Authenticatable
   //Funcion para encriptar la contraseña
     public function setPasswordAttribute($contrasena){
        $this->attributes['contrasena'] = bcrypt($contrasena);
+    }
+    //funcion rol admin
+    public function admin(){
+        return $this->hasMany(Administradores::class,'cedula','cedula');
+        //hasMany ->tiene muchos ('en este caso administradores','con id_admin','es igual a id_usuario')
     }
 }
