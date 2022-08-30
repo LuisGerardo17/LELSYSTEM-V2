@@ -9,25 +9,34 @@ use Illuminate\Support\Facades\Validator;
 
 class RegisterController extends Controller
 {
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
     public function create() {
-         
-
-         return view('auth.register');
+     return view('auth.register');
 
 }
 
- 
+
     public function store(){
-      
+
         $this->validate(request(),[
-          'username'=>'required',
-          'email'=>'required|email',
-          'password'=>'required|confirmed',
+          'cedula'=>'required',
+          'nombres'=>'required',
+          'apellidos'=>'required',
+          'correo'=>'required',
+          'direccion'=>'required',
+          'telefono'=>'required',
+          'contrasena'=>'required',
+          'imagen'=>'required',
+          'rol'=>'required',
         ]);
-        
-        $user = User::create(request(['username','email','password']));
+
+        $user = User::create(request(['cedula','nombres','apellidos','correo','direccion','telefono','contrasena','imagen','rol']));
         auth()->login($user);
-        return redirect()->to('administrador.admin');
+        return redirect()->to('admin.admin.admin');
     }
 }
 

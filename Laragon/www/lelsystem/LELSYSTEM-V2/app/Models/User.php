@@ -18,13 +18,16 @@ class User extends Authenticatable
      * @var array<int, string>
      */
     protected $fillable = [
-        'name',
-        'username',
-        'ci',
-        'email',
-        'password',
+        'cedula',
+        'nombres',
+        'apellidos',
+        'correo',
+        'direccion',
+         'telefono',
+        'contrasena',
+        'imagen',
         'rol',
-        'imagen'
+
     ];
 
     /**
@@ -33,7 +36,7 @@ class User extends Authenticatable
      * @var array<int, string>
      */
     protected $hidden = [
-        'password',
+        'contrasena',
         'remember_token',
     ];
 
@@ -46,7 +49,7 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
   //Funcion para encriptar la contraseña
-    public function setPasswordAttribute($password){
-       $this->attributes['password'] = bcrypt($password);
+    public function setPasswordAttribute($contrasena){
+       $this->attributes['contrasena'] = bcrypt($contrasena);
     }
 }

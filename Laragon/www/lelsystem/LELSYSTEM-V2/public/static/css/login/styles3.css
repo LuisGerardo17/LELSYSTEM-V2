@@ -1,0 +1,154 @@
+body{
+    background-image: url(img/FONDO.jpeg);
+     background-size: cover;
+     background-repeat: no-repeat;
+     background-position: center;
+     background-attachment: fixed;
+     color: white;
+ }
+ .logo{
+    margin: 0;
+    float: left;
+    margin-top: 5px;
+    margin-left: 20px;
+    border-radius: 10%;
+    background: #fff; 
+ }
+ 
+ .lista{
+    margin: 0;
+    padding: 0;
+    float: right;
+    margin-top: 10px;
+    border-radius: 40px;
+ }
+
+.nav-item{
+     margin-top: 15px;
+     padding-left: 16px;
+     padding-right: 16px;
+ }
+ 
+.marign{
+     display: block;
+     padding: 0.5rem 1rem;
+     transition: all 0.4s linear;
+     border-radius: 50px;
+     color: rgb(255, 255, 255);
+ }
+ .lista li a:hover {
+    transform: scale(1.15);
+    background: transparent;
+    color: #fff;
+ }
+ 
+ .colorq{
+     color: #fff;
+     background: #000;
+     font-size: 16px;
+ }
+ .colorq:hover{
+    transform: scale(1.15);
+    border: #000 solid 1px;
+ }
+ #fondo{
+     background: #00f;
+ }
+
+ .desplegable button{
+     border-radius: 50px;
+     display: block;
+     padding: 0.5rem 1rem;
+     transition: all 0.4s linear;
+     background-color: transparent;
+     color: #fff;
+     border: none;
+     margin-top: 3px;   
+ }
+
+ .desplegable button:hover{
+     transform: scale(1.15);
+ }
+ .menua{
+     background-color: rgba(0, 0, 0, 0.801);
+ }
+ .color{
+     color: white;
+ }
+ .imgSlider{
+     height: 570px;
+     object-fit: fill;
+     
+ }
+  
+ .imgPag{
+    background-color: black;
+    display: flex;
+}
+.imgPag:hover{
+    -webkit-transform:scale(0.999);
+    transform:scale(0.999);
+}
+
+ .iconos {
+     width: 300px;
+     display: flex;
+     justify-content: space-around;
+     margin: auto;
+ }
+ 
+.border-icon {
+     height: 20px;
+     width: 20px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     padding: 1.5rem;
+     border: solid thin white;
+     border-radius: 50%;
+     font-size: 1.5rem;
+     transition: all .3s ease-in;
+     background: #fff;
+ }
+ 
+
+ 
+ 
+main{
+     background-color: #fff;
+     color: rgb(0, 0, 0);
+ }
+ .row p{
+     padding-top: 10px;
+     font-size: 25px;
+     font-family: Georgia, 'Times New Roman', Times, serif;
+     font-weight: 520;
+     padding-left: 30px;
+     padding-right: 30px;
+
+ }
+ .colorn{
+    background-color: #00f;
+    color: white;
+ }
+.img {
+    border-radius: 20%;
+    border: #fff solid 5px;
+}
+.img2 {
+    border-radius: 20%;
+    border: #000 solid 5px;
+}
+ 
+
+ 
+ #footer{
+     background: linear-gradient(gray , black);
+ }
+ .footer2{
+     background-color: black;
+ }
+ 
+ 
+ 
+  

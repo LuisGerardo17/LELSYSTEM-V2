@@ -1,0 +1,77 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: url(../login/FondoA.jpg) no-repeat center top;
+    background-size: cover;
+    font-family: sans-serif;
+    height: 100vh;
+}
+
+.login-box {
+    width: 320px;
+    height: 420px;
+    background: #009688;
+    color: #fff;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    padding: 60px 30px;
+    border-radius: 5%;
+}
+
+.login-box .avatar {
+    width: 200px;
+    height: 125px;
+    border-radius: 10%;
+    position: absolute;
+    top: -70px;
+    left: calc(34.2% - 50px);
+    background: #fff;
+    border: 3px solid #009688;
+}
+
+.login-box h1 {
+    margin: 0;
+    padding: 0 0 20px;
+    text-align: center; 
+    font-size: 30px;
+}
+
+.login-box input[type="submit"] {
+    border: none;
+    outline: none;
+    height: 40px;
+    width: 260px;
+    background: #00f;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 5px; 
+}
+
+.login-box a.o {
+    text-decoration: none;
+    font-size: 15px;
+    line-height: 20px;
+    color: darkgray;
+    text-align: right;
+}
+
+.login-box a.reg {
+    text-decoration: none;
+    font-size: 15px;
+    line-height: 20px;
+    color: #fff;
+    text-align: center;
+}
+
+.login-box a.o:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.login-box a.reg:hover {
+    color: #fff;
+    transform: scale(1.15);
+}

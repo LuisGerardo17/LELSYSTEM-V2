@@ -1,0 +1,46 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: url(../login/FondoA.jpg) no-repeat center top;
+    background-size: cover;
+    font-family: sans-serif;
+    height: 100vh;
+}
+
+.login-box {
+    width: 800px;
+    height: 575px;
+    color: #fff;
+    top: 52%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    padding: 70px 30px;
+    background: #009688;
+    border-radius: 5%;
+}
+
+.login-box .avatar {
+    width: 200px;
+    height: 125px;
+    border-radius: 10%;
+    position: absolute;
+    top: calc(4% - 50px);
+    left: calc(44% - 50px);
+    background: #fff;
+    border: #009688 solid 3px;
+}
+
+.login-box h1 {
+    margin: 0;
+    padding: 30px 0 20px;
+    text-align: center; 
+    font-size: 40px;
+}
+
+.login-box .btn {
+    background-color: #00f;
+    border: #00f solid 1px;
+    
+}

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\SessionsController;
@@ -7,10 +8,11 @@ use App\Http\Controllers\AdministradorController;
 use App\Http\Controllers\DocenteController;
 use App\Http\Controllers\EstudianteController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\RegistroEstudiantesController;
 
-Route::get('/', function () {
-    return view('home.homepage');
-})->middleware('auth');
+Route::get('/homepage',function (){
+    return view('home');
+})->name('home');
 
 //CREACIÓN DE RUTAS PARA EL HOMEPAGE
 Route::get('/home.homepage', [App\Http\Controllers\HomeController::class, 'index'])->name('homepage');
@@ -33,10 +35,64 @@ Route::get('/docente.informatica', [App\Http\Controllers\InformaticaController::
 Route::get('/docente.mecanica', [App\Http\Controllers\MecanicaController::class, 'index'])->name('mecanica');
 Route::get('/docente.electricidad', [App\Http\Controllers\ElectricidadController::class, 'index'])->name('electricidad');
 
-//Administrador 
-Route::get('/administrador.admin', [App\Http\Controllers\AdministradorController::class, 'index'])
-->middleware('auth.admin')
-->name('admin.index');
+//Administrador
+
+
+Route::get('/homeadmin',function (){
+    return view('admin.home');
+})->name('adminHome');
+
+    //activities
+    Route::get('/admin.activities',function (){
+        return view('admin.activities.activities');
+    })->name('activities');
+
+    Route::get('/adminEdit',function (){
+        return view('admin.activities.activitiesEdit');
+    })->name('activitiesEdit');
+
+    //admin
+    /*Route::get('/admin.admin',function (){
+        return view('admin.admin.admin');
+    })->name('admin');
+
+    Route::get('/adminEdit',function (){
+        return view('admin.admin.adminEdit');
+    })->name('adminEdit');*/
+
+    //courses
+    Route::get('/admin.curse',function (){
+        return view('admin.courses.curse');
+    })->name('curse');
+
+    Route::get('/CourseEdit',function (){
+        return view('admin.courses.curseEdit');
+    })->name('curseEdit');
+
+    //resourses
+    Route::get('/admin.recourses',function (){
+        return view('admin.resourses.recourses');
+    })->name('recourses');
+
+    Route::get('/ResoursesEdit',function (){
+        return view('admin.resourses.recoursesEdit');
+    })->name('recoursesEdit');
+
+    //teacher
+    Route::get('/admin.teacher',function (){
+        return view('admin.teacher.teacher');
+    })->name('teacher');
+
+    Route::get('/TeacherEdit',function (){
+        return view('admin.teacher.teacherEdit');
+    })->name('teacherEdit');
+
+
+Route::get('/admin.index',function (){
+    return view('admin.admin.index');
+})->name('index');
+
+
 
 
 //Docente
@@ -45,6 +101,12 @@ Route::get('/docente.docente', [App\Http\Controllers\DocenteController::class, '
 ->name('docente.index');
 
 //Estudiante
-Route::get('/estudiante.estudiante', [App\Http\Controllers\EstudianteController::class, 'index'])
+/*Route::get('/estudiante.estudiante', [App\Http\Controllers\EstudianteController::class, 'index'])
 ->middleware('auth.estudiante')
-->name('estudiante.index');
+->name('estudiante.index');*/
+Route::resource('estudiante-registro',RegistroEstudiantesController::class);
+
+//admin
+Route::resource('admin.admin',AdminController::class);
+
+

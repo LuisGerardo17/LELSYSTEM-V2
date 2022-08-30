@@ -9,35 +9,33 @@ class SessionsController extends Controller
 {
     public function create(){
         return view('auth.login');
+}
 
-   }
-
-    
-    public function store() {
-    if(auth()->attempt(request(['rol','ci','password'])) == false) {
+  public function store() {
+    if(auth()->attempt(request(['correo','contrasena'])) == false) {
         return back()->withErrors([
-          'message' => 'The rol, ci or password is incorrect please try again'
+          'message' => 'El correo o contraseña esta incorrecto porfavor ingresa nuevamente'
         ]);
 
     } else {
-        if(auth()->user()->role == 'ADMINISTRADOR'){
+        if(auth()->user()->rol == 'Administrador'){
 
-            return redirect()->to('administrador.admin');
-            
-        } elseif(auth()->user()->role == 'DOCENTE'){
+            return redirect()->to('admin.admin.admin');
+
+        } elseif(auth()->user()->rol == 'Docente'){
 
             return redirect()->to('docente.docente');
-        } elseif(auth()->user()->role == 'ESTUDIANTE'){
+        } elseif(auth()->user()->rol == 'Estudiante'){
 
             return redirect()->to('estudiante.estudiante');
          }
-        
+
         else {
             return redirect()->to('/');
         }
- 
+
        }
-          
+
     }
 
     public function destroy() {
