@@ -20,23 +20,11 @@ class RegisterController extends Controller
 }
 
 
-    public function store(){
+    public function store(Request $request){
 
-        $this->validate(request(),[
-          'cedula'=>'required',
-          'nombres'=>'required',
-          'apellidos'=>'required',
-          'correo'=>'required',
-          'direccion'=>'required',
-          'telefono'=>'required',
-          'contrasena'=>'required',
-          'imagen'=>'required',
-          'rol'=>'required',
-        ]);
-
-        $user = User::create(request(['cedula','nombres','apellidos','correo','direccion','telefono','contrasena','imagen','rol']));
+        $user = User::create(request(['cedula','nombres','apellidos','correo','direccion','telefono','contrasena','contrasena_verified_at','imagen','rol']));
         auth()->login($user);
-        return redirect()->to('admin.admin.admin');
+        return redirect()->to('auth.login');
     }
 }
 
