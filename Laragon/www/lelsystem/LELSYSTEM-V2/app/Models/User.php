@@ -23,7 +23,7 @@ class User extends Authenticatable
         'apellidos',
         'correo',
         'direccion',
-         'telefono',
+        'telefono',
         'contrasena',
         'imagen',
         'rol',

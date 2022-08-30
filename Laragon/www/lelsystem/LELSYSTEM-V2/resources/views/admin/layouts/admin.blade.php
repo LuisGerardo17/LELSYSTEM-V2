@@ -151,7 +151,7 @@
               </div>
               <div class="modal-body">
                   <p>
-                      Si tienes problemas con la plataforma o aparecen errores permanentes, por favor contactarse con el administrador para poder solucionarlo, para contactarse presione en el siguiente link. <a href="{{ Route('admin') }}">Ayuda</a>
+                      Si tienes problemas con la plataforma o aparecen errores permanentes, por favor contactarse con el administrador para poder solucionarlo, para contactarse presione en el siguiente link.
                   </p>
               </div>
                 <div class="modal-footer">

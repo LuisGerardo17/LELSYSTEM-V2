@@ -21,7 +21,8 @@
 							<div class="container-fluid">
 								<div class="row">
 									<div class="col-xs-12 col-md-10 col-md-offset-1">
-									    <form action="">
+									    <form action="{{ url('Teacher/Teacher') }} " method="POST" enctype="multipart/form-data">
+											@csrf
 									    	@include('admin.teacher.teacherForm')
 									    </form>
 									</div>
@@ -40,9 +41,6 @@
 											<th class="text-center">Address</th>
 											<th class="text-center">Email</th>
 											<th class="text-center">Phone</th>
-											<th class="text-center">Specialty</th>
-											<th class="text-center">Birthday</th>
-											<th class="text-center">Gender</th>
 											<th class="text-center">Update</th>
 											<th class="text-center">Delete</th>
 										</tr>
@@ -56,9 +54,6 @@
 											<td>El Salvador</td>
 											<td>carlos@gmail.com</td>
 											<td>+50312345678</td>
-											<td>IT</td>
-											<td>07/03/1997</td>
-											<td>Male</td>
 											<td><a href="{{ Route('teacherEdit') }}" class="btn btn-success btn-raised btn-xs"><i class="zmdi zmdi-refresh"></i></a></td>
 											<td><a href="#!" class="btn btn-danger btn-raised btn-xs"><i class="zmdi zmdi-delete"></i></a></td>
 										</tr>
@@ -70,9 +65,6 @@
 											<td>El Salvador</td>
 											<td>alicia@gmail.com</td>
 											<td>+50312345678</td>
-											<td>Social Work</td>
-											<td>23/07/1997</td>
-											<td>Female</td>
 											<td><a href="#!" class="btn btn-success btn-raised btn-xs"><i class="zmdi zmdi-refresh"></i></a></td>
 											<td><a href="#!" class="btn btn-danger btn-raised btn-xs"><i class="zmdi zmdi-delete"></i></a></td>
 										</tr>
@@ -84,9 +76,6 @@
 											<td>El Salvador</td>
 											<td>sarai@gmail.com</td>
 											<td>+50312345678</td>
-											<td>Lawyer</td>
-											<td>10/09/1991</td>
-											<td>Female</td>
 											<td><a href="#!" class="btn btn-success btn-raised btn-xs"><i class="zmdi zmdi-refresh"></i></a></td>
 											<td><a href="#!" class="btn btn-danger btn-raised btn-xs"><i class="zmdi zmdi-delete"></i></a></td>
 										</tr>
@@ -98,9 +87,6 @@
 											<td>El Salvador</td>
 											<td>alba@gmail.com</td>
 											<td>+50312345678</td>
-											<td>Designer</td>
-											<td>19/04/1993</td>
-											<td>Female</td>
 											<td><a href="#!" class="btn btn-success btn-raised btn-xs"><i class="zmdi zmdi-refresh"></i></a></td>
 											<td><a href="#!" class="btn btn-danger btn-raised btn-xs"><i class="zmdi zmdi-delete"></i></a></td>
 										</tr>

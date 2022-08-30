@@ -8,6 +8,7 @@ use App\Http\Controllers\DocenteController;
 use App\Http\Controllers\EstudianteController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\RegistroEstudiantesController;
+use App\Http\Controllers\TeacherController;
 
 Route::get('/homepage',function (){
     return view('home');
@@ -100,7 +101,7 @@ Route::get('/admin.index',function (){
 Route::get('/docente.docente', [App\Http\Controllers\DocenteController::class, 'index'])
 ->middleware('auth.docente')
 ->name('docente.index');
-
+Route::resource('Teacher/Teacher',TeacherController::class);
 //Estudiante
 /*Route::get('/estudiante.estudiante', [App\Http\Controllers\EstudianteController::class, 'index'])
 ->middleware('auth.estudiante')
