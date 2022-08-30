@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use App\Models\Administradores;
 use Illuminate\Http\Request;
 
 class AdminController extends Controller
@@ -41,11 +42,13 @@ class AdminController extends Controller
             if($request->hasFile('imagen')){
                 $datosAdmin['imagen']=$request->file('imagen')->store('uploadsAdmin','public');
             }
-            $datosAdmin['rol']='Administrador';
 
+            $datosAdmin['rol']='Administrador';
             User::insert($datosAdmin);
+            Administradores::insert(['cedula'=>$datosAdmin['cedula']]);
             notify()->preset('registrado');
             return view('admin.admin.admin');
+
         }else{
             notify()->preset('error');
             return view('admin.admin.admin');

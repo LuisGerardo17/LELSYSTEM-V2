@@ -14,9 +14,9 @@ class CreateEstudiantesTable extends Migration
     public function up()
     {
         Schema::create('estudiantes', function (Blueprint $table) {
-            $table->id();
-            $table->unsignedInteger('user_id');
-            $table->foreign('user_id')->references('id')->on('users');
+
+            $table->string('cedula',10)->primary();
+            $table->foreign('cedula')->references('cedula')->on('users');
             $table->timestamps();
         });
     }

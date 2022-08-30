@@ -27,7 +27,11 @@
 
         <div class="col-md-6">
             <label for="validationCustom03" class="form-label">Dirección</label>
+
             <input type="text" class="form-control" name='direccion' id="validationCustom03" placeholder="Calle principal N. y calle secundaria" required>
+
+            <input type="text" class="form-control" name="direccion" id="validationCustom03" placeholder="Calle principal N. y calle secundaria" required>
+
         </div>
 
         <div class="col-md-6">
@@ -53,12 +57,18 @@
 
         <div class="col-md-3">
             <label for="validationCustom03" class="form-label">Confirmar Contraseña</label>
+
             <input type="password" class="form-control" name="contrasena_verified_at" id="validationCustom03" placeholder="Contraseña" required>
+
+          
         </div>
 
         <div class="col-md-6">
           <label for="validationCustom04" class="form-label">Rol</label>
+
           <select class="form-select" id="validationCustom04" name="rol" required>
+
+          <select class="form-select" name="rol" id="validationCustom04" required>
             <option value="Estudiante">Estudiante</option>
             <option value="Docente">Docente</option>
             <option value="Administrador">Administrador</option>

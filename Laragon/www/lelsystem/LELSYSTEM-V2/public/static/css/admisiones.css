@@ -9,10 +9,10 @@ body{
 .logo{
     margin: 0;
     float: left;
-    margin-top: 12px;
-    margin-left: 30px;
-    font-size: 30px;
-    
+    margin-top: 5px;
+    margin-left: 20px;
+    border-radius: 10%;
+    background: #fff; 
 }
 .lista{
     margin: 0;
@@ -22,10 +22,7 @@ body{
     margin-top: 10px;
     border-radius: 40px;
 }
-.lista  li{
-    display: inline-block;
-    
-}
+
 .marign{
     margin-top: 3px;
     
@@ -35,7 +32,7 @@ body{
     
 }
 .fondobajo{
-   background-color: rgb(62, 65, 68); 
+   background-color: #009688; 
     color: rgb(255, 255, 255);
     padding: 12px;
     height: auto;
@@ -61,43 +58,43 @@ body{
     color: rgb(255, 255, 255);
 }
 .lista li a:hover {
-    background: rgba(255, 255, 255, 0.938);
-    color: rgb(0, 0, 0);
+    color: #fff;
 }
-.sesiones{
-    background-color: rgba(255, 255, 255, 0.726);
-    border-radius: 50px;
-    color: white;
-}
+
 .colorq{
     color: white;
+    background: #00f;
 }
 #fondo{
-    background-color: rgb(62, 65, 68);
+    background-color: #009688;
 }
 .desplegable button{
     border-radius: 50px;
     display: block;
     padding: 0.5rem 1rem;
     transition: all 0.4s linear;
-    background-color: rgb(62, 65, 68);
-    color: rgb(255, 255, 255);
+    background: transparent;
+    color: #fff;
     border: none;
     margin-top: 3px;
 }
-.nav-item a:hover{
-    background-color: white;
-}
 .desplegable button:hover{
-    background: rgba(255, 255, 255, 0.938);
-    color: black;
+    transform: scale(1.15);
 }
+.nav-item a:hover{
+    transform: scale(1.15);
+}
+
 .menua{
     background-color: rgba(0, 0, 0, 0.801);
 }
 .color{
-    color: white;
+    color: #fff;
 }
+.color:hover{
+    background: transparent;
+}
+
 .imgSlider{
     height: 600px;
     object-fit: fill;
@@ -112,43 +109,8 @@ body{
     transform:scale(0.999);
 }
 
-.posicionq{
-    width: 40px;
-    float: right;
-    margin-right: 20px;
-    margin-top: 10px;
-    
-}
 a{
     text-decoration: none;
-}
-.padin{
-    padding: 0;
-}
-
-.blanco{
-    color: white;
-    margin: 8px;
-    padding-top: 10px;
-    padding-bottom: 8px;
-    padding-right: 200px;
-    
-}
-.blancoo{
-    color: white;
-    margin: 8px;
-    padding-top: 10px;
-    padding-bottom: 8px;
-    padding-right: 150px;
-    
-}
-.blancooo{
-    color: white;
-    margin: 8px;
-    padding-top: 10px;
-    padding-bottom: 8px;
-    padding-right: 190px;
-    
 }
 
 .sesionesbajos{
@@ -201,20 +163,8 @@ a{
     
 }
 
-.X{
-   background-color: white;
-}
-@media (max-width:841px){
-    .bajo{
-        display: block;
-        
-    }
-    #fondo{
-        display: none;
-    }
-}
 .iconos {
-    width: 200px;
+    width: 300px;
     display: flex;
     justify-content: space-around;
     margin: auto;
@@ -231,6 +181,7 @@ a{
     border-radius: 50%;
     font-size: 1.5rem;
     transition: all .3s ease-in;
+    background: #fff;
 }
 
 
@@ -257,7 +208,7 @@ main{
 
 
 #footer{
-    background-color: rgb(62, 65, 68);
+    background-color: #009688;
 }
 .footer2{
     background-color: black;
