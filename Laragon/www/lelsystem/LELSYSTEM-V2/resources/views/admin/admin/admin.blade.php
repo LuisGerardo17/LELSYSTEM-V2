@@ -38,13 +38,13 @@
 								<table class="table table-hover text-center">
 									<thead>
 										<tr>
-											<th class="text-center">#</th>
+
                                             <th class="text-center">Foto</th>
-											<th class="text-center">Name</th>
-											<th class="text-center">Last Name</th>
-											<th class="text-center">Address</th>
+											<th class="text-center">Nombres</th>
+											<th class="text-center">Apellido</th>
+											<th class="text-center">direccion</th>
 											<th class="text-center">Email</th>
-											<th class="text-center">Phone</th>
+											<th class="text-center">Telefono</th>
 											<th class="text-center">Update</th>
 											<th class="text-center">Delete</th>
 										</tr>
