@@ -8,23 +8,32 @@
 <div class="login-box">
     <img class="avatar" src="static/img/logo5.png" alt="">
     <h1>LOGIN</h1>
-    <form class="row g-3 needs-validation" novalidate>
+    <form class="row g-3 needs-validation" method="post" action="">
+        @csrf
         <div class="col-md-12">
           <label for="validationCustomUsername" class="form-label">Correo</label>
+
           <input type="text" class="form-control" name="correo" id="validationCustomUsername" aria-describedby="inputGroupPrepend" placeholder="example.1@yavirac.edu.ec" required>
+
+          <input type="text" class="form-control" name = "correo" id="validationCustomUsername" aria-describedby="inputGroupPrepend" placeholder="example.1@yavirac.edu.ec">
+
         </div>
 
         <div class="col-md-12">
             <label for="validationCustom03" class="form-label">Contraseña</label>
+
             <input type="password" class="form-control" name="contrasena" id="validationCustom03" placeholder="Contraseña" required>
+
+            <input type="password" class="form-control" name = "contrasena" id="validationCustom03" placeholder="Contraseña">
+
         </div>
 
         <a class="o" href="#">¿Olvidaste tu contraseña?</a><br>
-        
+
         <div><input type="submit" value="Entrar"></div>
-        
+
         <a class="reg" href="{{route('register')}}"><b>Registrate aquí</b></a>
-        
+
     </form>
 </div>
 

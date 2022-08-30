@@ -14,11 +14,11 @@ class CreateListadoEstudiantesTable extends Migration
     public function up()
     {
         Schema::create('listado_estudiantes', function (Blueprint $table) {
-            $table->id();
+            $table->id('id_listado_estudiante');
             $table->date('fecha');
             $table->string('descripcion', 20);
-            $table->unsignedInteger('id_matricula');
-            $table->foreign('id_matricula')->references('id')->on('matriculas');
+            $table->string('codigo_matricula',10);
+            $table->foreign('codigo_matricula')->references('codigo_matricula')->on('matriculas');
             $table->timestamps();
         });
     }

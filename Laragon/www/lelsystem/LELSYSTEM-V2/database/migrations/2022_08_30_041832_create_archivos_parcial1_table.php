@@ -14,14 +14,14 @@ class CreateArchivosParcial1Table extends Migration
     public function up()
     {
         Schema::create('archivos_parcial1', function (Blueprint $table) {
-            $table->id();
+            $table->id('id_archivo_parcial1');
             $table->string('nombre_archivo',250);
-            $table->double('nota');
-            $table->double('promedio1');
-            $table->unsignedInteger('id_matricula');
-            $table->foreign('id_matricula')->references('id')->on('matriculas');
-            $table->unsignedInteger('id_cursos_actividades');
-            $table->foreign('id_cursos_actividades')->references('id')->on('cursos_actividades');
+            $table->float('nota');
+            $table->float('promedio1');
+            $table->string('codigo_matricula',10);
+            $table->foreign('codigo_matricula')->references('codigo_matricula')->on('matriculas');
+            $table->bigInteger('id_cursos_actividades');
+            $table->foreign('id_cursos_actividades')->references('id_cursos_actividades')->on('cursos_actividades');
             $table->timestamps();
         });
     }

@@ -35,15 +35,23 @@ class TeacherController extends Controller
      */
     public function store(Request $request)
     {
-        dd($request->cedula);
-        dd($request->nombre);
-        dd($request->apellido);
-        dd($request->all());
-        die();
-        /*$datosTeacher=request()->all();
-        User::insert($datosTeacher);
-        dd($datosTeacher);*/
+        $datosDocente=Request()->except('_token');
+
+        if($datosDocente['contrasena']==$datosDocente['contrasena_verified_at']){
+            if($request->hasFile('imagen')){
+                $datosDocente['imagen']=$request->file('imagen')->store('uploadsTeacher','public');
+            }
+            $datosDocente['rol']='Teacher';
+            User::insert($datosDocente);
+            notify()->preset('registrado');
+            return view('admin.teacher.teacher');
+            dd($datosDocente);
+        }else{
+            notify()->preset('error');
+            return view('admin.teacher.teacher');
+        }
     }
+
 
     /**
      * Display the specified resource.

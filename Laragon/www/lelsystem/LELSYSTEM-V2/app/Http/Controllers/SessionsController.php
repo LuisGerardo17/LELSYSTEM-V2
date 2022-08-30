@@ -11,7 +11,7 @@ class SessionsController extends Controller
         return view('auth.login');
 }
 
-  public function store() {
+  public function store(Request $request) {
     if(auth()->attempt(request(['correo','contrasena'])) == false) {
         return back()->withErrors([
           'message' => 'El correo o contraseña esta incorrecto porfavor ingresa nuevamente'
@@ -20,11 +20,11 @@ class SessionsController extends Controller
     } else {
         if(auth()->user()->rol == 'Administrador'){
 
-            return redirect()->to('admin.admin.admin');
+            return redirect()->to('admin');
 
         } elseif(auth()->user()->rol == 'Docente'){
 
-            return redirect()->to('docente.docente');
+            return redirect()->to('docente');
         } elseif(auth()->user()->rol == 'Estudiante'){
 
             return redirect()->to('estudiante.estudiante');

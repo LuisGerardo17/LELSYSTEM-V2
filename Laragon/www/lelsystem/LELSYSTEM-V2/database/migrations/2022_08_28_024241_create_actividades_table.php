@@ -14,8 +14,7 @@ class CreateActividadesTable extends Migration
     public function up()
     {
         Schema::create('actividades', function (Blueprint $table) {
-            $table->id();
-            $table->string('codigo_actividad',5)->unique();
+            $table->string('codigo_actividad',5)->unique()->primary();
             $table->string('nombre_actividad',100);
             $table->string('descripcion');
             $table->timestamps();

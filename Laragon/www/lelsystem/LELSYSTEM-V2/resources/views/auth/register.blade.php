@@ -8,7 +8,7 @@
 <div class="login-box">
     <img class="avatar" src="static/img/logo5.png" alt="">
     <h1>REGISTRATE AQUÍ</h1>
-    <form class="row g-3 needs-validation" novalidate>
+    <form class="row g-3 needs-validation" method= "post" action="" enctype="multipart/form-data"  >
         @csrf
         <div class="col-md-4">
           <label for="validationCustom01" class="form-label">Cédula</label>
@@ -27,7 +27,11 @@
 
         <div class="col-md-6">
             <label for="validationCustom03" class="form-label">Dirección</label>
+
+            <input type="text" class="form-control" name='direccion' id="validationCustom03" placeholder="Calle principal N. y calle secundaria" required>
+
             <input type="text" class="form-control" name="direccion" id="validationCustom03" placeholder="Calle principal N. y calle secundaria" required>
+
         </div>
 
         <div class="col-md-6">
@@ -53,18 +57,28 @@
 
         <div class="col-md-3">
             <label for="validationCustom03" class="form-label">Confirmar Contraseña</label>
+
             <input type="password" class="form-control" name="contrasena_verified_at" id="validationCustom03" placeholder="Contraseña" required>
+
+
+            <input type="password" class="form-control" name="contrasena_verified_at" id="validationCustom03" placeholder="Contraseña" required>
+
+          
+
         </div>
 
         <div class="col-md-6">
           <label for="validationCustom04" class="form-label">Rol</label>
+
+          <select class="form-select" id="validationCustom04" name="rol" required>
+
           <select class="form-select" name="rol" id="validationCustom04" required>
             <option value="Estudiante">Estudiante</option>
             <option value="Docente">Docente</option>
             <option value="Administrador">Administrador</option>
           </select>
         </div>
-        
+
         <div class="col-md-6">
           <label for="validationCustom05" class="form-label">Imágen</label>
           <input type="file" class="form-control" name="imagen" id="validationCustom05" required>
