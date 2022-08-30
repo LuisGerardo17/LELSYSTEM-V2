@@ -29,7 +29,7 @@ body {
     top: calc(4% - 50px);
     left: calc(44% - 50px);
     background: #fff;
-    border: #009688 solid 1px;
+    border: #009688 solid 3px;
 }
 
 .login-box h1 {
