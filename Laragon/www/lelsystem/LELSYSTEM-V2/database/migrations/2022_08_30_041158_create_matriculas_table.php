@@ -14,12 +14,12 @@ class CreateMatriculasTable extends Migration
     public function up()
     {
         Schema::create('matriculas', function (Blueprint $table) {
-            $table->id('id_matricula')->unique();
+            $table->id();
             $table->string('codigo_matricula',10)->unique();
             $table->unsignedInteger('id_curso');
-            $table->foreign('id_curso')->references('id_curso')->on('cursos');
+            $table->foreign('id_curso')->references('id')->on('cursos');
             $table->unsignedInteger('id_estudiante');
-            $table->foreign('id_estudiante')->references('id_estudiante')->on('estudiantes');
+            $table->foreign('id_estudiante')->references('id')->on('estudiantes');
             $table->boolean('activo');
             $table->timestamps();
         });

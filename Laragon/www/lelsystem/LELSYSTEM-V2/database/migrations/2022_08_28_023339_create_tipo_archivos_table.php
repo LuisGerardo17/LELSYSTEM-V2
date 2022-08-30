@@ -14,7 +14,7 @@ class CreateTipoArchivosTable extends Migration
     public function up()
     {
         Schema::create('tipo_archivos', function (Blueprint $table) {
-            $table->id('id_tipo_archivo')->unique();
+            $table->id();
             $table->string('tipo',5);
             $table->timestamps();
         });

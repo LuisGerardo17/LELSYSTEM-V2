@@ -14,7 +14,7 @@ class CreateCursosTable extends Migration
     public function up()
     {
         Schema::create('cursos', function (Blueprint $table) {
-            $table->id('id_curso')->unique();
+            $table->id();
             $table->string('codigo_curso')->unique();
             $table->string('nombre_curso',50)->unique();
             $table->string('descripcion',200);
@@ -22,7 +22,7 @@ class CreateCursosTable extends Migration
             $table->date('fecha_fin');
             $table->boolean('activo');
             $table->bigInteger('id_docente');
-            $table->foreign('id_docente')->references('id_docente')->on('docentes');
+            $table->foreign('id_docente')->references('id')->on('docentes');
             $table->timestamps();
         });
     }
