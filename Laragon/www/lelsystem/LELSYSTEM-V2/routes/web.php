@@ -101,12 +101,12 @@ Route::get('/docente.docente', [App\Http\Controllers\DocenteController::class, '
 ->middleware('auth.docente')
 ->name('docente.index');
 Route::resource('Teacher.Teacher',TeacherController::class);
+//Route::delete('Teacher/Teacher/{cedula}', [TeacherController::class, 'destroy'])->name('user.delete');
 //Estudiante
 /*Route::get('/estudiante.estudiante', [App\Http\Controllers\EstudianteController::class, 'index'])
 ->middleware('auth.estudiante')
 ->name('estudiante.index');*/
 Route::resource('estudiante-registro',RegistroEstudiantesController::class);
-
 //admin
 Route::resource('admin.admin',AdminController::class);
 

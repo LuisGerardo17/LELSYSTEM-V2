@@ -79,7 +79,7 @@
 				<li>
 					<a href="#!" class="btn-Notifications-area">
 						<i class="zmdi zmdi-notifications-none"></i>
-						<span class="badge">7</span>
+						<span class="badge">4</span>
 					</a>
 				</li>
 				<li>
@@ -102,7 +102,7 @@
 		<div class="full-box Notifications-bg btn-Notifications-area"></div>
 		<div class="full-box Notifications-body">
 			<div class="Notifications-body-title text-titles text-center">
-				Notifications <i class="zmdi zmdi-close btn-Notifications-area"></i>
+				Notificaciones <i class="zmdi zmdi-close btn-Notifications-area"></i>
 			</div>
 			<div class="list-group">
 			  	<div class="list-group-item">
@@ -163,7 +163,7 @@
               </div>
               <div class="modal-body">
                   <p>
-                      Si tienes problemas con la plataforma o aparecen errores permanentes, por favor contactarse con el administrador para poder solucionarlo, para contactarse presione en el siguiente link.
+                      Si tienes problemas con la plataforma o aparecen errores permanentes, por favor contactarse con el administrador para poder solucionarlo, para informar el problema presione en el siguiente link.
                   </p>
               </div>
                 <div class="modal-footer">

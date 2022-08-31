@@ -14,7 +14,8 @@ class TeacherController extends Controller
      */
     public function index()
     {
-        return view('admin.teacher.teacher');
+        $datos=User::all();
+        return view('admin.teacher.teacher', compact('datos'));
     }
 
     /**
@@ -44,11 +45,10 @@ class TeacherController extends Controller
             $datosDocente['rol']='Teacher';
             User::insert($datosDocente);
             notify()->preset('registrado');
-            return view('admin.teacher.teacher');
-            dd($datosDocente);
+            return redirect('Teacher/Teacher');
         }else{
             notify()->preset('error');
-            return view('admin.teacher.teacher');
+            return redirect('Teacher/Teacher');
         }
     }
 
@@ -61,7 +61,7 @@ class TeacherController extends Controller
      */
     public function show(User $user)
     {
-        //
+       //
     }
 
     /**
@@ -70,9 +70,14 @@ class TeacherController extends Controller
      * @param  \App\Models\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function edit(User $user)
+    public function edit(User $datos)
     {
-        //
+        return view('admin.teacher.teacher', compact('datos'));
+
+        /*$post=Post::find($id);
+        $this->cedula=$post->cedula;
+        $this->nombres=$post->nombres;
+        $this->view=''*/
     }
 
     /**
@@ -84,7 +89,11 @@ class TeacherController extends Controller
      */
     public function update(Request $request, User $user)
     {
-        //
+        $datos=$request->only('cedula','nombres','apellidos','correo','direccion','telefono','imagen');
+        if(trim($request->contrasena)=='')
+        {
+            $datos=$request->except('contrasena');
+        }
     }
 
     /**
@@ -93,8 +102,11 @@ class TeacherController extends Controller
      * @param  \App\Models\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function destroy(User $user)
+    public function destroy($cedula)
     {
-        //
+        $datos=User::find($cedula);
+        $datos->delete();
+        return redirect('Teacher/Teacher');
+        //return view('admin.teacher.teacher', compact('datos'));
     }
 }

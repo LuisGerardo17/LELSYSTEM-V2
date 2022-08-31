@@ -33,7 +33,7 @@
     </div>
   <div class="form-group">
     <div>
-      <input type="text" readonly="" class="form-control" placeholder="Foto...">
+      <input type="text" readonly="" class="form-control" placeholder="Foto..." ">
       <input type="file"  name="imagen" >
     </div>
   </div>
