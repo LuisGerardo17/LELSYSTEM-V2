@@ -93,13 +93,13 @@ Route::get('/homeadmin',function (){
     })->name('recoursesEdit');
 
     //teacher
-    Route::get('/admin.teacher',function (){
+    /*Route::get('/admin.teacher',function (){
         return view('admin.teacher.teacher');
     })->name('teacher');
 
     Route::get('/TeacherEdit',function (){
         return view('admin.teacher.teacherEdit');
-    })->name('teacherEdit');
+    })->name('teacherEdit');*/
 
 
 Route::get('/admin.index',function (){
@@ -113,7 +113,7 @@ Route::get('/admin.index',function (){
 Route::get('/docente.docente', [DocenteController::class, 'index'])
 ->middleware('auth.docente')
 ->name('docente.index');
-Route::resource('Teacher/Teacher',TeacherController::class);
+Route::resource('Teacher.Teacher',TeacherController::class);
 //Estudiante
 /*Route::get('/estudiante.estudiante', [App\Http\Controllers\EstudianteController::class, 'index'])
 ->middleware('auth.estudiante')

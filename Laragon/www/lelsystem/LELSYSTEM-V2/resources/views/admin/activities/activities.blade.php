@@ -13,8 +13,8 @@
 			<div class="row">
 				<div class="col-xs-12">
 					<ul class="nav nav-tabs" style="margin-bottom: 15px;">
-					  	<li class="active"><a href="#new" data-toggle="tab">New</a></li>
-					  	<li><a href="#list" data-toggle="tab">List</a></li>
+					    <li><a href="#list" data-toggle="tab">Lista</a></li>
+					    <li class="active"><a href="#new" data-toggle="tab">Agregar</a></li>
 					</ul>
 					<div id="myTabContent" class="tab-content">
 						<div class="tab-pane fade active in" id="new">
@@ -23,29 +23,29 @@
 									<div class="col-xs-12 col-md-10 col-md-offset-1">
 									    <form action="">
 									    	<div class="form-group label-floating">
-											  <label class="control-label">Name</label>
+											  <label class="control-label">Nombre</label>
 											  <input class="form-control" type="text">
 											</div>
 											<div class="form-group label-floating">
-											  <label class="control-label">Section</label>
+											  <label class="control-label">Descripcion</label>
 											  <input class="form-control" type="text">
 											</div>
 											<div class="form-group">
-										      <label class="control-label">Status</label>
+										      <label class="control-label">Estado</label>
 										        <select class="form-control">
-										          <option>Active</option>
-										          <option>Disable</option>
+										          <option>Activado</option>
+										          <option>Desactivado</option>
 										        </select>
 										    </div>
 											<div class="form-group">
-										      <label class="control-label">Year</label>
+										      <label class="control-label">Año</label>
 										        <select class="form-control">
 										          <option>2017</option>
 										          <option>2016</option>
 										        </select>
 										    </div>
 										    <p class="text-center">
-										    	<button href="#!" class="btn btn-info btn-raised btn-sm"><i class="zmdi zmdi-floppy"></i> Save</button>
+										    	<button href="#!" class="btn btn-info btn-raised btn-sm"><i class="zmdi zmdi-floppy"></i> Guardar</button>
 										    </p>
 									    </form>
 									</div>
@@ -57,13 +57,13 @@
 								<table class="table table-hover text-center">
 									<thead>
 										<tr>
-											<th class="text-center">#</th>
-											<th class="text-center">Name</th>
-											<th class="text-center">Section</th>
-											<th class="text-center">Status</th>
-											<th class="text-center">Year</th>
-											<th class="text-center">Update</th>
-											<th class="text-center">Delete</th>
+											<th class="text-center">Codigo</th>
+											<th class="text-center">Nombre</th>
+											<th class="text-center">Descripcion</th>
+											<th class="text-center">Estado</th>
+											<th class="text-center">Año</th>
+											<th class="text-center">Actualizar</th>
+											<th class="text-center">Eliminar</th>
 										</tr>
 									</thead>
 									<tbody>

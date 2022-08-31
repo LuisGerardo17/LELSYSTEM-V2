@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use App\Models\Administradores;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class AdminController extends Controller
 {
@@ -15,8 +16,8 @@ class AdminController extends Controller
      */
     public function index()
     {
-
-        return view('admin.admin.admin');
+        $administradores=Administradores::paginate(2);
+        return view('admin.admin.admin',compact('administradores'));
     }
 
     /**
@@ -47,11 +48,11 @@ class AdminController extends Controller
             User::insert($datosAdmin);
             Administradores::insert(['cedula'=>$datosAdmin['cedula']]);
             notify()->preset('registrado');
-            return view('admin.admin.admin');
+            return redirect('admin/admin');
 
         }else{
             notify()->preset('error');
-            return view('admin.admin.admin');
+            return redirect('admin/admin');
         }
 
 
@@ -97,8 +98,13 @@ class AdminController extends Controller
      * @param  \App\Models\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function destroy(User $user)
+    public function destroy($cedula)
     {
-        //
+        $datos=User::find($cedula);
+        Storage::delete('public/'. $datos->imagen);
+        //storage/app    /public/....
+        User::destroy($cedula);
+        notify()->preset('eliminar');
+        return redirect('admin/admin');
     }
 }

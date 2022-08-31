@@ -12,14 +12,22 @@
         @csrf
         <div class="col-md-12">
           <label for="validationCustomUsername" class="form-label">Correo</label>
+
+          <input type="text" class="form-control" name="correo" id="validationCustomUsername" aria-describedby="inputGroupPrepend" placeholder="example.1@yavirac.edu.ec" required>
+
           <input type="text" class="form-control" name = "correo" id="validationCustomUsername" aria-describedby="inputGroupPrepend" placeholder="example.1@yavirac.edu.ec">
+
         </div>
          @error('message')
          <p class="error"> *Error</p>
          @enderror
         <div class="col-md-12">
             <label for="validationCustom03" class="form-label">Contraseña</label>
+
+            <input type="password" class="form-control" name="contrasena" id="validationCustom03" placeholder="Contraseña" required>
+
             <input type="password" class="form-control" name = "contrasena" id="validationCustom03" placeholder="Contraseña">
+
         </div>
 
         <a class="o" href="#">¿Olvidaste tu contraseña?</a><br>
