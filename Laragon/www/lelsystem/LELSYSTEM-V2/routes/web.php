@@ -15,6 +15,21 @@ Route::get('/homepage',function (){
     return view('home');
 })->name('home');
 
+
+Route::get('/auth.login', [SessionsController::class, 'create'])
+->middleware('guest')
+->name('login');
+Route::get('/auth.register', [RegisterController::class, 'create'])
+->middleware('guest')
+->name('register');
+
+//Register y Login
+Route::post('/auth.register', [RegisterController::class, 'store'])->name('register.store');
+Route::post('/auth.login', [SessionsController::class, 'store'])->name('login.store');
+Route::get('/logout', [SessionsController::class, 'destroy'])
+->middleware('auth')
+->name('login.destroy');
+
 //CREACIÓN DE RUTAS PARA EL HOMEPAGE
 Route::get('/home.homepage', [App\Http\Controllers\HomeController::class, 'index'])->name('homepage');
 Route::get('/homepage.historia', [App\Http\Controllers\Historia::class, 'index'])->name('historia');
@@ -22,14 +37,6 @@ Route::get('/homepage.vision', [App\Http\Controllers\vision::class, 'index'])->n
 Route::get('/homepage.oferta', [App\Http\Controllers\Oferta::class, 'index'])->name('oferta');
 Route::get('/homepage.contactos', [App\Http\Controllers\Contactos::class, 'index'])->name('contactos');
 Route::get('/homepage.admisiones', [App\Http\Controllers\Admisiones::class, 'index'])->name('admisiones');
-
-Route::get('/auth.login', [App\Http\Controllers\SessionsController::class, 'create'])->name('login');
-Route::get('/auth.register', [App\Http\Controllers\RegisterController::class, 'create'])->name('register');
-
-//Register y Login
-Route::post('/auth.register', [App\Http\Controllers\RegisterController::class, 'store'])->name('register.store');
-Route::post('/auth.login', [App\Http\Controllers\SessionsController::class, 'store'])->name('login.store');
-Route::get('/logout', [App\Http\Controllers\SessionsController::class, 'destroy'])->name('login.destroy');
 
 //CREACIÓN DE RUTAS PARA DOCENTE
 Route::get('/docente.informatica', [App\Http\Controllers\InformaticaController::class, 'index'])->name('informatica');
@@ -55,7 +62,13 @@ Route::get('/homeadmin',function (){
 
     Route::get('/admin.admin',function (){
         return view('admin.admin.admin');
-    })->name('admin');
+    })->middleware('auth')
+      ->name('admin');
+/*
+    Route::get('/auth.login',function (){
+        return view('auth.login');
+    })->name('login');
+*/
 
     Route::get('/adminEdit',function (){
         return view('admin.admin.adminEdit');
@@ -97,17 +110,25 @@ Route::get('/admin.index',function (){
 
 
 //Docente
-Route::get('/docente.docente', [App\Http\Controllers\DocenteController::class, 'index'])
+Route::get('/docente.docente', [DocenteController::class, 'index'])
 ->middleware('auth.docente')
 ->name('docente.index');
 Route::resource('Teacher/Teacher',TeacherController::class);
 //Estudiante
 /*Route::get('/estudiante.estudiante', [App\Http\Controllers\EstudianteController::class, 'index'])
 ->middleware('auth.estudiante')
-->name('estudiante.index');*/
+->name('estudiante.index');
+*/
+
+
+
+
+
 Route::resource('estudiante-registro',RegistroEstudiantesController::class);
 
 //admin
 Route::resource('admin.admin',AdminController::class);
-
+Route::get('/admin.admin',[AdminController::class,'index'])
+->middleware('auth.admin')
+->name('admin.index');
 

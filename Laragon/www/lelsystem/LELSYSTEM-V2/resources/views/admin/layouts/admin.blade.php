@@ -13,12 +13,6 @@
 
 <body>
 
-
-
-
-
-
-
     <!-- SideBar -->
 	<section class="full-box cover dashboard-sideBar">
 		<div class="full-box dashboard-sideBar-bg btn-menu-dashboard"></div>
@@ -29,18 +23,23 @@
 			</div>
 			<!-- SideBar User info -->
 			<div class="full-box dashboard-sideBar-UserInfo">
-				<figure class="full-box">
-					<img src="{{ asset('admin/assets/img/avatar.jpg') }}" alt="UserIcon">
-					<figcaption class="text-center text-titles">User Name</figcaption>
-				</figure>
-				<ul class="full-box list-unstyled text-center">
 
+                <figure class="full-box" >
+
+                    <img src="{{ asset('admin/assets/img/avatar.jpg') }}" alt="UserIcon">
+
+				</figure>
+
+
+				<ul class="full-box list-unstyled text-center">
+                    
 					<li>
-						<a href="#!" class="btn-exit-system">
+						<a href="{{route('login.destroy')}}" class="btn-exit-system">
 							<i class="zmdi zmdi-power"></i>
 						</a>
 					</li>
 				</ul>
+
 			</div>
 			<!-- SideBar Menu -->
 			<ul class="list-unstyled full-box dashboard-sideBar-Menu">
