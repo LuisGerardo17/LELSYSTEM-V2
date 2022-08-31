@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Foundation\Auth\User as Authenticatable;
 use App\Models\User;
 
 class SessionsController extends Controller
@@ -20,7 +21,7 @@ class SessionsController extends Controller
     } else {
         if(auth()->user()->rol == 'Administrador'){
 
-            return redirect()->to('admin');
+            return redirect()->route('admin');
 
         } elseif(auth()->user()->rol == 'Docente'){
 
@@ -40,8 +41,7 @@ class SessionsController extends Controller
 
     public function destroy() {
        auth()->logout();
-
-       return redirect()->to('/');
+       return redirect()->to('homepage');
 
     }
 

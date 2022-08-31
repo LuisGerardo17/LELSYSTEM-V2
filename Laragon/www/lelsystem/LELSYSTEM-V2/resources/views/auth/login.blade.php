@@ -18,7 +18,9 @@
           <input type="text" class="form-control" name = "correo" id="validationCustomUsername" aria-describedby="inputGroupPrepend" placeholder="example.1@yavirac.edu.ec">
 
         </div>
-
+         @error('message')
+         <p class="error"> *Error</p>
+         @enderror
         <div class="col-md-12">
             <label for="validationCustom03" class="form-label">Contraseña</label>
 
@@ -30,7 +32,9 @@
 
         <a class="o" href="#">¿Olvidaste tu contraseña?</a><br>
 
-        <div><input type="submit" value="Entrar"></div>
+        <div>
+            <button class="btn btn-primary" type="submit">Ingresar</button>
+        </div>
 
         <a class="reg" href="{{route('register')}}"><b>Registrate aquí</b></a>
 
