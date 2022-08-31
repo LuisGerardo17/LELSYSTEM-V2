@@ -16,7 +16,7 @@ class CreateAdministradoresTable extends Migration
         Schema::create('administradores', function (Blueprint $table) {
 
             $table->string('cedula',10)->primary();
-            $table->foreign('cedula')->references('cedula')->on('users');
+            $table->foreign('cedula')->references('cedula')->on('users')->cascadeOnDelete()->cascadeOnUpdate();
             $table->timestamps();
         });
     }

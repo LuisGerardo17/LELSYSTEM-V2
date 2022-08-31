@@ -32,6 +32,8 @@ class User extends Authenticatable
 
     ];
 
+    protected $primaryKey = 'cedula';
+
     /**
      * The attributes that should be hidden for serialization.
      *

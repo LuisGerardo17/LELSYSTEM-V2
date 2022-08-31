@@ -83,3 +83,20 @@ $(document).ready(function(){
         });
     });
 })(jQuery);
+
+$('.Eliminar').submit('click', function(e){
+    e.preventDefault();
+    swal({
+          title: '¿Esta seguro que desea eliminar?',
+          type: 'warning',
+          showCancelButton: true,
+          confirmButtonColor: '#03A9F4',
+          cancelButtonColor: '#F44336',
+          confirmButtonText: '<i class="zmdi zmdi-run"></i> SI',
+          cancelButtonText: '<i class="zmdi zmdi-close-circle"></i> NO!'
+    }).then((r) => {
+        if (r) {
+          this.submit()
+        }
+    })
+});

@@ -60,13 +60,19 @@ return [
             'message' => 'Usuario registrado con exito.',
             'type'    => 'success',
             'model'   => 'toast',
-            'title'   => 'Listo',
+            'title'   => 'Registrado',
         ],
         'error' => [
             'message' => 'Error al registrar compruebe los datos.',
             'type'    => 'error',
             'model'   => 'toast',
             'title'   => 'Error',
+        ],
+        'eliminar' => [
+            'message' => 'Usuario Eliminado con exito.',
+            'type'    => 'success',
+            'model'   => 'toast',
+            'title'   => 'Eliminado',
         ],
     ],
 
