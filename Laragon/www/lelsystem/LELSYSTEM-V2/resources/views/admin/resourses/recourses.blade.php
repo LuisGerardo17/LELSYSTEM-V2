@@ -13,8 +13,8 @@
 			<div class="row">
 				<div class="col-xs-12">
 					<ul class="nav nav-tabs" style="margin-bottom: 15px;">
-					  	<li class="active"><a href="#new" data-toggle="tab">New</a></li>
-					  	<li><a href="#list" data-toggle="tab">List</a></li>
+					    <li><a href="#list" data-toggle="tab">Lista</a></li>
+					    <li class="active"><a href="#new" data-toggle="tab">Agregar</a></li>
 					</ul>
 					<div id="myTabContent" class="tab-content">
 						<div class="tab-pane fade active in" id="new">
@@ -23,49 +23,49 @@
 									<div class="col-xs-12 col-md-10 col-md-offset-1">
 									    <form action="">
 									    	<div class="form-group label-floating">
-											  <label class="control-label">Name</label>
+											  <label class="control-label">Nombre</label>
 											  <input class="form-control" type="text">
 											</div>
 											<div class="form-group label-floating">
-											  <label class="control-label">Last Name</label>
+											  <label class="control-label">Apellido</label>
 											  <input class="form-control" type="text">
 											</div>
 											<div class="form-group label-floating">
-											  <label class="control-label">Address</label>
+											  <label class="control-label">Direccion</label>
 											  <textarea class="form-control"></textarea>
 											</div>
 											<div class="form-group label-floating">
-											  <label class="control-label">Email</label>
+											  <label class="control-label">Correo</label>
 											  <input class="form-control" type="text">
 											</div>
 											<div class="form-group label-floating">
-											  <label class="control-label">Phone</label>
+											  <label class="control-label">Telefono</label>
 											  <input class="form-control" type="text">
 											</div>
 											<div class="form-group label-floating">
-											  <label class="control-label">Specialty</label>
+											  <label class="control-label">Especialidad</label>
 											  <input class="form-control" type="text">
 											</div>
 											<div class="form-group">
-											  <label class="control-label">Birthday</label>
+											  <label class="control-label">Fecha de nacimiento</label>
 											  <input class="form-control" type="date">
 											</div>
 											<div class="form-group">
-										        <label class="control-label">Gender</label>
+										        <label class="control-label">Genero</label>
 										        <select class="form-control">
-										          <option>Male</option>
-										          <option>Female</option>
+										          <option>Masculino</option>
+										          <option>Femenino</option>
 										        </select>
 										    </div>
 											<div class="form-group">
-										      <label class="control-label">Photo</label>
+										      <label class="control-label">Foto</label>
 										      <div>
 										        <input type="text" readonly="" class="form-control" placeholder="Browse...">
 										        <input type="file" >
 										      </div>
 										    </div>
 										    <p class="text-center">
-										    	<button href="#!" class="btn btn-info btn-raised btn-sm"><i class="zmdi zmdi-floppy"></i> Save</button>
+										    	<button href="#!" class="btn btn-info btn-raised btn-sm"><i class="zmdi zmdi-floppy"></i> Guardar</button>
 										    </p>
 									    </form>
 									</div>
@@ -78,16 +78,16 @@
 									<thead>
 										<tr>
 											<th class="text-center">#</th>
-											<th class="text-center">Name</th>
-											<th class="text-center">Last Name</th>
-											<th class="text-center">Address</th>
-											<th class="text-center">Email</th>
-											<th class="text-center">Phone</th>
-											<th class="text-center">Specialty</th>
-											<th class="text-center">Birthday</th>
-											<th class="text-center">Gender</th>
-											<th class="text-center">Update</th>
-											<th class="text-center">Delete</th>
+											<th class="text-center">Nombre</th>
+											<th class="text-center">Apellido</th>
+											<th class="text-center">Direccion</th>
+											<th class="text-center">Correo</th>
+											<th class="text-center">Telefono</th>
+											<th class="text-center">Especialidad</th>
+											<th class="text-center">Fecha de nacimiento</th>
+											<th class="text-center">Genero</th>
+											<th class="text-center">Actualizar</th>
+											<th class="text-center">Eliminar</th>
 										</tr>
 									</thead>
 									<tbody>
