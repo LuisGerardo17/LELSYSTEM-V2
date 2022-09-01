@@ -43,7 +43,7 @@ Route::get('/docente.informatica', [App\Http\Controllers\InformaticaController::
 Route::get('/docente.mecanica', [App\Http\Controllers\MecanicaController::class, 'index'])->name('mecanica');
 Route::get('/docente.electricidad', [App\Http\Controllers\ElectricidadController::class, 'index'])->name('electricidad');
 
-//Administrador
+/****************************Administrador****************************************/
 
 
 Route::get('/homeadmin',function (){
@@ -92,6 +92,12 @@ Route::get('/homeadmin',function (){
         return view('admin.resourses.recoursesEdit');
     })->name('recoursesEdit');
 
+Route::resource('admin.admin',AdminController::class);
+Route::get('/admin.admin',[AdminController::class,'index'])
+->middleware('auth.admin')
+->name('admin.index');
+
+
     //teacher
     /*Route::get('/admin.teacher',function (){
         return view('admin.teacher.teacher');
@@ -101,34 +107,30 @@ Route::get('/homeadmin',function (){
         return view('admin.teacher.teacherEdit');
     })->name('teacherEdit');*/
 
+//ADMINISTRAR ESTUDIANTE
+
+Route::get('/estudiante.estudiante',function (){
+    return view('admin.estudiante.estudiante');
+})->name('estudiante');
+Route::resource('estudiante.estudiante', EstudianteController::class);
+Route::get('/estudiante.estudiante',[EstudianteController::class,'index'])
+->name('estudiante.index');
 
 Route::get('/admin.index',function (){
     return view('admin.admin.index');
 })->name('index');
-
-
-
-
-//Docente
-Route::get('/docente.docente', [DocenteController::class, 'index'])
-->middleware('auth.docente')
-->name('docente.index');
+//ADMINISTRARDOCENTE
 Route::resource('Teacher.Teacher',TeacherController::class);
+
 //Route::delete('Teacher/Teacher/{cedula}', [TeacherController::class, 'destroy'])->name('user.delete');
 //Estudiante
-/*Route::get('/estudiante.estudiante', [App\Http\Controllers\EstudianteController::class, 'index'])
-->middleware('auth.estudiante')
-->name('estudiante.index');
-*/
-
-
-
 
 
 Route::resource('estudiante-registro',RegistroEstudiantesController::class);
-//admin
-Route::resource('admin.admin',AdminController::class);
-Route::get('/admin.admin',[AdminController::class,'index'])
-->middleware('auth.admin')
-->name('admin.index');
 
+/************************************************************************************/
+
+/******************************Docente************************************************/
+Route::get('/docente.docente', [DocenteController::class, 'index'])
+->middleware('auth.docente')
+->name('docente.index');
