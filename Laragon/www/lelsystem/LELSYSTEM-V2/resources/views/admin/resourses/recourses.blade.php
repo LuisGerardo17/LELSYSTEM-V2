@@ -28,7 +28,7 @@
 											</div>
 											<div class="form-group label-floating">
 											  <label class="control-label">Apellido</label>
-											  <input class="form-control" type="text">
+											  <input class="form-control" type="text" >
 											</div>
 											<div class="form-group label-floating">
 											  <label class="control-label">Direccion</label>

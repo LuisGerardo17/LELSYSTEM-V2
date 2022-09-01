@@ -32,7 +32,7 @@
 
 
 				<ul class="full-box list-unstyled text-center">
-                    
+
 					<li>
 						<a href="{{route('login.destroy')}}" class="btn-exit-system">
 							<i class="zmdi zmdi-power"></i>
@@ -54,6 +54,10 @@
                 <li>
                     <a href="{{ url('Teacher/Teacher') }}"><i class="zmdi zmdi-male-alt zmdi-hc-fw"></i> Administrar docente</a>
                 </li>
+                <li>
+                    <a href="{{ url('estudiante/estudiante') }}"><i class="zmdi zmdi-male-alt zmdi-hc-fw"></i> Administrar estudiante</a>
+                </li>
+
                 <li>
                     <a href="{{ Route('activities') }}"><i class="zmdi zmdi-book zmdi-hc-fw"></i> Administrar actividad</a>
                 </li>
