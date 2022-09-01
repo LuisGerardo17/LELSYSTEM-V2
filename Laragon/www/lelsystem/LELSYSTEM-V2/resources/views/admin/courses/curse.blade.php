@@ -23,35 +23,35 @@
 									<div class="col-xs-12 col-md-10 col-md-offset-1">
 									    <form action="">
 									    	<div class="form-group label-floating">
+											  <label class="control-label">Codigo</label>
+											  <input class="form-control" type="text">
+											</div>
+											<div class="form-group label-floating">
 											  <label class="control-label">Nombre</label>
 											  <input class="form-control" type="text">
 											</div>
 											<div class="form-group label-floating">
-											  <label class="control-label">Apellido</label>
+											  <label class="control-label">Descripcion</label>
 											  <input class="form-control" type="text">
 											</div>
 											<div class="form-group label-floating">
-											  <label class="control-label">Direccion</label>
-											  <textarea class="form-control"></textarea>
+											  <label class="control-label">Fecha inicio</label><br>
+											  <input class="form-control" type="date">
 											</div>
 											<div class="form-group label-floating">
-											  <label class="control-label">Correo</label>
-											  <input class="form-control" type="text">
+											  <label class="control-label">Fecha fin</label><br>
+											  <input class="form-control" type="date">
 											</div>
 											<div class="form-group label-floating">
-											  <label class="control-label">Telefono</label>
-											  <input class="form-control" type="text">
-											</div>
-											<div class="form-group label-floating">
-											  <label class="control-label">Ocupacion</label>
-											  <input class="form-control" type="text">
-											</div>
-											<div class="form-group">
-										        <label class="control-label">Genero</label>
-										        <select class="form-control">
-										          <option>Masculino</option>
-										          <option>Femenino</option>
+											  <label class="control-label">Estado</label>
+											  <select class="form-control">
+										          <option>Activo</option>
+										          <option>Inactivo</option>
 										        </select>
+											</div>
+											<div class="form-group label-floating">
+										        <label class="control-label">Cedula</label>
+										        <input class="form-control" type="text">
 										    </div>
 										    <p class="text-center">
 										    	<button href="#!" class="btn btn-info btn-raised btn-sm"><i class="zmdi zmdi-floppy"></i> Guardar</button>
@@ -66,14 +66,14 @@
 								<table class="table table-hover text-center">
 									<thead>
 										<tr>
-											<th class="text-center">#</th>
+											<th class="text-center">Codigo</th>
 											<th class="text-center">Nombre</th>
-											<th class="text-center">Apellido</th>
-											<th class="text-center">Direccion</th>
-											<th class="text-center">Correo</th>
-											<th class="text-center">Telefono</th>
-											<th class="text-center">Ocupacion</th>
-											<th class="text-center">Genero</th>
+											<th class="text-center">Descripcion</th>
+											<th class="text-center">Fecha inicio</th>
+											<th class="text-center">Fecha fin</th>
+											<th class="text-center">Estado</th>
+											<th class="text-center">Cedula</th>
+											
 											<th class="text-center">Actualizar</th>
 											<th class="text-center">Eliminar</th>
 										</tr>
@@ -87,7 +87,7 @@
 											<td>carlos@gmail.com</td>
 											<td>+50312345678</td>
 											<td>Web Developer</td>
-											<td>Male</td>
+											
 											<td><a href="#!" class="btn btn-success btn-raised btn-xs"><i class="zmdi zmdi-refresh"></i></a></td>
 											<td><a href="#!" class="btn btn-danger btn-raised btn-xs"><i class="zmdi zmdi-delete"></i></a></td>
 										</tr>
@@ -99,7 +99,7 @@
 											<td>alicia@gmail.com</td>
 											<td>+50312345678</td>
 											<td>Social Work</td>
-											<td>Female</td>
+											
 											<td><a href="#!" class="btn btn-success btn-raised btn-xs"><i class="zmdi zmdi-refresh"></i></a></td>
 											<td><a href="#!" class="btn btn-danger btn-raised btn-xs"><i class="zmdi zmdi-delete"></i></a></td>
 										</tr>
@@ -111,7 +111,7 @@
 											<td>sarai@gmail.com</td>
 											<td>+50312345678</td>
 											<td>Lawyer</td>
-											<td>Female</td>
+											
 											<td><a href="#!" class="btn btn-success btn-raised btn-xs"><i class="zmdi zmdi-refresh"></i></a></td>
 											<td><a href="#!" class="btn btn-danger btn-raised btn-xs"><i class="zmdi zmdi-delete"></i></a></td>
 										</tr>
@@ -123,7 +123,7 @@
 											<td>alba@gmail.com</td>
 											<td>+50312345678</td>
 											<td>Designer</td>
-											<td>Female</td>
+											
 											<td><a href="#!" class="btn btn-success btn-raised btn-xs"><i class="zmdi zmdi-refresh"></i></a></td>
 											<td><a href="#!" class="btn btn-danger btn-raised btn-xs"><i class="zmdi zmdi-delete"></i></a></td>
 										</tr>
@@ -135,7 +135,7 @@
 											<td>claudia@gmail.com</td>
 											<td>+50312345678</td>
 											<td>Lawyer</td>
-											<td>Female</td>
+											
 											<td><a href="#!" class="btn btn-success btn-raised btn-xs"><i class="zmdi zmdi-refresh"></i></a></td>
 											<td><a href="#!" class="btn btn-danger btn-raised btn-xs"><i class="zmdi zmdi-delete"></i></a></td>
 										</tr>
