@@ -3,6 +3,7 @@
 use App\Http\Controllers\AdminController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\ActivitiesController;
 use App\Http\Controllers\SessionsController;
 use App\Http\Controllers\AdministradorController;
 use App\Http\Controllers\DocenteController;
@@ -51,14 +52,13 @@ Route::get('/homeadmin',function (){
 })->name('adminHome');
 
     //activities
-    Route::get('/admin.activities',function (){
+    /*Route::get('/admin.activities',function (){
         return view('admin.activities.activities');
     })->name('activities');
 
     Route::get('/adminEdit',function (){
         return view('admin.activities.activitiesEdit');
-    })->name('activitiesEdit');
-
+    })->name('activitiesEdit');*/
 
     Route::get('/admin.admin',function (){
         return view('admin.admin.admin');
@@ -110,20 +110,17 @@ Route::get('/admin.index',function (){
 
 
 //Docente
+Route::resource('Teacher.Teacher',TeacherController::class);
 Route::get('/docente.docente', [DocenteController::class, 'index'])
 ->middleware('auth.docente')
 ->name('docente.index');
-Route::resource('Teacher.Teacher',TeacherController::class);
 //Route::delete('Teacher/Teacher/{cedula}', [TeacherController::class, 'destroy'])->name('user.delete');
+
 //Estudiante
 /*Route::get('/estudiante.estudiante', [App\Http\Controllers\EstudianteController::class, 'index'])
 ->middleware('auth.estudiante')
 ->name('estudiante.index');
 */
-
-
-
-
 
 Route::resource('estudiante-registro',RegistroEstudiantesController::class);
 //admin
@@ -131,4 +128,9 @@ Route::resource('admin.admin',AdminController::class);
 Route::get('/admin.admin',[AdminController::class,'index'])
 ->middleware('auth.admin')
 ->name('admin.index');
+
+//Actividades
+Route::resource('activities.activities',ActivitiesController::class);
+
+
 

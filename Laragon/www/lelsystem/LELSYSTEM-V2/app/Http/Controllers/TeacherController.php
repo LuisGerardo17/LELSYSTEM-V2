@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use App\Models\Docentes;
 use Illuminate\Http\Request;
 
 class TeacherController extends Controller
@@ -44,10 +45,12 @@ class TeacherController extends Controller
             }
             $datosDocente['rol']='Teacher';
             User::insert($datosDocente);
-            notify()->preset('registrado');
+            //notify()->preset('Laravel Notify is awesome!');
+            //notify()->preset('registrado');
             return redirect('Teacher/Teacher');
         }else{
-            notify()->preset('error');
+            //notify()->preset('Laravel Notify is awesome!');
+            //notify()->preset('error');
             return redirect('Teacher/Teacher');
         }
     }
@@ -72,13 +75,15 @@ class TeacherController extends Controller
      */
     public function edit(User $datos)
     {
-        return view('admin.teacher.teacher', compact('datos'));
+        $user=User::findOrFail($datos);
+        return $user;
+        //return view('admin.teacher.teacherEdit', compact('datos'));
 
         /*$post=Post::find($id);
         $this->cedula=$post->cedula;
         $this->nombres=$post->nombres;
         $this->view=''*/
-    }
+    } 
 
     /**
      * Update the specified resource in storage.
@@ -89,11 +94,34 @@ class TeacherController extends Controller
      */
     public function update(Request $request, User $user)
     {
+        //$user=User::findOrFail($cedula);
         $datos=$request->only('cedula','nombres','apellidos','correo','direccion','telefono','imagen');
-        if(trim($request->contrasena)=='')
+        $contrasena=$request->input('contrasena');
+        if($contrasena)
+        $datos['contrasena']= bcrypt($contrasena);
+        /*if(trim($request->contrasena)=='' && trim($request->contrasena_verified_at)=='')
         {
-            $datos=$request->except('contrasena');
+            $datos=$request->except('contrasena','contrasena_verified_at');
         }
+        else{
+            $datos=$request->all();
+            $datos['contrasena']=bcrypt($request->contrasena);
+            $datos['contrasena_verified_at']=bcrypt($request->contrasena_verified_at);
+        }*/
+        
+        $user->update($datos);
+        return redirect()->route('admin.teacher.teacherEdit')->with('Usuario actualizado con exito');
+
+
+
+        /*if(trim($request->contrasena_verified_at)=='')
+        {
+            $datos=$request->except('contrasena_verified_at');
+        }
+        else{
+            $datos=$request->all();
+            $data['contrasena']=bcrypt($request->contrasena_verified_at);
+        }*/
     }
 
     /**
@@ -106,6 +134,7 @@ class TeacherController extends Controller
     {
         $datos=User::find($cedula);
         $datos->delete();
+        notify()->preset('eliminar');
         return redirect('Teacher/Teacher');
         //return view('admin.teacher.teacher', compact('datos'));
     }
