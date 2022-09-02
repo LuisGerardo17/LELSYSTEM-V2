@@ -65,7 +65,7 @@
                     <a href="{{ Route('curse') }}"><i class="zmdi zmdi-balance zmdi-hc-fw"></i> Administrar curso</a>
                 </li>
                 <li>
-                    <a href="{{ Route('recourses') }}"><i class="zmdi zmdi-font zmdi-hc-fw"></i> Administrar Recursos</a>
+                    <a href="{{ url('admin/recursos') }}"><i class="zmdi zmdi-font zmdi-hc-fw"></i> Administrar Recursos</a>
                 </li>
 
 
