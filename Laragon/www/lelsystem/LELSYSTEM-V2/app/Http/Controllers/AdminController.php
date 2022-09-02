@@ -79,7 +79,7 @@ class AdminController extends Controller
     public function edit($datos)
     {
         $admin=User::find($datos);
-        return view('admin.admin.adminEdit',compact('admin'));
+        return view('admin.admin.adminEdit',compact('admin')); 
     }
 
     /**

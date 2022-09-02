@@ -132,12 +132,9 @@ Route::get('/admin.index',function (){
 
 //Docente
 Route::resource('Teacher.Teacher',TeacherController::class);
-Route::get('/docente.docente', [DocenteController::class, 'index'])
-->middleware('auth.docente')
-->name('docente.index');
+
 
 //ADMINISTRARDOCENTE
-Route::resource('Teacher.Teacher',TeacherController::class);
 
 //Route::delete('Teacher/Teacher/{cedula}', [TeacherController::class, 'destroy'])->name('user.delete');
 
@@ -151,11 +148,6 @@ Route::resource('Teacher.Teacher',TeacherController::class);
 Route::resource('estudiante-registro',RegistroEstudiantesController::class);
 
 //Actividades
-Route::resource('activities.activities',ActivitiesController::class);
+Route::resource('activities/activities',ActivitiesController::class);
 
-
-
-Route::get('/docente.docente', [DocenteController::class, 'index'])
-->middleware('auth.docente')
-->name('docente.index'); 
 

@@ -59,9 +59,11 @@ class ActivitiesController extends Controller
      * @param  \App\Models\Actividades  $actividades
      * @return \Illuminate\Http\Response
      */
-    public function edit(Actividades $actividades)
+    public function edit($actividades)
     {
-        return view('admin.activities.activitiesEdit', compact('actividades'));
+        $act=Actividades::findOrFail($actividades);
+        //return $act;
+        return view('admin.activities.activitiesEdit', compact('act'));
     }
 
     /**
@@ -71,9 +73,15 @@ class ActivitiesController extends Controller
      * @param  \App\Models\Actividades  $actividades
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Actividades $actividades)
+    public function update(Request $request, $id)
     {
-        //
+        $datos=Actividades::findOrFail($id);
+        $datos->codigo_actividad=$request->input('codigo_actividad');
+        $datos->nombre_actividad=$request->input('nombre_actividad');
+        $datos->descripcion=$request->input('descripcion');
+        $datos->save();
+        return redirect('activities/activities');
+
     }
 
     /**
@@ -85,17 +93,9 @@ class ActivitiesController extends Controller
     public function destroy(Actividades  $actividades)
     {
         $actividades->delete();
-        //Actividades::destroy($actividades);
-        //$datos=Actividades::find( $actividades); 
-        //$datos->delete();
         notify()->preset('Actividad eliminada');
         return redirect('activities/activities');
         
-        /*$datos=Actividades::find($codigo); 
-        $datos->delete();
-        return redirect('activities/activities');  */
-        /*$actividades=Actividades::find($codigo);
-        $actividades->delete();
-        return redirect('activities/activities'); */
+      
     }
 }
