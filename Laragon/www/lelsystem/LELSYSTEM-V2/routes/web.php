@@ -9,10 +9,11 @@ use App\Http\Controllers\AdministradorController;
 use App\Http\Controllers\DocenteController;
 use App\Http\Controllers\EstudianteController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\MatriculaController;
 use App\Http\Controllers\RecursosController;
 use App\Http\Controllers\RegistroEstudiantesController;
 use App\Http\Controllers\TeacherController;
-
+Route::get('/',function (){return redirect('/homepage');});
 Route::get('/homepage',function (){
     return view('home');
 })->name('home');
@@ -51,29 +52,18 @@ Route::get('/docente.electricidad', [App\Http\Controllers\ElectricidadController
 Route::get('/homeadmin',function (){
     return view('admin.home');
 })->name('adminHome');
+//admin
+Route::resource('admin.admin',AdminController::class);
+//endadmin
+//recursos
+Route::resource('admin/recursos',RecursosController::class);
+//endrecursos
 
-    //activities
-    /*Route::get('/admin.activities',function (){
-        return view('admin.activities.activities');
-    })->name('activities');
-
-    Route::get('/adminEdit',function (){
-        return view('admin.activities.activitiesEdit');
-    })->name('activitiesEdit');*/
-
-    Route::get('/admin.admin',function (){
-        return view('admin.admin.admin');
-    })->middleware('auth')
-      ->name('admin');
 /*
     Route::get('/auth.login',function (){
         return view('auth.login');
     })->name('login');
 */
-
-    Route::get('/adminEdit',function (){
-        return view('admin.admin.adminEdit');
-    })->name('adminEdit');
 
     //courses
     Route::get('/admin.curse',function (){
@@ -84,25 +74,13 @@ Route::get('/homeadmin',function (){
         return view('admin.courses.curseEdit');
     })->name('curseEdit');
 
-    //resourses
-    /*Route::get('/admin.recourses',function (){
-        return view('admin.resourses.recourses');
-    })->name('recourses');
 
-    Route::get('/ResoursesEdit',function (){
-        return view('admin.resourses.recoursesEdit');
-    })->name('recoursesEdit');*/
 
-//admin
+//matricula
 
-Route::resource('admin.admin',AdminController::class);
+Route::resource('matricula',MatriculaController::class);
 
-//endadmin
-//recursos
-
-Route::resource('admin/recursos',RecursosController::class);
-
-//endrecursos
+//endmatricula
 
 
     //teacher

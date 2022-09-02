@@ -52,11 +52,15 @@
                     <div class="full-box tile-title text-center text-titles text-uppercase">
                         Estudiantes
                     </div>
+                    @php
+                        use App\Models\Estudiantes;
+                        $estudiante=Estudiantes::count();
+                    @endphp
                     <div class="full-box tile-icon text-center">
                         <i class="zmdi zmdi-face"></i>
                     </div>
                     <div class="full-box tile-number text-titles">
-                        <p class="full-box">70</p>
+                        <p class="full-box">{{ $estudiante }}</p>
                         <small>Registros</small>
                     </div>
                 </article>
@@ -66,25 +70,33 @@
                     <div class="full-box tile-title text-center text-titles text-uppercase">
                         Cursos
                     </div>
+                    @php
+                        use App\Models\Cursos;
+                        $cursos=Cursos::count();
+                    @endphp
                     <div class="full-box tile-icon text-center">
                         <i class="zmdi zmdi-balance zmdi-hc-fw"></i>
                     </div>
                     <div class="full-box tile-number text-titles">
-                        <p class="full-box">70</p>
+                        <p class="full-box">{{ $cursos }}</p>
                         <small>Registros</small>
                     </div>
                 </article>
             </a>
-            <a href="">
+            <a href="{{ url('admin/recursos') }}">
                 <article class="full-box tile">
                     <div class="full-box tile-title text-center text-titles text-uppercase">
                         Recursos
                     </div>
+                    @php
+                        use App\Models\Recursos;
+                        $recursos=Recursos::count();
+                    @endphp
                     <div class="full-box tile-icon text-center">
                         <i class="zmdi zmdi-font zmdi-hc-fw"></i>
                     </div>
                     <div class="full-box tile-number text-titles">
-                        <p class="full-box">70</p>
+                        <p class="full-box">{{ $recursos }}</p>
                         <small>Registros</small>
                     </div>
                 </article>
@@ -94,11 +106,15 @@
                     <div class="full-box tile-title text-center text-titles text-uppercase">
                         Actividades
                     </div>
+                    @php
+                        use App\Models\Actividades;
+                        $actividades=Actividades::count();
+                    @endphp
                     <div class="full-box tile-icon text-center">
                         <i class="zmdi zmdi-book zmdi-hc-fw"></i>
                     </div>
                     <div class="full-box tile-number text-titles">
-                        <p class="full-box">70</p>
+                        <p class="full-box">{{ $actividades }}</p>
                         <small>Registros</small>
                     </div>
                 </article>
