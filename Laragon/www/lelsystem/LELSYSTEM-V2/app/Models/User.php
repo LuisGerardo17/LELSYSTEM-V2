@@ -61,4 +61,8 @@ class User extends Authenticatable
         return $this->hasMany(Administradores::class,'cedula','cedula');
         //hasMany ->tiene muchos ('en este caso administradores','con id_admin','es igual a id_usuario')
     }
+
+    public function estudiante(){
+        return $this->hasMany(Estudiantes::class,'cedula','cedula');
+    }
 }

@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Usuarios;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class RegistroEstudiantesController extends Controller
@@ -47,7 +47,7 @@ class RegistroEstudiantesController extends Controller
      * @param  \App\Models\Usuarios  $usuarios
      * @return \Illuminate\Http\Response
      */
-    public function show(Usuarios $usuarios)
+    public function show( $user)
     {
         //
     }
@@ -58,7 +58,7 @@ class RegistroEstudiantesController extends Controller
      * @param  \App\Models\Usuarios  $usuarios
      * @return \Illuminate\Http\Response
      */
-    public function edit(Usuarios $usuarios)
+    public function edit($usuarios)
     {
         //
     }
@@ -70,7 +70,7 @@ class RegistroEstudiantesController extends Controller
      * @param  \App\Models\Usuarios  $usuarios
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Usuarios $usuarios)
+    public function update(Request $request, $usuarios)
     {
         //
     }
@@ -81,7 +81,7 @@ class RegistroEstudiantesController extends Controller
      * @param  \App\Models\Usuarios  $usuarios
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Usuarios $usuarios)
+    public function destroy($usuarios)
     {
         //
     }

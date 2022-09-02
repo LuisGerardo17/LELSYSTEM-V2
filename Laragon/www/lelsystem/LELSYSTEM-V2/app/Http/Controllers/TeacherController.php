@@ -15,8 +15,8 @@ class TeacherController extends Controller
      */
     public function index()
     {
-        $datos=User::all();
-        return view('admin.teacher.teacher', compact('datos'));
+        $docentes = Docentes::paginate(2);
+        return view('admin.teacher.teacher', compact('docentes'));
     }
 
     /**
@@ -43,10 +43,13 @@ class TeacherController extends Controller
             if($request->hasFile('imagen')){
                 $datosDocente['imagen']=$request->file('imagen')->store('uploadsTeacher','public');
             }
-            $datosDocente['rol']='Teacher';
+            $datosDocente['rol']='Docente';
             User::insert($datosDocente);
             //notify()->preset('Laravel Notify is awesome!');
             //notify()->preset('registrado');
+            Docentes::insert(['cedula'=>$datosDocente['cedula']]);
+            //notify()->preset('registrado');
+
             return redirect('Teacher/Teacher');
         }else{
             //notify()->preset('Laravel Notify is awesome!');
@@ -94,7 +97,7 @@ class TeacherController extends Controller
      */
     public function update(Request $request, User $user)
     {
-        //$user=User::findOrFail($cedula);
+        $user=User::findOrFail($cedula);
         $datos=$request->only('cedula','nombres','apellidos','correo','direccion','telefono','imagen');
         $contrasena=$request->input('contrasena');
         if($contrasena)
@@ -103,6 +106,7 @@ class TeacherController extends Controller
         {
             $datos=$request->except('contrasena','contrasena_verified_at');
         }
+
         else{
             $datos=$request->all();
             $datos['contrasena']=bcrypt($request->contrasena);
