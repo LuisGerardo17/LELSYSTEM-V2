@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Auth\Authenticatable;
-use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 
@@ -29,6 +28,7 @@ public function __construct ()
 }
 
     public function store(Request $request){
+
         $this->validate(request(),
         [
            'cedula' =>'required',
@@ -45,7 +45,7 @@ public function __construct ()
         ]);
 
         $user = User::insert(request(['cedula','nombres','apellidos','correo','direccion','telefono','contrasena','contrasena_verified_at','imagen','rol']));
-        auth()->login($user);
+         auth()->login($user);
         return redirect()->to('auth.login');
     }
 }

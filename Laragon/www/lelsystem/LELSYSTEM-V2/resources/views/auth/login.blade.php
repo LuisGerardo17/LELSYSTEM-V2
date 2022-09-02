@@ -15,7 +15,6 @@
 
           <input type="text" class="form-control" name="correo" id="validationCustomUsername" aria-describedby="inputGroupPrepend" placeholder="example.1@yavirac.edu.ec" required>
 
-          <input type="text" class="form-control" name = "correo" id="validationCustomUsername" aria-describedby="inputGroupPrepend" placeholder="example.1@yavirac.edu.ec">
 
         </div>
          @error('message')
@@ -25,8 +24,6 @@
             <label for="validationCustom03" class="form-label">Contraseña</label>
 
             <input type="password" class="form-control" name="contrasena" id="validationCustom03" placeholder="Contraseña" required>
-
-            <input type="password" class="form-control" name = "contrasena" id="validationCustom03" placeholder="Contraseña">
 
         </div>
 

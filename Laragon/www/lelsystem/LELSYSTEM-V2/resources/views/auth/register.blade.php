@@ -71,21 +71,12 @@
         @enderror
         <div class="col-md-3">
             <label for="validationCustom03" class="form-label">Confirmar Contraseña</label>
-
-            <input type="password" class="form-control" name="contrasena_verified_at" id="validationCustom03" placeholder="Contraseña" required>
-          </div>
-
+             <input type="password" class="form-control" name="contrasena_verified_at" id="validationCustom03" placeholder="Contraseña" required>
+        </div>
 
         @error('contrasena')
         <p class="error">*{{$message}}</p>
         @enderror
-
-            <input type="password" class="form-control" name="contrasena_verified_at" id="validationCustom03" placeholder="Contraseña" required>
-
-
-
-        </div>
-
 
         <div class="col-md-6">
           <label for="validationCustom04" class="form-label">Rol</label>

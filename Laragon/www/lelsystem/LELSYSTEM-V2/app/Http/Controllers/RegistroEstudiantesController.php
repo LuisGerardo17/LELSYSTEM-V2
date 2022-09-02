@@ -44,7 +44,7 @@ class RegistroEstudiantesController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Usuarios  $usuarios
+     * @param  \App\Models\User  $users
      * @return \Illuminate\Http\Response
      */
     public function show( $user)
@@ -55,10 +55,10 @@ class RegistroEstudiantesController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Usuarios  $usuarios
+     * @param  \App\Models\User  $users
      * @return \Illuminate\Http\Response
      */
-    public function edit($usuarios)
+    public function edit($user)
     {
         //
     }
@@ -67,10 +67,10 @@ class RegistroEstudiantesController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Usuarios  $usuarios
+     * @param  \App\Models\User  $users
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $usuarios)
+    public function update(Request $request, $user)
     {
         //
     }
@@ -78,10 +78,10 @@ class RegistroEstudiantesController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Usuarios  $usuarios
+     * @param  \App\Models\User  $users
      * @return \Illuminate\Http\Response
      */
-    public function destroy($usuarios)
+    public function destroy($user)
     {
         //
     }
