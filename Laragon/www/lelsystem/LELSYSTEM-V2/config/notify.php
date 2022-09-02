@@ -62,6 +62,12 @@ return [
             'model'   => 'toast',
             'title'   => 'Registrado',
         ],
+        'registradocosas' => [
+            'message' => 'registrado con exito.',
+            'type'    => 'success',
+            'model'   => 'toast',
+            'title'   => 'Registrado',
+        ],
         'error' => [
             'message' => 'Error al registrar compruebe los datos.',
             'type'    => 'error',
@@ -73,6 +79,61 @@ return [
             'type'    => 'success',
             'model'   => 'toast',
             'title'   => 'Eliminado',
+        ],
+
+        //Alerta docentes
+        'Docente registrado' => [
+            'message' => 'Docente registrado exitosamente',
+            'type'    => 'success',
+            'model'   => 'toast',
+            'title'   => 'Registrado',
+        ],
+        'Error al registrar' => [
+            'message' => 'Ha ocurrido un error',
+            'type'    => 'success',
+            'model'   => 'toast',
+            'title'   => 'Registrado',
+        ],
+        'Docente eliminado' => [
+            'message' => 'Docente eliminado exitosamente',
+            'type'    => 'success',
+            'model'   => 'toast',
+            'title'   => 'Registrado',
+        ],
+
+        //Alerta actividad
+        'Actividad registrada' => [
+            'message' => 'Su actividad ha sido creada exitosamente',
+            'type'    => 'success',
+            'model'   => 'toast',
+            'title'   => 'Registrado',
+        ],
+        'Actividad eliminada' => [
+            'message' => 'Su actividad se ha eliminado',
+            'type'    => 'success',
+            'model'   => 'toast',
+            'title'   => 'Registrado',
+        ],
+
+           //Alerta edit admin
+        'editar' => [
+            'message' => 'Usuario actualizado con exito.',
+            'type'    => 'success',
+            'model'   => 'toast',
+            'title'   => 'Actualizado',
+        ],
+        'eliminartodo' => [
+            'message' => 'Eliminado con exito.',
+            'type'    => 'success',
+            'model'   => 'toast',
+            'title'   => 'Eliminado',
+        ],
+
+        'editartodo' => [
+            'message' => 'Actualizado con exito.',
+            'type'    => 'success',
+            'model'   => 'toast',
+            'title'   => 'Actualizado',
         ],
     ],
 

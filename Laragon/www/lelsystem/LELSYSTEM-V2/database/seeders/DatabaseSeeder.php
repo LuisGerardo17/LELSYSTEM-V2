@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\TipoArchivos;
 use Illuminate\Database\Seeder;
 use App\Models\User;
 use Illuminate\Support\Facades\DB;
@@ -28,7 +29,20 @@ class DatabaseSeeder extends Seeder
           $user->telefono = '09876543';
           $user->imagen = 'foto';
           $user->rol = 'Administrador';
-          $user ->insert();
+          $user->save();
+
+          //tipo archivos
+          $archivos=new TipoArchivos();
+          $archivos->tipo='pdf';
+          $archivos->save();
+
+          $archivos1=new TipoArchivos();
+          $archivos1->tipo='excel';
+          $archivos1->save();
+
+          $archivos2=new TipoArchivos();
+          $archivos2->tipo='word';
+          $archivos2->save();
 
 
     }

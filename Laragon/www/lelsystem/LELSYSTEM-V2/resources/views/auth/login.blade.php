@@ -15,7 +15,6 @@
 
           <input type="text" class="form-control" name="correo" id="validationCustomUsername" aria-describedby="inputGroupPrepend" placeholder="example.1@yavirac.edu.ec" required>
 
-
         </div>
          @error('message')
          <p class="error"> *Error</p>

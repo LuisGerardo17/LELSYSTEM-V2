@@ -12,8 +12,13 @@ class User extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
 
+<<<<<<< HEAD
 
     protected $table = 'usuarios';
+=======
+ 
+
+>>>>>>> 323a94218496a8b4eee99759ce2938061cda56a4
     /**
      * The attributes that are mass assignable.
      *
@@ -28,8 +33,8 @@ class User extends Authenticatable
         'telefono',
         'contrasena',
         'imagen',
-        'rol',
-
+        'rol', 
+    
     ];
 
     protected $primaryKey = 'cedula';

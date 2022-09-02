@@ -3,14 +3,17 @@
 use App\Http\Controllers\AdminController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\ActivitiesController;
 use App\Http\Controllers\SessionsController;
 use App\Http\Controllers\AdministradorController;
 use App\Http\Controllers\DocenteController;
 use App\Http\Controllers\EstudianteController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\MatriculaController;
+use App\Http\Controllers\RecursosController;
 use App\Http\Controllers\RegistroEstudiantesController;
 use App\Http\Controllers\TeacherController;
-
+Route::get('/',function (){return redirect('/homepage');});
 Route::get('/homepage',function (){
     return view('home');
 })->name('home');
@@ -49,30 +52,18 @@ Route::get('/docente.electricidad', [App\Http\Controllers\ElectricidadController
 Route::get('/homeadmin',function (){
     return view('admin.home');
 })->name('adminHome');
+//admin
+Route::resource('admin.admin',AdminController::class);
+//endadmin
+//recursos
+Route::resource('admin/recursos',RecursosController::class);
+//endrecursos
 
-    //activities
-    Route::get('/admin.activities',function (){
-        return view('admin.activities.activities');
-    })->name('activities');
-
-    Route::get('/adminEdit',function (){
-        return view('admin.activities.activitiesEdit');
-    })->name('activitiesEdit');
-
-
-    Route::get('/admin.admin',function (){
-        return view('admin.admin.admin');
-    })->middleware('auth')
-      ->name('admin');
 /*
     Route::get('/auth.login',function (){
         return view('auth.login');
     })->name('login');
 */
-
-    Route::get('/adminEdit',function (){
-        return view('admin.admin.adminEdit');
-    })->name('adminEdit');
 
     //courses
     Route::get('/admin.curse',function (){
@@ -83,19 +74,13 @@ Route::get('/homeadmin',function (){
         return view('admin.courses.curseEdit');
     })->name('curseEdit');
 
-    //resourses
-    Route::get('/admin.recourses',function (){
-        return view('admin.resourses.recourses');
-    })->name('recourses');
 
-    Route::get('/ResoursesEdit',function (){
-        return view('admin.resourses.recoursesEdit');
-    })->name('recoursesEdit');
 
-Route::resource('admin.admin',AdminController::class);
-Route::get('/admin.admin',[AdminController::class,'index'])
-->middleware('auth.admin')
-->name('admin.index');
+//matricula
+
+Route::resource('matricula',MatriculaController::class);
+
+//endmatricula
 
 
     //teacher
@@ -119,18 +104,28 @@ Route::get('/estudiante.estudiante',[EstudianteController::class,'index'])
 Route::get('/admin.index',function (){
     return view('admin.admin.index');
 })->name('index');
-//ADMINISTRARDOCENTE
+
+
+
+
+//Docente
 Route::resource('Teacher.Teacher',TeacherController::class);
 
+
+//ADMINISTRARDOCENTE
+
 //Route::delete('Teacher/Teacher/{cedula}', [TeacherController::class, 'destroy'])->name('user.delete');
+
 //Estudiante
 
+/*Route::get('/estudiante.estudiante', [App\Http\Controllers\EstudianteController::class, 'index'])
+->middleware('auth.estudiante')
+->name('estudiante.index');
+*/
 
 Route::resource('estudiante-registro',RegistroEstudiantesController::class);
 
-/************************************************************************************/
+//Actividades
+Route::resource('activities/activities',ActivitiesController::class);
 
-/******************************Docente************************************************/
-Route::get('/docente.docente', [DocenteController::class, 'index'])
-->middleware('auth.docente')
-->name('docente.index');
+

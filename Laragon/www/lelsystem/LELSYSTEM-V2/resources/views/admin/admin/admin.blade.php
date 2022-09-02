@@ -60,7 +60,10 @@
                                                 <td>{{ $admin->user->direccion }}</td>
                                                 <td>{{ $admin->user->correo }}</td>
                                                 <td>{{ $admin->user->telefono }}</td>
-                                                <td><a href="" class="btn btn-success btn-raised btn-xs"><i class="zmdi zmdi-refresh"></i></a></td>
+                                                <td>
+
+                                                    <a href="{{ url('admin/admin/'. $admin->cedula .'/edit') }}" class="btn btn-success btn-raised btn-xs"><i class="zmdi zmdi-refresh"></i></a></td>
+
                                                 <td>
                                                     <form action="{{ url('/admin/admin/').'/'.$admin->cedula }}" method="post" class="Eliminar">
                                                         @csrf
@@ -68,8 +71,8 @@
                                                         <button type="submit"><a class="btn btn-danger btn-raised btn-xs"><i class="zmdi zmdi-delete"></i></a></button>
                                                     </form>
                                                 </td>
-                                            </tr>
-                                        @endforeach
+                                            </tr> 
+                                        @endforeach 
 
 
 									</tbody>

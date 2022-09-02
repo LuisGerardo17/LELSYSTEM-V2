@@ -21,33 +21,24 @@
 							<div class="container-fluid">
 								<div class="row">
 									<div class="col-xs-12 col-md-10 col-md-offset-1">
-									    <form action="">
+									    <form action="{{ url('activities/activities')}}" method="POST">
+										@csrf
+											<div class="form-group label-floating">
+											  <label class="control-label">Codigo</label>
+											  <input class="form-control" type="text" name="codigo_actividad" >
+											</div> 
 									    	<div class="form-group label-floating">
 											  <label class="control-label">Nombre</label>
-											  <input class="form-control" type="text">
+											  <input class="form-control" type="text" name="nombre_actividad" >
 											</div>
 											<div class="form-group label-floating">
 											  <label class="control-label">Descripcion</label>
-											  <input class="form-control" type="text">
+											  <input class="form-control" type="text" name="descripcion" >
 											</div>
-											<div class="form-group">
-										      <label class="control-label">Estado</label>
-										        <select class="form-control">
-										          <option>Activado</option>
-										          <option>Desactivado</option>
-										        </select>
-										    </div>
-											<div class="form-group">
-										      <label class="control-label">Año</label>
-										        <select class="form-control">
-										          <option>2017</option>
-										          <option>2016</option>
-										        </select>
-										    </div>
 										    <p class="text-center">
 										    	<button href="#!" class="btn btn-info btn-raised btn-sm"><i class="zmdi zmdi-floppy"></i> Guardar</button>
 										    </p>
-									    </form>
+									    </form> 
 									</div>
 								</div>
 							</div>
@@ -60,40 +51,26 @@
 											<th class="text-center">Codigo</th>
 											<th class="text-center">Nombre</th>
 											<th class="text-center">Descripcion</th>
-											<th class="text-center">Estado</th>
-											<th class="text-center">Año</th>
 											<th class="text-center">Actualizar</th>
 											<th class="text-center">Eliminar</th>
 										</tr>
 									</thead>
 									<tbody>
+									@foreach ($actividades as $items)
 										<tr>
-											<td>1</td>
-											<td>First</td>
-											<td>A</td>
-											<td>Active</td>
-											<td>2017</td>
-											<td><a href="#!" class="btn btn-success btn-raised btn-xs"><i class="zmdi zmdi-refresh"></i></a></td>
-											<td><a href="#!" class="btn btn-danger btn-raised btn-xs"><i class="zmdi zmdi-delete"></i></a></td>
+											<td>{{$items->codigo_actividad}}</td>
+											<td>{{$items->nombre_actividad}}</td>
+											<td>{{$items->descripcion}}</td> 
+											
+											<td><button type="submit" ><a href="{{ url('activities/activities/') .'/'. $items->codigo_actividad . '/edit' }}" class="btn btn-success btn-raised btn-xs"><i class="zmdi zmdi-refresh"></i></a></button></td>
+											
+											<form action="{{ url('activities/activities/'.$items->codigo_actividad) }}" method="POST">
+												@csrf
+												@method('DELETE')
+											<td><button type="submit" ><a href="#!" class="btn btn-danger btn-raised btn-xs"><i class="zmdi zmdi-delete"></i></a></button></td>
+											</form>
 										</tr>
-										<tr>
-											<td>2</td>
-											<td>First</td>
-											<td>B</td>
-											<td>Active</td>
-											<td>2017</td>
-											<td><a href="#!" class="btn btn-success btn-raised btn-xs"><i class="zmdi zmdi-refresh"></i></a></td>
-											<td><a href="#!" class="btn btn-danger btn-raised btn-xs"><i class="zmdi zmdi-delete"></i></a></td>
-										</tr>
-										<tr>
-											<td>3</td>
-											<td>Third</td>
-											<td>A</td>
-											<td>Active</td>
-											<td>2017</td>
-											<td><a href="#!" class="btn btn-success btn-raised btn-xs"><i class="zmdi zmdi-refresh"></i></a></td>
-											<td><a href="#!" class="btn btn-danger btn-raised btn-xs"><i class="zmdi zmdi-delete"></i></a></td>
-										</tr>
+										@endforeach
 									</tbody>
 								</table>
 								<ul class="pagination pagination-sm">
