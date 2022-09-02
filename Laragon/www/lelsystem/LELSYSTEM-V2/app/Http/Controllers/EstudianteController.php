@@ -8,14 +8,10 @@ use Illuminate\Http\Request;
 class EstudianteController extends Controller
 {
     public function index(){
-<<<<<<< HEAD
 
-        $estudiantes=Estudiantes::paginate(2);
-        return view('admin.estudiante.estudiante',compact('estudiantes'));
-=======
         $estudiantes = Estudiantes::paginate(2);
-       return view('admin.estudiante.estudiante',compact('estudiantes')); 
->>>>>>> 323a94218496a8b4eee99759ce2938061cda56a4
+       return view('admin.estudiante.estudiante',compact('estudiantes'));
+
     }
 
 
