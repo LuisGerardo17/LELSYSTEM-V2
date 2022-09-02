@@ -10,4 +10,8 @@ class Actividades extends Model
     use HasFactory;
 
     protected $table = 'actividades';
+    protected $primaryKey='codigo_actividad';
+    protected $fillable=[
+        'nombre_actividad','descripcion'
+    ];
 }

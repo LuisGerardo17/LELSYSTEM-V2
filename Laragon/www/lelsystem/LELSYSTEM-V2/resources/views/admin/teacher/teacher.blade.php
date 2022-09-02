@@ -13,9 +13,9 @@
 			<div class="row">
 				<div class="col-xs-12">
 					<ul class="nav nav-tabs" style="margin-bottom: 15px;">
-					  	<li class="active"><a href="#new" data-toggle="tab">Agregar</a></li>
 					  	<li><a href="#list" data-toggle="tab">Lista</a></li>
-					</ul>
+					  	<li class="active"><a href="#new" data-toggle="tab">Agregar</a></li>
+					</ul> 
 					<div id="myTabContent" class="tab-content">
 						<div class="tab-pane fade active in" id="new">
 							<div class="container-fluid">
@@ -51,12 +51,12 @@
 										<tr>
 											<td>{{$items->user->cedula}}</td>
                                             <td><img src="{{asset('storage').'/'.$items->imagen}}" alt="" width="50px"></td>
-											<td>{{$items->user->nombres}}</td>
-											<td>{{$items->user->apellidos}}</td>
-											<td>{{$items->user->direccion}}</td>
-											<td>{{$items->user->correo}}</td>
-											<td>{{$items->user->telefono}}</td>
-											<form action="{{ url('/Teacher/Teacher/').'/'.$items->cedula }}" method="POST">
+											<td>{{$items->nombres}}</td>
+											<td>{{$items->apellidos}}</td>
+											<td>{{$items->direccion}}</td>
+											<td>{{$items->correo}}</td>
+											<td>{{$items->telefono}}</td>
+											<form action="{{ url('/Teacher/Teacher/edit/').'/'.$items->cedula }}" method="POST">
 											@csrf
 											@method('PUT')
 											<td><button type="submit"><a href="" class="btn btn-success btn-raised btn-xs"><i class="zmdi zmdi-refresh"></i></a></button></td>
