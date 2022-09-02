@@ -13,7 +13,7 @@ use App\Http\Controllers\MatriculaController;
 use App\Http\Controllers\RecursosController;
 use App\Http\Controllers\RegistroEstudiantesController;
 use App\Http\Controllers\TeacherController;
-
+Route::get('/',function (){return redirect('/homepage');});
 Route::get('/homepage',function (){
     return view('home');
 })->name('home');
