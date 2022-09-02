@@ -10,9 +10,10 @@ class EstudianteController extends Controller
     public function index(){
 
         $estudiantes = Estudiantes::paginate(2);
+
        return view('admin.estudiante.estudiante',compact('estudiantes'));
 
-    } 
+    }
 
 
 
@@ -105,4 +106,4 @@ class EstudianteController extends Controller
         return redirect('estudiante/estudiante');
 
     }
-} 
+}
