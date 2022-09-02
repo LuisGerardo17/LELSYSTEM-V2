@@ -9,6 +9,7 @@ use App\Http\Controllers\AdministradorController;
 use App\Http\Controllers\DocenteController;
 use App\Http\Controllers\EstudianteController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\RecursosController;
 use App\Http\Controllers\RegistroEstudiantesController;
 use App\Http\Controllers\TeacherController;
 
@@ -84,18 +85,24 @@ Route::get('/homeadmin',function (){
     })->name('curseEdit');
 
     //resourses
-    Route::get('/admin.recourses',function (){
+    /*Route::get('/admin.recourses',function (){
         return view('admin.resourses.recourses');
     })->name('recourses');
 
     Route::get('/ResoursesEdit',function (){
         return view('admin.resourses.recoursesEdit');
-    })->name('recoursesEdit');
+    })->name('recoursesEdit');*/
+
+//admin
 
 Route::resource('admin.admin',AdminController::class);
-Route::get('/admin.admin',[AdminController::class,'index'])
-->middleware('auth.admin')
-->name('admin.index');
+
+//endadmin
+//recursos
+
+Route::resource('admin/recursos',RecursosController::class);
+
+//endrecursos
 
 
     //teacher
