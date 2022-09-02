@@ -12,7 +12,7 @@ class EstudianteController extends Controller
         $estudiantes = Estudiantes::paginate(2);
        return view('admin.estudiante.estudiante',compact('estudiantes'));
 
-    }
+    } 
 
 
 
@@ -69,16 +69,10 @@ class EstudianteController extends Controller
      * @param  \App\Models\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function edit(User $datos)
+    public function edit($datos)
     {
-
-
-        /*
-         return view('admin.estudiante.estudiante', compact('datos'));
-         $post=Post::find($id);
-        $this->cedula=$post->cedula;
-        $this->nombres=$post->nombres;
-        $this->view=''*/
+        $student=User::find($datos);
+        return view('admin.estudiante.estudianteEdit', compact('student'));
     }
 
     /**
@@ -88,9 +82,12 @@ class EstudianteController extends Controller
      * @param  \App\Models\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function update($cedula)
+    public function update(Request $request,$id)
     {
-
+        $dato=$request->except(['_token','_method']);
+        User::where('cedula','=',$id)->update($dato);
+        notify()->preset('Estudiante actualizado');
+        return redirect('estudiante/estudiante');
 
     }
 
@@ -103,8 +100,9 @@ class EstudianteController extends Controller
     public function destroy($cedula)
     {
         $datos=User::find($cedula);
-        $datos->delete();
-        return redirect('admin.estudiante.estudiante');
+        User::destroy($cedula);
+        notify()->success('Estudiante eliminado');
+        return redirect('estudiante/estudiante');
 
     }
-}
+} 

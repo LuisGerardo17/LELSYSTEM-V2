@@ -89,8 +89,9 @@ class TeacherController extends Controller
     {
         $dato=$request->except(['_token','_method']);
         User::where('cedula','=',$id)->update($dato);
+        notify()->preset('Docente actualizado'); 
         return redirect('Teacher/Teacher');
-    }
+    } 
     /**
      * Remove the specified resource from storage.
      *
@@ -105,4 +106,4 @@ class TeacherController extends Controller
         return redirect('Teacher/Teacher'); 
         
     }
-}
+} 

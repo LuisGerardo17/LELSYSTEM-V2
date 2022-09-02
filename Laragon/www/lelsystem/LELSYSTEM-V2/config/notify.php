@@ -90,15 +90,21 @@ return [
         ],
         'Error al registrar' => [
             'message' => 'Ha ocurrido un error',
-            'type'    => 'success',
+            'type'    => 'Error',
             'model'   => 'toast',
-            'title'   => 'Registrado',
+            'title'   => 'Error',
         ],
         'Docente eliminado' => [
             'message' => 'Docente eliminado exitosamente',
             'type'    => 'success',
             'model'   => 'toast',
-            'title'   => 'Registrado',
+            'title'   => 'Eliminado',
+        ],
+        'Docente actualizado' => [
+            'message' => 'El docente ha sido actualizado con exito',
+            'type'    => 'success',
+            'model'   => 'toast',
+            'title'   => 'Actualizado',
         ],
 
         //Alerta actividad
@@ -112,7 +118,7 @@ return [
             'message' => 'Su actividad se ha eliminado',
             'type'    => 'success',
             'model'   => 'toast',
-            'title'   => 'Registrado',
+            'title'   => 'Eliminado',
         ],
 
            //Alerta edit admin
@@ -134,6 +140,19 @@ return [
             'type'    => 'success',
             'model'   => 'toast',
             'title'   => 'Actualizado',
+        ],
+        //Estudiante
+        'Estudiante actualizado' => [
+            'message' => 'El estudiante ha sido actualizado con exito',
+            'type'    => 'success',
+            'model'   => 'toast',
+            'title'   => 'Actualizado',
+        ],
+        'Estudiante eliminado' => [
+            'message' => 'El estudiante ha sido eliminado con exito',
+            'type'    => 'success',
+            'model'   => 'toast',
+            'title'   => 'Eliminado',
         ],
     ],
 

@@ -125,7 +125,7 @@ Route::resource('Teacher.Teacher',TeacherController::class);
 
 Route::resource('estudiante-registro',RegistroEstudiantesController::class);
 
-//Actividades
+//Actividades->Leonardo
 Route::resource('activities/activities',ActivitiesController::class);
 
 
