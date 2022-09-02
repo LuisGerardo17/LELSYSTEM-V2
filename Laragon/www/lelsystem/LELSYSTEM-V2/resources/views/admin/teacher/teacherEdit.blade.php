@@ -13,7 +13,7 @@
 	<div class="row">
 		<div class="col-xs-12">
 			<ul class="nav nav-tabs" style="margin-bottom: 15px;">
-				<li><a href="{{ Route('teacher') }}">Volver</a></li>
+				<li><a href="">Volver</a></li>
 				<li class="active"><a href="#new" data-toggle="tab">Editar</a></li>
 
 			</ul>
@@ -25,46 +25,52 @@
 					<div class="container-fluid">
 						<div class="row">
 							<div class="col-xs-12 col-md-10 col-md-offset-1">
-								<form action="{{ url('Teacher/Teacher/{Teacher}.'/'.$items->cedula') }}" method="post" enctype="multipart/form-data">
+								<form action="{{ url('Teacher/Teacher/'.$docen->cedula) }}" method="post" enctype="multipart/form-data">
 									@csrf
 									@method('PUT')
 									<div class="form-group label-floating">
 										<label class="control-label">Cédula</label>
-										<input class="form-control" type="text" name="cedula" value='{{$items->cedula}}'>
+										<input class="form-control" type="text" name="cedula" value="{{$docen->cedula}}">
 									</div>
 									<div class="form-group label-floating">
 										<label class="control-label">Nombres</label>
-										<input class="form-control" type="text" name="nombres" value='{{$items->nombres}}'>
+										<input class="form-control" type="text" name="nombres" value="{{$docen->nombres}}">
 									</div>
 
 									<div class="form-group label-floating">
 										<label class="control-label">Apellidos</label>
-										<input class="form-control" type="text" name="apellidos" value='{{$items->apellidos}}'>
+										<input class="form-control" type="text" name="apellidos" value="{{$docen->apellidos}}">
 									</div>
 									<div class="form-group label-floating">
 										<label class="control-label">Correo</label>
-										<input class="form-control" type="text" name="correo" value='{{$items->correo}}'>
+										<input class="form-control" type="text" name="correo" value="{{$docen->correo}}">
 									</div>
 									<div class="form-group label-floating">
 										<label class="control-label">Dirección</label>
-										<input class="form-control" type="text" name="direccion" value='{{$items->direccion}}'>
+										<input class="form-control" type="text" name="direccion" value="{{$docen->direccion}}">
 									</div>
 									<div class="form-group label-floating">
 										<label class="control-label">Telefono</label>
-										<input class="form-control" type="text" name="telefono" value='{{$items->telefono}}'>
+										<input class="form-control" type="text" name="telefono" value="{{$docen->telefono}}">
 									</div>
 									<div class="form-group label-floating">
 										<label class="control-label">Contraseña</label>
-										<input class="form-control" type="password" name="contrasena" value='{{$items->contrasena}}'>
+										<input class="form-control" type="password" name="contrasena" value="{{$docen->contrasena}}">
 									</div>
 									<div class="form-group label-floating">
 										<label class="control-label">Confirmar Contraseña</label>
-										<input class="form-control" type="password" name="contrasena_verified_at" value='{{$items->contrasena_verified_at}}'>
+										<input class="form-control" type="password" name="contrasena_verified_at" value="{{$docen->contrasena_verified_at}}">
 									</div>
-									
+									<div class="form-group">
+										<div>
+											<input type="text" readonly="" class="form-control" value="{{$docen->imagen}}">
+											<input type="file" name="imagen">
+										</div>
+									</div>
 									<p class="text-center">
 										<button type="submit" class="btn btn-info btn-raised btn-sm"><i class="zmdi zmdi-floppy"></i> Save</button>
 									</p>
+
 
 								</form>
 							</div>

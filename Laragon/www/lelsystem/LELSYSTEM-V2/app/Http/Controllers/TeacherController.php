@@ -72,58 +72,25 @@ class TeacherController extends Controller
      * @param  \App\Models\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function edit(User $datos)
+    public function edit($datos)
     {
-        $user=User::findOrFail($datos);
-        return $user;
-        //return view('admin.teacher.teacherEdit', compact('datos'));
-
-        /*$post=Post::find($id);
-        $this->cedula=$post->cedula;
-        $this->nombres=$post->nombres;
-        $this->view=''*/
+        $docen=User::find($datos);
+        return view('admin.teacher.teacherEdit', compact('docen'));
     } 
 
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \Illuminate\Http\Request  $request 
      * @param  \App\Models\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, User $user)
+    public function update(Request $request,$id)
     {
-        $user=User::findOrFail($user);
-        $datos=$request->only('cedula','nombres','apellidos','correo','direccion','telefono','imagen');
-        $contrasena=$request->input('contrasena');
-        if($contrasena)
-        $datos['contrasena']= bcrypt($contrasena);
-        /*if(trim($request->contrasena)=='' && trim($request->contrasena_verified_at)=='')
-        {
-            $datos=$request->except('contrasena','contrasena_verified_at');
-        }
-
-        else{
-            $datos=$request->all();
-            $datos['contrasena']=bcrypt($request->contrasena);
-            $datos['contrasena_verified_at']=bcrypt($request->contrasena_verified_at);
-        }*/
-        
-        $user->update($datos);
-        return redirect()->route('admin.teacher.teacherEdit')->with('Usuario actualizado con exito');
-
-
-
-        /*if(trim($request->contrasena_verified_at)=='')
-        {
-            $datos=$request->except('contrasena_verified_at');
-        }
-        else{
-            $datos=$request->all();
-            $data['contrasena']=bcrypt($request->contrasena_verified_at);
-        }*/
+        $dato=$request->except(['_token','_method']);
+        User::where('cedula','=',$id)->update($dato);
+        return redirect('Teacher/Teacher');
     }
-
     /**
      * Remove the specified resource from storage.
      *
@@ -132,14 +99,10 @@ class TeacherController extends Controller
      */
     public function destroy($cedula)
     {
-        //$datos=User::find($cedula);
+        $datos=User::find($cedula);
         User::destroy($cedula);
-        Docentes::destroy($cedula);
-        //$user = Docentes::find($cedula); 
-        //$user->delete();
-        //User::destroy($cedula);
         notify()->success('Docente eliminado exitosamente');
-        return redirect('Teacher/Teacher');
-        //return view('admin.teacher.teacher', compact('datos'));
+        return redirect('Teacher/Teacher'); 
+        
     }
 }

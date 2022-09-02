@@ -23,7 +23,7 @@
 							<div class="col-xs-12 col-md-10 col-md-offset-1">
 								<form action="{{ url('activities/activities/'.$act->codigo_actividad) }}" method="POST">
 								@csrf
-								@method('PUT')
+								@method('PUT')  
 									<div class="form-group label-floating">
 										<label class="control-label">Codigo</label>
 										<input class="form-control" type="text" name="codigo_actividad" value="{{$act->codigo_actividad}}">

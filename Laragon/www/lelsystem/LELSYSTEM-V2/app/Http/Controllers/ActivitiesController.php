@@ -90,8 +90,8 @@ class ActivitiesController extends Controller
     public function destroy($id)
     {
         Actividades::destroy($id);
-        notify()->preset('Actividad eliminada');
-        return redirect('activities/activities');
+        notify()->preset('Actividad eliminada'); 
+        return redirect('activities/activities'); 
         
       
     }

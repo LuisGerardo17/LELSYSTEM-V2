@@ -17,7 +17,7 @@
 					    <li class="active"><a href="#new" data-toggle="tab">Agregar</a></li>
 					</ul>
 					<div id="myTabContent" class="tab-content">
-						<div class="tab-pane fade active in" id="new">
+						<div class="tab-pane fade active in" id="new"> 
 							<div class="container-fluid">
 								<div class="row">
 									<div class="col-xs-12 col-md-10 col-md-offset-1">
@@ -60,7 +60,7 @@
 										<tr>
 											<td>{{$items->codigo_actividad}}</td>
 											<td>{{$items->nombre_actividad}}</td>
-											<td>{{$items->descripcion}}</td> 
+											<td>{{$items->descripcion}}</td>    
 											
 											<td><button type="submit" ><a href="{{ url('activities/activities/') .'/'. $items->codigo_actividad . '/edit' }}" class="btn btn-success btn-raised btn-xs"><i class="zmdi zmdi-refresh"></i></a></button></td>
 											

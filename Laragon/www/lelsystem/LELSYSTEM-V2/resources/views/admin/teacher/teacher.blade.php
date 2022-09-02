@@ -56,18 +56,15 @@
 											<td>{{$items->user->direccion}}</td> 
 											<td>{{$items->user->correo}}</td>
 											<td>{{$items->user->telefono}}</td>
-											<form action="{{ url('/Teacher/Teacher/edit/').'/'.$items->cedula }}" method="POST">
-											@csrf
-											@method('PUT')
-											<td><button type="submit"><a href="" class="btn btn-success btn-raised btn-xs"><i class="zmdi zmdi-refresh"></i></a></button></td>
-											</form>
-											<form action="{{ url('/Teacher/Teacher/').'/'.$items->cedula }}" method="POST">
+											<td><button type="submit" ><a href="{{ url('Teacher/Teacher/') .'/'. $items->cedula . '/edit' }}" class="btn btn-success btn-raised btn-xs"><i class="zmdi zmdi-refresh"></i></a></button></td>
+
+											<form action="{{ url('/Teacher/Teacher/'.$items->cedula) }}" method="POST"> 
 												@csrf 
 												@method('DELETE')
 											<td><button type="submit" ><a href="#!" class="btn btn-danger btn-raised btn-xs"><i class="zmdi zmdi-delete"></i></a></button></td>
 											</form>
 										</tr>
-										@endforeach
+										@endforeach 
 									</tbody>
 								</table>
 							
