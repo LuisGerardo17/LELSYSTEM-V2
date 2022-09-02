@@ -17,5 +17,6 @@ class Actividades extends Model
     ];
 
     protected $primaryKey = 'codigo_actividad';
+    protected $keyType = 'string';
 
 } 

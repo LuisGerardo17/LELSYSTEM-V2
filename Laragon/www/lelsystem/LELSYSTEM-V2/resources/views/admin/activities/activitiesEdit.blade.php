@@ -21,20 +21,20 @@
 					<div class="container-fluid">
 						<div class="row">
 							<div class="col-xs-12 col-md-10 col-md-offset-1">
-								<form action="{{ url('activities/activities/') .'/'. $items->codigo_actividad . '/update' }}" method="POST">
+								<form action="{{ url('activities/activities/'.$act->codigo_actividad) }}" method="POST">
 								@csrf
 								@method('PUT')
 									<div class="form-group label-floating">
 										<label class="control-label">Codigo</label>
-										<input class="form-control" type="text" name="codigo_actividad" value="{{$items->codigo_actividad}}">
+										<input class="form-control" type="text" name="codigo_actividad" value="{{$act->codigo_actividad}}">
 									</div>
 									<div class="form-group label-floating">
 										<label class="control-label">Nombre</label>
-										<input class="form-control" type="text" name="nombre_actividad" value="{{$items->nombre_actividad}}">
+										<input class="form-control" type="text" name="nombre_actividad" value="{{$act->nombre_actividad}}">
 									</div>
 									<div class="form-group label-floating">
 										<label class="control-label">Descripcion</label>
-										<input class="form-control" type="text" name="descripcion" value="{{$items->descripcion}}">
+										<input class="form-control" type="text" name="descripcion" value="{{$act->descripcion}}">
 									</div>
 									<p class="text-center">
 										<button href="#!" class="btn btn-info btn-raised btn-sm"><i class="zmdi zmdi-floppy"></i> Guardar cambios</button>

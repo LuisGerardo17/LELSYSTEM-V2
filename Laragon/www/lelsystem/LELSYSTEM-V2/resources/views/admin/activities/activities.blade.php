@@ -64,7 +64,7 @@
 											
 											<td><button type="submit" ><a href="{{ url('activities/activities/') .'/'. $items->codigo_actividad . '/edit' }}" class="btn btn-success btn-raised btn-xs"><i class="zmdi zmdi-refresh"></i></a></button></td>
 											
-											<form action="{{ url('/activities/activities/').'/'.$items->codigo_actividad . '/destroy' }}" method="POST">
+											<form action="{{ url('activities/activities/'.$items->codigo_actividad) }}" method="POST">
 												@csrf
 												@method('DELETE')
 											<td><button type="submit" ><a href="#!" class="btn btn-danger btn-raised btn-xs"><i class="zmdi zmdi-delete"></i></a></button></td>
