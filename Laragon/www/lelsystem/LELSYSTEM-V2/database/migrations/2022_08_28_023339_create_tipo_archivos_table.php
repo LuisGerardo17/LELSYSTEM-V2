@@ -15,7 +15,7 @@ class CreateTipoArchivosTable extends Migration
     {
         Schema::create('tipo_archivos', function (Blueprint $table) {
             $table->id('id_tipo_archivo');
-            $table->string('tipo',5);
+            $table->string('tipo',50);
             $table->timestamps();
         });
     }

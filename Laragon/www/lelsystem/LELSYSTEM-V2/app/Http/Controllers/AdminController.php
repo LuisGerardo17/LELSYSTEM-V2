@@ -17,7 +17,8 @@ class AdminController extends Controller
     public function index()
     {
         $administradores=Administradores::paginate(2);
-        return view('admin.admin.admin',compact('administradores'));
+        $admin=false;
+        return view('admin.admin.admin',compact('administradores','admin'));
     }
 
     /**
@@ -75,9 +76,10 @@ class AdminController extends Controller
      * @param  \App\Models\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function edit(User $user)
+    public function edit($datos)
     {
-        //
+        $admin=User::find($datos);
+        return view('admin.admin.adminEdit',compact('admin'));
     }
 
     /**
@@ -87,9 +89,17 @@ class AdminController extends Controller
      * @param  \App\Models\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, User $user)
+    public function update(Request $request,$id)
     {
-        //
+        $datos=$request->except(["_token","_method"]);
+        if($request->hasFile('imagen')){
+            $datosimg=User::find($id);
+            Storage::delete('public/'. $datosimg->imagen);
+            $datos['imagen']=$request->file('imagen')->store('uploadsAdmin','public');
+        }
+        User::where('cedula','=',$id)->update($datos);
+        notify()->preset('editar');
+        return redirect('admin/admin');
     }
 
     /**

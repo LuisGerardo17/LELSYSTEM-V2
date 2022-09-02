@@ -62,6 +62,12 @@ return [
             'model'   => 'toast',
             'title'   => 'Registrado',
         ],
+        'registradocosas' => [
+            'message' => 'registrado con exito.',
+            'type'    => 'success',
+            'model'   => 'toast',
+            'title'   => 'Registrado',
+        ],
         'error' => [
             'message' => 'Error al registrar compruebe los datos.',
             'type'    => 'error',
@@ -74,6 +80,25 @@ return [
             'model'   => 'toast',
             'title'   => 'Eliminado',
         ],
+        'editar' => [
+            'message' => 'Usuario actualizado con exito.',
+            'type'    => 'success',
+            'model'   => 'toast',
+            'title'   => 'Actualizado',
+        ],
+        'eliminartodo' => [
+            'message' => 'Eliminado con exito.',
+            'type'    => 'success',
+            'model'   => 'toast',
+            'title'   => 'Eliminado',
+        ],
+        'editartodo' => [
+            'message' => 'Actualizado con exito.',
+            'type'    => 'success',
+            'model'   => 'toast',
+            'title'   => 'Actualizado',
+        ],
+
     ],
 
 ];
