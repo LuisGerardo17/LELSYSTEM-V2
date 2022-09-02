@@ -14,8 +14,9 @@ class ActivitiesController extends Controller
      */
     public function index()
     {
-        $datos=Actividades::all();
-        return view('admin.activities.activities', compact('datos'));
+        $actividades=Actividades::all(); 
+        notify()->preset('Actividad registrada');
+        return view('admin.activities.activities', compact('actividades'));
     }
 
     /**
@@ -60,7 +61,7 @@ class ActivitiesController extends Controller
      */
     public function edit(Actividades $actividades)
     {
-        return view('admin.activities.activitiesEdit', compact('datos'));
+        return view('admin.activities.activitiesEdit', compact('actividades'));
     }
 
     /**
@@ -81,11 +82,20 @@ class ActivitiesController extends Controller
      * @param  \App\Models\Actividades  $actividades
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Actividades $actividades)
+    public function destroy(Actividades  $actividades)
     {
-        $datos=Actividades::find($actividades);
-        $datos->delete();
-        //notify()->preset('eliminar');
+        $actividades->delete();
+        //Actividades::destroy($actividades);
+        //$datos=Actividades::find( $actividades); 
+        //$datos->delete();
+        notify()->preset('Actividad eliminada');
         return redirect('activities/activities');
+        
+        /*$datos=Actividades::find($codigo); 
+        $datos->delete();
+        return redirect('activities/activities');  */
+        /*$actividades=Actividades::find($codigo);
+        $actividades->delete();
+        return redirect('activities/activities'); */
     }
 }

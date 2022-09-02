@@ -56,15 +56,15 @@
 										</tr>
 									</thead>
 									<tbody>
-									@foreach ($datos as $items)
+									@foreach ($actividades as $items)
 										<tr>
 											<td>{{$items->codigo_actividad}}</td>
 											<td>{{$items->nombre_actividad}}</td>
 											<td>{{$items->descripcion}}</td>
-											<form action="{{ url('activities/activities/{activity}/edit').'/'.$items->codigo_actividad }}" method="POST">
+											<form action="{{ url('activities/activities/').'/'.$items->codigo_actividad }}" method="POST">
 											@csrf
 											@method('PUT')
-											<td><a href="#!" class="btn btn-success btn-raised btn-xs"><i class="zmdi zmdi-refresh"></i></a></td>
+											<td><button type="submit" ><a href="#!" class="btn btn-success btn-raised btn-xs"><i class="zmdi zmdi-refresh"></i></a></button></td>
 											</form>
 											
 											<form action="{{ url('/activities/activities/').'/'.$items->codigo_actividad }}" method="POST">

@@ -68,8 +68,8 @@
                                                         <button type="submit"><a class="btn btn-danger btn-raised btn-xs"><i class="zmdi zmdi-delete"></i></a></button>
                                                     </form>
                                                 </td>
-                                            </tr>
-                                        @endforeach
+                                            </tr> 
+                                        @endforeach 
 
 
 									</tbody>

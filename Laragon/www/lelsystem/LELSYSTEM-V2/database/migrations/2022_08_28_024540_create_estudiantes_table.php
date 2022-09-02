@@ -15,7 +15,7 @@ class CreateEstudiantesTable extends Migration
     {
         Schema::create('estudiantes', function (Blueprint $table) {
             $table->string('cedula',10)->primary();
-            $table->foreign('cedula')->references('cedula')->on('users')->cascadeOnDelete()->cascadeOnUpdate();
+            $table->foreign('cedula')->references('cedula')->on('users')->cascadeOnDelete()->cascadeOnUpdate(); 
             $table->timestamps();
         });
     }

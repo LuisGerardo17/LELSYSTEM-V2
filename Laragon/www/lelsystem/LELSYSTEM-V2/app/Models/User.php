@@ -28,8 +28,8 @@ class User extends Authenticatable
         'telefono',
         'contrasena',
         'imagen',
-        'rol',
-
+        'rol', 
+    
     ];
 
     protected $primaryKey = 'cedula';

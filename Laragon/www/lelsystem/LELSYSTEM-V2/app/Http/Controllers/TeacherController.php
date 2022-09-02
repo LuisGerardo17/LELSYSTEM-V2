@@ -13,9 +13,9 @@ class TeacherController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index() 
     {
-        $docentes = Docentes::paginate(2);
+        $docentes = Docentes::all();
         return view('admin.teacher.teacher', compact('docentes'));
     }
 
@@ -45,15 +45,11 @@ class TeacherController extends Controller
             }
             $datosDocente['rol']='Docente';
             User::insert($datosDocente);
-            //notify()->preset('Laravel Notify is awesome!');
-            //notify()->preset('registrado');
+            notify()->preset('Docente registrado'); 
             Docentes::insert(['cedula'=>$datosDocente['cedula']]);
-            //notify()->preset('registrado');
-
             return redirect('Teacher/Teacher');
         }else{
-            //notify()->preset('Laravel Notify is awesome!');
-            //notify()->preset('error');
+            notify()->preset('Error al registrar');
             return redirect('Teacher/Teacher');
         }
     }
@@ -97,7 +93,7 @@ class TeacherController extends Controller
      */
     public function update(Request $request, User $user)
     {
-        $user=User::findOrFail($cedula);
+        $user=User::findOrFail($user);
         $datos=$request->only('cedula','nombres','apellidos','correo','direccion','telefono','imagen');
         $contrasena=$request->input('contrasena');
         if($contrasena)
@@ -136,9 +132,13 @@ class TeacherController extends Controller
      */
     public function destroy($cedula)
     {
-        $datos=User::find($cedula);
-        $datos->delete();
-        notify()->preset('eliminar');
+        //$datos=User::find($cedula);
+        User::destroy($cedula);
+        Docentes::destroy($cedula);
+        //$user = Docentes::find($cedula); 
+        //$user->delete();
+        //User::destroy($cedula);
+        notify()->success('Docente eliminado exitosamente');
         return redirect('Teacher/Teacher');
         //return view('admin.teacher.teacher', compact('datos'));
     }

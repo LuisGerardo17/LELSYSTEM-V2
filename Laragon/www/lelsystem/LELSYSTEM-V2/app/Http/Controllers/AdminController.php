@@ -36,7 +36,7 @@ class AdminController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request) 
     {
         $datosAdmin=$request->except('_token');
         if($datosAdmin['contrasena']==$datosAdmin['contrasena_verified_at']){
@@ -48,7 +48,7 @@ class AdminController extends Controller
             User::insert($datosAdmin);
             Administradores::insert(['cedula'=>$datosAdmin['cedula']]);
             notify()->preset('registrado');
-            return redirect('admin/admin');
+            return redirect('admin/admin'); 
 
         }else{
             notify()->preset('error');
@@ -105,6 +105,6 @@ class AdminController extends Controller
         //storage/app    /public/....
         User::destroy($cedula);
         notify()->preset('eliminar');
-        return redirect('admin/admin');
+        return redirect('admin/admin'); 
     }
 }

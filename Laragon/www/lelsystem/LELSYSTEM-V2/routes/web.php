@@ -150,5 +150,5 @@ Route::resource('activities.activities',ActivitiesController::class);
 
 Route::get('/docente.docente', [DocenteController::class, 'index'])
 ->middleware('auth.docente')
-->name('docente.index');
+->name('docente.index'); 
 

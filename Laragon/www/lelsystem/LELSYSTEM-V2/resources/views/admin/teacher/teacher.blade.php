@@ -50,19 +50,19 @@
 									@foreach ($docentes as $items)
 										<tr>
 											<td>{{$items->user->cedula}}</td>
-                                            <td><img src="{{asset('storage').'/'.$items->imagen}}" alt="" width="50px"></td>
-											<td>{{$items->nombres}}</td>
-											<td>{{$items->apellidos}}</td>
-											<td>{{$items->direccion}}</td>
-											<td>{{$items->correo}}</td>
-											<td>{{$items->telefono}}</td>
+                                            <td><img src="{{asset('storage').'/'.$items->user->imagen}}" alt="" width="50px"></td>
+											<td>{{$items->user->nombres}}</td>
+											<td>{{$items->user->apellidos}}</td>
+											<td>{{$items->user->direccion}}</td> 
+											<td>{{$items->user->correo}}</td>
+											<td>{{$items->user->telefono}}</td>
 											<form action="{{ url('/Teacher/Teacher/edit/').'/'.$items->cedula }}" method="POST">
 											@csrf
 											@method('PUT')
 											<td><button type="submit"><a href="" class="btn btn-success btn-raised btn-xs"><i class="zmdi zmdi-refresh"></i></a></button></td>
 											</form>
 											<form action="{{ url('/Teacher/Teacher/').'/'.$items->cedula }}" method="POST">
-												@csrf
+												@csrf 
 												@method('DELETE')
 											<td><button type="submit" ><a href="#!" class="btn btn-danger btn-raised btn-xs"><i class="zmdi zmdi-delete"></i></a></button></td>
 											</form>
@@ -70,6 +70,7 @@
 										@endforeach
 									</tbody>
 								</table>
+							
 								<ul class="pagination pagination-sm">
 								  	<li class="disabled"><a href="#!">«</a></li>
 								  	<li class="active"><a href="#!">1</a></li>

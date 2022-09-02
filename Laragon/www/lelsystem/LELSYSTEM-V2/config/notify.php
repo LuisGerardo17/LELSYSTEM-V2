@@ -74,6 +74,36 @@ return [
             'model'   => 'toast',
             'title'   => 'Eliminado',
         ],
+        'Docente registrado' => [
+            'message' => 'Docente registrado exitosamente',
+            'type'    => 'success',
+            'model'   => 'toast',
+            'title'   => 'Registrado',
+        ],
+        'Error al registrar' => [
+            'message' => 'Ha ocurrido un error',
+            'type'    => 'success',
+            'model'   => 'toast',
+            'title'   => 'Registrado',
+        ],
+        'Docente eliminado' => [
+            'message' => 'Docente eliminado exitosamente',
+            'type'    => 'success',
+            'model'   => 'toast',
+            'title'   => 'Registrado',
+        ],
+        'Actividad registrada' => [
+            'message' => 'Su actividad ha sido creada exitosamente',
+            'type'    => 'success',
+            'model'   => 'toast',
+            'title'   => 'Registrado',
+        ],
+        'Actividad eliminada' => [
+            'message' => 'Su actividad se ha eliminado',
+            'type'    => 'success',
+            'model'   => 'toast',
+            'title'   => 'Eliminado',
+        ],
     ],
 
 ];
