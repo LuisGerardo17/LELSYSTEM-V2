@@ -15,7 +15,7 @@
 					<ul class="nav nav-tabs" style="margin-bottom: 15px;">
 					  	<li><a href="#list" data-toggle="tab">Lista</a></li>
 					  	<li class="active"><a href="#new" data-toggle="tab">Agregar</a></li>
-					</ul> 
+					</ul>
 					<div id="myTabContent" class="tab-content">
 						<div class="tab-pane fade active in" id="new">
 							<div class="container-fluid">
@@ -53,21 +53,21 @@
                                             <td><img src="{{asset('storage').'/'.$items->user->imagen}}" alt="" width="50px"></td>
 											<td>{{$items->user->nombres}}</td>
 											<td>{{$items->user->apellidos}}</td>
-											<td>{{$items->user->direccion}}</td> 
+											<td>{{$items->user->direccion}}</td>
 											<td>{{$items->user->correo}}</td>
 											<td>{{$items->user->telefono}}</td>
 											<td><button type="submit" ><a href="{{ url('Teacher/Teacher/') .'/'. $items->cedula . '/edit' }}" class="btn btn-success btn-raised btn-xs"><i class="zmdi zmdi-refresh"></i></a></button></td>
 
-											<form action="{{ url('/Teacher/Teacher/'.$items->cedula) }}" method="POST"> 
-												@csrf 
+											<form action="{{ url('/Teacher/Teacher/'.$items->cedula) }}" method="POST" class="Eliminar">
+												@csrf
 												@method('DELETE')
 											<td><button type="submit" ><a href="#!" class="btn btn-danger btn-raised btn-xs"><i class="zmdi zmdi-delete"></i></a></button></td>
 											</form>
 										</tr>
-										@endforeach 
+										@endforeach
 									</tbody>
 								</table>
-							
+
 								<ul class="pagination pagination-sm">
 								  	<li class="disabled"><a href="#!">«</a></li>
 								  	<li class="active"><a href="#!">1</a></li>
