@@ -1,5 +1,5 @@
 $(document).ready(function(){
-	$('.btn-sideBar-SubMenu').on('click', function(){
+	/*$('.btn-sideBar-SubMenu').on('click', function(){
 		var SubMenu=$(this).next('ul');
 		var iconBtn=$(this).children('.zmdi-caret-down');
 		if(SubMenu.hasClass('show-sideBar-SubMenu')){
@@ -9,7 +9,7 @@ $(document).ready(function(){
 			iconBtn.addClass('zmdi-hc-rotate-180');
 			SubMenu.addClass('show-sideBar-SubMenu');
 		}
-	});
+	});*/
 	$('.btn-exit-system').on('click', function(){
 		swal({
 		  	title: 'Are you sure?',
