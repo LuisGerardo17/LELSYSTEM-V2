@@ -16,7 +16,7 @@ class RecursosController extends Controller
     public function index()
     {
         $forms=TipoArchivos::all();
-        $recursos=Recursos::paginate(5);
+        $recursos=Recursos::paginate(8);
         return view('admin.recursos.recursos',compact('forms','recursos'));
     }
 

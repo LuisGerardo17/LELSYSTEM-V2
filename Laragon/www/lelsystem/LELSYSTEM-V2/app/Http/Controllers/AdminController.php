@@ -16,7 +16,7 @@ class AdminController extends Controller
      */
     public function index()
     {
-        $administradores=Administradores::paginate(2);
+        $administradores=Administradores::paginate(8);
 
 
         return view('admin.admin.admin',compact('administradores'));
@@ -50,7 +50,7 @@ class AdminController extends Controller
             'contrasena'=>'required|confirmed|min:2|max:8',
             'imagen'=>'required|mimes:jpeg,png,jpg'
         ];
-        
+
         $request->validate($campos);
         $datosAdmin=$request->except(['_token','contrasena_confirmation']);
 
