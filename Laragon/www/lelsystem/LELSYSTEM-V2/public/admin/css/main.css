@@ -607,6 +607,9 @@ body, html{
 		padding-left: 0;
 	}
 }
+.alertas{
+    color: red;
+}
 
 /*doncente*/
 

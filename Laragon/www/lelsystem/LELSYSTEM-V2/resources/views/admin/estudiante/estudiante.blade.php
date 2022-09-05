@@ -58,7 +58,7 @@
 											<td>{{$items->user->telefono}}</td>
 											<td><button type="submit" ><a href="{{ url('estudiante/estudiante/') .'/'. $items->cedula . '/edit' }}" class="btn btn-success btn-raised btn-xs"><i class="zmdi zmdi-refresh"></i></a></button></td>
 
-											<form action="{{ url('/estudiante/estudiante/').'/'.$items->cedula }}" method="POST">
+											<form action="{{ url('/estudiante/estudiante/').'/'.$items->cedula }}" method="POST" class="Eliminar">
 												@csrf
 												@method('DELETE')
 											<td><button type="submit" ><a href="#!" class="btn btn-danger btn-raised btn-xs"><i class="zmdi zmdi-delete"></i></a></button></td>
@@ -67,15 +67,7 @@
 										@endforeach
 									</tbody>
 								</table>
-								<ul class="pagination pagination-sm">
-								  	<li class="disabled"><a href="#!">«</a></li>
-								  	<li class="active"><a href="#!">1</a></li>
-								  	<li><a href="#!">2</a></li>
-								  	<li><a href="#!">3</a></li>
-								  	<li><a href="#!">4</a></li>
-								  	<li><a href="#!">5</a></li>
-								  	<li><a href="#!">»</a></li>
-								</ul>
+								{!! $estudiantes->links() !!}
 							</div>
 					  	</div>
 					</div>

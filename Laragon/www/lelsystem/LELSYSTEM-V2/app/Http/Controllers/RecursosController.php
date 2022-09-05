@@ -16,7 +16,7 @@ class RecursosController extends Controller
     public function index()
     {
         $forms=TipoArchivos::all();
-        $recursos=Recursos::paginate(5);
+        $recursos=Recursos::paginate(8);
         return view('admin.recursos.recursos',compact('forms','recursos'));
     }
 
@@ -39,7 +39,15 @@ class RecursosController extends Controller
     public function store(Request $request)
     {
         $datos=$request->except('_token');
-        
+        $campos=[
+            'codigo_recurso'=>'required|string',
+            'nombre_recurso'=>'required',
+            'descripcion'=>'required',
+            'id_tipo_archivo'=>'required|max:1',
+
+        ];
+
+        $request->validate($campos);
         Recursos::insert($datos);
         notify()->preset('registradocosas');
         return redirect('admin/recursos');

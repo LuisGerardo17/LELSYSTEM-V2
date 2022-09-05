@@ -1,3 +1,4 @@
+
 <div class="form-group label-floating">
     <label class="control-label">Cédula</label>
     <input class="form-control" type="text" onkeypress='return event.charCode >= 48 && event.charCode <= 57' maxlength="10" name="cedula" id="cedula" value="{{ isset($admin) ? $admin->cedula : old('cedula') }}">

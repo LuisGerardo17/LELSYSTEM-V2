@@ -10,8 +10,10 @@ use Illuminate\Support\Facades\Storage;
 class EstudianteController extends Controller
 {
     public function index(){
+
         $estudiantes = Estudiantes::paginate(5);
        // $estudiantes = DB::table('users')->select('cedula','imagen','nombres','apellidos','direccion','correo','telefono')->where('rol','Estudiante')->get();
+
        return view('admin.estudiante.estudiante',compact('estudiantes'));
 
     }
