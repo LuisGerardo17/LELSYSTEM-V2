@@ -58,7 +58,7 @@
 											<td>{{$items->telefono}}</td>
 											<td><button type="submit" ><a href="{{ url('Teacher/Teacher/') .'/'. $items->cedula . '/edit' }}" class="btn btn-success btn-raised btn-xs"><i class="zmdi zmdi-refresh"></i></a></button></td>
 
-											<form action="{{ url('/Teacher/Teacher/'.$items->cedula) }}" method="POST">
+											<form action="{{ url('/Teacher/Teacher/'.$items->cedula) }}" method="POST" class="Eliminar">
 												@csrf
 												@method('DELETE')
 											<td><button type="submit" ><a href="#!" class="btn btn-danger btn-raised btn-xs"><i class="zmdi zmdi-delete"></i></a></button></td>

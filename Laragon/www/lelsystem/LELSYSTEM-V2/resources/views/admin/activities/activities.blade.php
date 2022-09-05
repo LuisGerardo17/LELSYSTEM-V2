@@ -17,7 +17,7 @@
 					    <li class="active"><a href="#new" data-toggle="tab">Agregar</a></li>
 					</ul>
 					<div id="myTabContent" class="tab-content">
-						<div class="tab-pane fade active in" id="new"> 
+						<div class="tab-pane fade active in" id="new">
 							<div class="container-fluid">
 								<div class="row">
 									<div class="col-xs-12 col-md-10 col-md-offset-1">
@@ -26,7 +26,7 @@
 											<div class="form-group label-floating">
 											  <label class="control-label">Codigo</label>
 											  <input class="form-control" type="text" name="codigo_actividad" >
-											</div> 
+											</div>
 									    	<div class="form-group label-floating">
 											  <label class="control-label">Nombre</label>
 											  <input class="form-control" type="text" name="nombre_actividad" >
@@ -38,7 +38,7 @@
 										    <p class="text-center">
 										    	<button href="#!" class="btn btn-info btn-raised btn-sm"><i class="zmdi zmdi-floppy"></i> Guardar</button>
 										    </p>
-									    </form> 
+									    </form>
 									</div>
 								</div>
 							</div>
@@ -60,11 +60,11 @@
 										<tr>
 											<td>{{$items->codigo_actividad}}</td>
 											<td>{{$items->nombre_actividad}}</td>
-											<td>{{$items->descripcion}}</td>    
-											
+											<td>{{$items->descripcion}}</td>
+
 											<td><button type="submit" ><a href="{{ url('activities/activities/') .'/'. $items->codigo_actividad . '/edit' }}" class="btn btn-success btn-raised btn-xs"><i class="zmdi zmdi-refresh"></i></a></button></td>
-											
-											<form action="{{ url('activities/activities/'.$items->codigo_actividad) }}" method="POST">
+
+											<form action="{{ url('activities/activities/'.$items->codigo_actividad) }}" method="POST" class="Eliminar">
 												@csrf
 												@method('DELETE')
 											<td><button type="submit" ><a href="#!" class="btn btn-danger btn-raised btn-xs"><i class="zmdi zmdi-delete"></i></a></button></td>
