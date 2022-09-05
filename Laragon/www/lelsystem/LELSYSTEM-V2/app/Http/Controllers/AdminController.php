@@ -16,7 +16,7 @@ class AdminController extends Controller
      */
     public function index()
     {
-        $administradores=Administradores::paginate(8);
+        $administradores=Administradores::paginate(2);
 
 
         return view('admin.admin.admin',compact('administradores'));
