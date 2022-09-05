@@ -1,6 +1,6 @@
 <div class="form-group label-floating">
     <label class="control-label">Cédula</label>
-    <input class="form-control" type="text" name="cedula" >
+    <input class="form-control" type="text" name="cedula" maxlength="10">
   </div>
   <div class="form-group label-floating">
     <label class="control-label">Nombres</label>

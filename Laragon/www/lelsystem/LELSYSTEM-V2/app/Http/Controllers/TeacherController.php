@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use App\Models\Docentes;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class TeacherController extends Controller
 {
@@ -13,9 +14,10 @@ class TeacherController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index() 
+    public function index()
     {
-        $docentes = Docentes::all();
+
+         $docentes = DB::table('users')->select('cedula','imagen','nombres','apellidos','direccion','correo','telefono')->where('rol','Docente')->get();
         return view('admin.teacher.teacher', compact('docentes'));
     }
 
@@ -45,7 +47,7 @@ class TeacherController extends Controller
             }
             $datosDocente['rol']='Docente';
             User::insert($datosDocente);
-            notify()->preset('Docente registrado'); 
+            notify()->preset('Docente registrado');
             Docentes::insert(['cedula'=>$datosDocente['cedula']]);
             return redirect('Teacher/Teacher');
         }else{
@@ -76,12 +78,12 @@ class TeacherController extends Controller
     {
         $docen=User::find($datos);
         return view('admin.teacher.teacherEdit', compact('docen'));
-    } 
+    }
 
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request 
+     * @param  \Illuminate\Http\Request  $request
      * @param  \App\Models\User  $user
      * @return \Illuminate\Http\Response
      */
@@ -89,9 +91,9 @@ class TeacherController extends Controller
     {
         $dato=$request->except(['_token','_method']);
         User::where('cedula','=',$id)->update($dato);
-        notify()->preset('Docente actualizado'); 
+        notify()->preset('Docente actualizado');
         return redirect('Teacher/Teacher');
-    } 
+    }
     /**
      * Remove the specified resource from storage.
      *
@@ -103,7 +105,7 @@ class TeacherController extends Controller
         $datos=User::find($cedula);
         User::destroy($cedula);
         notify()->success('Docente eliminado exitosamente');
-        return redirect('Teacher/Teacher'); 
-        
+        return redirect('Teacher/Teacher');
+
     }
-} 
+}

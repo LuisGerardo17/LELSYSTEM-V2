@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
+use App\Models\Docentes;
+use App\Models\Estudiantes;
+use App\Models\Administradores;
 use Illuminate\Auth\Authenticatable;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
@@ -29,24 +32,32 @@ public function __construct ()
 
     public function store(Request $request){
 
-        $this->validate(request(),
-        [
-           'cedula' =>'required',
-           'nombres' =>'required',
-           'apellidos'=>'required',
-           'direccion'=>'required',
-           'telefono'=>'required',
-           'correo'=>'required',
-           'telefono'=>'required',
-           'contrasena'=>'required',
-           'rol'=>'required',
-           'imagen'=>'required',
+        $datosUser=Request()->except('_token');
 
-        ]);
+        if($datosUser['contrasena']==$datosUser['contrasena_verified_at']){
+            if($request->hasFile('imagen')){
+                $datosUser['imagen']=$request->file('imagen')->store('uploadsUsers','public');
+            }
+             if($datosUser['rol']=='Estudiante'){
+                User::insert($datosUser);
+                Estudiantes::insert(['cedula'=>$datosUser['cedula']]);
 
-        $user = User::insert(request(['cedula','nombres','apellidos','correo','direccion','telefono','contrasena','contrasena_verified_at','imagen','rol']));
-         auth()->login($user);
-        return redirect()->to('auth.login');
+             }else if ( $datosUser['rol']=='Docente'){
+                User::insert($datosUser);
+                Docentes::insert(['cedula'=>$datosUser['cedula']]);
+
+
+              }else if($datosUser['rol']=='Administrador'){
+                User::insert($datosUser);
+                Administradores::insert(['cedula'=>$datosUser['cedula']]);
+              }
+
+        }else{
+            notify()->preset('error');
+            return redirect('auth.login');
+        }
+        notify()->preset('registrado');
+        return redirect('login');
     }
 }
 

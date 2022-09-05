@@ -19,7 +19,7 @@
 
 					</ul>
 					<div id="myTabContent" class="tab-content">
-						<div class="tab-pane fade" id="new">
+						<div class="tab-pane fade {{ ($errors->any()) ? 'active in':'' }}" id="new">
 							<div class="container-fluid">
 								<div class="row">
 									<div class="col-xs-12 col-md-10 col-md-offset-1">
@@ -34,7 +34,7 @@
 						</div>
 
                         <x:notify-messages/>
-					  	<div class="tab-pane fade active in" id="list">
+					  	<div class="tab-pane fade {{ ($errors->any()) ? '' : 'active in' }}" id="list">
 							<div class="table-responsive">
 								<table class="table table-hover text-center">
 									<thead>
@@ -71,8 +71,8 @@
                                                         <button type="submit"><a class="btn btn-danger btn-raised btn-xs"><i class="zmdi zmdi-delete"></i></a></button>
                                                     </form>
                                                 </td>
-                                            </tr> 
-                                        @endforeach 
+                                            </tr>
+                                        @endforeach
 
 
 									</tbody>
@@ -85,5 +85,7 @@
 			</div>
 		</div>
 	</section>
-
+@php
+    Session::forget('session')
+@endphp
 @endsection

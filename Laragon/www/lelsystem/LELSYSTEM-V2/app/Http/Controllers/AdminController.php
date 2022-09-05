@@ -16,9 +16,8 @@ class AdminController extends Controller
      */
     public function index()
     {
-        $administradores=Administradores::paginate(2);
-        $admin=false;
-        return view('admin.admin.admin',compact('administradores','admin'));
+        $administradores=Administradores::paginate(5);
+        return view('admin.admin.admin',compact('administradores'));
     }
 
     /**
@@ -37,10 +36,22 @@ class AdminController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request) 
+    public function store(Request $request)
     {
-        $datosAdmin=$request->except('_token');
-        if($datosAdmin['contrasena']==$datosAdmin['contrasena_verified_at']){
+        $campos=[
+            'cedula'=>'required|string|max:10 ',
+            'nombres'=>'required',
+            'apellidos'=>'required',
+            'correo'=>'required',
+            'direccion'=>'required',
+            'telefono'=>'required|max:10',
+            'contrasena'=>'required|confirmed|min:2|max:8',
+            'imagen'=>'required|mimes:jpeg,png,jpg'
+        ];
+
+        $request->validate($campos);
+        $datosAdmin=$request->except(['_token','contrasena_confirmation']);
+
             if($request->hasFile('imagen')){
                 $datosAdmin['imagen']=$request->file('imagen')->store('uploadsAdmin','public');
             }
@@ -49,14 +60,7 @@ class AdminController extends Controller
             User::insert($datosAdmin);
             Administradores::insert(['cedula'=>$datosAdmin['cedula']]);
             notify()->preset('registrado');
-            return redirect('admin/admin'); 
-
-        }else{
-            notify()->preset('error');
             return redirect('admin/admin');
-        }
-
-
     }
 
     /**
@@ -79,7 +83,7 @@ class AdminController extends Controller
     public function edit($datos)
     {
         $admin=User::find($datos);
-        return view('admin.admin.adminEdit',compact('admin')); 
+        return view('admin.admin.adminEdit',compact('admin'));
     }
 
     /**
@@ -115,6 +119,6 @@ class AdminController extends Controller
         //storage/app    /public/....
         User::destroy($cedula);
         notify()->preset('eliminar');
-        return redirect('admin/admin'); 
+        return redirect('admin/admin');
     }
 }

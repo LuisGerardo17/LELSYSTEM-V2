@@ -3,6 +3,7 @@
 use App\Http\Controllers\AdminController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\ActivitiesController;
 use App\Http\Controllers\SessionsController;
 use App\Http\Controllers\AdministradorController;
@@ -22,12 +23,12 @@ Route::get('/homepage',function (){
 Route::get('/auth.login', [SessionsController::class, 'create'])
 ->middleware('guest')
 ->name('login');
-Route::get('/auth.register', [RegisterController::class, 'create'])
+Route::get('/auth.register', [UserController::class, 'create'])
 ->middleware('guest')
 ->name('register');
 
 //Register y Login
-Route::post('/auth.register', [RegisterController::class, 'store'])->name('register.store');
+Route::post('/auth.register', [UserController::class, 'store'])->name('register.store');
 Route::post('/auth.login', [SessionsController::class, 'store'])->name('login.store');
 Route::get('/logout', [SessionsController::class, 'destroy'])
 ->middleware('auth')

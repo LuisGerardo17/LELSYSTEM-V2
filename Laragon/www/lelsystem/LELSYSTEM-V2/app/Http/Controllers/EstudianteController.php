@@ -4,15 +4,17 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use App\Models\Estudiantes;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Storage;
 
 class EstudianteController extends Controller
 {
     public function index(){
-
-        $estudiantes = Estudiantes::paginate(2);
+        $estudiantes = Estudiantes::paginate(5);
+       // $estudiantes = DB::table('users')->select('cedula','imagen','nombres','apellidos','direccion','correo','telefono')->where('rol','Estudiante')->get();
        return view('admin.estudiante.estudiante',compact('estudiantes'));
 
-    } 
+    }
 
 
 
@@ -33,7 +35,20 @@ class EstudianteController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    {
+{
+    $campos=[
+        'cedula'=>'required|string|max:10 ',
+        'nombres'=>'required',
+        'apellidos'=>'required',
+        'correo'=>'required',
+        'direccion'=>'required',
+        'telefono'=>'required|max:10',
+        'contrasena'=>'required|confirmed|min:2|max:8',
+        'imagen'=>'required|mimes:jpeg,png,jpg'
+    ];
+
+    $request->validate($campos);
+
         $datosEstudiante=Request()->except('_token');
 
         if($datosEstudiante['contrasena']==$datosEstudiante['contrasena_verified_at']){
@@ -49,7 +64,8 @@ class EstudianteController extends Controller
             notify()->preset('error');
             return redirect('estudiante.estudiante');
         }
-    }
+
+}
 
 
     /**
@@ -105,4 +121,4 @@ class EstudianteController extends Controller
         return redirect('estudiante/estudiante');
 
     }
-} 
+}
