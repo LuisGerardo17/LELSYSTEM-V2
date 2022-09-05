@@ -8,12 +8,14 @@
 <body>
 
    @yield('content')
+   
    <a href="{{route('login')}}">
-    <input class="home" type="submit" value="Login">
+    <input class="log" type="submit" value="Login">
    </a>
-    <a href="{{route('home')}}">
+   <br>
+   <a href="{{route('home')}}">
     <input class="home" type="submit" value="Homepage">
-    </a>
-
+   </a>
+      
 </body>
 </html>

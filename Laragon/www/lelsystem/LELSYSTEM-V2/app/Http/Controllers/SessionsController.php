@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Foundation\Auth\User as Authenticatable;
 use App\Models\User;
 
 class SessionsController extends Controller
@@ -11,7 +12,7 @@ class SessionsController extends Controller
         return view('auth.login');
 }
 
-  public function store() {
+  public function store(Request $request) {
     if(auth()->attempt(request(['correo','contrasena'])) == false) {
         return back()->withErrors([
           'message' => 'El correo o contraseña esta incorrecto porfavor ingresa nuevamente'
@@ -20,11 +21,11 @@ class SessionsController extends Controller
     } else {
         if(auth()->user()->rol == 'Administrador'){
 
-            return redirect()->to('admin.admin.admin');
+            return redirect()->route('admin');
 
         } elseif(auth()->user()->rol == 'Docente'){
 
-            return redirect()->to('docente.docente');
+            return redirect()->to('docente');
         } elseif(auth()->user()->rol == 'Estudiante'){
 
             return redirect()->to('estudiante.estudiante');
@@ -40,8 +41,7 @@ class SessionsController extends Controller
 
     public function destroy() {
        auth()->logout();
-
-       return redirect()->to('/');
+       return redirect()->to('homepage');
 
     }
 

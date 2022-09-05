@@ -20,7 +20,7 @@ body{
     padding: 0;
     float: right;
     margin-top: 10px;
-    border-radius: 40px;
+    border-radius: 50px;
  }
 
 .nav-item{
@@ -38,21 +38,17 @@ body{
  }
  .lista li a:hover {
     transform: scale(1.15);
-    background: transparent;
     color: #fff;
  }
  
  .colorq{
      color: #fff;
-     background: #000;
+     background: #00f;
      font-size: 16px;
  }
- .colorq:hover{
-    transform: scale(1.15);
-    border: #000 solid 1px;
- }
+ 
  #fondo{
-     background: #00f;
+     background: #009688;
  }
 
  .desplegable button{
@@ -68,21 +64,27 @@ body{
 
  .desplegable button:hover{
      transform: scale(1.15);
- }
+}
+
  .menua{
      background-color: rgba(0, 0, 0, 0.801);
  }
+
  .color{
-     color: white;
+     color: #fff;
  }
+.color:hover{
+    background: transparent;
+}
+
  .imgSlider{
-     height: 570px;
-     object-fit: fill;
+    height: 570px;
+    object-fit: fill;
      
  }
   
  .imgPag{
-    background-color: black;
+    background-color: #000;
     display: flex;
 }
 .imgPag:hover{
@@ -128,7 +130,7 @@ main{
 
  }
  .colorn{
-    background-color: #00f;
+    background-color: #009688;
     color: white;
  }
 .img {
@@ -143,7 +145,7 @@ main{
 
  
  #footer{
-     background: linear-gradient(gray , black);
+     background: #009688;
  }
  .footer2{
      background-color: black;

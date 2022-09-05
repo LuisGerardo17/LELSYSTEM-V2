@@ -2,25 +2,38 @@
 @section('title', 'Login')
 @section('content')
 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+
 <div class="login-box">
     <img class="avatar" src="static/img/logo5.png" alt="">
     <h1>LOGIN</h1>
-    <form method="POST" action="">
+    <form class="row g-3 needs-validation" method="post" action="">
         @csrf
-        <label for="username">Correo</label>
-        <input type="text" placeholder="Ingrese correo">
+        <div class="col-md-12">
+          <label for="validationCustomUsername" class="form-label">Correo</label>
 
-        <label for="password">Contraseña</label>
-        <input type="password" placeholder="Ingrese contraseña">
+          <input type="text" class="form-control" name="correo" id="validationCustomUsername" aria-describedby="inputGroupPrepend" placeholder="example.1@yavirac.edu.ec" required>
 
-        @error('message')
-         <p class="border border-red-500 round-md bg-red-100 w-full text-red-600 p-2 my-2">* Error </p>
-        @enderror
+        </div>
+         @error('message')
+         <p class="error"> *Error</p>
+         @enderror
+        <div class="col-md-12">
+            <label for="validationCustom03" class="form-label">Contraseña</label>
 
-        <buton type="submit">Enviar</buton>
+            <input type="password" class="form-control" name="contrasena" id="validationCustom03" placeholder="Contraseña" required>
 
-        <a href="#">¿Olvidaste tu contraseña?</a><br>
-        <a href="{{route('register')}}">Registrate aquí</a>
+        </div>
+
+        <a class="o" href="#">¿Olvidaste tu contraseña?</a><br>
+
+        <div>
+            <button class="btn btn-primary" type="submit">Ingresar</button>
+        </div>
+
+        <a class="reg" href="{{route('register')}}"><b>Registrate aquí</b></a>
+
     </form>
 </div>
 

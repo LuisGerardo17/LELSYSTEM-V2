@@ -12,7 +12,7 @@
 			<div class="row">
 				<div class="col-xs-12">
 					<ul class="nav nav-tabs" style="margin-bottom: 15px;">
-                        <li><a href="{{ Route('admin') }}" >Volver</a></li>
+                        <li><a href="{{ url('admin/admin') }}" >Volver</a></li>
 					  	<li class="active"><a href="#new" data-toggle="tab">Editar</a></li>
 
 					</ul>
@@ -24,7 +24,9 @@
 							<div class="container-fluid">
 								<div class="row">
 									<div class="col-xs-12 col-md-10 col-md-offset-1">
-									    <form action="">
+									    <form action="{{ url('admin/admin/'.$admin->cedula) }}" method="post" enctype="multipart/form-data">
+                                            @csrf
+                                            {{ method_field('PATCH') }}
 									    	@include('admin.admin.adminForm')
 									    </form>
 									</div>

@@ -1,14 +1,37 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\ActivitiesController;
 use App\Http\Controllers\SessionsController;
 use App\Http\Controllers\AdministradorController;
 use App\Http\Controllers\DocenteController;
 use App\Http\Controllers\EstudianteController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\MatriculaController;
+use App\Http\Controllers\RecursosController;
 use App\Http\Controllers\RegistroEstudiantesController;
+use App\Http\Controllers\TeacherController;
+Route::get('/',function (){return redirect('/homepage');});
+Route::get('/homepage',function (){
+    return view('home');
+})->name('home');
 
+
+Route::get('/auth.login', [SessionsController::class, 'create'])
+->middleware('guest')
+->name('login');
+Route::get('/auth.register', [RegisterController::class, 'create'])
+->middleware('guest')
+->name('register');
+
+//Register y Login
+Route::post('/auth.register', [RegisterController::class, 'store'])->name('register.store');
+Route::post('/auth.login', [SessionsController::class, 'store'])->name('login.store');
+Route::get('/logout', [SessionsController::class, 'destroy'])
+->middleware('auth')
+->name('login.destroy');
 
 //CREACIÓN DE RUTAS PARA EL HOMEPAGE
 Route::get('/home.homepage', [App\Http\Controllers\HomeController::class, 'index'])->name('homepage');
@@ -18,45 +41,29 @@ Route::get('/homepage.oferta', [App\Http\Controllers\Oferta::class, 'index'])->n
 Route::get('/homepage.contactos', [App\Http\Controllers\Contactos::class, 'index'])->name('contactos');
 Route::get('/homepage.admisiones', [App\Http\Controllers\Admisiones::class, 'index'])->name('admisiones');
 
-Route::get('/auth.login', [App\Http\Controllers\SessionsController::class, 'create'])->name('login');
-Route::get('/auth.register', [App\Http\Controllers\RegisterController::class, 'create'])->name('register');
-
-//Register y Login
-Route::post('/auth.register', [App\Http\Controllers\RegisterController::class, 'store'])->name('register.store');
-Route::post('/auth.login', [App\Http\Controllers\SessionsController::class, 'store'])->name('login.store');
-Route::get('/logout', [App\Http\Controllers\SessionsController::class, 'destroy'])->name('login.destroy');
-
 //CREACIÓN DE RUTAS PARA DOCENTE
 Route::get('/docente.informatica', [App\Http\Controllers\InformaticaController::class, 'index'])->name('informatica');
 Route::get('/docente.mecanica', [App\Http\Controllers\MecanicaController::class, 'index'])->name('mecanica');
 Route::get('/docente.electricidad', [App\Http\Controllers\ElectricidadController::class, 'index'])->name('electricidad');
 
-//Administrador
-Route::get('/admin.admin.admin', [App\Http\Controllers\AdministradorController::class, 'index'])
-->middleware('auth.admin')
-->name('admin.index');
+/****************************Administrador****************************************/
 
-Route::get('/homepage',function (){
-    return view('home');
-})->name('home');
 
-    //activities
-    Route::get('/admin.activities',function (){
-        return view('admin.activities.activities');
-    })->name('activities');
+Route::get('/homeadmin',function (){
+    return view('admin.home');
+})->name('adminHome');
+//admin
+Route::resource('admin.admin',AdminController::class);
+//endadmin
+//recursos
+Route::resource('admin/recursos',RecursosController::class);
+//endrecursos
 
-    Route::get('/adminEdit',function (){
-        return view('admin.activities.activitiesEdit');
-    })->name('activitiesEdit');
-
-    //admin
-    Route::get('/admin.admin',function (){
-        return view('admin.admin.admin');
-    })->name('admin');
-
-    Route::get('/adminEdit',function (){
-        return view('admin.admin.adminEdit');
-    })->name('adminEdit');
+/*
+    Route::get('/auth.login',function (){
+        return view('auth.login');
+    })->name('login');
+*/
 
     //courses
     Route::get('/admin.curse',function (){
@@ -67,24 +74,32 @@ Route::get('/homepage',function (){
         return view('admin.courses.curseEdit');
     })->name('curseEdit');
 
-    //resourses
-    Route::get('/admin.recourses',function (){
-        return view('admin.resourses.recourses');
-    })->name('recourses');
 
-    Route::get('/ResoursesEdit',function (){
-        return view('admin.resourses.recoursesEdit');
-    })->name('recoursesEdit');
+
+//matricula
+
+Route::resource('matricula',MatriculaController::class);
+
+//endmatricula
+
 
     //teacher
-    Route::get('/admin.teacher',function (){
+    /*Route::get('/admin.teacher',function (){
         return view('admin.teacher.teacher');
     })->name('teacher');
 
     Route::get('/TeacherEdit',function (){
         return view('admin.teacher.teacherEdit');
-    })->name('teacherEdit');
+    })->name('teacherEdit');*/
 
+//ADMINISTRAR ESTUDIANTE
+
+Route::get('/estudiante.estudiante',function (){
+    return view('admin.estudiante.estudiante');
+})->name('estudiante');
+Route::resource('estudiante.estudiante', EstudianteController::class);
+Route::get('/estudiante.estudiante',[EstudianteController::class,'index'])
+->name('estudiante.index');
 
 Route::get('/admin.index',function (){
     return view('admin.admin.index');
@@ -94,16 +109,23 @@ Route::get('/admin.index',function (){
 
 
 //Docente
-Route::get('/docente.docente', [App\Http\Controllers\DocenteController::class, 'index'])
-->middleware('auth.docente')
-->name('docente.index');
+Route::resource('Teacher.Teacher',TeacherController::class);
+
+
+//ADMINISTRARDOCENTE
+
+//Route::delete('Teacher/Teacher/{cedula}', [TeacherController::class, 'destroy'])->name('user.delete');
 
 //Estudiante
+
 /*Route::get('/estudiante.estudiante', [App\Http\Controllers\EstudianteController::class, 'index'])
 ->middleware('auth.estudiante')
-->name('estudiante.index');*/
+->name('estudiante.index');
+*/
+
 Route::resource('estudiante-registro',RegistroEstudiantesController::class);
 
-Route::get('/hola',function (){
-    return view('miscambios.registro');
-});
+//Actividades->Leonardo
+Route::resource('activities/activities',ActivitiesController::class);
+
+
