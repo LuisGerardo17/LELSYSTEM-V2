@@ -23,7 +23,7 @@
     </div>
   <div class="form-group label-floating">
     <label class="control-label">Correo</label>
-    <input class="form-control" type="text" name="correo" value="{{ isset($admin) ? $admin->correo : old('correo') }}">
+    <input class="form-control" type="text" name="correo" value="{{ isset($admin) ? $admin->correo : old('correo') }}", >
     @error('correo')
         <p class="alertas">*{{$message}}</p>
     @enderror
@@ -37,7 +37,7 @@
   </div>
   <div class="form-group label-floating">
     <label class="control-label">Telefono</label>
-    <input class="form-control" type="text" name="telefono" value="{{ isset($admin) ? $admin->telefono : old('telefono') }}">
+    <input class="form-control" type="text" name="telefono" maxlength="10" value="{{ isset($admin) ? $admin->telefono : old('telefono') }}">
     @error('telefono')
         <p class="alertas">*{{$message}}</p>
     @enderror

@@ -15,4 +15,9 @@ class Estudiantes extends Model
         return $this->belongsTo(User::class,'cedula','cedula');
         //belongsto ->pertenese ('a la tabla','con id_usuarios','es igual a id_administrador')
     }
+
+    public function cursos(){
+        return $this->hasMany(Cursos::class,'cedula','cedula');
+
+    }
 }

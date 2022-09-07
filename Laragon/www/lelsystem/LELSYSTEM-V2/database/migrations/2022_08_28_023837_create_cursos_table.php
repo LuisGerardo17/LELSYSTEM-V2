@@ -19,9 +19,9 @@ class CreateCursosTable extends Migration
             $table->string('descripcion',200);
             $table->date('fecha_inicio');
             $table->date('fecha_fin');
-            $table->boolean('activo');
+            $table->string('estado');
             $table->string('cedula',10);
-            $table->foreign('cedula')->references('cedula')->on('docentes');
+            $table->foreign('cedula')->references('cedula')->on('docentes')->cascadeOnDelete()->cascadeOnUpdate();
             $table->timestamps();
         });
     }

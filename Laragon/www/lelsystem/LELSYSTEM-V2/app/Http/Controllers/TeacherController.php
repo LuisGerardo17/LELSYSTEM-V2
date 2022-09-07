@@ -6,6 +6,7 @@ use App\Models\User;
 use App\Models\Docentes;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Storage;
 
 class TeacherController extends Controller
 {
@@ -16,8 +17,8 @@ class TeacherController extends Controller
      */
     public function index()
     {
-
-         $docentes = DB::table('users')->select('cedula','imagen','nombres','apellidos','direccion','correo','telefono')->where('rol','Docente')->get();
+          $docentes = Docentes::paginate(10);
+         //$docentes = DB::table('users')->select('cedula','imagen','nombres','apellidos','direccion','correo','telefono')->where('rol','Docente')->get();
         return view('admin.teacher.teacher', compact('docentes'));
     }
 
@@ -39,21 +40,31 @@ class TeacherController extends Controller
      */
     public function store(Request $request)
     {
-        $datosDocente=Request()->except('_token');
 
-        if($datosDocente['contrasena']==$datosDocente['contrasena_verified_at']){
+        $campos=[
+            'cedula'=>'required|string|max:10 ',
+            'nombres'=>'required',
+            'apellidos'=>'required',
+            'correo'=>'required',
+            'direccion'=>'required',
+            'telefono'=>'required|max:10',
+            'contrasena'=>'required|confirmed|min:2|max:8',
+            'imagen'=>'required|mimes:jpeg,png,jpg'
+        ];
+
+        $request->validate($campos);
+        $datosDocente=Request()->except('_token','contrasena_confirmation');
+
+
             if($request->hasFile('imagen')){
-                $datosDocente['imagen']=$request->file('imagen')->store('uploadsTeacher','public');
+                $datosDocente['imagen']=$request->file('imagen')->store('uploadsUsers','public');
             }
             $datosDocente['rol']='Docente';
             User::insert($datosDocente);
-            notify()->preset('Docente registrado');
             Docentes::insert(['cedula'=>$datosDocente['cedula']]);
+            notify()->preset('Docente registrado');
             return redirect('Teacher/Teacher');
-        }else{
-            notify()->preset('Error al registrar');
-            return redirect('Teacher/Teacher');
-        }
+
     }
 
 
@@ -76,8 +87,8 @@ class TeacherController extends Controller
      */
     public function edit($datos)
     {
-        $docen=User::find($datos);
-        return view('admin.teacher.teacherEdit', compact('docen'));
+        $admin=User::find($datos);
+        return view('admin.teacher.teacherEdit',compact('admin'));
     }
 
     /**
@@ -103,6 +114,7 @@ class TeacherController extends Controller
     public function destroy($cedula)
     {
         $datos=User::find($cedula);
+        Storage::delete('public/'. $datos->imagen);
         User::destroy($cedula);
         notify()->success('Docente eliminado exitosamente');
         return redirect('Teacher/Teacher');

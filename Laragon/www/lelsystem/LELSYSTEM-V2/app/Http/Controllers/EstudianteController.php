@@ -11,8 +11,8 @@ class EstudianteController extends Controller
 {
     public function index(){
 
-        $estudiantes = Estudiantes::paginate(5);
-       // $estudiantes = DB::table('users')->select('cedula','imagen','nombres','apellidos','direccion','correo','telefono')->where('rol','Estudiante')->get();
+        $estudiantes=Estudiantes::paginate(10);
+        //$estudiantes = DB::table('users')->select('cedula','imagen','nombres','apellidos','direccion','correo','telefono')->where('rol','Estudiante')->get();
 
        return view('admin.estudiante.estudiante',compact('estudiantes'));
 
@@ -37,8 +37,8 @@ class EstudianteController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-{
-    $campos=[
+   {
+      $campos=[
         'cedula'=>'required|string|max:10 ',
         'nombres'=>'required',
         'apellidos'=>'required',
@@ -47,13 +47,13 @@ class EstudianteController extends Controller
         'telefono'=>'required|max:10',
         'contrasena'=>'required|confirmed|min:2|max:8',
         'imagen'=>'required|mimes:jpeg,png,jpg'
-    ];
+      ];
 
-    $request->validate($campos);
+      $request->validate($campos);
 
-        $datosEstudiante=Request()->except('_token');
+        $datosEstudiante=Request()->except('_token','contrasena_confirmation');
 
-        if($datosEstudiante['contrasena']==$datosEstudiante['contrasena_verified_at']){
+
             if($request->hasFile('imagen')){
                 $datosEstudiante['imagen']=$request->file('imagen')->store('uploadsEstudiante','public');
             }
@@ -61,13 +61,9 @@ class EstudianteController extends Controller
             User::insert($datosEstudiante);
             Estudiantes::insert(['cedula'=>$datosEstudiante['cedula']]);
             notify()->preset('registrado');
-            return redirect('estudiante.estudiante');
-        }else{
-            notify()->preset('error');
-            return redirect('estudiante.estudiante');
-        }
+            return redirect('admin/estudiante');
+    }
 
-}
 
 
     /**
@@ -89,8 +85,8 @@ class EstudianteController extends Controller
      */
     public function edit($datos)
     {
-        $student=User::find($datos);
-        return view('admin.estudiante.estudianteEdit', compact('student'));
+        $admin=User::find($datos);
+        return view('admin.estudiante.estudianteEdit',compact('admin'));
     }
 
     /**
@@ -102,10 +98,15 @@ class EstudianteController extends Controller
      */
     public function update(Request $request,$id)
     {
-        $dato=$request->except(['_token','_method']);
-        User::where('cedula','=',$id)->update($dato);
-        notify()->preset('Estudiante actualizado');
-        return redirect('estudiante/estudiante');
+        $datos=$request->except(["_token","_method"]);
+        if($request->hasFile('imagen')){
+            $datosimg=User::find($id);
+            Storage::delete('public/'. $datosimg->imagen);
+            $datos['imagen']=$request->file('imagen')->store('uploadsUser','public');
+        }
+        User::where('cedula','=',$id)->update($datos);
+        notify()->preset('editar');
+        return redirect('admin/estudiante');
 
     }
 
@@ -117,10 +118,11 @@ class EstudianteController extends Controller
      */
     public function destroy($cedula)
     {
-        $datos=User::find($cedula);
+        $datos =User::find($cedula);
+        Storage::delete('public/'. $datos->imagen);
         User::destroy($cedula);
         notify()->success('Estudiante eliminado');
-        return redirect('estudiante/estudiante');
+        return redirect('admin/estudiante');
 
     }
 }

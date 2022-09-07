@@ -1,160 +1,65 @@
-@extends('admin.layouts.admin')
+<div class="form-group label-floating">
+    <label class="control-label">Codigo</label>
+    <input class="form-control" type="text" name="codigo_curso" value="{{ isset($datos) ? $datos->codigo_curso : old('codigo_curso') }}">
+    @error('codigo_curso')
+        <p class="alertas">*{{$message}}</p>
+    @enderror
+  </div>
+  <div class="form-group label-floating">
+    <label class="control-label">Nombre</label>
+    <input class="form-control" type="text" name="nombre_curso" value="{{ isset($datos) ? $datos->nombre_curso : old('nombre_curso') }}">
+    @error('nombre_curso')
+        <p class="alertas">*{{$message}}</p>
+    @enderror
+  </div>
+  <div class="form-group label-floating">
+    <label class="control-label">Descripcion</label>
+    <textarea class="form-control" name="descripcion">{{ isset($datos) ? $datos->descripcion : old('descripcion') }}</textarea>
+    @error('descripcion')
+        <p class="alertas">*{{$message}}</p>
+    @enderror
+  </div>
 
-@section('titulo','Representative')
-@section('contenido')
-		<!-- Content page -->
-		<div class="container-fluid">
-			<div class="page-header">
-			  <h1 class="text-titles"><i class="zmdi zmdi-balance zmdi-hc-fw"></i> Cursos <small>Courses</small></h1>
-			</div>
-			<p class="lead">Se trata de una palabra que hace referencia al periodo de tiempo establecido de forma anual para el dictado de clases en una institución educativa.</p>
-		</div>
-		<div class="container-fluid">
-			<div class="row">
-				<div class="col-xs-12">
-					<ul class="nav nav-tabs" style="margin-bottom: 15px;">
-					  	<li class="active"><a href="#new" data-toggle="tab">New</a></li>
-					  	<li><a href="#list" data-toggle="tab">List</a></li>
-					</ul>
-					<div id="myTabContent" class="tab-content">
-						<div class="tab-pane fade active in" id="new">
-							<div class="container-fluid">
-								<div class="row">
-									<div class="col-xs-12 col-md-10 col-md-offset-1">
-									    <form action="">
-									    	<div class="form-group label-floating">
-											  <label class="control-label">Name</label>
-											  <input class="form-control" type="text">
-											</div>
-											<div class="form-group label-floating">
-											  <label class="control-label">Last Name</label>
-											  <input class="form-control" type="text">
-											</div>
-											<div class="form-group label-floating">
-											  <label class="control-label">Address</label>
-											  <textarea class="form-control"></textarea>
-											</div>
-											<div class="form-group label-floating">
-											  <label class="control-label">Email</label>
-											  <input class="form-control" type="text">
-											</div>
-											<div class="form-group label-floating">
-											  <label class="control-label">Phone</label>
-											  <input class="form-control" type="text">
-											</div>
-											<div class="form-group label-floating">
-											  <label class="control-label">Occupation</label>
-											  <input class="form-control" type="text">
-											</div>
-											<div class="form-group">
-										        <label class="control-label">Gender</label>
-										        <select class="form-control">
-										          <option>Male</option>
-										          <option>Female</option>
-										        </select>
-										    </div>
-										    <p class="text-center">
-										    	<button href="#!" class="btn btn-info btn-raised btn-sm"><i class="zmdi zmdi-floppy"></i> Save</button>
-										    </p>
-									    </form>
-									</div>
-								</div>
-							</div>
-						</div>
-					  	<div class="tab-pane fade" id="list">
-							<div class="table-responsive">
-								<table class="table table-hover text-center">
-									<thead>
-										<tr>
-											<th class="text-center">#</th>
-											<th class="text-center">Name</th>
-											<th class="text-center">Last Name</th>
-											<th class="text-center">Address</th>
-											<th class="text-center">Email</th>
-											<th class="text-center">Phone</th>
-											<th class="text-center">Occupation</th>
-											<th class="text-center">Gender</th>
-											<th class="text-center">Update</th>
-											<th class="text-center">Delete</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td>1</td>
-											<td>Carlos</td>
-											<td>Alfaro</td>
-											<td>El Salvador</td>
-											<td>carlos@gmail.com</td>
-											<td>+50312345678</td>
-											<td>Web Developer</td>
-											<td>Male</td>
-											<td><a href="#!" class="btn btn-success btn-raised btn-xs"><i class="zmdi zmdi-refresh"></i></a></td>
-											<td><a href="#!" class="btn btn-danger btn-raised btn-xs"><i class="zmdi zmdi-delete"></i></a></td>
-										</tr>
-										<tr>
-											<td>2</td>
-											<td>Alicia</td>
-											<td>Melendez</td>
-											<td>El Salvador</td>
-											<td>alicia@gmail.com</td>
-											<td>+50312345678</td>
-											<td>Social Work</td>
-											<td>Female</td>
-											<td><a href="#!" class="btn btn-success btn-raised btn-xs"><i class="zmdi zmdi-refresh"></i></a></td>
-											<td><a href="#!" class="btn btn-danger btn-raised btn-xs"><i class="zmdi zmdi-delete"></i></a></td>
-										</tr>
-										<tr>
-											<td>3</td>
-											<td>Sarai</td>
-											<td>Mercado</td>
-											<td>El Salvador</td>
-											<td>sarai@gmail.com</td>
-											<td>+50312345678</td>
-											<td>Lawyer</td>
-											<td>Female</td>
-											<td><a href="#!" class="btn btn-success btn-raised btn-xs"><i class="zmdi zmdi-refresh"></i></a></td>
-											<td><a href="#!" class="btn btn-danger btn-raised btn-xs"><i class="zmdi zmdi-delete"></i></a></td>
-										</tr>
-										<tr>
-											<td>4</td>
-											<td>Alba</td>
-											<td>Bonilla</td>
-											<td>El Salvador</td>
-											<td>alba@gmail.com</td>
-											<td>+50312345678</td>
-											<td>Designer</td>
-											<td>Female</td>
-											<td><a href="#!" class="btn btn-success btn-raised btn-xs"><i class="zmdi zmdi-refresh"></i></a></td>
-											<td><a href="#!" class="btn btn-danger btn-raised btn-xs"><i class="zmdi zmdi-delete"></i></a></td>
-										</tr>
-										<tr>
-											<td>5</td>
-											<td>Claudia</td>
-											<td>Rodriguez</td>
-											<td>El Salvador</td>
-											<td>claudia@gmail.com</td>
-											<td>+50312345678</td>
-											<td>Lawyer</td>
-											<td>Female</td>
-											<td><a href="#!" class="btn btn-success btn-raised btn-xs"><i class="zmdi zmdi-refresh"></i></a></td>
-											<td><a href="#!" class="btn btn-danger btn-raised btn-xs"><i class="zmdi zmdi-delete"></i></a></td>
-										</tr>
-									</tbody>
-								</table>
-								<ul class="pagination pagination-sm">
-								  	<li class="disabled"><a href="#!">«</a></li>
-								  	<li class="active"><a href="#!">1</a></li>
-								  	<li><a href="#!">2</a></li>
-								  	<li><a href="#!">3</a></li>
-								  	<li><a href="#!">4</a></li>
-								  	<li><a href="#!">5</a></li>
-								  	<li><a href="#!">»</a></li>
-								</ul>
-							</div>
-					  	</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-    @endsection
+  <div class="form-group label-floating">
+    <label class="control-label">Fecha de Inicio</label>
+    <input class="form-control" name="fecha_inicio" type="date" value = "{{ isset($datos) ? $datos->fecha_inico : old('fecha_inicio') }}">
+    @error('fecha_inicio')
+        <p class="alertas">*{{$message}}</p>
+    @enderror
+  </div>
+
+
+  <div class="form-group label-floating">
+    <label class="control-label">Fecha de Finalización</label>
+    <input class="form-control" name="fecha_fin" type="date" value = "{{ isset($datos) ? $datos->fecha_fin : old('fecha_fin') }}">
+    @error('fecha_fin')
+        <p class="alertas">*{{$message}}</p>
+    @enderror
+  </div>
+
+  <div class="form-group label-floating">
+    <label class="control-label"> Estado </label>
+      <select class="form-select" name="estado"  value = "{{ isset($datos) ? $datos->estado : old('estado') }}">
+          <option value="Activo">Activo</option>
+          <option value="Inactivo">Inactivo</option>
+       </select>
+       @error('estado')
+      <p class="alertas">*{{$message}}</p>
+      @enderror
+ </div>
+  <div class="form-group label-floating">
+    <label class="control-label">Cedula Docente</label>
+    <select class="form-control" name="cedula">
+        <option>Cedula del Docente</option>
+        @foreach($docentes as $docente)
+        <option value="{{ $docente->cedula }}" {{(isset($datos) && $docente->cedula==$datos->cedula) ? 'selected' : ''}}>{{ $docente->cedula}}</option>
+        @endforeach
+    </select>
+    @error('cedula')
+        <p class="alertas">*{{$message}}</p>
+    @enderror
+  </div>
+
+  <p class="text-center">
+      <button type="submit" class="btn btn-info btn-raised btn-sm"><i class="zmdi zmdi-floppy"></i> Guardar</button>
+  </p>

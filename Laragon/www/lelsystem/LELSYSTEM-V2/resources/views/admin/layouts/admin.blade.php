@@ -57,13 +57,13 @@
 					<a href="{{ url('Teacher/Teacher') }}"><i class="zmdi zmdi-male-alt zmdi-hc-fw"></i> Administrar docente</a>
 				</li>
                 <li>
-					<a href="{{ url('estudiante/estudiante') }}"><i class="zmdi zmdi-face"></i> Administrar estudiante</a>
+					<a href="{{ url('admin/estudiante') }}"><i class="zmdi zmdi-face"></i> Administrar estudiante</a>
 				</li>
 				<li>
 					<a href="{{ url('activities/activities') }}"><i class="zmdi zmdi-book zmdi-hc-fw"></i> Administrar actividad</a>
 				</li>
 				<li>
-					<a href="{{ Route('curse') }}"><i class="zmdi zmdi-balance zmdi-hc-fw"></i> Administrar curso</a>
+					<a href="{{ url('admin/cursos') }}"><i class="zmdi zmdi-balance zmdi-hc-fw"></i> Administrar curso</a>
 				</li>
 				<li>
 					<a href="{{ url('admin/recursos') }}"><i class="zmdi zmdi-font zmdi-hc-fw"></i> Administrar Recursos</a>

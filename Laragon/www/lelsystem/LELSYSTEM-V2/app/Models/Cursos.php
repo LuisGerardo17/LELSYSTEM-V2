@@ -10,4 +10,13 @@ class Cursos extends Model
     use HasFactory;
 
     protected $table = 'cursos';
+
+
+    public function cedula(){
+        return $this->belongsTo(Docentes::class,'cedula','cedula');
+
+    }
+    protected $primaryKey = 'codigo_curso';
+
+    protected $keyType = 'string';
 }

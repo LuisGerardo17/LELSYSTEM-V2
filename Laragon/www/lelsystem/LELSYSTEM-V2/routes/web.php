@@ -12,6 +12,7 @@ use App\Http\Controllers\EstudianteController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\MatriculaController;
 use App\Http\Controllers\RecursosController;
+use App\Http\Controllers\CursoController;
 use App\Http\Controllers\RegistroEstudiantesController;
 use App\Http\Controllers\TeacherController;
 Route::get('/',function (){return redirect('/homepage');});
@@ -58,6 +59,7 @@ Route::resource('admin.admin',AdminController::class);
 //endadmin
 //recursos
 Route::resource('admin/recursos',RecursosController::class);
+Route::resource('admin/cursos',CursoController::class);
 //endrecursos
 
 /*
@@ -84,23 +86,17 @@ Route::resource('matricula',MatriculaController::class);
 //endmatricula
 
 
-    //teacher
-    /*Route::get('/admin.teacher',function (){
-        return view('admin.teacher.teacher');
-    })->name('teacher');
-
-    Route::get('/TeacherEdit',function (){
-        return view('admin.teacher.teacherEdit');
-    })->name('teacherEdit');*/
-
 //ADMINISTRAR ESTUDIANTE
 
-Route::get('/estudiante.estudiante',function (){
+Route::resource('admin/estudiante', EstudianteController::class);
+
+/*Route::get('/admin.estudiante',function (){
     return view('admin.estudiante.estudiante');
-})->name('estudiante');
-Route::resource('estudiante.estudiante', EstudianteController::class);
-Route::get('/estudiante.estudiante',[EstudianteController::class,'index'])
-->name('estudiante.index');
+})->name('curse');
+
+Route::get('/EstudianteEdit',function (){
+    return view('admin.estudiante.estudianteEdit');
+})->name('curseEdit');*/
 
 Route::get('/admin.index',function (){
     return view('admin.admin.index');
@@ -111,7 +107,14 @@ Route::get('/admin.index',function (){
 
 //Docente
 Route::resource('Teacher.Teacher',TeacherController::class);
+/*
+Route::get('/admin.teacher',function (){
+    return view('admin.teacher.teacher');
+})->name('teacher');
 
+Route::get('/TeacherEdit',function (){
+    return view('admin.teacher.teacherEdit');
+})->name('teacherEdit');*/
 
 //ADMINISTRARDOCENTE
 
