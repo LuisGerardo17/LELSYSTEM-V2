@@ -73,7 +73,13 @@
                                                 </td>
                                             </tr>
                                         @endforeach
-
+											<form action="{{ url('/Teacher/Teacher/'.$items->cedula) }}" method="POST" class="Eliminar">
+												@csrf
+												@method('DELETE')
+											<td><button type="submit" ><a href="#!" class="btn btn-danger btn-raised btn-xs"><i class="zmdi zmdi-delete"></i></a></button></td>
+											</form>
+										</tr>
+										@endforeach
 
 									</tbody>
 								</table>
