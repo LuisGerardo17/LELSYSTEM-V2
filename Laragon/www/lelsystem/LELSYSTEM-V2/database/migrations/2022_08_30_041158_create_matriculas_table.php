@@ -14,12 +14,11 @@ class CreateMatriculasTable extends Migration
     public function up()
     {
         Schema::create('matriculas', function (Blueprint $table) {
-            $table->string('codigo_matricula',10)->unique()->primary();
-            $table->string('codigo_curso',10);
-            $table->foreign('codigo_curso')->references('codigo_curso')->on('cursos');
-            $table->string('cedula',10);
-            $table->foreign('cedula')->references('cedula')->on('estudiantes');
-            $table->boolean('activo');
+            $table->string('cedula',10)->primary();
+            $table->foreign('cedula')->references('cedula')->on('estudiantes')->cascadeOnDelete()->cascadeOnUpdate();
+            $table->bigInteger('codigo_curso');
+            $table->foreign('codigo_curso')->references('codigo_curso')->on('cursos')->cascadeOnDelete()->cascadeOnUpdate();
+            $table->string('estado');
             $table->timestamps();
         });
     }
