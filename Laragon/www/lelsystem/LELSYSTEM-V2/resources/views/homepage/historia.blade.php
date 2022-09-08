@@ -108,7 +108,7 @@
      <main>
 		<nav aria-label="breadcrumb">
 			<ol class="breadcrumb ">
-				<li class="breadcrumb-item"><a href="{{route('homepage')}}">Principal</a></li>
+				<li class="breadcrumb-item"><a href="{{route('home')}}">Principal</a></li>
 				<li class="breadcrumb-item active" aria-current="page">Historia</li>
 			</ol>
 		</nav>
@@ -142,7 +142,7 @@
 		<div class="row pb-3">
 			<p>Para mediados de 2017, se designa al MSc. Iván Borja como Rector de los Institutos Tecnológicos Superiores Gran Colombia y Benito Juárez, con las carreras de Desarrollo de Software y Diseño de Modas, respectivamente. La población estudiantil, supera las 900 personas, con una planta docentes de 83 profesores. Durante el mismo año se aprobaron los proyectos de carrera de  Diseño de Modas, Desarrollo de Software y Marketing. Para 2018, se aprobaron las carreras de Arte Culinario y Guía Nacional de Turismo. La población estudiantil prevista para este año superará las 1200 personas.Grandes retos aguardan al Yavirac, debido a que tiene planificado: la expansión de su infraestructura, el aumento de su comunidad académica, tener una mayor influencia territorial en un sector históricamente marginado, una oferta académica pertinente y relacionada al Plan Nacional de Desarrollo «Todo una Vida» y ser uno de los Institutos Universitarios Superiores, cuya creación está superditada en las reformas a la Ley Orgánica de Educación Superior (LOES). Grandes retos aguardan al Yavirac y sin duda los alcanzará.</p>
 		</div>
-		
+
 	</main>
 
 

@@ -111,7 +111,7 @@
 	<main>
 		<nav aria-label="breadcrumb">
 			<ol class="breadcrumb ">
-				<li class="breadcrumb-item"><a href="{{route('homepage')}}">Principal</a></li>
+				<li class="breadcrumb-item"><a href="{{route('home')}}">Principal</a></li>
 				<li class="breadcrumb-item active" aria-current="page">Contactanos</li>
 			</ol>
 		</nav>
@@ -140,7 +140,7 @@
 
 						<br><b>Correo electrónico:</b> atayupanta@yavirac.edu.ec
 
-						<br> <b>Horario de atención:</b> 
+						<br> <b>Horario de atención:</b>
 						<br>
 						De lunes a viernes, de 08H00 a 17H00
 					</h4>
@@ -149,7 +149,7 @@
 		</div>
 		<br>
 	</main>
-	
+
 	<footer id="footer" class="top-space">
 		<div class="footer1">
 			<div class="container padin">

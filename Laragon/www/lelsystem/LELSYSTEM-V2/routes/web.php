@@ -20,20 +20,28 @@ Route::get('/homepage',function (){
     return view('home');
 })->name('home');
 
+/*
+
+Route::resource('auth/register',UserController::class);
+Route::resource('auth/login',SessionsController::class);
+*/
+
+
+
+
+//Register y Login
 
 Route::get('/auth.login', [SessionsController::class, 'create'])
 ->middleware('guest')
 ->name('login');
-Route::get('/auth.register', [UserController::class, 'create'])
-->middleware('guest')
-->name('register');
-
-//Register y Login
-Route::post('/auth.register', [UserController::class, 'store'])->name('register.store');
 Route::post('/auth.login', [SessionsController::class, 'store'])->name('login.store');
 Route::get('/logout', [SessionsController::class, 'destroy'])
 ->middleware('auth')
 ->name('login.destroy');
+Route::get('/auth.register', [UserController::class, 'create'])
+->middleware('guest')
+->name('register');
+Route::post('/auth.register', [UserController::class, 'store'])->name('register.store');
 
 //CREACIÓN DE RUTAS PARA EL HOMEPAGE
 Route::get('/home.homepage', [App\Http\Controllers\HomeController::class, 'index'])->name('homepage');
@@ -54,6 +62,7 @@ Route::get('/docente.electricidad', [App\Http\Controllers\ElectricidadController
 Route::get('/homeadmin',function (){
     return view('admin.home');
 })->name('adminHome');
+
 //admin
 Route::resource('admin.admin',AdminController::class);
 //endadmin
@@ -89,6 +98,7 @@ Route::resource('matricula',MatriculaController::class);
 //ADMINISTRAR ESTUDIANTE
 
 Route::resource('admin/estudiante', EstudianteController::class);
+Route::resource('docente/docente', DocenteController::class);
 
 /*Route::get('/admin.estudiante',function (){
     return view('admin.estudiante.estudiante');
