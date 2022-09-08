@@ -10,4 +10,4 @@ class DocenteController extends Controller
         return view('docente.docente');
 
    }
-}
+} 

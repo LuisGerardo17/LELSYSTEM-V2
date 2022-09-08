@@ -36,7 +36,7 @@
 											  <input class="form-control" type="text" name="descripcion" >
 											</div>
 										    <p class="text-center">
-										    	<button href="#!" class="btn btn-info btn-raised btn-sm"><i class="zmdi zmdi-floppy"></i> Guardar</button>
+										    	<button href="#!" class="btn btn-info btn-raised btn-sm"><i class="zmdi zmdi-floppy"></i>Guardar</button>
 										    </p>
 									    </form>
 									</div>

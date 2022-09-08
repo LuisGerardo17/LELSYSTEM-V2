@@ -1,10 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\Estudiantes;
 use App\Models\matriculas;
 use Illuminate\Http\Request;
-
 class MatriculaController extends Controller
 {
     /**
@@ -13,8 +12,10 @@ class MatriculaController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
-        //
+    { 
+        $estudiantes = Estudiantes::paginate(10);
+        //$estudiantes = DB::table('users')->select('cedula','nombres','apellidos','correo')->where('rol','Estudiante')->get();
+       return view('', compact('estudiantes'));
     }
 
     /**
@@ -55,9 +56,10 @@ class MatriculaController extends Controller
      * @param  \App\Models\matriculas  $matriculas
      * @return \Illuminate\Http\Response
      */
-    public function edit(matriculas $matriculas)
+    public function edit($datos)
     {
-        //
+        $matri=matriculas::find($datos);
+        return view();
     }
 
     /**
@@ -67,9 +69,12 @@ class MatriculaController extends Controller
      * @param  \App\Models\matriculas  $matriculas
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, matriculas $matriculas)
+    public function update(Request $request,$id)
     {
-        //
+        $dato=$request->except(['_token','_method']);
+        Estudiantes::where('cedula','=',$id)->update($dato);
+        notify()->preset('Docente actualizado');
+        return redirect('Teacher/Teacher');
     }
 
     /**
@@ -78,8 +83,10 @@ class MatriculaController extends Controller
      * @param  \App\Models\matriculas  $matriculas
      * @return \Illuminate\Http\Response
      */
-    public function destroy(matriculas $matriculas)
+    public function destroy($codigo)
     {
-        //
+        $datos=matriculas::find($codigo);
+        matriculas::destroy($codigo);
+        return redirect();
     }
 }
