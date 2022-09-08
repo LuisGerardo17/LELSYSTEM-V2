@@ -132,4 +132,14 @@ Route::resource('estudiante-registro',RegistroEstudiantesController::class);
 //Actividades->Leonardo
 Route::resource('activities/activities',ActivitiesController::class);
 
+//docente
+Route::get('docente', function () {
+    return view('docente.inicio');
+});
+Route::get('materias', function () {
+    return view('docente.materias.materias');
+});
 
+Route::get('lista', function () {
+    return view('docente.listados.listados');
+});

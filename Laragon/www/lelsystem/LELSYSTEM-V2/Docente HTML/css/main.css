@@ -56,12 +56,7 @@ body, html{
 	background-size: cover;
 }
 .text-titles{
-	font-family: 'RobotoCondensedLight';
-	
-}
-.titulo {
-	background: #009688;
-	text-align: center;
+	font-family: 'RobotoCondensedLight'
 }
 /*============ LogIn*/
 .logInForm{
@@ -88,7 +83,6 @@ body, html{
 	top: 0;
 	height: 100%;
 	transition: all .3s ease-in-out;
-    z-index: -1000;
 }
 /*sideBar*/
 .dashboard-sideBar,
@@ -98,9 +92,7 @@ body, html{
 .dashboard-sideBar{
 	left: 0;
 	z-index: 2;
-
-	background-image: url('../assets/img/fondoadmin.jpg');
-
+	background-image: url('../assets/img/sideBar-font.jpg');
 	border-right: 1px solid rgba(255, 255, 255, .4);
 	overflow: hidden;
 }
@@ -177,7 +169,7 @@ body, html{
 }
 .dashboard-sideBar-Menu > li > a > i.zmdi-caret-down{
 	line-height: 50px;
-	transition: all .3s ease-in-out;
+	transition: all .3s ease-in-out; 
 }
 .dashboard-sideBar-Menu > li > a{
 	padding: 0 15px;
@@ -218,8 +210,8 @@ body, html{
 /*contentPage*/
 .dashboard-contentPage{
 	right: 0;
-	z-index: 0;
-	padding-left: 270px;
+	z-index: 1;
+	padding-left: 0;
 }
 .dashboard-Navbar,
 .dashboard-Navbar > ul,
@@ -232,8 +224,9 @@ body, html{
 	outline: none;
 }
 .dashboard-Navbar{
-	background-color: #009688; /*navbar*/
+	background-color: #000;
 	overflow: hidden;
+	
 }
 .dashboard-Navbar > ul >li,
 .dashboard-Navbar > ul > li > a{
@@ -318,7 +311,7 @@ body, html{
 }
 /*============ Estilos home*/
 .tile{
-	max-width: 300px;
+	max-width: 400px;
 	height: 180px;
 	background-color: #fff;
 	color: rgba(43, 174, 168, 1);
@@ -329,10 +322,7 @@ body, html{
 	cursor: pointer;
 	margin: 10px;
 }
-.tile:hover > .tile-icon > i,
-.tile:hover > .tile-number{
-	color: rgba(43, 174, 168, 1);
-}
+
 .tile-title,
 .tile-icon,
 .tile-number{
@@ -362,14 +352,11 @@ body, html{
 }
 .tile-icon > i,
 .tile-number{
-	color: rgba(43, 174, 168, .4);
+	color: #000;
 	transition: all .3s ease-in-out;
 }
 .tile-number{
 	right: 0;
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
 }
 .tile-number > p{
 	font-size: 70px;
@@ -489,11 +476,9 @@ body, html{
     .cd-timeline-img {
         width: 60px;
         height: 60px;
-		
         left: 50%;
         margin-left: -30px;
-        -webkit-transform: translateZ(0);
-        -webkit-backface-visibility: hidden;
+        
     }
     .cd-timeline-img img{
         width: 60px;
@@ -613,24 +598,13 @@ body, html{
 		padding-left: 0;
 	}
 }
-.alertas{
-    color: red;
+
+/*img*/
+.img {
+	margin-top: 10px;
+	margin-left: 10px;
+	width: 150px;
+	height: 120px;
+	position: relative;
 }
 
-/*doncente*/
-
-
-.espacio {
-	padding: 0 0 10px 30px;
-}
-
-.flex{
-	display: flex;
-}
-.espacio2{
-	padding-right: 50px;
-	
-}
-.link{
-	text-decoration: none;
-}
