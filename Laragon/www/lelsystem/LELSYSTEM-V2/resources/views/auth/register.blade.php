@@ -77,8 +77,7 @@
           <label for="validationCustom04" class="form-label">Rol</label>
           <select class="form-select" name="rol" id="validationCustom04" required>
             <option value="Estudiante">Estudiante</option>
-            <option value="Docente">Docente</option>
-            <option value="Administrador">Administrador</option>
+          
           </select>
         </div>
         @error('rol')

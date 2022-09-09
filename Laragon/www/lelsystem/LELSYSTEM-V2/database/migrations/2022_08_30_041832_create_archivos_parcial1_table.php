@@ -18,10 +18,10 @@ class CreateArchivosParcial1Table extends Migration
             $table->string('nombre_archivo',250);
             $table->float('nota');
             $table->float('promedio1');
-            $table->string('codigo_matricula',10);
-            $table->foreign('codigo_matricula')->references('codigo_matricula')->on('matriculas');
+            $table->string('cedula',10);
+            $table->foreign('cedula')->references('cedula')->on('matriculas')->cascadeOnDelete()->cascadeOnUpdate();
             $table->bigInteger('id_cursos_actividades');
-            $table->foreign('id_cursos_actividades')->references('id_cursos_actividades')->on('cursos_actividades');
+            $table->foreign('id_cursos_actividades')->references('id_cursos_actividades')->on('cursos_actividades')->cascadeOnDelete()->cascadeOnUpdate();
             $table->timestamps();
         });
     }

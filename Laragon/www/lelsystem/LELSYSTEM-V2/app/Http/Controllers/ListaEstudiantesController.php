@@ -1,10 +1,11 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Models\Estudiantes;
-use App\Models\matriculas;
+
+use App\Models\ListadoEstudiantes;
 use Illuminate\Http\Request;
-class MatriculaController extends Controller
+
+class ListaEstudiantesController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -12,10 +13,8 @@ class MatriculaController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    { 
-        $estudiantes = Estudiantes::paginate(7);
-        //$estudiantes = DB::table('users')->select('cedula','nombres','apellidos','correo')->where('rol','Estudiante')->get();
-       return view('', compact('estudiantes'));
+    {
+        //
     }
 
     /**
@@ -42,10 +41,10 @@ class MatriculaController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\matriculas  $matriculas
+     * @param  \App\Models\ListadoEstudiantes  $listadoEstudiantes
      * @return \Illuminate\Http\Response
      */
-    public function show(matriculas $matriculas)
+    public function show(ListadoEstudiantes $listadoEstudiantes)
     {
         //
     }
@@ -53,40 +52,34 @@ class MatriculaController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\matriculas  $matriculas
+     * @param  \App\Models\ListadoEstudiantes  $listadoEstudiantes
      * @return \Illuminate\Http\Response
      */
-    public function edit($datos)
+    public function edit(ListadoEstudiantes $listadoEstudiantes)
     {
-        $matri=matriculas::find($datos);
-        return view();
+        //
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\matriculas  $matriculas
+     * @param  \App\Models\ListadoEstudiantes  $listadoEstudiantes
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request,$id)
+    public function update(Request $request, ListadoEstudiantes $listadoEstudiantes)
     {
-        $dato=$request->except(['_token','_method']);
-        Estudiantes::where('cedula','=',$id)->update($dato);
-        notify()->preset('Docente actualizado');
-        return redirect('Teacher/Teacher');
+        //
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\matriculas  $matriculas
+     * @param  \App\Models\ListadoEstudiantes  $listadoEstudiantes
      * @return \Illuminate\Http\Response
      */
-    public function destroy($codigo)
+    public function destroy(ListadoEstudiantes $listadoEstudiantes)
     {
-        $datos=matriculas::find($codigo);
-        matriculas::destroy($codigo);
-        return redirect();
+        //
     }
 }
