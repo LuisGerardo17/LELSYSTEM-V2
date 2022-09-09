@@ -57,7 +57,7 @@ body, html{
 }
 .text-titles{
 	font-family: 'RobotoCondensedLight';
-	
+
 }
 .titulo {
 	background: #009688;
@@ -489,7 +489,7 @@ body, html{
     .cd-timeline-img {
         width: 60px;
         height: 60px;
-		
+
         left: 50%;
         margin-left: -30px;
         -webkit-transform: translateZ(0);
@@ -629,8 +629,15 @@ body, html{
 }
 .espacio2{
 	padding-right: 50px;
-	
+
 }
 .link{
 	text-decoration: none;
+}
+.imagenPresentacion img{
+    min-width: 250px;
+    max-width: 550px;
+}
+.imagenPresentacion{
+    text-align: center;
 }

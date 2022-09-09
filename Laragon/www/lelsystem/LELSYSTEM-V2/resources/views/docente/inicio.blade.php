@@ -1,8 +1,14 @@
 @extends('docente.layouts.layouts')
 @section('titulo', 'Docente')
 @section('seccion')
-    
 
+<style>
+    .dashboard-contentPage{
+	right: 0;
+	z-index: 0;
+	padding-left: 0px;
+}
+</style>
 	<!-- Content page-->
 	<section class="full-box dashboard-contentPage">
 		<!-- NavBar -->
@@ -17,9 +23,9 @@
 			  <h1 class="text-titles"><b>Mis Cursos</b></h1>
 			</div>
 		</div>
-		
+
 		<div class="full-box text-center" >
-		<a href="arte.html">		
+		<a href="arte.html">
 			<article class="full-box tile">
 				<div  class="full-box tile-title text-center text-titles text-uppercase">
 					Arte Culinario
@@ -39,7 +45,7 @@
 				</div>
 			</article>
 		</a>
-		<a href="controlist.html">	
+		<a href="controlist.html">
 			<article class="full-box tile">
 				<div class="full-box tile-title text-center text-titles text-uppercase">
 					desarrollo de software
@@ -48,8 +54,8 @@
 					<img width="200%" src="{{ asset('admin/assets/img/img.jpg') }}" alt="desarrollo">
 				</div>
 			</article>
-		</a>	
-		<a href="controlist.html">	
+		</a>
+		<a href="controlist.html">
 			<article class="full-box tile">
 				<div class="full-box tile-title text-center text-titles text-uppercase">
 					diseño de modas
@@ -59,7 +65,7 @@
 				</div>
 			</article>
 		</a>
-		<a href="controlist.html">	
+		<a href="controlist.html">
 			<article class="full-box tile">
 				<div class="full-box tile-title text-center text-titles text-uppercase">
 					guía nacional
@@ -69,7 +75,7 @@
 				</div>
 			</article>
 		</a>
-		<a href="controlist.html">	
+		<a href="controlist.html">
 			<article class="full-box tile">
 				<div class="full-box tile-title text-center text-titles text-uppercase">
 					marketing
@@ -80,7 +86,7 @@
 			</article>
 		</a>
 		</div>
-		
+
 	<!-- Notifications area -->
 	<section class="full-box Notifications-area">
 		<div class="full-box Notifications-bg btn-Notifications-area"></div>

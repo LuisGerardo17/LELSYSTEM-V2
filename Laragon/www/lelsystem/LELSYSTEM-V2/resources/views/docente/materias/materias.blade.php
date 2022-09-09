@@ -1,7 +1,7 @@
 @extends('docente.layouts.layouts')
 @section('titulo', 'Materias')
 @section('seccion')
-   
+
 	<!-- SideBar -->
 	<section class="full-box cover dashboard-sideBar">
 		<div class="full-box dashboard-sideBar-bg btn-menu-dashboard"></div>
@@ -28,7 +28,7 @@
 						</a>
 					</li>
 				</ul>
-			</div> 
+			</div>
 			<!-- SideBar Menu -->
 			<ul class="list-unstyled full-box dashboard-sideBar-Menu">
 				<li>
@@ -38,24 +38,24 @@
 				</li>
                 <li>
 					<a href="arte.html" class="btn-sideBar-SubMenu">
-						<i class="zmdi zmdi-folder zmdi-hc-fw"></i> Arte Culinario 
+						<i class="zmdi zmdi-folder zmdi-hc-fw"></i> Arte Culinario
 					</a>
 				</li>
 				<li>
 					<a href="artelist.html" class="btn-sideBar-SubMenu">
-						<i class="zmdi zmdi-male-female zmdi-hc-fw"></i> Lista Estudiantes 
+						<i class="zmdi zmdi-male-female zmdi-hc-fw"></i> Lista Estudiantes
 					</a>
 				</li>
 				<li>
 					<a href="artemat.html" class="btn-sideBar-SubMenu">
-						<i class="zmdi zmdi-font zmdi-hc-fw"></i> Matriculas 
+						<i class="zmdi zmdi-font zmdi-hc-fw"></i> Matriculas
 					</a>
 				</li>
 				<li>
 					<a href="#!" class="btn-sideBar-SubMenu">
-						<i class="zmdi zmdi-n-1-square zmdi-hc-fw"></i> Notas 
+						<i class="zmdi zmdi-n-1-square zmdi-hc-fw"></i> Notas
 					</a>
-					
+
 				</li>
 				<li>
 					<a href="#!" class="btn-sideBar-SubMenu">
@@ -101,6 +101,9 @@
 			<div class="page-header">
 			  <h1 class="text-titles titulo">ARTE CULINARIO</h1>
 		    </div>
+            <div class="imagenPresentacion">
+                <img src="{{ asset('admin/assets/img/img.jpg') }}" alt="">
+            </div>
             <div class="espacio">
                 <div class="row">
                     <h2>Descripccion</h2>
@@ -151,13 +154,13 @@
                     <h3>Deberes</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius optio doloremque voluptas, nesciunt in illum, incidunt recusandae, consequatur ut molestiae excepturi? Vel voluptatibus eos libero aliquid maxime porro doloremque odit.</p>
                 </div>
-                <div class="row espacio"> 
+                <div class="row espacio">
                     <h3>Examenes</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius optio doloremque voluptas, nesciunt in illum, incidunt recusandae, consequatur ut molestiae excepturi? Vel voluptatibus eos libero aliquid maxime porro doloremque odit.</p>
                 </div>
             </div>
 		</div>
-		
+
 	<!-- Notifications area -->
 	<section class="full-box Notifications-area">
 		<div class="full-box Notifications-bg btn-Notifications-area"></div>
