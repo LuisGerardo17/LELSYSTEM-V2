@@ -153,3 +153,6 @@ Route::get('materias', function () {
 Route::get('lista', function () {
     return view('docente.listados.listados');
 });
+Route::get('matricula', function () {
+    return view('docente.matricula.matricula');
+});
