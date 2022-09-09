@@ -6,7 +6,7 @@
 
     <div class="container-fluid">
         <div class="page-header">
-          <h1 class="text-titles"><i class="zmdi zmdi-account zmdi-hc-fw"></i> Lista <small>Estudiantes</small></h1>
+          <h1 class="text-titles"><i class="zmdi zmdi-male-female zmdi-hc-fw"></i> Lista <small>Estudiantes</small></h1>
         </div>
     </div>
     <div class="container-fluid">

@@ -642,6 +642,7 @@ body, html{
     text-align: center;
 }
 
+
 .edit{
 	padding: 0 0 0 94%;
 	font-size: 16px;
@@ -760,3 +761,11 @@ body, html{
 
 /*Animacion*/
 .popup.active{opacity: 1; transform: scale(1);}
+
+.aprobado{
+    background-color: rgb(39, 133, 39);
+}
+.reprobado{
+    background-color: rgb(238, 57, 57);
+}
+
