@@ -6,7 +6,7 @@
 
     <div class="container-fluid">
         <div class="page-header">
-          <h1 class="text-titles"><i class="zmdi zmdi-account zmdi-hc-fw"></i> Matricula <small>Estudiantes</small></h1>
+          <h1 class="text-titles"><i class="zmdi zmdi-font zmdi-hc-fw"></i> Matricula <small>Estudiantes</small></h1>
         </div>
     </div>
     <div class="container-fluid">
@@ -41,7 +41,7 @@
                                               Estado <br>
                                               <input  name="estado" type="radio">
 =======
-                                          <div> 
+                                          <div>
                                               Actividad <br>
                                               <input  name="act" type="radio">
 >>>>>>> 12a63842bec8fa4975180818ece21ec3f96540df
@@ -91,7 +91,7 @@
 									</form>
                                 </tr>
                                 @endforeach
-                            </tbody> 
+                            </tbody>
                         </table>
                         <ul class="pagination pagination-sm">
                               <li class="disabled"><a href="#!">«</a></li>
