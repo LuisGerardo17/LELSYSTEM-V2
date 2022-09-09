@@ -56,7 +56,7 @@
 										</tr>
 									</thead> 
 									<tbody>
-									@foreach ($actividades as $items)
+									@foreach ($actividades as $items) 
 										<tr>
 											<td>{{$items->codigo_actividad}}</td>
 											<td>{{$items->nombre_actividad}}</td>

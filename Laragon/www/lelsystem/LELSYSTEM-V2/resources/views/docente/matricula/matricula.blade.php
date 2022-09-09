@@ -23,29 +23,8 @@
                             <div class="row">
                                 <div class="col-xs-12 col-md-10 col-md-offset-1">
                                     <form action="{{ url('matricula')}}" method="POST">
-                                        <div class="form-group label-floating">
-                                            <label class="control-label">Codigo Matricula</label>
-                                            <input class="form-control" type="text">
-                                          </div>
-                                          <div class="form-group label-floating">
-                                            <label class="control-label">Codigo Curso</label>
-                                            <input class="form-control" type="text">
-                                          </div>
-                                          <div class="form-group label-floating">
-                                            <label class="control-label">Cedula</label>
-                                            <input class="form-control" type="text">
-                                          </div>
-                                          <br>
-                                          <div> 
-                                              Actividad <br>
-                                              <input  name="act" type="radio">
-                                              <label>Activa</label>
-                                              <input  name="act" type="radio">
-                                              <label>Inactiva</label>
-                                          </div>
-                                          <p class="text-center">
-                                              <button href="#!" class="btn btn-info btn-raised btn-sm"><i class="zmdi zmdi-floppy"></i> Guardar</button>
-                                          </p>
+                                    @csrf
+									@include('docente.matricula.matriculaForm')
                                     </form>
 
                                 </div>
