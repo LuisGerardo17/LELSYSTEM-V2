@@ -22,7 +22,7 @@
 								<div class="row">
 									<div class="col-xs-12 col-md-10 col-md-offset-1">
 									    <form action="{{ url('activities/activities')}}" method="POST">
-										@csrf
+										@csrf 
 											<div class="form-group label-floating">
 											  <label class="control-label">Codigo</label>
 											  <input class="form-control" type="text" name="codigo_actividad" >
@@ -54,7 +54,7 @@
 											<th class="text-center">Actualizar</th>
 											<th class="text-center">Eliminar</th>
 										</tr>
-									</thead>
+									</thead> 
 									<tbody>
 									@foreach ($actividades as $items)
 										<tr>

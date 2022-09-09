@@ -15,10 +15,10 @@ class MatriculaController extends Controller
     public function index()
 
     { 
-        //$matricula = matriculas::paginate(7);
+        $matricula = matriculas::paginate(7);
         //$matricula = DB::table('users')->select('cedula','nombres','apellidos','correo')->where('rol','Estudiante')->get();
-       //return view('docente.matricula.matricula', compact('matricula')); 
-
+       return view('docente.matricula.matricula', compact('matricula')); 
+    }
 
 
     /**
@@ -62,7 +62,7 @@ class MatriculaController extends Controller
     public function edit($datos)
     {
         $matri=matriculas::find($datos);
-        return view();
+        return view('docente.matricula.matriculaEdit',compact('matri'));
     }
 
     /**
