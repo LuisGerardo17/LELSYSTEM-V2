@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Actividades extends Model
 {
-    use HasFactory;
+    use HasFactory; 
 
     protected $fillable = [
         'codigo_actividad',

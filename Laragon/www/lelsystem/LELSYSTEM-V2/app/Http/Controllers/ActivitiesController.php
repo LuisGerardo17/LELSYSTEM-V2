@@ -17,7 +17,7 @@ class ActivitiesController extends Controller
         $actividades=Actividades::all(); 
         notify()->preset('Actividad registrada');
         return view('admin.activities.activities', compact('actividades'));
-    } 
+    }  
 
     /**
      * Show the form for creating a new resource.
