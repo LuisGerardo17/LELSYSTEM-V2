@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 use App\Models\User;
 use App\Models\Estudiantes;
-use App\Models\matriculas;
+use App\Models\Matriculas;
 use Illuminate\Http\Request;
 class MatriculaController extends Controller
 {
@@ -13,11 +13,13 @@ class MatriculaController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
+
     { 
-        $matricula = matriculas::paginate(7);
-        //$estudiantes = DB::table('users')->select('cedula','nombres','apellidos','correo')->where('rol','Estudiante')->get();
-       return view('docente.matricula.matricula', compact('matricula')); 
-    }
+        //$matricula = matriculas::paginate(7);
+        //$matricula = DB::table('users')->select('cedula','nombres','apellidos','correo')->where('rol','Estudiante')->get();
+       //return view('docente.matricula.matricula', compact('matricula')); 
+
+
 
     /**
      * Show the form for creating a new resource.
