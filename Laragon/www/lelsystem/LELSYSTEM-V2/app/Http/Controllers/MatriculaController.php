@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Models\User;
 use App\Models\Estudiantes;
 use App\Models\matriculas;
 use Illuminate\Http\Request;
@@ -13,9 +14,9 @@ class MatriculaController extends Controller
      */
     public function index()
     { 
-        $estudiantes = Estudiantes::paginate(7);
+        $matricula = matriculas::paginate(7);
         //$estudiantes = DB::table('users')->select('cedula','nombres','apellidos','correo')->where('rol','Estudiante')->get();
-       return view('', compact('estudiantes'));
+       return view('docente.matricula.matricula', compact('matricula')); 
     }
 
     /**
@@ -83,10 +84,10 @@ class MatriculaController extends Controller
      * @param  \App\Models\matriculas  $matriculas
      * @return \Illuminate\Http\Response
      */
-    public function destroy($codigo)
+    public function destroy($id)
     {
-        $datos=matriculas::find($codigo);
-        matriculas::destroy($codigo);
-        return redirect();
+        //$datos=matriculas::find($id);
+        matriculas::destroy($id);
+        return redirect('matricula');
     }
 }

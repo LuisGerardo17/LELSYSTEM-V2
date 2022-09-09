@@ -62,6 +62,9 @@
                                     <th class="text-center">Nombres</th>
                                     <th class="text-center">Apellidos</th>
                                     <th class="text-center">Correo</th>
+                                    <th class="text-center">Codigo curso</th>
+                                    <th class="text-center">Estado</th>
+                                    <th class="text-center">Matricular</th>
                                     <th class="text-center">Delete</th>
                                 </tr>
                             </thead>
@@ -71,13 +74,9 @@
                                     <td>Enrique Sebastian</td>
                                     <td>Mera Yela</td>
                                     <td>esy.mera@yavirac.edu.ec</td>
-                                    <td><a href="#!" class="btn btn-danger btn-raised btn-xs"><i class="zmdi zmdi-delete"></i></a></td>
-                                </tr>
-                                <tr>
-                                    <td>9999999999</td>
-                                    <td>Anshelo Alejandro</td>
-                                    <td>Proaño Lema</td>
-                                    <td>aal.proano@yavirac.edu.ec</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td><a href="#!" class="btn btn-success btn-raised btn-xs"><i class="zmdi zmdi-refresh"></i></a></td>
                                     <td><a href="#!" class="btn btn-danger btn-raised btn-xs"><i class="zmdi zmdi-delete"></i></a></td>
                                 </tr>
 
