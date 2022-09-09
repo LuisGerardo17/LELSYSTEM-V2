@@ -57,7 +57,7 @@ class TeacherController extends Controller
 
 
             if($request->hasFile('imagen')){
-                $datosDocente['imagen']=$request->file('imagen')->store('uploadsUsers','public');
+                $datosDocente['imagen']=$request->file('imagen')->store('uploadsTeacher','public');
             }
             $datosDocente['rol']='Docente';
             User::insert($datosDocente);

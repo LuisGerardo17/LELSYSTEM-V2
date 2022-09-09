@@ -17,11 +17,25 @@ class UserController extends Controller
     }
     public function store(Request $request){
 
-        $datosUser=Request()->except('_token');
 
-        if($datosUser['contrasena']==$datosUser['contrasena_verified_at']){
+        $campos=[
+            'cedula'=>'required|string|max:10 ',
+            'nombres'=>'required',
+            'apellidos'=>'required',
+            'correo'=>'required',
+            'direccion'=>'required',
+            'telefono'=>'required|max:10',
+            'contrasena'=>'required|confirmed|min:2|max:10',
+            'imagen'=>'required|mimes:jpeg,png,jpg'
+        ];
+
+        $request->validate($campos);
+
+        $datosUser=Request()->except('_token','contrasena_confirmation');
+
+
             if($request->hasFile('imagen')){
-                $datosUser['imagen']=$request->file('imagen')->store('uploadsUsers','public');
+                $datosUser['imagen']=$request->file('imagen')->store('uploadsEstudiante','public');
             }
              if($datosUser['rol']=='Estudiante'){
                 User::insert($datosUser);
@@ -37,10 +51,6 @@ class UserController extends Controller
                 Administradores::insert(['cedula'=>$datosUser['cedula']]);
               }
 
-        }else{
-            notify()->preset('error');
-            return redirect('auth.login');
-        }
         notify()->preset('registrado');
         return view('auth.login');
     }
