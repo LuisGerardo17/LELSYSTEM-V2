@@ -18,10 +18,10 @@
 				<div class="tab-pane fade active in" id="new">
 					<div class="container-fluid">
 						<div class="row">
-							<div class="col-xs-12 col-md-10 col-md-offset-1"> 
+							<div class="col-xs-12 col-md-10 col-md-offset-1">
 								<form action="{{ url('matricula/'.$matri->cedula) }}" method="POST">
 								@csrf
-								@method('PUT')  
+								@method('PUT')
 									<div class="form-group label-floating">
 										<label class="control-label">Cedula</label>
 										<input class="form-control" type="text" name="cedula" value="{{ isset($matri) ? $matri->cedula : old('cedula') }}" {{ isset($matri) ? 'disabled' : '' }}">
@@ -55,7 +55,7 @@
 									</p>
 								</form>
 							</div>
-						</div> 
+						</div>
 					</div>
 				</div>
 				<div class="tab-pane fade" id="list">

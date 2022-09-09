@@ -36,15 +36,9 @@
                                             <input class="form-control" type="text">
                                           </div>
                                           <br>
-<<<<<<< HEAD
                                           <div>
-                                              Estado <br>
-                                              <input  name="estado" type="radio">
-=======
-                                          <div> 
                                               Actividad <br>
-                                              <input  name="act" type="radio">
->>>>>>> 12a63842bec8fa4975180818ece21ec3f96540df
+                                              <input  name="estado" type="radio">
                                               <label>Activa</label>
                                               <input  name="estado" type="radio">
                                               <label>Inactiva</label>
@@ -68,8 +62,7 @@
                                     <th class="text-center">Nombres</th>
                                     <th class="text-center">Apellidos</th>
                                     <th class="text-center">Correo</th>
-                                    <th class="text-center">Codigo curso</th>
-                                    <th class="text-center">Estado</th>
+
                                     <th class="text-center">Matricular</th>
                                     <th class="text-center">Delete</th>
                                 </tr>
@@ -77,13 +70,12 @@
                             <tbody>
 								@foreach ($matricula as $items)
                                 <tr>
-                                    <td>{{$items->user->cedula}}</td>
-                                    <td>{{$items->user->nombres}}</td>
-                                    <td>{{$items->user->apellidos}}</td>
-                                    <td>{{$items->user->correo}}</td>
-                                    <td>{{$items->user->codigo_curso}}</td>
-                                    <td>{{$items->user->estado}}</td>
-                                    <td><button type="submit" ><a href="{{ url('matricula/') .'/'. $items->cedula . '/edit' }}" class="btn btn-success btn-raised btn-xs"><i class="zmdi zmdi-refresh"></i></a></button></td>
+                                    <td>{{$items->cedula}}</td>
+                                    <td>{{$items->nombres}}</td>
+                                    <td>{{$items->apellidos}}</td>
+                                    <td>{{$items->correo}}</td>
+
+                                    <td><button type="submit" ><a href="{{ url('matricula/') .'/'.$items->cedula . '/edit' }}" class="btn btn-success btn-raised btn-xs"><i class="zmdi zmdi-refresh"></i></a></button></td>
                                     <form action="{{ url('matricula/'.$items->cedula) }}" method="POST" class="Eliminar">
 										@csrf
 										@method('DELETE')
@@ -91,7 +83,7 @@
 									</form>
                                 </tr>
                                 @endforeach
-                            </tbody> 
+                            </tbody>
                         </table>
                         <ul class="pagination pagination-sm">
                               <li class="disabled"><a href="#!">«</a></li>

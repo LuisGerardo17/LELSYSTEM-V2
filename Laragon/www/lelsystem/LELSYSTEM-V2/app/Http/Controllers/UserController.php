@@ -41,7 +41,7 @@ class UserController extends Controller
              if($datosUser['rol']=='Estudiante'){
                 User::insert($datosUser);
                 Estudiantes::insert(['cedula'=>$datosUser['cedula']]);
-                Matriculas::insert(['cedula'=>$datosUser['cedula']]);
+                 Matriculas::insert(['cedula'=>$datosUser['cedula']]);
 
              }else if ( $datosUser['rol']=='Docente'){
                 User::insert($datosUser);
