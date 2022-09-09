@@ -144,9 +144,12 @@ Route::resource('activities/activities',ActivitiesController::class);
 
 //Matricula->Leonardo
 Route::resource('matricula',MatriculaController::class);
+
+//Materias->Leonardo
+//Route::resource('materias',);
 //docente
 Route::get('docente', function () {
-    return view('docente.inicio');
+    return view('docente.inicio'); 
 });
 Route::get('materias', function () {
     return view('docente.materias.materias');
@@ -161,5 +164,8 @@ Route::get('lista', function () {
 
 Route::get('listaestudiantes', function () {
     return view('docente.listados.listaestudiantes');
+});
+Route::get('notas', function () {
+    return view('docente.notas.notas');
 });
 

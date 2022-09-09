@@ -27,7 +27,7 @@
                                             @csrf
 									    	@include('admin.teacher.teacherForm')
 									    </form>
-
+ 
 									</div>
 								</div>
 							</div>

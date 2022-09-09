@@ -6,7 +6,7 @@
 
     <div class="container-fluid">
         <div class="page-header">
-          <h1 class="text-titles"><i class="zmdi zmdi-account zmdi-hc-fw"></i> Matricula <small>Estudiantes</small></h1>
+          <h1 class="text-titles"><i class="zmdi zmdi-font zmdi-hc-fw"></i> Matricula <small>Estudiantes</small></h1>
         </div>
     </div>
     <div class="container-fluid">
@@ -23,6 +23,10 @@
                             <div class="row">
                                 <div class="col-xs-12 col-md-10 col-md-offset-1">
                                     <form action="{{ url('matricula')}}" method="POST">
+
+                                    @csrf
+									@include('docente.matricula.matriculaForm')
+
                                         <div class="form-group label-floating">
                                             <label class="control-label">Codigo Matricula</label>
                                             <input class="form-control" type="text">
@@ -36,8 +40,9 @@
                                             <input class="form-control" type="text">
                                           </div>
                                           <br>
+
                                           <div>
-                                              Actividad <br>
+                                              Estado <br>
                                               <input  name="estado" type="radio">
                                               <label>Activa</label>
                                               <input  name="estado" type="radio">
@@ -46,6 +51,7 @@
                                           <p class="text-center">
                                               <button href="#!" class="btn btn-info btn-raised btn-sm"><i class="zmdi zmdi-floppy"></i> Guardar</button>
                                           </p>
+
                                     </form>
 
                                 </div>

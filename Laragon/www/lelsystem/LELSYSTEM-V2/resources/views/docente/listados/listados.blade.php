@@ -6,7 +6,7 @@
 
     <div class="container-fluid">
         <div class="page-header">
-          <h1 class="text-titles"><i class="zmdi zmdi-account zmdi-hc-fw"></i> listado <small>Estudiantes</small></h1>
+          <h1 class="text-titles"><i class="zmdi zmdi-male-female zmdi-hc-fw"></i> listado <small>Estudiantes</small></h1>
         </div>
     </div>
     <div class="container-fluid">
@@ -14,7 +14,6 @@
             <div class="col-xs-12">
                 <ul class="nav nav-tabs" style="margin-bottom: 15px;">
                     <li class="active"><a href="#list" data-toggle="tab">Lista</a></li>
-
                 </ul>
                 <div id="myTabContent" class="tab-content">
 
@@ -23,6 +22,7 @@
                         <table class="table table-hover text-center">
                             <thead>
                                 <tr>
+                                    <th class="text-center">cedula</th>
                                     <th class="text-center">fecha</th>
                                     <th class="text-center">Description</th>
 
@@ -31,12 +31,13 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td><a href="">30/20/2001</a></td>
+
+                                    <td><a href="">30/20/2020</a></td>
                                     <td><a href="">Sesión de Clase Normal</a></td>
                                     <td><a href="#!" class="btn btn-danger btn-raised btn-xs"><i class="zmdi zmdi-refresh"></i></a></td>
                                 </tr>
                                 <tr>
-                                    <td><a href="">32/20/2001</a></td>
+                                    <td><a href="">32/20/2085</a></td>
                                     <td><a href="">Sesión de Clase Normal</a></td>
                                     <td><a href="#!" class="btn btn-danger btn-raised btn-xs"><i class="zmdi zmdi-refresh"></i></a></td>
                                 </tr>

@@ -43,16 +43,16 @@
 					</li>
 				</ul>
 			</div>
-			<!-- SideBar Menu -->
+			<!-- SideBar Menu --> 
 			<ul class="list-unstyled full-box dashboard-sideBar-Menu">
 				<li>
 					<a href="home.html">
-						<i class="zmdi zmdi-view-dashboard zmdi-hc-fw"></i> Cursos
+						<i class="zmdi zmdi-view-dashboard zmdi-hc-fw"></i> dashboard
 					</a>
 				</li>
                 <li>
 					<a href="arte.html" class="btn-sideBar-SubMenu">
-						<i class="zmdi zmdi-folder zmdi-hc-fw"></i> Arte Culinario
+						<i class="zmdi zmdi-folder zmdi-hc-fw"></i> 'Curso'
 					</a>
 				</li>
 				<li>
@@ -70,16 +70,6 @@
 						<i class="zmdi zmdi-n-1-square zmdi-hc-fw"></i> Notas
 					</a>
 
-				</li>
-				<li>
-					<a href="#!" class="btn-sideBar-SubMenu">
-						<i class="zmdi zmdi-shield-security zmdi-hc-fw"></i> Settings School <i class="zmdi zmdi-caret-down pull-right"></i>
-					</a>
-					<ul class="list-unstyled full-box">
-						<li>
-							<a href="school.html"><i class="zmdi zmdi-balance zmdi-hc-fw"></i> School Data</a>
-						</li>
-					</ul>
 				</li>
 			</ul>
 		</div>
@@ -200,6 +190,7 @@
             <script src="{{ asset('admin/js/main.js') }}"></script>
             <script>
                 $.material.init();
+				ventanaemergente();
             </script>
     </body>
     </html>

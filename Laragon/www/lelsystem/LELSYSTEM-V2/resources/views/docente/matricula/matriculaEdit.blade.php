@@ -4,7 +4,7 @@
 <!-- Content page -->
 <div class="container-fluid">
 	<div class="page-header">
-		<h1 class="text-titles"><i class="zmdi zmdi-book zmdi-hc-fw"></i> Actividades <small>Activities</small></h1>
+		<h1 class="text-titles"><i class="zmdi zmdi-font zmdi-hc-fw"></i> Matricula <small>Estudiantes</small></h1>
 	</div>
 	<p class="lead">Las actividades son todas aquellas tareas o labores que cada individuo ejerce diariamente, están las actividades laborales, las actividades escolares, las actividades recreativas, las actividades físicas, etc.</p>
 </div>
@@ -22,37 +22,7 @@
 								<form action="{{ url('matricula/'.$matri->cedula) }}" method="POST">
 								@csrf
 								@method('PUT')
-									<div class="form-group label-floating">
-										<label class="control-label">Cedula</label>
-										<input class="form-control" type="text" name="cedula" value="{{ isset($matri) ? $matri->cedula : old('cedula') }}" {{ isset($matri) ? 'disabled' : '' }}">
-									</div>
-									<div class="form-group label-floating">
-										<label class="control-label">Nombres</label>
-										<input class="form-control" type="text" name="nombres" value="{{ isset($matri) ? $matri->nombres : old('nombres') }}" {{ isset($matri) ? 'disabled' : '' }}">
-									</div>
-									<div class="form-group label-floating">
-										<label class="control-label">Apellidos</label>
-										<input class="form-control" type="text" name="apellidos" value="{{ isset($matri) ? $matri->apellidos : old('apellidos') }}" {{ isset($matri) ? 'disabled' : '' }}">
-									</div>
-									<div class="form-group label-floating">
-										<label class="control-label">Correo</label>
-										<input class="form-control" type="text" name="correo" value="{{ isset($matri) ? $matri->correo : old('correo') }}" {{ isset($matri) ? 'disabled' : '' }}">
-									</div>
-									<div class="form-group label-floating">
-										<label class="control-label">Codigo curso</label>
-										<input class="form-control" type="text" name="codigo_curso" value="{{$matri->codigo_curso}}">
-									</div>
-									<div class="form-group label-floating">
-										<label class="control-label">Estado</label>
-											  <br>
-                                              <input  name="estado" type="radio" value="{{$matri->estado}}">
-                                              <label>Activa</label>
-                                              <input  name="estado" type="radio" value="{{$matri->estado}}">
-                                              <label>Inactiva</label>
-									</div>
-									<p class="text-center">
-										<button href="#!" class="btn btn-info btn-raised btn-sm"><i class="zmdi zmdi-floppy"></i> Guardar cambios</button>
-									</p>
+								@include('docente.matricula.matriculaForm')
 								</form>
 							</div>
 						</div>
