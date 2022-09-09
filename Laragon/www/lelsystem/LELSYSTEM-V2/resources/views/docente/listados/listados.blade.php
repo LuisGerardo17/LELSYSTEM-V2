@@ -31,12 +31,12 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td><a href="">30/20/2001</a></td>
+                                    <td><a href="">30/20/2020</a></td>
                                     <td><a href="">Sesión de Clase Normal</a></td>
                                     <td><a href="#!" class="btn btn-danger btn-raised btn-xs"><i class="zmdi zmdi-refresh"></i></a></td>
                                 </tr>
                                 <tr>
-                                    <td><a href="">32/20/2001</a></td>
+                                    <td><a href="">32/20/2085</a></td>
                                     <td><a href="">Sesión de Clase Normal</a></td>
                                     <td><a href="#!" class="btn btn-danger btn-raised btn-xs"><i class="zmdi zmdi-refresh"></i></a></td>
                                 </tr>
