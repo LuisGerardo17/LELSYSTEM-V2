@@ -105,13 +105,13 @@
 			</nav>
 		</div>
 	</header>
-	
+
 
 	<main>
 		<div class="breakups">
 			<nav aria-label="breadcrumb">
 				<ol class="breadcrumb">
-					<li class="breadcrumb-item"><a href ="{{route('homepage')}}">Principal</a></li>
+					<li class="breadcrumb-item"><a href ="{{route('home')}}">Principal</a></li>
 					<li class="breadcrumb-item active" aria-current="page">Admisiones</li>
 				</ol>
 			</nav>
@@ -171,7 +171,7 @@
 							<h3 class="widget-title">Contactanos</h3>
 							<div class="widget-body">
 								<p>+593 999999999<br>
-									<a href="mailto:esy.mera@yavirac.edu.ec"><i
+									<a href="mailto:esy.mera@yavirac.edu.ec"><br><i
 											class='bx bxl-gmail border-icon'></i></a><br>
 
 								</p>

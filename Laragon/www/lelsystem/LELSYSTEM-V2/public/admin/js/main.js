@@ -1,5 +1,5 @@
 $(document).ready(function(){
-	$('.btn-sideBar-SubMenu').on('click', function(){
+	/*$('.btn-sideBar-SubMenu').on('click', function(){
 		var SubMenu=$(this).next('ul');
 		var iconBtn=$(this).children('.zmdi-caret-down');
 		if(SubMenu.hasClass('show-sideBar-SubMenu')){
@@ -9,7 +9,7 @@ $(document).ready(function(){
 			iconBtn.addClass('zmdi-hc-rotate-180');
 			SubMenu.addClass('show-sideBar-SubMenu');
 		}
-	});
+	});*/
 	$('.btn-exit-system').on('click', function(){
 		swal({
 		  	title: 'Are you sure?',
@@ -83,3 +83,20 @@ $(document).ready(function(){
         });
     });
 })(jQuery);
+
+$('.Eliminar').submit('click', function(e){
+    e.preventDefault();
+    swal({
+          title: '¿Esta seguro que desea eliminar?',
+          type: 'warning',
+          showCancelButton: true,
+          confirmButtonColor: '#03A9F4',
+          cancelButtonColor: '#F44336',
+          confirmButtonText: '<i class="zmdi zmdi-run"></i> SI',
+          cancelButtonText: '<i class="zmdi zmdi-close-circle"></i> NO!'
+    }).then((r) => {
+        if (r) {
+          this.submit()
+        }
+    })
+});

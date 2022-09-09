@@ -111,7 +111,7 @@
 	<main>
 		<nav aria-label="breadcrumb">
 			<ol class="breadcrumb ">
-				<li class="breadcrumb-item"><a href="{{route('homepage')}}">Principal</a></li>
+				<li class="breadcrumb-item"><a href="{{route('home')}}">Principal</a></li>
 				<li class="breadcrumb-item active" aria-current="page">Contactanos</li>
 			</ol>
 		</nav>
@@ -121,9 +121,9 @@
 			</div>
 			<div class="row">
 				<div class="col frame">
-					<iframe
+					<iframe class="map"
 						src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.7875347594754!2d-78.51888238567923!3d-0.22507903545148264!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d59a28366b3d81%3A0xc6029256689ed873!2sInstituto%20Superior%20Tecnol%C3%B3gico%20Yavirac!5e0!3m2!1ses-419!2sec!4v1648407363016!5m2!1ses-419!2sec"
-						width="500" height="350" allowfullscreen="" loading="lazy"
+						width="600" height="400" allowfullscreen="" loading="lazy"
 						referrerpolicy="no-referrer-when-downgrade"></iframe>
 				</div>
 				<div class="col direccion">
@@ -133,14 +133,14 @@
 						<b>Teléfono:</b> 02 394 1080 <br>
 
 						<b>Ext.:</b> 1000 Secretaría Rectorado
-						&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 1002 Coordinación Administrativa
-						&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp1004 Secretaría General
-						<br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 1005 Centro de Educación Continua
-						<br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 1006 Recepción
+						<br>&nbsp &nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 1002 Coordinación Administrativa
+						<br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 1004 Secretaría General
+						<br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 1005 Centro de Educación Continua
+						<br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 1006 Recepción
 
 						<br><b>Correo electrónico:</b> atayupanta@yavirac.edu.ec
 
-						<br> <b>Horario de atención:</b> 
+						<br> <b>Horario de atención:</b>
 						<br>
 						De lunes a viernes, de 08H00 a 17H00
 					</h4>
@@ -149,20 +149,22 @@
 		</div>
 		<br>
 	</main>
-	
+
 	<footer id="footer" class="top-space">
 		<div class="footer1">
 			<div class="container padin">
 				<div class="row">
 					<div class="col-md widget">
+						<center>
 						<h3 class="widget-title">Contactanos</h3>
 						<div class="widget-body">
 							<p>+593 999999999<br>
-								<a href="mailto:esy.mera@yavirac.edu.ec"><i
+								<a href="mailto:esy.mera@yavirac.edu.ec"><br><i
 										class='bx bxl-gmail border-icon'></i></a><br>
 
 							</p>
 						</div>
+						</center>
 					</div>
 
 					<div class="col-md widget">

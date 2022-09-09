@@ -56,7 +56,12 @@ body, html{
 	background-size: cover;
 }
 .text-titles{
-	font-family: 'RobotoCondensedLight'
+	font-family: 'RobotoCondensedLight';
+	
+}
+.titulo {
+	background: #009688;
+	text-align: center;
 }
 /*============ LogIn*/
 .logInForm{
@@ -484,6 +489,7 @@ body, html{
     .cd-timeline-img {
         width: 60px;
         height: 60px;
+		
         left: 50%;
         margin-left: -30px;
         -webkit-transform: translateZ(0);
@@ -606,4 +612,25 @@ body, html{
 	.no-paddin-left{
 		padding-left: 0;
 	}
+}
+.alertas{
+    color: red;
+}
+
+/*doncente*/
+
+
+.espacio {
+	padding: 0 0 10px 30px;
+}
+
+.flex{
+	display: flex;
+}
+.espacio2{
+	padding-right: 50px;
+	
+}
+.link{
+	text-decoration: none;
 }

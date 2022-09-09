@@ -1,155 +1,78 @@
 @extends('admin.layouts.admin')
 
-@section('titulo','Representative')
+@section('titulo','Admin')
 @section('contenido')
 		<!-- Content page -->
 		<div class="container-fluid">
 			<div class="page-header">
-			  <h1 class="text-titles"><i class="zmdi zmdi-balance zmdi-hc-fw"></i> Cursos <small>Courses</small></h1>
+			  <h1 class="text-titles"><i class="zmdi zmdi-font zmdi-hc-fw"></i>  Cursos <small>Teacher-Means</small></h1>
 			</div>
-			<p class="lead">Se trata de una palabra que hace referencia al periodo de tiempo establecido de forma anual para el dictado de clases en una institución educativa.</p>
+			<p class="lead">Los cursos de aprendizaje presentan muchas ventajas en la educación virtual.</p>
 		</div>
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-xs-12">
 					<ul class="nav nav-tabs" style="margin-bottom: 15px;">
-					  	<li class="active"><a href="#new" data-toggle="tab">New</a></li>
-					  	<li><a href="#list" data-toggle="tab">List</a></li>
+					    <li class="active"><a href="#list" data-toggle="tab">Lista</a></li>
+					  	<li><a href="#new" data-toggle="tab">Agregar</a></li>
 					</ul>
 					<div id="myTabContent" class="tab-content">
-						<div class="tab-pane fade active in" id="new">
+						<div class="tab-pane fade {{ ($errors->any()) ? 'active in' : '' }}" id="new">
 							<div class="container-fluid">
 								<div class="row">
 									<div class="col-xs-12 col-md-10 col-md-offset-1">
-									    <form action="">
-									    	<div class="form-group label-floating">
-											  <label class="control-label">Name</label>
-											  <input class="form-control" type="text">
-											</div>
-											<div class="form-group label-floating">
-											  <label class="control-label">Last Name</label>
-											  <input class="form-control" type="text">
-											</div>
-											<div class="form-group label-floating">
-											  <label class="control-label">Address</label>
-											  <textarea class="form-control"></textarea>
-											</div>
-											<div class="form-group label-floating">
-											  <label class="control-label">Email</label>
-											  <input class="form-control" type="text">
-											</div>
-											<div class="form-group label-floating">
-											  <label class="control-label">Phone</label>
-											  <input class="form-control" type="text">
-											</div>
-											<div class="form-group label-floating">
-											  <label class="control-label">Occupation</label>
-											  <input class="form-control" type="text">
-											</div>
-											<div class="form-group">
-										        <label class="control-label">Gender</label>
-										        <select class="form-control">
-										          <option>Male</option>
-										          <option>Female</option>
-										        </select>
-										    </div>
-										    <p class="text-center">
-										    	<button href="#!" class="btn btn-info btn-raised btn-sm"><i class="zmdi zmdi-floppy"></i> Save</button>
-										    </p>
+									    <form action="{{ url('admin/cursos') }}" method="post" enctype="multipart/form-data">
+                                            @csrf
+
+                                            @include('admin.courses.curseForm')
+
+
 									    </form>
 									</div>
 								</div>
 							</div>
 						</div>
-					  	<div class="tab-pane fade" id="list">
+                        <x:notify-messages/>
+					  	<div class="tab-pane fade {{ ($errors->any()) ? '' : 'active in' }}" id="list">
 							<div class="table-responsive">
-								<table class="table table-hover text-center">
+								<table class="table table-hover text-center w-8">
 									<thead>
 										<tr>
-											<th class="text-center">#</th>
-											<th class="text-center">Name</th>
-											<th class="text-center">Last Name</th>
-											<th class="text-center">Address</th>
-											<th class="text-center">Email</th>
-											<th class="text-center">Phone</th>
-											<th class="text-center">Occupation</th>
-											<th class="text-center">Gender</th>
-											<th class="text-center">Update</th>
-											<th class="text-center">Delete</th>
+											<th class="text-center">Codigo</th>
+											<th class="text-center">Nombre</th>
+											<th class="text-center">Descripcion</th>
+											<th class="text-center">Fecha de  Inicio</th>
+                                            <th class="text-center">Fecha de Finalización</th>
+                                            <th class="text-center">Estado</th>
+                                            <th class="text-center">Cedula Docente</th>
+											<th class="text-center">Actualizar</th>
+											<th class="text-center">Eliminar</th>
 										</tr>
 									</thead>
 									<tbody>
-										<tr>
-											<td>1</td>
-											<td>Carlos</td>
-											<td>Alfaro</td>
-											<td>El Salvador</td>
-											<td>carlos@gmail.com</td>
-											<td>+50312345678</td>
-											<td>Web Developer</td>
-											<td>Male</td>
-											<td><a href="#!" class="btn btn-success btn-raised btn-xs"><i class="zmdi zmdi-refresh"></i></a></td>
-											<td><a href="#!" class="btn btn-danger btn-raised btn-xs"><i class="zmdi zmdi-delete"></i></a></td>
-										</tr>
-										<tr>
-											<td>2</td>
-											<td>Alicia</td>
-											<td>Melendez</td>
-											<td>El Salvador</td>
-											<td>alicia@gmail.com</td>
-											<td>+50312345678</td>
-											<td>Social Work</td>
-											<td>Female</td>
-											<td><a href="#!" class="btn btn-success btn-raised btn-xs"><i class="zmdi zmdi-refresh"></i></a></td>
-											<td><a href="#!" class="btn btn-danger btn-raised btn-xs"><i class="zmdi zmdi-delete"></i></a></td>
-										</tr>
-										<tr>
-											<td>3</td>
-											<td>Sarai</td>
-											<td>Mercado</td>
-											<td>El Salvador</td>
-											<td>sarai@gmail.com</td>
-											<td>+50312345678</td>
-											<td>Lawyer</td>
-											<td>Female</td>
-											<td><a href="#!" class="btn btn-success btn-raised btn-xs"><i class="zmdi zmdi-refresh"></i></a></td>
-											<td><a href="#!" class="btn btn-danger btn-raised btn-xs"><i class="zmdi zmdi-delete"></i></a></td>
-										</tr>
-										<tr>
-											<td>4</td>
-											<td>Alba</td>
-											<td>Bonilla</td>
-											<td>El Salvador</td>
-											<td>alba@gmail.com</td>
-											<td>+50312345678</td>
-											<td>Designer</td>
-											<td>Female</td>
-											<td><a href="#!" class="btn btn-success btn-raised btn-xs"><i class="zmdi zmdi-refresh"></i></a></td>
-											<td><a href="#!" class="btn btn-danger btn-raised btn-xs"><i class="zmdi zmdi-delete"></i></a></td>
-										</tr>
-										<tr>
-											<td>5</td>
-											<td>Claudia</td>
-											<td>Rodriguez</td>
-											<td>El Salvador</td>
-											<td>claudia@gmail.com</td>
-											<td>+50312345678</td>
-											<td>Lawyer</td>
-											<td>Female</td>
-											<td><a href="#!" class="btn btn-success btn-raised btn-xs"><i class="zmdi zmdi-refresh"></i></a></td>
-											<td><a href="#!" class="btn btn-danger btn-raised btn-xs"><i class="zmdi zmdi-delete"></i></a></td>
-										</tr>
+                                        @foreach( $cursos as $curso )
+                                            <tr>
+                                                <td>{{ $curso->codigo_curso }}</td>
+                                                <td>{{ $curso->nombre_curso }}</td>
+                                                <td style="max-width: 10px; overflow: hidden;">{{ $curso->descripcion }}</td>
+                                                <td>{{ $curso->fecha_inicio }}</td>
+                                                <td>{{ $curso->fecha_fin }}</td>
+                                                <td>{{ $curso->estado}}</td>
+                                                <td>{{ $curso->cedula }}</td>
+                                                <td><a href="{{ url('admin/cursos/'.$curso->codigo_curso.'/edit') }}" class="btn btn-success btn-raised btn-xs"><i class="zmdi zmdi-refresh"></i></a></td>
+                                                <td>
+                                                    <form action="{{ url('admin/cursos'.'/'.$curso->codigo_curso) }}" method="post" class="Eliminar">
+                                                        @csrf
+                                                        {{ method_field('DELETE') }}
+                                                        <button type="submit"><a class="btn btn-danger btn-raised btn-xs"><i class="zmdi zmdi-delete"></i></a></button>
+                                                    </form>
+                                                </td>
+                                            </tr>
+                                        @endforeach
+
 									</tbody>
 								</table>
-								<ul class="pagination pagination-sm">
-								  	<li class="disabled"><a href="#!">«</a></li>
-								  	<li class="active"><a href="#!">1</a></li>
-								  	<li><a href="#!">2</a></li>
-								  	<li><a href="#!">3</a></li>
-								  	<li><a href="#!">4</a></li>
-								  	<li><a href="#!">5</a></li>
-								  	<li><a href="#!">»</a></li>
-								</ul>
+								{!! $cursos->links() !!}
 							</div>
 					  	</div>
 					</div>
@@ -157,4 +80,5 @@
 			</div>
 		</div>
 	</section>
-    @endsection
+
+@endsection

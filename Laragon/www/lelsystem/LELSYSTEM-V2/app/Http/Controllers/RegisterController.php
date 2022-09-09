@@ -4,6 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
+use App\Models\Docentes;
+use App\Models\Estudiantes;
+use App\Models\Administradores;
+use Illuminate\Auth\Authenticatable;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 
@@ -14,29 +18,46 @@ class RegisterController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+    protected $redirectTo = "/login";
+
     public function create() {
      return view('auth.register');
 
 }
+public function __construct ()
+{
+    $this->middleware('guest');
+}
+
+    public function store(Request $request){
+
+        $datosUser=Request()->except('_token');
+
+        if($datosUser['contrasena']==$datosUser['contrasena_verified_at']){
+            if($request->hasFile('imagen')){
+                $datosUser['imagen']=$request->file('imagen')->store('uploadsUsers','public');
+            }
+             if($datosUser['rol']=='Estudiante'){
+                User::insert($datosUser);
+                Estudiantes::insert(['cedula'=>$datosUser['cedula']]);
+
+             }else if ( $datosUser['rol']=='Docente'){
+                User::insert($datosUser);
+                Docentes::insert(['cedula'=>$datosUser['cedula']]);
 
 
-    public function store(){
+              }else if($datosUser['rol']=='Administrador'){
+                User::insert($datosUser);
+                Administradores::insert(['cedula'=>$datosUser['cedula']]);
+              }
 
-        $this->validate(request(),[
-          'cedula'=>'required',
-          'nombres'=>'required',
-          'apellidos'=>'required',
-          'correo'=>'required',
-          'direccion'=>'required',
-          'telefono'=>'required',
-          'contrasena'=>'required',
-          'imagen'=>'required',
-          'rol'=>'required',
-        ]);
-
-        $user = User::create(request(['cedula','nombres','apellidos','correo','direccion','telefono','contrasena','imagen','rol']));
-        auth()->login($user);
-        return redirect()->to('admin.admin.admin');
+        }else{
+            notify()->preset('error');
+            return redirect('auth.login');
+        }
+        notify()->preset('registrado');
+        return redirect('login');
     }
 }
 

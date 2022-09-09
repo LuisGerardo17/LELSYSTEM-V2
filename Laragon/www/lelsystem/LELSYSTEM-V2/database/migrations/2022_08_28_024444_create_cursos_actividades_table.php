@@ -14,11 +14,11 @@ class CreateCursosActividadesTable extends Migration
     public function up()
     {
         Schema::create('cursos_actividades', function (Blueprint $table) {
-            $table->id('id_cursos_actividades')->unique();
-            $table->unsignedInteger('id_curso');
-            $table->foreign('id_curso')->references('id_curso')->on('cursos');
-            $table->unsignedInteger('id_actividad');
-            $table->foreign('id_actividad')->references('id_actividad')->on('actividades');
+            $table->id('id_cursos_actividades');
+            $table->bigInteger('codigo_curso');
+            $table->foreign('codigo_curso')->references('codigo_curso')->on('cursos')->cascadeOnDelete()->cascadeOnUpdate();
+            $table->string('codigo_actividad',5);
+            $table->foreign('codigo_actividad')->references('codigo_actividad')->on('actividades');
             $table->timestamps();
         });
     }

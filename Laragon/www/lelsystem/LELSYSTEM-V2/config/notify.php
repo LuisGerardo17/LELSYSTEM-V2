@@ -60,13 +60,99 @@ return [
             'message' => 'Usuario registrado con exito.',
             'type'    => 'success',
             'model'   => 'toast',
-            'title'   => 'Listo',
+            'title'   => 'Registrado',
+        ],
+        'registradocosas' => [
+            'message' => 'registrado con exito.',
+            'type'    => 'success',
+            'model'   => 'toast',
+            'title'   => 'Registrado',
         ],
         'error' => [
             'message' => 'Error al registrar compruebe los datos.',
             'type'    => 'error',
             'model'   => 'toast',
             'title'   => 'Error',
+        ],
+        'eliminar' => [
+            'message' => 'Usuario Eliminado con exito.',
+            'type'    => 'success',
+            'model'   => 'toast',
+            'title'   => 'Eliminado',
+        ],
+
+        //Alerta docentes
+        'Docente registrado' => [
+            'message' => 'Docente registrado exitosamente',
+            'type'    => 'success',
+            'model'   => 'toast',
+            'title'   => 'Registrado',
+        ],
+        'Error al registrar' => [
+            'message' => 'Ha ocurrido un error',
+            'type'    => 'Error',
+            'model'   => 'toast',
+            'title'   => 'Error',
+        ],
+        'Docente eliminado' => [
+            'message' => 'Docente eliminado exitosamente',
+            'type'    => 'success',
+            'model'   => 'toast',
+            'title'   => 'Eliminado',
+        ],
+        'Docente actualizado' => [
+            'message' => 'El docente ha sido actualizado con exito',
+            'type'    => 'success',
+            'model'   => 'toast',
+            'title'   => 'Actualizado',
+        ],
+
+        //Alerta actividad
+        'Actividad registrada' => [
+            'message' => 'Su actividad ha sido creada exitosamente',
+            'type'    => 'success',
+            'model'   => 'toast',
+            'title'   => 'Registrado',
+        ],
+        'Actividad eliminada' => [
+            'message' => 'Su actividad se ha eliminado',
+            'type'    => 'success',
+            'model'   => 'toast',
+            'title'   => 'Eliminado',
+        ],
+
+           //Alerta edit admin
+        'editar' => [
+            'message' => 'Usuario actualizado con exito.',
+            'type'    => 'success',
+            'model'   => 'toast',
+            'title'   => 'Actualizado',
+        ],
+        'eliminartodo' => [
+            'message' => 'Eliminado con exito.',
+            'type'    => 'success',
+            'model'   => 'toast',
+            'title'   => 'Eliminado',
+        ],
+
+        'editartodo' => [
+            'message' => 'Actualizado con exito.',
+            'type'    => 'success',
+            'model'   => 'toast',
+            'title'   => 'Actualizado',
+        ],
+        //Estudiante
+        'Estudiante actualizado' => [
+            'message' => 'El estudiante ha sido actualizado con exito',
+            'type'    => 'success',
+            'model'   => 'toast',
+            'title'   => 'Actualizado',
+        ],
+        'Estudiante eliminado' => [
+            'message' => 'El estudiante ha sido eliminado con exito',
+            'type'    => 'success',
+            'model'   => 'toast',
+            'title'   => 'Eliminado',
         ],
     ],
 
