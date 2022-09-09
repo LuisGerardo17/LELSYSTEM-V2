@@ -19,8 +19,9 @@ class MatriculaController extends Controller
         $matricula = matriculas::paginate(7);
         //$matricula = DB::table('users')->select('cedula','nombres','apellidos','correo')->where('rol','Estudiante')->get();
        return view('docente.matricula.matricula', compact('matricula'));
-
     }
+
+
 
     /**
      * Show the form for creating a new resource.
@@ -73,7 +74,7 @@ class MatriculaController extends Controller
      */
     public function edit($datos)
     {
-        $matri=Matriculas::find($datos);
+        $matri=matriculas::find($datos);
         return view('docente.matricula.matriculaEdit',compact('matri'));
     }
 
@@ -105,4 +106,5 @@ class MatriculaController extends Controller
         notify()->preset('eliminar');
          return redirect('matricula');
     }
+
 }

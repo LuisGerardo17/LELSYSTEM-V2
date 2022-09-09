@@ -87,7 +87,7 @@ class ActivitiesController extends Controller
      * @param  \App\Models\Actividades  $actividades
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy($id) 
     {
         Actividades::destroy($id);
         notify()->preset('Actividad eliminada'); 

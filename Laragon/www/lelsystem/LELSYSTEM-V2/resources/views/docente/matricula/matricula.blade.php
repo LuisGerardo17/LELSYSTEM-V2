@@ -22,7 +22,7 @@
                         <div class="container-fluid">
                             <div class="row">
                                 <div class="col-xs-12 col-md-10 col-md-offset-1">
-                                    <form>
+                                    <form action="{{ url('matricula')}}" method="POST">
                                         <div class="form-group label-floating">
                                             <label class="control-label">Codigo Matricula</label>
                                             <input class="form-control" type="text">
@@ -36,9 +36,15 @@
                                             <input class="form-control" type="text">
                                           </div>
                                           <br>
+<<<<<<< HEAD
                                           <div>
                                               Estado <br>
                                               <input  name="estado" type="radio">
+=======
+                                          <div> 
+                                              Actividad <br>
+                                              <input  name="act" type="radio">
+>>>>>>> 12a63842bec8fa4975180818ece21ec3f96540df
                                               <label>Activa</label>
                                               <input  name="estado" type="radio">
                                               <label>Inactiva</label>
@@ -69,18 +75,23 @@
                                 </tr>
                             </thead>
                             <tbody>
+								@foreach ($matricula as $items)
                                 <tr>
-                                    <td>9999999999</td>
-                                    <td>Enrique Sebastian</td>
-                                    <td>Mera Yela</td>
-                                    <td>esy.mera@yavirac.edu.ec</td>
-                                    <td></td>
-                                    <td></td>
-                                    <td><a href="#!" class="btn btn-success btn-raised btn-xs"><i class="zmdi zmdi-refresh"></i></a></td>
+                                    <td>{{$items->user->cedula}}</td>
+                                    <td>{{$items->user->nombres}}</td>
+                                    <td>{{$items->user->apellidos}}</td>
+                                    <td>{{$items->user->correo}}</td>
+                                    <td>{{$items->user->codigo_curso}}</td>
+                                    <td>{{$items->user->estado}}</td>
+                                    <td><button type="submit" ><a href="{{ url('matricula/') .'/'. $items->cedula . '/edit' }}" class="btn btn-success btn-raised btn-xs"><i class="zmdi zmdi-refresh"></i></a></button></td>
+                                    <form action="{{ url('matricula/'.$items->cedula) }}" method="POST" class="Eliminar">
+										@csrf
+										@method('DELETE')
                                     <td><a href="#!" class="btn btn-danger btn-raised btn-xs"><i class="zmdi zmdi-delete"></i></a></td>
+									</form>
                                 </tr>
-
-                            </tbody>
+                                @endforeach
+                            </tbody> 
                         </table>
                         <ul class="pagination pagination-sm">
                               <li class="disabled"><a href="#!">«</a></li>

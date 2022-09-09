@@ -73,11 +73,8 @@
                                                 </td>
                                             </tr>
                                         @endforeach
-<<<<<<< HEAD
 									</tbody>
-=======
-                                    </tbody>
->>>>>>> 2fa9778084bdbe8bde6e37befc17a0073d6b1254
+
 								</table>
 								{!! $docentes->links() !!}
 							</div>
