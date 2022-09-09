@@ -5,16 +5,18 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\User;
+use App\Models\Estudiantes;
+use App\Models\Cursos;
 
 class Matriculas extends Model
 {
     use HasFactory;
- 
+
     protected $fillable = [
         'cedula',
         'codigo_curso',
         'estado'
-    
+
     ];
 
 
@@ -29,7 +31,7 @@ class Matriculas extends Model
         //belongsto ->pertenese ('a la tabla','con id_usuarios','es igual a id_administrador')
     }
     public function curso(){
-        return $this->belongsTo(Curso::class,'codigo_curso','codigo_curso');
+        return $this->belongsTo(Cursos::class,'codigo_curso','codigo_curso');
         //belongsto ->pertenese ('a la tabla','con id_usuarios','es igual a id_administrador')
     }
 

@@ -4,7 +4,7 @@
 <!-- Content page -->
 <div class="container-fluid">
 	<div class="page-header">
-		<h1 class="text-titles"><i class="zmdi zmdi-book zmdi-hc-fw"></i> Actividades <small>Activities</small></h1>
+		<h1 class="text-titles"><i class="zmdi zmdi-font zmdi-hc-fw"></i> Matricula <small>Estudiantes</small></h1>
 	</div>
 	<p class="lead">Las actividades son todas aquellas tareas o labores que cada individuo ejerce diariamente, están las actividades laborales, las actividades escolares, las actividades recreativas, las actividades físicas, etc.</p>
 </div>
@@ -18,14 +18,14 @@
 				<div class="tab-pane fade active in" id="new">
 					<div class="container-fluid">
 						<div class="row">
-							<div class="col-xs-12 col-md-10 col-md-offset-1"> 
+							<div class="col-xs-12 col-md-10 col-md-offset-1">
 								<form action="{{ url('matricula/'.$matri->cedula) }}" method="POST">
 								@csrf
 								@method('PUT')  
 								@include('docente.matricula.matriculaForm')
 								</form>
 							</div>
-						</div> 
+						</div>
 					</div>
 				</div>
 				<div class="tab-pane fade" id="list">

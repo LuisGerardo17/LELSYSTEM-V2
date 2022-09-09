@@ -6,7 +6,7 @@
 
     <div class="container-fluid">
         <div class="page-header">
-          <h1 class="text-titles"><i class="zmdi zmdi-account zmdi-hc-fw"></i> Lista <small>Estudiantes</small></h1>
+          <h1 class="text-titles"><i class="zmdi zmdi-male-female zmdi-hc-fw"></i> Lista <small>Estudiantes</small></h1>
         </div>
     </div>
     <div class="container-fluid">
@@ -36,7 +36,7 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>9999999999</td>
+                                    <td>9999999991</td>
                                     <td>Enrique Sebastian</td>
                                     <td>Mera Yela</td>
                                     <td>esy.mera@yavirac.edu.ec</td>
@@ -51,10 +51,10 @@
                                     <td>Anshelo Alejandro</td>
                                     <td>Proaño Lema</td>
                                     <td>aal.proano@yavirac.edu.ec</td>
-                                    <td><input type="radio" name="1" id=""></td>
-                                    <td><input type="radio" name="1" id=""></td>
-                                    <td><input type="radio" name="1" id=""></td>
-                                    <td><input type="radio" name="1" id=""></td>
+                                    <td><input type="radio" name="2" id=""></td>
+                                    <td><input type="radio" name="2" id=""></td>
+                                    <td><input type="radio" name="2" id=""></td>
+                                    <td><input type="radio" name="2" id=""></td>
                                 </tr>
 
                             </tbody>

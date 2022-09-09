@@ -165,4 +165,7 @@ Route::get('lista', function () {
 Route::get('listaestudiantes', function () {
     return view('docente.listados.listaestudiantes');
 });
+Route::get('notas', function () {
+    return view('docente.notas.notas');
+});
 

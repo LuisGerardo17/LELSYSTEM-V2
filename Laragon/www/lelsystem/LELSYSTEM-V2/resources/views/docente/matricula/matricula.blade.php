@@ -6,14 +6,14 @@
 
     <div class="container-fluid">
         <div class="page-header">
-          <h1 class="text-titles"><i class="zmdi zmdi-account zmdi-hc-fw"></i> Matricula <small>Estudiantes</small></h1>
+          <h1 class="text-titles"><i class="zmdi zmdi-font zmdi-hc-fw"></i> Matricula <small>Estudiantes</small></h1>
         </div>
     </div>
     <div class="container-fluid">
         <div class="row">
             <div class="col-xs-12">
                 <ul class="nav nav-tabs" style="margin-bottom: 15px;">
-                    <li class="active"><a href="#list" data-toggle="tab">Lista</a></li>
+                    <li class="active"><a href="#list" data-toggle="tab">Lista de Estudiantes</a></li>
                       <li><a href="#new" data-toggle="tab">Agregar</a></li>
 
                 </ul>
@@ -23,8 +23,35 @@
                             <div class="row">
                                 <div class="col-xs-12 col-md-10 col-md-offset-1">
                                     <form action="{{ url('matricula')}}" method="POST">
+
                                     @csrf
 									@include('docente.matricula.matriculaForm')
+
+                                        <div class="form-group label-floating">
+                                            <label class="control-label">Codigo Matricula</label>
+                                            <input class="form-control" type="text">
+                                          </div>
+                                          <div class="form-group label-floating">
+                                            <label class="control-label">Codigo Curso</label>
+                                            <input class="form-control" type="text">
+                                          </div>
+                                          <div class="form-group label-floating">
+                                            <label class="control-label">Cedula</label>
+                                            <input class="form-control" type="text">
+                                          </div>
+                                          <br>
+
+                                          <div>
+                                              Estado <br>
+                                              <input  name="estado" type="radio">
+                                              <label>Activa</label>
+                                              <input  name="estado" type="radio">
+                                              <label>Inactiva</label>
+                                          </div>
+                                          <p class="text-center">
+                                              <button href="#!" class="btn btn-info btn-raised btn-sm"><i class="zmdi zmdi-floppy"></i> Guardar</button>
+                                          </p>
+
                                     </form>
 
                                 </div>
@@ -64,7 +91,7 @@
 									</form>
                                 </tr>
                                 @endforeach
-                            </tbody> 
+                            </tbody>
                         </table>
                         <ul class="pagination pagination-sm">
                               <li class="disabled"><a href="#!">«</a></li>

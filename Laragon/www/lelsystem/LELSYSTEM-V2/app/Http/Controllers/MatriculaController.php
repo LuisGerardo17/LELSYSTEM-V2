@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\Models\User;
 use App\Models\Estudiantes;
+use App\Models\ListadoEstudiantes;
 use App\Models\Matriculas;
 use Illuminate\Http\Request;
 class MatriculaController extends Controller
@@ -14,11 +15,12 @@ class MatriculaController extends Controller
      */
     public function index()
 
-    { 
+    {
         $matricula = matriculas::paginate(7);
         //$matricula = DB::table('users')->select('cedula','nombres','apellidos','correo')->where('rol','Estudiante')->get();
-       return view('docente.matricula.matricula', compact('matricula')); 
+       return view('docente.matricula.matricula', compact('matricula'));
     }
+
 
 
     /**
@@ -39,7 +41,18 @@ class MatriculaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $campos=[
+            'codigo_curso'=>'required|string|max:50 ',
+            'estado'=>'required',
+          ];
+
+        $request->validate($campos);
+        $datos=$request->except(['_token','nombres','apellidos','correo']);
+
+            Matriculas::insert($datos);
+            ListadoEstudiantes::insert(['cedula'=>$datos['cedula']]);
+            notify()->preset('registrado');
+            return redirect('admin/admin');
     }
 
     /**
@@ -75,9 +88,9 @@ class MatriculaController extends Controller
     public function update(Request $request,$id)
     {
         $dato=$request->except(['_token','_method']);
-        Estudiantes::where('cedula','=',$id)->update($dato);
+        Matriculas::where('cedula','=',$id)->update($dato);
         notify()->preset('Docente actualizado');
-        return redirect('Teacher/Teacher');
+        return redirect('matricula');
     }
 
     /**
@@ -86,10 +99,12 @@ class MatriculaController extends Controller
      * @param  \App\Models\matriculas  $matriculas
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy($cedula)
     {
-        //$datos=matriculas::find($id);
-        matriculas::destroy($id);
-        return redirect('matricula');
+
+         Matriculas::destroy($cedula);
+        notify()->preset('eliminar');
+         return redirect('matricula');
     }
+
 }
