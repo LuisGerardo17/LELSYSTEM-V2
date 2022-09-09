@@ -37,10 +37,10 @@
                                           </div>
                                           <br>
                                           <div>
-                                              Actividad <br>
-                                              <input  name="act" type="radio">
+                                              Estado <br>
+                                              <input  name="estado" type="radio">
                                               <label>Activa</label>
-                                              <input  name="act" type="radio">
+                                              <input  name="estado" type="radio">
                                               <label>Inactiva</label>
                                           </div>
                                           <p class="text-center">
