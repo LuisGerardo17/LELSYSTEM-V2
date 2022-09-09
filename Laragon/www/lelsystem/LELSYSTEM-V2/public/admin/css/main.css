@@ -641,3 +641,122 @@ body, html{
 .imagenPresentacion{
     text-align: center;
 }
+
+.edit{
+	padding: 0 0 0 94%;
+	font-size: 16px;
+	cursor: pointer;
+}
+
+.mas{
+	font-size: 13px;
+	cursor: pointer;
+}
+
+/*======= form emerge*/
+.overlay{
+	background: rgba(0,0,0,.3);
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 270px;
+	right: 0;
+    display: flex;
+	align-items: center;
+	justify-content: center;
+	visibility: hidden;
+}
+
+.overlay.active {
+	visibility: visible;
+}
+
+.popup{
+	background: #009688;
+	box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, .3);
+	border-radius: 3px;
+	font-family: "RobotoCondensedLight";
+	padding: 20px;
+	width: 600px;
+	text-align: center;
+	
+	
+    transition: .3s ease all;
+	transform: scale(0.7);
+	opacity: 0;
+
+    
+}
+
+.popup .btn-cerrar-popup{
+	font-size: 16px;
+	line-height: 16px;
+	display: block;
+	text-align: right;
+	color: #bbbbbb;
+	transition: .3s ease all;
+}
+.popup .btn-cerrar-popup:hover{
+	color: #000;
+}
+
+.popup h3 {
+	font-size: 36px;
+	font-weight: 600;
+	margin-bottom: 20px;
+	text-align: center;
+	color: #fff;
+}
+
+
+
+.popup form .contenedor-inputs input {
+	width: 100%;
+	margin-bottom: 20px;
+	height: 52px;
+	line-height: 52px;
+	font-size: 18px;
+	text-align: center;
+	border: none;
+	border: 0.5px solid #fff;
+	border-bottom: 3px solid #fff;
+	border-right: 3px solid #fff;
+	background: transparent;
+	color: #fff;
+
+}
+
+
+::placeholder{
+	color: #fff;
+}
+
+.popup form .contenedor-inputs label {
+	font-size: 18px;
+	color: #fff;
+}
+
+.popup form .contenedor-inputs .file{
+	border: none;
+	padding-left: 110px;
+}
+
+.popup form .btn-submit{
+	padding: 0 20px;
+	height: 40px;
+	line-height: 40px;
+	border: none;
+	color: #fff;
+	background: #00f;
+	font-family: "RobotoCondensedLight";
+	font-size: 16px;
+	cursor: pointer;
+	transition: .3s ease all;
+}
+
+.popup form .btn-submit:hover{
+	background: rgba(94,125,227, .9);
+}
+
+/*Animacion*/
+.popup.active{opacity: 1; transform: scale(1);}

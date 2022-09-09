@@ -200,6 +200,7 @@
             <script src="{{ asset('admin/js/main.js') }}"></script>
             <script>
                 $.material.init();
+				ventanaemergente();
             </script>
     </body>
     </html>
