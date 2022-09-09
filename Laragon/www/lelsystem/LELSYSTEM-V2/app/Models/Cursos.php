@@ -4,6 +4,8 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Docentes;
+use App\Models\Matriculas;
 
 class Cursos extends Model
 {
@@ -19,4 +21,10 @@ class Cursos extends Model
     protected $primaryKey = 'codigo_curso';
 
     protected $keyType = 'string';
+
+    public function matriculas(){
+        return $this->hasMany(Matriculas::class,'codigo_curso','codigo_curso');
+
+    }
+
 }

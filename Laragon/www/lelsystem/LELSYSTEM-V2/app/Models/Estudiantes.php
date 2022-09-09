@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\User;
+use App\Models\Matriculas;
 
 class Estudiantes extends Model
 {
@@ -16,8 +17,8 @@ class Estudiantes extends Model
         //belongsto ->pertenese ('a la tabla','con id_usuarios','es igual a id_administrador')
     }
 
-    public function cursos(){
-        return $this->hasMany(Cursos::class,'cedula','cedula');
+    public function matriculas(){
+        return $this->hasMany(Matriculas::class,'cedula','cedula');
 
     }
 }

@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Models\Estudiantes;
-use App\Models\matriculas;
+use App\Models\Matriculas;
 use Illuminate\Http\Request;
 class MatriculaController extends Controller
 {
@@ -12,10 +12,10 @@ class MatriculaController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    { 
+    {
         $estudiantes = Estudiantes::paginate(7);
         //$estudiantes = DB::table('users')->select('cedula','nombres','apellidos','correo')->where('rol','Estudiante')->get();
-       return view('', compact('estudiantes'));
+       return view('docente.matricula.matricula', compact('estudiantes'));
     }
 
     /**
