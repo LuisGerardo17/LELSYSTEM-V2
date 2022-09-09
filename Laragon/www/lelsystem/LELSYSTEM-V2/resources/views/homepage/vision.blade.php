@@ -94,7 +94,7 @@
 								<li class="nav-item">
 									<a class="blancooo" href="{{route('admisiones')}}">Admisiones</a>
 								</li>
-								
+
 								<li class="nav-item ">
 									<center><a class="blanco sesionesbajos" href="{{route('login')}}">Iniciar Sesion</a></center>
 								</li>
@@ -111,7 +111,7 @@
 	<main>
 		<nav aria-label="breadcrumb">
 			<ol class="breadcrumb ">
-				<li class="breadcrumb-item"><a href="{{route('homepage')}}">Principal</a></li>
+				<li class="breadcrumb-item"><a href="{{route('home')}}">Principal</a></li>
 				<li class="breadcrumb-item active" aria-current="page">Vision</li>
 			</ol>
 		</nav>
@@ -119,14 +119,14 @@
 			<center><img src="https://gcloudassets.unini.org/unini/files/styles/programas_610x272_/public/2019-06/ima-uninipr-meees.jpg?itok=gUsI5bE-" alt="" class="hola" ></center>
 		</div>
 		<div class="row my-4">
-			<div class="col"><h2>Misión</h2><p>	
+			<div class="col"><h2>Misión</h2><p>
 				Formar profesionales de excelencia de nivel Técnico y Tecnológico que promuevan, integren y apliquen sus conocimientos en turismo, patrimonio cultural y carreras afines para ofrecer una respuesta a las necesidades del sistema turístico a través de la conservación y restauración de bienes arquitectónicos, arqueológicos, históricos y artísticos y de esta manera fortalecer las identidades nacionales.</p></div>
 			<div class="col"><center><img src="https://yavirac.edu.ec/wp-content/uploads/2020/01/mision.jpg" alt="img1"></center></div>
 		</div>
 		<div class="row pb-2">
 			<div class="col"><center><img src="https://yavirac.edu.ec/wp-content/uploads/2019/03/vision.jpg" alt="img2"></center></div>
 			<div class="col"><h2>Visión</h2><p>	Al 2020 el Instituto Superior Tecnológico de Turismo y Patrimonio Yavirac será la institución líder en la formación profesional de técnicos y tecnólogos superiores en turismo, patrimonio cultural y carreras afines con un modelo pedagógico de alto rigor académico y científico en la recuperación y proyección de la memoria histórica, basado en valores sociales y éticos universales.</p></div>
-			
+
 		</div>
 	</div>
 	</main>
@@ -141,7 +141,7 @@
 						<div class="widget-body">
 							<p>+593 999999999<br>
 								<a href="mailto:esy.mera@yavirac.edu.ec"><br><i class='bx bxl-gmail border-icon'></i></a><br>
-								
+
 							</p>
 						</div>
 						</center>
@@ -160,7 +160,7 @@
 						</div>
 					</div>
 
-					
+
 
 				</div>
 			</div>
