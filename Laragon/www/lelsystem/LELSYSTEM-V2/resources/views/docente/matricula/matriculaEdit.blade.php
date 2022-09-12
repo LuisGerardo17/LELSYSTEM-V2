@@ -38,17 +38,17 @@
                                     <input class="form-control" type="text" name="correo" value="{{ isset($matricula) ? $matricula->correo : old('correo') }}" {{ isset($matri) ? 'disabled' : '' }}">
                                 </div>
                                 <div class="form-group label-floating">
-                                    <label class="control-label">Codigo curso</label>
-                                    <input class="form-control" type="text" name="codigo_curso" value="{{$matricula->codigo_curso}}">
+                                    <label class="control-label">Nombre curso</label>
+                                    <input class="form-control" type="text" name="nombre_curso" value="{{$matricula->nombre_curso}}">
                                 </div>
                                 <div class="form-group label-floating">
-                                    <label class="control-label">Estado</label>
-                                    <br>
-                                    <input name="estado" type="radio" value="{{$matricula->estado}}">
-                                    <label>Activa</label>
-                                    <input name="estado" type="radio" value="{{$matricula->estado}}">
-                                    <label>Inactiva</label>
-                                </div>
+                                    <label class="control-label"> Estado </label>
+                                      <select class="form-select" name="estado"  value = "{{ $matricula->estado}}">
+                                          <option value="Activo">Activo</option>
+                                          <option value="Inactivo">Inactivo</option>
+                                       </select>
+
+                                 </div>
                                 <p class="text-center">
                                     <button href="#!" class="btn btn-info btn-raised btn-sm"><i class="zmdi zmdi-floppy"></i> Guardar</button>
                                 </p>
