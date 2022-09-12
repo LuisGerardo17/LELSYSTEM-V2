@@ -19,8 +19,7 @@ class CursoController extends Controller
     {
         $datos=$request->except('_token');
         $campos=[
-            'codigo_curso'=>'required|string|max:5',
-            'nombre_curso'=>'required',
+            'nombre_curso'=>'required|string|max:50',
             'descripcion'=>'required',
             'fecha_inicio'=>'required|date',
             'fecha_fin'=>'required|date',
@@ -47,7 +46,7 @@ class CursoController extends Controller
     public function update(Request $request, $id)
     {
         $datos=$request->except(['_token','_method']);
-        Cursos::where('codigo_curso','=',$id)->update($datos);
+        Cursos::where('nombre_curso','=',$id)->update($datos);
         notify()->preset('editartodo');
         return redirect('admin/cursos');
     }

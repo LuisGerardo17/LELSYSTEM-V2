@@ -18,12 +18,12 @@ class Cursos extends Model
         return $this->belongsTo(Docentes::class,'cedula','cedula');
 
     }
-    protected $primaryKey = 'codigo_curso';
+    protected $primaryKey = 'nombre_curso';
 
     protected $keyType = 'string';
 
     public function matriculas(){
-        return $this->hasMany(Matriculas::class,'codigo_curso','codigo_curso');
+        return $this->hasMany(Matriculas::class,'nombre_curso','nombre_curso');
 
     }
 
