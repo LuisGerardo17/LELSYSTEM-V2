@@ -50,7 +50,7 @@
                                     <td>{{$items->cedula}}</td>
                                     <td>{{$items->nombre_curso}}</td>
                                     <td>{{$items->estado}}</td>
-                                    <td><button type="submit" ><a href="{{ url('matricula'.$items->cedula. '/edit' )}}" class="btn btn-success btn-raised btn-xs"><i class="zmdi zmdi-refresh"></i></a></button></td>
+                                    <td><a href="{{ url('matricula/'.$items->cedula. '/edit' )}}" class="btn btn-success btn-raised btn-xs"><i class="zmdi zmdi-refresh"></i></a></td>
                                     <form action="{{ url('matricula/'.$items->cedula) }}" method="POST" class="Eliminar">
 										@csrf
 										@method('DELETE')
