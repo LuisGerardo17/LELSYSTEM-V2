@@ -21,9 +21,9 @@ class MatriculaController extends Controller
     {
         $estudiantes = Estudiantes::all();
         $cursos = Cursos::all();
-        $matricula=Matriculas::paginate(5);
+        $matriculas=Matriculas::paginate(8);
          //$matricula = DB::table('users')->select('cedula','nombres','apellidos','correo')->where('rol','Estudiante')->get();
-          return view('docente.matricula.listamatricula', compact('matricula','estudiantes','cursos'));
+          return view('docente.matricula.listamatricula', compact('matriculas','estudiantes','cursos'));
      }
 
 /**
@@ -89,7 +89,9 @@ public function indexestudiante()
     public function edit($datos)
     {
         $matricula=Matriculas::find($datos);
-        return view('docente.matricula.matriculaEdit',compact('matricula'));
+        $estudiantes=Estudiantes::all();
+        $cursos=Cursos::all();
+        return view('docente.matricula.matriculaEdit',compact('matricula','estudiantes','cursos'));
     }
 
     /**
@@ -101,10 +103,10 @@ public function indexestudiante()
      */
     public function update(Request $request,$id)
     {
-        $dato=$request->except(['_token','_method']);
-        Matriculas::where('cedula','=',$id)->update($dato);
+        $matricula=$request->except(['_token','_method']);
+        Matriculas::where('cedula','=',$id)->update($matricula);
         notify()->preset('Docente actualizado');
-        return redirect('listamatricula');
+        return redirect('matricula');
     }
 
     /**
@@ -118,7 +120,7 @@ public function indexestudiante()
 
          Matriculas::destroy($cedula);
         notify()->preset('eliminar');
-         return redirect('listamatricula');
+         return redirect('matricula');
     }
 
 }
