@@ -38,7 +38,7 @@
                             <thead>
                                 <tr>
                                     <th class="text-center">Cedula</th>
-                                    <th class="text-center">Codigo Curso</th>
+                                    <th class="text-center">Nombre Curso</th>
                                     <th class="text-center">Estado</th>
                                    <th class="text-center">Edit</th>
                                     <th class="text-center">Delete</th>
@@ -48,7 +48,7 @@
 								@foreach ($matricula as $items)
                                 <tr>
                                     <td>{{$items->cedula}}</td>
-                                    <td>{{$items->codigo_curso}}</td>
+                                    <td>{{$items->nombre_curso}}</td>
                                     <td>{{$items->estado}}</td>
                                     <td><button type="submit" ><a href="{{ url('matricula'.$items->cedula. '/edit' )}}" class="btn btn-success btn-raised btn-xs"><i class="zmdi zmdi-refresh"></i></a></button></td>
                                     <form action="{{ url('matricula/'.$items->cedula) }}" method="POST" class="Eliminar">
