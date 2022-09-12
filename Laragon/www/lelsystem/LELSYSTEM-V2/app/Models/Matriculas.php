@@ -31,7 +31,7 @@ class Matriculas extends Model
         //belongsto ->pertenese ('a la tabla','con id_usuarios','es igual a id_administrador')
     }
     public function curso(){
-        return $this->belongsTo(Cursos::class,'codigo_curso','codigo_curso');
+        return $this->belongsTo(Cursos::class,'nombre_curso','nombre_curso');
         //belongsto ->pertenese ('a la tabla','con id_usuarios','es igual a id_administrador')
     }
 
