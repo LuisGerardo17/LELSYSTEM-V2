@@ -19,8 +19,7 @@ class CursoController extends Controller
     {
         $datos=$request->except('_token');
         $campos=[
-            'codigo_curso'=>'required|string|max:5',
-            'nombre_curso'=>'required',
+            'nombre_curso'=>'required|string|max:50',
             'descripcion'=>'required',
             'fecha_inicio'=>'required|date',
             'fecha_fin'=>'required|date',

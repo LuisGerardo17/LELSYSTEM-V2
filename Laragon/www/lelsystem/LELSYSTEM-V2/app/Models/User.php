@@ -5,11 +5,13 @@ namespace App\Models;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
 use App\Models\Estudiantes;
 use App\Models\Docentes;
 use App\Models\Administradores;
+use App\Models\Matriculas;
 
 class User extends Authenticatable
 {
@@ -73,5 +75,9 @@ class User extends Authenticatable
 
     public function docente(){
         return $this->hasMany(Docentes::class,'cedula','cedula');
+    }
+
+    public function matricula(){
+        return $this->hasMany(Matriculas::class,'cedula','cedula');
     }
 }

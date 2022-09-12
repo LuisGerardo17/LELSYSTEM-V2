@@ -43,7 +43,7 @@
 					</li>
 				</ul>
 			</div>
-			<!-- SideBar Menu --> 
+			<!-- SideBar Menu -->
 			<ul class="list-unstyled full-box dashboard-sideBar-Menu">
 				<li>
 					<a href="home.html">
@@ -56,7 +56,7 @@
 					</a>
 				</li>
 				<li>
-					<a href="artelist.html" class="btn-sideBar-SubMenu">
+					<a  class="btn-sideBar-SubMenu"  href="{{ url('listaEstudiantes')}}">
 						<i class="zmdi zmdi-male-female zmdi-hc-fw"></i> Lista Estudiantes
 					</a>
 				</li>

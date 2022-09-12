@@ -16,8 +16,8 @@ class CreateMatriculasTable extends Migration
         Schema::create('matriculas', function (Blueprint $table) {
             $table->string('cedula',10)->primary();
             $table->foreign('cedula')->references('cedula')->on('estudiantes')->cascadeOnDelete()->cascadeOnUpdate();
-            $table->bigInteger('codigo_curso');
-            $table->foreign('codigo_curso')->references('codigo_curso')->on('cursos')->cascadeOnDelete()->cascadeOnUpdate();
+            $table->string('nombre_curso',50);
+            $table->foreign('nombre_curso')->references('nombre_curso')->on('cursos')->cascadeOnDelete()->cascadeOnUpdate();
             $table->string('estado');
             $table->timestamps();
         });

@@ -1,31 +1,39 @@
 <div class="form-group label-floating">
-	<label class="control-label">Cedula</label>
-	<input class="form-control" type="text" name="cedula" value="">
-</div>
+    <label class="control-label">Cedula Estudinate</label>
+    <select class="form-control" name="cedula">
+        <option>Cedula del Estudiante</option>
+        @foreach($estudiantes as $estudiante)
+        <option value="{{ $estudiante->cedula }}" {{(isset($datos) && $estudiante->cedula==$datos->cedula) ? 'selected' : ''}}>{{ $estudiante->cedula}}</option>
+        @endforeach
+    </select>
+    @error('cedula')
+        <p class="alertas">*{{$message}}</p>
+    @enderror
+  </div>
+
+  <div class="form-group label-floating">
+    <label class="control-label">Codigo Curso</label>
+    <select class="form-control" name="codigo_curso">
+        <option>Codigo Curso</option>
+        @foreach($cursos as $curso)
+        <option value="{{ $curso->codigo_curso }}" {{(isset($datos) && $curso->codigo_curso==$datos->codigo_curso) ? 'selected' : ''}}>{{ $curso->codigo_curso}}</option>
+        @endforeach
+    </select>
+    @error('codigo_curso')
+        <p class="alertas">*{{$message}}</p>
+    @enderror
+  </div>
 <div class="form-group label-floating">
-	<label class="control-label">Nombres</label>
-	<input class="form-control" type="text" name="nombres" value="">
-</div>
-<div class="form-group label-floating">
-	<label class="control-label">Apellidos</label>
-	<input class="form-control" type="text" name="apellidos" value="">
-</div>
-<div class="form-group label-floating">
-	<label class="control-label">Correo</label>
-	<input class="form-control" type="text" name="correo" value="">
-</div>
-<div class="form-group label-floating">
-	<label class="control-label">Codigo curso</label>
-	<input class="form-control" type="text" name="codigo_curso" value="">
-</div>
-<div class="form-group label-floating">
-	<label class="control-label">Estado</label>
-	<br>
-	<input name="estado" type="radio" value="">
-	<label>Activa</label>
-	<input name="estado" type="radio" value="">
-	<label>Inactiva</label>
-</div>
-<p class="text-center">
-	<button href="#!" class="btn btn-info btn-raised btn-sm"><i class="zmdi zmdi-floppy"></i> Guardar</button>
-</p>
+    <label class="control-label"> Estado </label>
+      <select class="form-select" name="estado"  value = "{{ isset($datos) ? $datos->estado : old('estado') }}">
+          <option value="Activo">Activo</option>
+          <option value="Inactivo">Inactivo</option>
+       </select>
+       @error('estado')
+      <p class="alertas">*{{$message}}</p>
+      @enderror
+ </div>
+  <p class="text-center">
+      <button type="submit" class="btn btn-info btn-raised btn-sm"><i class="zmdi zmdi-floppy"></i> Guardar</button>
+  </p>
+

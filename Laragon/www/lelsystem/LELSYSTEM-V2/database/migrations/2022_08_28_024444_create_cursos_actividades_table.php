@@ -15,8 +15,8 @@ class CreateCursosActividadesTable extends Migration
     {
         Schema::create('cursos_actividades', function (Blueprint $table) {
             $table->id('id_cursos_actividades');
-            $table->bigInteger('codigo_curso');
-            $table->foreign('codigo_curso')->references('codigo_curso')->on('cursos')->cascadeOnDelete()->cascadeOnUpdate();
+            $table->string('nombre_curso',50);
+            $table->foreign('nombre_curso')->references('nombre_curso')->on('cursos')->cascadeOnDelete()->cascadeOnUpdate();
             $table->string('codigo_actividad',5);
             $table->foreign('codigo_actividad')->references('codigo_actividad')->on('actividades');
             $table->timestamps();

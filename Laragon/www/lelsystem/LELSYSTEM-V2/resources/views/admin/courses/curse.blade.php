@@ -38,7 +38,7 @@
 								<table class="table table-hover text-center w-8">
 									<thead>
 										<tr>
-											<th class="text-center">Codigo</th>
+
 											<th class="text-center">Nombre</th>
 											<th class="text-center">Descripcion</th>
 											<th class="text-center">Fecha de  Inicio</th>
@@ -52,7 +52,7 @@
 									<tbody>
                                         @foreach( $cursos as $curso )
                                             <tr>
-                                                <td>{{ $curso->codigo_curso }}</td>
+                                               
                                                 <td>{{ $curso->nombre_curso }}</td>
                                                 <td style="max-width: 10px; overflow: hidden;">{{ $curso->descripcion }}</td>
                                                 <td>{{ $curso->fecha_inicio }}</td>

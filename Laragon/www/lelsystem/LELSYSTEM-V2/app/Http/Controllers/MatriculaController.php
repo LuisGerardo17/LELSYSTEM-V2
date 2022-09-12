@@ -5,6 +5,8 @@ use App\Models\User;
 use App\Models\Estudiantes;
 use App\Models\ListadoEstudiantes;
 use App\Models\Matriculas;
+use App\Models\Cursos;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 class MatriculaController extends Controller
 {
@@ -13,17 +15,26 @@ class MatriculaController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+
     public function index()
-
     {
+
         //$matricula=Matriculas::all(); 
-        $matricula = matriculas::paginate(7);
+        /*$matricula = matriculas::paginate(7);
         //$matricula = DB::table('users')->select('cedula','nombres','apellidos','correo')->where('rol','Estudiante')->get();
-       return view('docente.matricula.matricula', compact('matricula'));
-    }
+       return view('docente.matricula.matricula', compact('matricula'));*/
 
+        $estudiantes = Estudiantes::all();
+        $cursos = Cursos::all();
+        $matricula=Matriculas::paginate(5);
+         //$matricula = DB::table('users')->select('cedula','nombres','apellidos','correo')->where('rol','Estudiante')->get();
+          return view('docente.matricula.listamatricula', compact('matricula','estudiantes','cursos'));
+     }
 
+/**
 
+**/
     /**
      * Show the form for creating a new resource.
      *
@@ -42,18 +53,21 @@ class MatriculaController extends Controller
      */
     public function store(Request $request)
     {
+        $datos=$request->except(['_token']);
         $campos=[
-            'codigo_curso'=>'required|string|max:50 ',
-            'estado'=>'required',
+             'cedula'=>'required|string|max:10 ',
+             'codigo_curso'=>'required|max:1 ',
+             'estado'=>'required',
+
           ];
 
-        $request->validate($campos);
-        $datos=$request->except(['_token','nombres','apellidos','correo']);
+           $request->validate($campos);
+
 
             Matriculas::insert($datos);
-            ListadoEstudiantes::insert(['cedula'=>$datos['cedula']]);
+            //ListadoEstudiantes::insert(['cedula'=>$datos['cedula']]);
             notify()->preset('registrado');
-            return redirect('admin/admin');
+            return redirect('matricula');
     }
 
     /**
@@ -75,8 +89,8 @@ class MatriculaController extends Controller
      */
     public function edit($datos)
     {
-        $matri=matriculas::find($datos);
-        return view('docente.matricula.matriculaEdit',compact('matri'));
+        $matricula=Matriculas::find($datos);
+        return view('docente.matricula.matriculaEdit',compact('matricula'));
     }
 
     /**
@@ -91,7 +105,7 @@ class MatriculaController extends Controller
         $dato=$request->except(['_token','_method']);
         Matriculas::where('cedula','=',$id)->update($dato);
         notify()->preset('Docente actualizado');
-        return redirect('matricula');
+        return redirect('listamatricula');
     }
 
     /**
@@ -105,7 +119,7 @@ class MatriculaController extends Controller
 
          Matriculas::destroy($cedula);
         notify()->preset('eliminar');
-         return redirect('matricula');
+         return redirect('listamatricula');
     }
 
 }
