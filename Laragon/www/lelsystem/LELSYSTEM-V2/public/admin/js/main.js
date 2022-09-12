@@ -103,21 +103,63 @@ $('.Eliminar').submit('click', function(e){
 
 function ventanaemergente(){
 /*======= form emerge*/
-var btnAbrirPopup = document.querySelectorAll(".edit")
+const overlay = document.getElementById("overlay"),
+overlayparcialUno=document.getElementById('overlayparcialUno'),
+overlayparcialDos=document.getElementById('overlayparcialDos')
 
-btnAbrirPopup.forEach(e => {
-	let overlay = document.getElementById("overlay"),
-    popup = document.getElementById("popup"),
-    btnCerrarPopup = document.getElementById("btn-cerrar-popup");
+//popus
+const popup = document.getElementById("popup"),
+popup2 = document.getElementById("popup2"),
+popup3 = document.getElementById("popup3")
+//botones
+var btnCerrarPopup = document.querySelectorAll('.btn-cerrar-popup')
+const btnAbrirPopup = document.querySelector("#edit"),
+parcialUno = document.querySelector("#parcialUno"),
+parcialDos = document.querySelector("#parcialDos")
 
-	e.addEventListener("click", function(){
-	overlay.classList.add("active");
-	popup.classList.add("active");
+//boton eliminar
+btnCerrarPopup.forEach(e=>{
+        e.addEventListener("click", function(){
+        overlay.classList.remove("active");
+        overlayparcialUno.classList.remove("active");
+        overlayparcialDos.classList.remove("active");
+        popup.classList.remove("active");
+        popup2.classList.remove("active");
+        popup3.classList.remove("active");
+        });
+})
+
+//eventos
+    btnAbrirPopup.addEventListener("click", function(){
+        overlay.classList.add("active");
+        popup.classList.add("active");
 	});
 
-	btnCerrarPopup.addEventListener("click", function(){
-	overlay.classList.remove("active");
-	popup.classList.remove("active");
+    parcialUno.addEventListener("click", function(){
+        overlayparcialUno.classList.add("active");
+        popup2.classList.add("active");
 	});
-});
+
+    parcialDos.addEventListener("click", function(){
+        overlayparcialDos.classList.add("active");
+        popup3.classList.add("active");
+	});
+
 }
+
+let inputsespacio=document.getElementById('imputs')
+let selector=document.getElementById('selector')
+
+selector.addEventListener('change',(e)=>{
+    let campo=e.target.value
+    let imputFecha='<label for="">fecha entrega</label><input type="date" name="" id="">'
+    let imputFile='<label for="">recurso</label><input type="file" name="" id="">'
+    if(campo==""){
+        inputsespacio.innerHTML=""
+    }else if(campo=='recursos'){
+        inputsespacio.innerHTML=imputFile
+    }else{
+        inputsespacio.innerHTML=imputFecha
+    }
+    console.log(campo)
+})
