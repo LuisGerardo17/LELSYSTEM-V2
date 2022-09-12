@@ -649,9 +649,10 @@ body, html{
 	cursor: pointer;
 }
 
-.mas{
+.mas {
 	font-size: 13px;
 	cursor: pointer;
+	padding: 0;
 }
 
 /*======= form emerge*/
