@@ -56,7 +56,7 @@ class MatriculaController extends Controller
         $datos=$request->except(['_token']);
         $campos=[
              'cedula'=>'required|string|max:10 ',
-             'codigo_curso'=>'required|max:1 ',
+             'nombre_curso'=>'required|max:50 ',
              'estado'=>'required',
 
           ];

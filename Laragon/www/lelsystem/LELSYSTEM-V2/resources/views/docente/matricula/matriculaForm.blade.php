@@ -1,5 +1,5 @@
 <div class="form-group label-floating">
-    <label class="control-label">Cedula Estudinate</label>
+    <label class="control-label">Cedula Estudiante</label>
     <select class="form-control" name="cedula">
         <option>Cedula del Estudiante</option>
         @foreach($estudiantes as $estudiante)
@@ -12,14 +12,14 @@
   </div>
 
   <div class="form-group label-floating">
-    <label class="control-label">Codigo Curso</label>
-    <select class="form-control" name="codigo_curso">
-        <option>Codigo Curso</option>
+    <label class="control-label">Nombre Curso</label>
+    <select class="form-control" name="nombre_curso">
+        <option>Nombre del Curso</option>
         @foreach($cursos as $curso)
-        <option value="{{ $curso->codigo_curso }}" {{(isset($datos) && $curso->codigo_curso==$datos->codigo_curso) ? 'selected' : ''}}>{{ $curso->codigo_curso}}</option>
+        <option value="{{ $curso->nombre_curso }}" {{(isset($datos) && $curso->nombre_curso==$datos->nombre_curso) ? 'selected' : ''}}>{{ $curso->nombre_curso}}</option>
         @endforeach
     </select>
-    @error('codigo_curso')
+    @error('nombre_curso')
         <p class="alertas">*{{$message}}</p>
     @enderror
   </div>
