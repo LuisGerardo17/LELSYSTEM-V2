@@ -6,7 +6,7 @@
 
     <div class="container-fluid">
         <div class="page-header">
-          <h1 class="text-titles"><i class="zmdi zmdi-font zmdi-hc-fw"></i> Matricula <small>Estudiantes</small></h1>
+          <h1 class="text-titles"><i class="zmdi zmdi-font zmdi-hc-fw"></i> Matrícula <small>Estudiantes</small></h1>
         </div>
     </div>
     <div class="container-fluid">
@@ -18,40 +18,13 @@
 
                 </ul>
                 <div id="myTabContent" class="tab-content">
-                    <div class="tab-pane fade" id="new">
+                    <div class="tab-pane fade {{ ($errors->any()) ? 'active in' : '' }}" id="new">
                         <div class="container-fluid">
                             <div class="row">
                                 <div class="col-xs-12 col-md-10 col-md-offset-1">
-                                    <form action="{{ url('matricula')}}" method="POST">
-
-                                    @csrf
-									@include('docente.matricula.matriculaForm')
-
-                                        <div class="form-group label-floating">
-                                            <label class="control-label">Codigo Matricula</label>
-                                            <input class="form-control" type="text">
-                                          </div>
-                                          <div class="form-group label-floating">
-                                            <label class="control-label">Codigo Curso</label>
-                                            <input class="form-control" type="text">
-                                          </div>
-                                          <div class="form-group label-floating">
-                                            <label class="control-label">Cedula</label>
-                                            <input class="form-control" type="text">
-                                          </div>
-                                          <br>
-
-                                          <div>
-                                              Estado <br>
-                                              <input  name="estado" type="radio">
-                                              <label>Activa</label>
-                                              <input  name="estado" type="radio">
-                                              <label>Inactiva</label>
-                                          </div>
-                                          <p class="text-center">
-                                              <button href="#!" class="btn btn-info btn-raised btn-sm"><i class="zmdi zmdi-floppy"></i> Guardar</button>
-                                          </p>
-
+                                    <form action="{{ url('listaEstudiantes')}}" method="POST">
+                                            @csrf
+                                            @include('docente.matricula.matriculaForm')
                                     </form>
 
                                 </div>
@@ -59,7 +32,7 @@
                         </div>
                     </div>
 
-                      <div class="tab-pane fade active in" id="list">
+                      <div class="tab-pane fade {{ ($errors->any()) ? '' : 'active in' }}" id="list">
                         <div class="table-responsive">
                         <table class="table table-hover text-center">
                             <thead>
@@ -68,21 +41,20 @@
                                     <th class="text-center">Nombres</th>
                                     <th class="text-center">Apellidos</th>
                                     <th class="text-center">Correo</th>
-
                                     <th class="text-center">Matricular</th>
                                     <th class="text-center">Delete</th>
                                 </tr>
                             </thead>
                             <tbody>
-								@foreach ($matricula as $items)
+								@foreach ($estudiante as $items)
                                 <tr>
                                     <td>{{$items->cedula}}</td>
                                     <td>{{$items->nombres}}</td>
                                     <td>{{$items->apellidos}}</td>
                                     <td>{{$items->correo}}</td>
 
-                                    <td><button type="submit" ><a href="{{ url('matricula/') .'/'.$items->cedula . '/edit' }}" class="btn btn-success btn-raised btn-xs"><i class="zmdi zmdi-refresh"></i></a></button></td>
-                                    <form action="{{ url('matricula/'.$items->cedula) }}" method="POST" class="Eliminar">
+                                    <td><button type="submit" ><a href="{{ url('listaEstudiantes'.$items->cedula. '/edit' )}}" class="btn btn-success btn-raised btn-xs"><i class="zmdi zmdi-refresh"></i></a></button></td>
+                                    <form action="{{ url('listaEstudiantes/'.$items->cedula) }}" method="POST" class="Eliminar">
 										@csrf
 										@method('DELETE')
                                     <td><a href="#!" class="btn btn-danger btn-raised btn-xs"><i class="zmdi zmdi-delete"></i></a></td>

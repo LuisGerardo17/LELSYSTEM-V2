@@ -19,59 +19,47 @@
 					<div class="container-fluid">
 						<div class="row">
 							<div class="col-xs-12 col-md-10 col-md-offset-1">
-								<form action="{{ url('matricula/'.$matri->cedula) }}" method="POST">
+								<form action="{{ url('matricula/'.$matricula->cedula) }}" method="POST">
 								@csrf
-								@method('PUT')
-								@include('docente.matricula.matriculaForm')
+								<div class="form-group label-floating">
+                                    <label class="control-label">Cedula</label>
+                                    <input class="form-control" type="text" name="cedula" value="{{ isset($matricula) ? $matricula->cedula : old('cedula') }}" {{ isset($matri) ? 'disabled' : '' }}">
+                                </div>
+                                <div class="form-group label-floating">
+                                    <label class="control-label">Nombres</label>
+                                    <input class="form-control" type="text" name="nombres" value="{{ isset($matricula) ? $matricula->nombres : old('nombres') }}" {{ isset($matri) ? 'disabled' : '' }}">
+                                </div>
+                                <div class="form-group label-floating">
+                                    <label class="control-label">Apellidos</label>
+                                    <input class="form-control" type="text" name="apellidos" value="{{ isset($matricula) ? $matricula->apellidos : old('apellidos') }}" {{ isset($matri) ? 'disabled' : '' }}">
+                                </div>
+                                <div class="form-group label-floating">
+                                    <label class="control-label">Correo</label>
+                                    <input class="form-control" type="text" name="correo" value="{{ isset($matricula) ? $matricula->correo : old('correo') }}" {{ isset($matri) ? 'disabled' : '' }}">
+                                </div>
+                                <div class="form-group label-floating">
+                                    <label class="control-label">Codigo curso</label>
+                                    <input class="form-control" type="text" name="codigo_curso" value="{{$matricula->codigo_curso}}">
+                                </div>
+                                <div class="form-group label-floating">
+                                    <label class="control-label">Estado</label>
+                                    <br>
+                                    <input name="estado" type="radio" value="{{$matricula->estado}}">
+                                    <label>Activa</label>
+                                    <input name="estado" type="radio" value="{{$matricula->estado}}">
+                                    <label>Inactiva</label>
+                                </div>
+                                <p class="text-center">
+                                    <button href="#!" class="btn btn-info btn-raised btn-sm"><i class="zmdi zmdi-floppy"></i> Guardar</button>
+                                </p>
 								</form>
 							</div>
 						</div>
 					</div>
 				</div>
-				<div class="tab-pane fade" id="list">
-					<div class="table-responsive">
-						<table class="table table-hover text-center">
-							<thead>
-								<tr>
-									<th class="text-center">#</th>
-									<th class="text-center">Name</th>
-									<th class="text-center">Section</th>
-									<th class="text-center">Status</th>
-									<th class="text-center">Year</th>
-									<th class="text-center">Update</th>
-									<th class="text-center">Delete</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td>1</td>
-									<td>First</td>
-									<td>A</td>
-									<td>Active</td>
-									<td>2017</td>
-									<td><a href="#!" class="btn btn-success btn-raised btn-xs"><i class="zmdi zmdi-refresh"></i></a></td>
-									<td><a href="#!" class="btn btn-danger btn-raised btn-xs"><i class="zmdi zmdi-delete"></i></a></td>
-								</tr>
-								<tr>
-									<td>2</td>
-									<td>First</td>
-									<td>B</td>
-									<td>Active</td>
-									<td>2017</td>
-									<td><a href="#!" class="btn btn-success btn-raised btn-xs"><i class="zmdi zmdi-refresh"></i></a></td>
-									<td><a href="#!" class="btn btn-danger btn-raised btn-xs"><i class="zmdi zmdi-delete"></i></a></td>
-								</tr>
-								<tr>
-									<td>3</td>
-									<td>Third</td>
-									<td>A</td>
-									<td>Active</td>
-									<td>2017</td>
-									<td><a href="#!" class="btn btn-success btn-raised btn-xs"><i class="zmdi zmdi-refresh"></i></a></td>
-									<td><a href="#!" class="btn btn-danger btn-raised btn-xs"><i class="zmdi zmdi-delete"></i></a></td>
-								</tr>
-							</tbody>
-						</table>
+
+			</tbody>
+		</table>
 						<ul class="pagination pagination-sm">
 							<li class="disabled"><a href="#!">«</a></li>
 							<li class="active"><a href="#!">1</a></li>
