@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Actividades;
 use Illuminate\Http\Request;
 
-class ActivitiesController extends Controller
+class ActivitiesController extends Controller 
 {
     /**
      * Display a listing of the resource.

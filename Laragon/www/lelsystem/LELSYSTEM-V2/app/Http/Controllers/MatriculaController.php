@@ -9,13 +9,14 @@ use Illuminate\Http\Request;
 class MatriculaController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * Display a listing of the resource. 
      *
      * @return \Illuminate\Http\Response
      */
     public function index()
 
     {
+        //$matricula=Matriculas::all(); 
         $matricula = matriculas::paginate(7);
         //$matricula = DB::table('users')->select('cedula','nombres','apellidos','correo')->where('rol','Estudiante')->get();
        return view('docente.matricula.matricula', compact('matricula'));
