@@ -7,12 +7,14 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\ActivitiesController;
 use App\Http\Controllers\SessionsController;
 use App\Http\Controllers\AdministradorController;
+use App\Http\Controllers\BuscarController;
 use App\Http\Controllers\DocenteController;
 use App\Http\Controllers\EstudianteController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\MatriculaController;
 use App\Http\Controllers\RecursosController;
 use App\Http\Controllers\CursoController;
+use App\Http\Controllers\ListaEstudiantesController;
 use App\Http\Controllers\RegistroEstudiantesController;
 use App\Http\Controllers\TeacherController;
 Route::get('/',function (){return redirect('/homepage');});
@@ -146,8 +148,10 @@ Route::resource('activities/activities',ActivitiesController::class);
 Route::resource('matricula',MatriculaController::class);
 Route::resource('listaEstudiantes',MatriculaController::class);
 
-//Materias->Leonardo
-//Route::resource('materias',);
+//Buscar->Leonardo
+Route::resource('buscar',BuscarController::class);
+Route::resource('lista',ListaEstudiantesController::class);
+
 //docente
 Route::get('docente', function () {
     return view('docente.inicio');
@@ -163,7 +167,7 @@ Route::get('lista', function () {
     return view('docente.matricula.matricula');
 });*/
 
-Route::get('listaestudiantes', function () {
+/*Route::get('listaestudiantes', function () {
     return view('docente.listados.listaestudiantes');
 });
 Route::get('notas', function () {

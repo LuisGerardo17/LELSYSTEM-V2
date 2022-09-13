@@ -17,8 +17,14 @@ class MatriculaController extends Controller
      */
 
 
-    public function index()
+    public function index(Request $request) 
     {
+    /*$texto=trim($request->get('texto'));
+    $matriculas=DB::table('users')
+    ->select('nombres','apellidos','correo')
+    ->where('apellidos','LIKE','%'.$texto.'%')
+    ->orWhere('cedula','LIKE','%'.$texto.'%')
+    ->orderBy('apellidos','asc')->paginate(7);*/
     /*$texto=trim($request->get('texto'));
     $user=DB::table('user')
     ->select('nombres','apelldos','correo')
@@ -48,7 +54,7 @@ class MatriculaController extends Controller
      */
     public function create()
     {
-        //
+        
     }
 
     /**
@@ -95,7 +101,7 @@ class MatriculaController extends Controller
      */
     public function edit($datos)
     {
-        $matricula=Matriculas::find($datos);
+        $matricula=Matriculas::find($datos); 
         $estudiantes=Estudiantes::all();
         $cursos=Cursos::all();
         return view('docente.matricula.matriculaEdit',compact('matricula','estudiantes','cursos'));

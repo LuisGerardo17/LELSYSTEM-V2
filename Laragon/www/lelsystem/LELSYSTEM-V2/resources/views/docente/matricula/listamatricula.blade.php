@@ -23,13 +23,9 @@
                         <div class="row">
                             <div class="col-xs-12 col-md-10 col-md-offset-1">
                                 <form action="{{ url('matricula')}}" method="POST">
-
                                     @csrf
                                     @include('docente.matricula.matriculaForm')
-
-
                                 </form>
-
                             </div>
                         </div>
                     </div>
@@ -39,49 +35,21 @@
                     <div class="table-responsive">
                         <table class="table table-hover text-center" method="GET">
                             
+                        <!-- buscador -->
                         <div class="col-xl-12">
-                            <form action="{{url('matricula')}}">
+                            <form action="{{url('matricula')}}" method="GET">
                                 <div class="form-row">
                                     <div class="col-ms-4 my-1">
                                         <input type="text" class="form-control" name="texto" value="" >
                                     </div>
                                     <div class="col-auto my-1"> 
-                                        <input type="submit" class="btn btn-primary" value="Buscar">
+                                        <input type="submit" class="btn btn-primary text-center" value="Buscar">
                                     </div>
                                 </div>
                             </form>
                         </div>
-                        <table class="table table-hover text-center">
-
-                            <thead>
-                                <tr>
-                                    
-                                    <th class="text-center">Nombres</th>
-                                    <th class="text-center">Apellidos</th>
-                                    <th class="text-center">Correo</th>
-                            
-                                </tr>
-                            </thead>
-                            <tbody>
-
-                                
-                                <td colspan="3">No hay resultado</td>
-                                
-                                
-
-								@foreach ($matriculas as $items)
-
-                                <tr>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-                                
-                            </tbody>
-
-                            </table>
-
-
+                        
+                        <!-- fin buscador -->
 
                             <table class="table table-hover text-center">
                                 <thead>
@@ -94,7 +62,7 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach ($matricula as $items)
+                                    @foreach ($matriculas as $items)
                                     <tr>
                                         <td>{{$items->cedula}}</td>
                                         <td>{{$items->nombre_curso}}</td>

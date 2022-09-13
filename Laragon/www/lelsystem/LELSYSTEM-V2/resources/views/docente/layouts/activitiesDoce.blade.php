@@ -56,12 +56,12 @@
 					</a>
 				</li>
 				<li>
-					<a  class="btn-sideBar-SubMenu"  href="{{ url('listaEstudiantes')}}">
+					<a  class="btn-sideBar-SubMenu"  href="{{ url('lista')}}">
 						<i class="zmdi zmdi-male-female zmdi-hc-fw"></i> Lista Estudiantes
 					</a>
 				</li>
 				<li>
-					<a href="artemat.html" class="btn-sideBar-SubMenu">
+					<a href="{{ url('matricula')}}" class="btn-sideBar-SubMenu">
 						<i class="zmdi zmdi-font zmdi-hc-fw"></i> Matriculas
 					</a>
 				</li>

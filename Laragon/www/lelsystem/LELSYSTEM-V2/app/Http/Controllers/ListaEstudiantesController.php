@@ -1,8 +1,12 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\User;
+use App\Models\Estudiantes;
 use App\Models\ListadoEstudiantes;
+use App\Models\Matriculas;
+use App\Models\Cursos;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 
 class ListaEstudiantesController extends Controller
@@ -14,7 +18,10 @@ class ListaEstudiantesController extends Controller
      */
     public function index()
     {
-        
+        $estudiantes = Estudiantes::all();
+        $cursos = Cursos::all();
+        $matriculas=Matriculas::paginate(7);
+        return view('docente.listados.listado', compact('matriculas','estudiantes','cursos'));
     }
 
     /**

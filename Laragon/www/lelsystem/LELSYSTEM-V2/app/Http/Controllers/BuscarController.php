@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\Estudiantes;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -15,13 +15,14 @@ class BuscarController extends Controller
      */
     public function index(Request $request)
     {
-        $texto=trim($request->get('texto'));
-    $user=DB::table('user')
-    ->select('nombres','apelldos','correo')
+    /*$texto=trim($request->get('texto'));
+    $matriculas=DB::table('users')
+    ->select('nombres','apellidos','correo')
     ->where('apellidos','LIKE','%'.$texto.'%')
     ->orWhere('cedula','LIKE','%'.$texto.'%')
     ->orderBy('apellidos','asc')->paginate(7);
-    
+    return view('docente.matricula.listamatricula',compact('matriculas','texto'));*/
+     
     }
 
     /**
