@@ -19,6 +19,12 @@ class MatriculaController extends Controller
 
     public function index()
     {
+    /*$texto=trim($request->get('texto'));
+    $user=DB::table('user')
+    ->select('nombres','apelldos','correo')
+    ->where('apellidos','LIKE','%'.$texto.'%')
+    ->orWhere('cedula','LIKE','%'.$texto.'%')
+    ->orderBy('apellidos','asc')->paginate(7);*/
 
         //$matricula=Matriculas::all(); 
         /*$matricula = matriculas::paginate(7);
@@ -80,7 +86,7 @@ class MatriculaController extends Controller
     {
         //
     }
-
+ 
     /**
      * Show the form for editing the specified resource.
      *
