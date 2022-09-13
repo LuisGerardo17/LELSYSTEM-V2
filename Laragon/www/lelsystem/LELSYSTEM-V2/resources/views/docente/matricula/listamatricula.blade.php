@@ -13,8 +13,9 @@
         <div class="row">
             <div class="col-xs-12">
                 <ul class="nav nav-tabs" style="margin-bottom: 15px;">
+                    <li class="active"><a href="#estudiantes" data-toggle="tab">Lista de Estudiantes Registrados</a></li>
                     <li class="active"><a href="#list" data-toggle="tab">Lista de Matricula</a></li>
-                      <li><a href="#new" data-toggle="tab">Agregar</a></li>
+                    <li><a href="#new" data-toggle="tab">Agregar</a></li>
 
                 </ul>
                 <div id="myTabContent" class="tab-content">

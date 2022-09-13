@@ -6,7 +6,7 @@
 
     <div class="container-fluid">
         <div class="page-header">
-          <h1 class="text-titles"><i class="zmdi zmdi-font zmdi-hc-fw"></i> Matrícula <small>Estudiantes</small></h1>
+          <h1 class="text-titles"><i class="zmdi zmdi-font zmdi-hc-fw"></i> Lista <small>Estudiantes</small></h1>
         </div>
     </div>
     <div class="container-fluid">
@@ -22,7 +22,7 @@
                         <div class="container-fluid">
                             <div class="row">
                                 <div class="col-xs-12 col-md-10 col-md-offset-1">
-                                    <form action="{{ url('listaEstudiantes')}}" method="POST">
+                                    <form action="{{ url('estudiante/')}}" method="POST">
                                             @csrf
                                             @include('docente.matricula.matriculaForm')
                                     </form>
@@ -32,7 +32,7 @@
                         </div>
                     </div>
 
-                      <div class="tab-pane fade {{ ($errors->any()) ? '' : 'active in' }}" id="list">
+                       <div class="tab-pane fade {{ ($errors->any()) ? '' : 'active in' }}" id="list">
                         <div class="table-responsive">
                         <table class="table table-hover text-center">
                             <thead>
@@ -46,15 +46,15 @@
                                 </tr>
                             </thead>
                             <tbody>
-								@foreach ($estudiante as $items)
+								@foreach ($estudiantes as $items)
                                 <tr>
                                     <td>{{$items->cedula}}</td>
                                     <td>{{$items->nombres}}</td>
                                     <td>{{$items->apellidos}}</td>
                                     <td>{{$items->correo}}</td>
 
-                                    <td><button type="submit" ><a href="{{ url('listaEstudiantes'.$items->cedula. '/edit' )}}" class="btn btn-success btn-raised btn-xs"><i class="zmdi zmdi-refresh"></i></a></button></td>
-                                    <form action="{{ url('listaEstudiantes/'.$items->cedula) }}" method="POST" class="Eliminar">
+                                    <td><button type="submit" ><a href="{{ url('estudiantes/'.$items->cedula. '/edit' )}}" class="btn btn-success btn-raised btn-xs"><i class="zmdi zmdi-refresh"></i></a></button></td>
+                                    <form action="{{ url('estudiantes/'.$items->cedula) }}" method="POST" class="Eliminar">
 										@csrf
 										@method('DELETE')
                                     <td><a href="#!" class="btn btn-danger btn-raised btn-xs"><i class="zmdi zmdi-delete"></i></a></td>
@@ -63,15 +63,7 @@
                                 @endforeach
                             </tbody>
                         </table>
-                        <ul class="pagination pagination-sm">
-                              <li class="disabled"><a href="#!">«</a></li>
-                              <li class="active"><a href="#!">1</a></li>
-                              <li><a href="#!">2</a></li>
-                              <li><a href="#!">3</a></li>
-                              <li><a href="#!">4</a></li>
-                              <li><a href="#!">5</a></li>
-                              <li><a href="#!">»</a></li>
-                        </ul>
+                       {{!! $estudiantes->links() !!}}
                     </div>
                   </div>
             </div>

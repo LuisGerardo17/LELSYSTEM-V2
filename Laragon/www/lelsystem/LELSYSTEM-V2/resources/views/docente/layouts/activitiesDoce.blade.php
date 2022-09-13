@@ -52,18 +52,16 @@
 				</li>
                 <li>
 					<a href="arte.html" class="btn-sideBar-SubMenu">
-						<i class="zmdi zmdi-folder zmdi-hc-fw"></i> 'Curso'
+						<i class="zmdi zmdi-folder zmdi-hc-fw"></i> Cursos
 					</a>
 				</li>
 				<li>
-					<a  class="btn-sideBar-SubMenu"  href="{{ url('listaEstudiantes')}}">
-						<i class="zmdi zmdi-male-female zmdi-hc-fw"></i> Lista Estudiantes
+					<a  class="btn-sideBar-SubMenu"  href="{{ url('matricula')}}">
+						<i class="zmdi zmdi-male-female zmdi-hc-fw"></i> Matriculas
 					</a>
 				</li>
 				<li>
-					<a href="artemat.html" class="btn-sideBar-SubMenu">
-						<i class="zmdi zmdi-font zmdi-hc-fw"></i> Matriculas
-					</a>
+					<a class="btn-sideBar-SubMenu" href="{{ url('admin/estudiante') }}"><i class="zmdi zmdi-font zmdi-hc-fw"></i> Lista de estudiantes</a>
 				</li>
 				<li>
 					<a href="#!" class="btn-sideBar-SubMenu">

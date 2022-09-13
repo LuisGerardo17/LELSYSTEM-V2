@@ -5,8 +5,9 @@ use App\Models\User;
 use App\Models\Estudiantes;
 use App\Models\ListadoEstudiantes;
 use App\Models\Matriculas;
-use App\Models\Cursos;
 use Illuminate\Support\Facades\DB;
+use App\Models\Cursos;
+
 use Illuminate\Http\Request;
 class MatriculaController extends Controller
 {
@@ -26,14 +27,8 @@ class MatriculaController extends Controller
           return view('docente.matricula.listamatricula', compact('matriculas','estudiantes','cursos'));
      }
 
-/**
-public function indexestudiante()
-    {
 
-         $estudiante = DB::table('users')->select('cedula','nombres','apellidos','correo')->where('rol','Estudiante')->get();
-         return view('docente.matricula.listaEstudiantes', compact('estudiante'));
-    }
-**/
+
     /**
      * Show the form for creating a new resource.
      *
