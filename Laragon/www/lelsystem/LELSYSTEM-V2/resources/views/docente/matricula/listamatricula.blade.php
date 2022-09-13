@@ -22,7 +22,7 @@
                         <div class="container-fluid">
                             <div class="row">
                                 <div class="col-xs-12 col-md-10 col-md-offset-1">
-                                    <form action="{{ url('matricula')}}" method="POST">
+                                    <form action="{{ url('matricula/')}}" method="POST">
                                             @csrf
                                             @include('docente.matricula.matriculaForm')
                                     </form>
@@ -45,7 +45,7 @@
                                 </tr>
                             </thead>
                             <tbody>
-								@foreach ($matricula as $items)
+								@foreach ($matriculas as $items)
                                 <tr>
                                     <td>{{$items->cedula}}</td>
                                     <td>{{$items->nombre_curso}}</td>
@@ -60,15 +60,8 @@
                                 @endforeach
                             </tbody>
                         </table>
-                        <ul class="pagination pagination-sm">
-                              <li class="disabled"><a href="#!">«</a></li>
-                              <li class="active"><a href="#!">1</a></li>
-                              <li><a href="#!">2</a></li>
-                              <li><a href="#!">3</a></li>
-                              <li><a href="#!">4</a></li>
-                              <li><a href="#!">5</a></li>
-                              <li><a href="#!">»</a></li>
-                        </ul>
+
+                        {!! $matriculas->links() !!}
                     </div>
                   </div>
             </div>
