@@ -3,16 +3,31 @@
                 <a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup"><i class="zmdi zmdi-close"></i></a>
                 <h3>EDITAR</h3>
                 <form action="">
-                    <div class="contenedor-inputs">
-                        <label>Foto</label>
-                        <input class="file" type="file">
-                        <input type="text" placeholder="Descripcion">
-                        <label>Icono</label>
-                        <input class="file" type="file">
-                        <input type="text" placeholder="Nombre">
-                        <input type="text" placeholder="Telefono">
+                    <div class="form-group">
+                        <div>
+                            <input type="text" readonly="" class="form-control" placeholder="icono clase...">
+                            <input type="file"  >
+                        </div>
                     </div>
-                    <input type="submit" class="btn-submit" value="Enviar">
+                    <div class="form-group label-floating">
+                        <label class="control-label">descripccion</label>
+                        <input class="form-control" type="password" name="contrasena">
+                    </div>
+                    <div class="form-group label-floating">
+                        <label class="control-label">Nombre</label>
+                        <input class="form-control" type="password" name="contrasena">
+                    </div>
+                    <div class="form-group label-floating">
+                        <label class="control-label">Telefono</label>
+                        <input class="form-control" type="password" name="contrasena">
+                    </div>
+                    <div class="form-group">
+                        <div>
+                            <input type="text" readonly="" class="form-control" placeholder="Foto...">
+                            <input type="file"  >
+                        </div>
+                    </div>
+                    <center><input type="submit" class="btn-submit" value="Enviar"></center>
                 </form>
             </div>
         </div>
@@ -24,26 +39,25 @@
                 <h3>Parcial 1</h3>
                 <form action="">
                     <div class="form-group label-floating">
-                        <label>Tipo archivo</label>
-                        <select class="form-control" name="id_tipo_archivo">
-                            <option>tipo archivo-----</option>
-                            <option value="">tipo archivo-----</option>
-                            <option value="">tipo archivo-----</option>
-                            <option value="">tipo archivo-----</option>
-
+                        <label class="control-label">Recurso a utilizar</label>
+                        <select class="form-control" name="id_tipo_archivo" id="selector">
+                            <option>Recurso-----</option>
+                            <option value="recursos">recursos</option>
+                            <option value="tareas">tareas</option>
+                            <option value="examenes">examenes</option>
                         </select>
                     </div>
-                    <div>
-                    <label>Titulo</label>
-                    <input type="text">
-                    <label>Descripción</label>
-                    <input type="text">
-                    <label>Archivo</label>
-                    <input type="file">
-                    <label>Tiempo de entrega</label>
-                    <input type="date">
+                    <div class="form-group label-floating">
+                        <label class="control-label">Titulo</label>
+                        <input class="form-control" type="password" name="contrasena">
                     </div>
-                    <input type="submit" class="btn-submit" value="Enviar">
+                    <div class="form-group label-floating">
+                        <label class="control-label">Descripccion</label>
+                        <input class="form-control" type="password" name="contrasena">
+                    </div>
+                    <div id="imputs">
+                    </div>
+                    <center><input type="submit" class="btn-submit" value="Enviar"></center>
                 </form>
             </div>
         </div>
@@ -54,25 +68,26 @@
                 <a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup"><i class="zmdi zmdi-close"></i></a>
                 <h3>Parcial 2</h3>
                 <form action="">
-                    <div>
-                    <label class="control-label">Seleccione que quiere añadir</label>
-                    <select class="form-control" name="" id="selector">
-                        <option value="">-------</option>
-                        <option value="recursos">recursos</option>
-                        <option value="tareas">tareas</option>
-                        <option value="examenes">examenes</option>
-                    </select>
+                    <div class="form-group label-floating">
+                        <label class="control-label">Recurso a utilizar</label>
+                        <select class="form-control" name="id_tipo_archivo" id="selector2">
+                            <option>Recurso-----</option>
+                            <option value="recursos">recursos</option>
+                            <option value="tareas">tareas</option>
+                            <option value="examenes">examenes</option>
+                        </select>
                     </div>
-                    <div class="contenedor-inputs">
-                        <label for="">titulo</label>
-                        <input type="text" name="" id="">
-                        <label for="">descripccion</label><br>
-                        <textarea name="" id="" cols="76" rows="2"></textarea>
-                        <div id="imputs">
-                            
-                        </div>
+                    <div class="form-group label-floating">
+                        <label class="control-label">Titulo</label>
+                        <input class="form-control" type="password" name="contrasena">
                     </div>
-                    <input type="submit" class="btn-submit" value="Enviar">
+                    <div class="form-group label-floating">
+                        <label class="control-label">Descripccion</label>
+                        <input class="form-control" type="password" name="contrasena">
+                    </div>
+                    <div id="imputs2">
+                    </div>
+                    <center><input type="submit" class="btn-submit" value="Enviar"></center>
                 </form>
             </div>
         </div>

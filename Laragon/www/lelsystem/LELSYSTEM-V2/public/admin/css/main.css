@@ -656,17 +656,22 @@ body, html{
 }
 
 /*======= form emerge*/
+
 .overlay{
 	background: rgba(0,0,0,.3);
 	position: fixed;
 	top: 0;
 	bottom: 0;
-	left: 0;
+	left: 270px;
 	right: 0;
     display: flex;
 	align-items: center;
 	justify-content: center;
 	visibility: hidden;
+
+}
+.overlaymas{
+    left: 0;
 }
 
 .overlay.active {
@@ -674,13 +679,13 @@ body, html{
 }
 
 .popup{
-	background: #009688;
+	background: #000000d2;
 	box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, .3);
 	border-radius: 3px;
 	font-family: "RobotoCondensedLight";
 	padding: 20px;
 	width: 600px;
-	text-align: center;
+
 
 
     transition: .3s ease all;
@@ -707,12 +712,12 @@ body, html{
 	font-weight: 600;
 	margin-bottom: 20px;
 	text-align: center;
-	color: #fff;
+	color: rgb(255, 255, 255);
 }
 
 
 
-.popup form .contenedor-inputs input {
+/*.popup form .contenedor-inputs input {
 	width: 100%;
 	margin-bottom: 20px;
 	height: 52px;
@@ -724,7 +729,7 @@ body, html{
 	border-bottom: 3px solid #fff;
 	border-right: 3px solid #fff;
 	background: transparent;
-	color: #fff;
+	color: rgb(255, 255, 255);
 
 }
 
@@ -741,7 +746,7 @@ body, html{
 .popup form .contenedor-inputs .file{
 	border: none;
 	padding-left: 110px;
-}
+}*/
 
 .popup form .btn-submit{
 	padding: 0 20px;
