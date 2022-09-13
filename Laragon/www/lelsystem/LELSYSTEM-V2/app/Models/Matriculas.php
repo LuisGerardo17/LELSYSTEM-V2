@@ -14,7 +14,7 @@ class Matriculas extends Model
 
     protected $fillable = [
         'cedula',
-        'codigo_curso',
+        'nombre_curso',
         'estado'
 
     ];

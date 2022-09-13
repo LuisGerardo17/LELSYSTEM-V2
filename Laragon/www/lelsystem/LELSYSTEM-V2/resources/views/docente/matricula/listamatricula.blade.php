@@ -63,10 +63,14 @@
                                 </tr>
                             </thead>
                             <tbody>
+
                                 
                                 <td colspan="3">No hay resultado</td>
                                 
                                 
+
+								@foreach ($matriculas as $items)
+
                                 <tr>
                                     <td></td>
                                     <td></td>
@@ -74,6 +78,7 @@
                                 </tr>
                                 
                             </tbody>
+
                             </table>
 
 
@@ -113,6 +118,11 @@
                                 <li><a href="#!">5</a></li>
                                 <li><a href="#!">»</a></li>
                             </ul>
+
+                        </table>
+
+                        {!! $matriculas->links() !!}
+
                     </div>
                 </div>
             </div>
