@@ -164,9 +164,9 @@ Route::get('materias', function () {
     return view('docente.materias.materias');
 });
 
-Route::get('lista', function () {
+/*Route::get('lista', function () {
     return view('docente.listados.listados');
-});
+});*/
 /*Route::get('matricula', function () {
     return view('docente.matricula.matricula');
 });*/

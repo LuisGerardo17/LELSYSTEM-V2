@@ -33,7 +33,7 @@
        </select>
        @error('estado')
       <p class="alertas">*{{$message}}</p>
-      @enderror
+      @enderror 
  </div>
   <p class="text-center">
       <button type="submit" class="btn btn-info btn-raised btn-sm"><i class="zmdi zmdi-floppy"></i> Guardar</button>

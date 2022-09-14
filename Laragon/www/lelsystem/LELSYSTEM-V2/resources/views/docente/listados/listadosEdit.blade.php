@@ -2,7 +2,7 @@
 @section('titulo', 'Materias')
 @section('seccion')
 <!-- Content page -->
-<div class="container-fluid">
+<div class="container-fluid"> 
 	<div class="page-header">
 		<h1 class="text-titles"><i class="zmdi zmdi-book zmdi-hc-fw"></i> Actividades <small>Activities</small></h1>
 	</div>
@@ -17,11 +17,13 @@
 			</ul>
 			<div id="myTabContent" class="tab-content">
 				<div class="tab-pane fade active in" id="new">
-					<div class="container-fluid">
+					<div class="container-fluid"> 
 						<div class="row">
 							<div class="col-xs-12 col-md-10 col-md-offset-1">
-								<form action="" method="POST">
-									    	@include('docente.listados.listadosForm')
+								<form action="{{ url('lista/'.$listadoEstudiante->cedula) }}" method="POST">
+								@csrf
+                                    {{ method_field('PATCH') }}
+									@include('docente.listados.listadosForm')
 								</form>
 							</div>
 						</div>
@@ -33,4 +35,4 @@
 </div>
 </section>
 
-@endsection
+@endsection 
