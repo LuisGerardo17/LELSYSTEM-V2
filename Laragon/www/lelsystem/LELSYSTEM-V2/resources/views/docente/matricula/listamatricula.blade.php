@@ -8,13 +8,13 @@
     <div class="page-header">
         <h1 class="text-titles"><i class="zmdi zmdi-font zmdi-hc-fw"></i> Matrícula <small>Estudiantes</small></h1>
     </div>
-</div>
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-xs-12">
-            <ul class="nav nav-tabs" style="margin-bottom: 15px;">
-                <li class="active"><a href="#list" data-toggle="tab">Lista de Matricula</a></li>
-                <li><a href="#new" data-toggle="tab">Agregar</a></li>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12">
+                <ul class="nav nav-tabs" style="margin-bottom: 15px;">
+                    <li class="active"><a href="#estudiantes" data-toggle="tab">Lista de Estudiantes Registrados</a></li>
+                    <li class="active"><a href="#list" data-toggle="tab">Lista de Matricula</a></li>
+                    <li><a href="#new" data-toggle="tab">Agregar</a></li>
 
             </ul>
             <div id="myTabContent" class="tab-content">
@@ -35,21 +35,6 @@
                     <div class="table-responsive">
                         <table class="table table-hover text-center" method="GET">
                             
-                        <!-- buscador -->
-                        <div class="col-xl-12">
-                            <form action="{{url('matricula')}}" method="GET">
-                                <div class="form-row">
-                                    <div class="col-ms-4 my-1">
-                                        <input type="text" class="form-control" name="texto" value="" >
-                                    </div>
-                                    <div class="col-auto my-1"> 
-                                        <input type="submit" class="btn btn-primary text-center" value="Buscar">
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                        
-                        <!-- fin buscador -->
 
                             <table class="table table-hover text-center">
                                 <thead>

@@ -25,12 +25,17 @@ $(document).ready(function(){
 		});
 	});
 	$('.btn-menu-dashboard').on('click', function(){
+        var overlay=$('.overlay')
 		var body=$('.dashboard-contentPage');
 		var sidebar=$('.dashboard-sideBar');
 		if(sidebar.css('pointer-events')=='none'){
+            overlay.removeClass('overlaymas');
+
 			body.removeClass('no-paddin-left');
 			sidebar.removeClass('hide-sidebar').addClass('show-sidebar');
 		}else{
+            overlay.addClass('overlaymas');
+
 			body.addClass('no-paddin-left');
 			sidebar.addClass('hide-sidebar').removeClass('show-sidebar');
 		}
@@ -149,17 +154,31 @@ btnCerrarPopup.forEach(e=>{
 
 let inputsespacio=document.getElementById('imputs')
 let selector=document.getElementById('selector')
+let inputsespacio2=document.getElementById('imputs2')
+let selector2=document.getElementById('selector2')
+let imputFecha='<div class="form-group"><label class="control-label">Fecha de entrega</label><input class="form-control" type="date"></div>'
+let imputFile='<div class="form-group"><div><input type="text" readonly="" class="form-control" placeholder="Archivo..."><input type="file"  ></div></div>'
 
 selector.addEventListener('change',(e)=>{
     let campo=e.target.value
-    let imputFecha='<label for="">fecha entrega</label><input type="date" name="" id="">'
-    let imputFile='<label for="">recurso</label><input type="file" name="" id="">'
     if(campo==""){
         inputsespacio.innerHTML=""
     }else if(campo=='recursos'){
         inputsespacio.innerHTML=imputFile
     }else{
         inputsespacio.innerHTML=imputFecha
+    }
+    console.log(campo)
+})
+
+selector2.addEventListener('change',(e)=>{
+    let campo=e.target.value
+    if(campo==""){
+        inputsespacio2.innerHTML=""
+    }else if(campo=='recursos'){
+        inputsespacio2.innerHTML=imputFile
+    }else{
+        inputsespacio2.innerHTML=imputFecha
     }
     console.log(campo)
 })

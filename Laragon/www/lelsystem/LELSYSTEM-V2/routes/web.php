@@ -17,6 +17,9 @@ use App\Http\Controllers\CursoController;
 use App\Http\Controllers\ListaEstudiantesController;
 use App\Http\Controllers\RegistroEstudiantesController;
 use App\Http\Controllers\TeacherController;
+use App\Http\Controllers\ListaController;
+
+
 Route::get('/',function (){return redirect('/homepage');});
 Route::get('/homepage',function (){
     return view('home');
@@ -146,7 +149,8 @@ Route::resource('activities/activities',ActivitiesController::class);
 
 //Matricula->Leonardo
 Route::resource('matricula',MatriculaController::class);
-Route::resource('listaEstudiantes',MatriculaController::class);
+Route::resource('estudiantes',ListaController::class);
+
 
 //Buscar->Leonardo
 Route::resource('buscar',BuscarController::class);
