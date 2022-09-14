@@ -25,12 +25,17 @@ $(document).ready(function(){
 		});
 	});
 	$('.btn-menu-dashboard').on('click', function(){
+        var overlay=$('.overlay')
 		var body=$('.dashboard-contentPage');
 		var sidebar=$('.dashboard-sideBar');
 		if(sidebar.css('pointer-events')=='none'){
+            overlay.removeClass('overlaymas');
+
 			body.removeClass('no-paddin-left');
 			sidebar.removeClass('hide-sidebar').addClass('show-sidebar');
 		}else{
+            overlay.addClass('overlaymas');
+
 			body.addClass('no-paddin-left');
 			sidebar.addClass('hide-sidebar').removeClass('show-sidebar');
 		}
@@ -100,3 +105,80 @@ $('.Eliminar').submit('click', function(e){
         }
     })
 });
+
+function ventanaemergente(){
+/*======= form emerge*/
+const overlay = document.getElementById("overlay"),
+overlayparcialUno=document.getElementById('overlayparcialUno'),
+overlayparcialDos=document.getElementById('overlayparcialDos')
+
+//popus
+const popup = document.getElementById("popup"),
+popup2 = document.getElementById("popup2"),
+popup3 = document.getElementById("popup3")
+//botones
+var btnCerrarPopup = document.querySelectorAll('.btn-cerrar-popup')
+const btnAbrirPopup = document.querySelector("#edit"),
+parcialUno = document.querySelector("#parcialUno"),
+parcialDos = document.querySelector("#parcialDos")
+
+//boton eliminar
+btnCerrarPopup.forEach(e=>{
+        e.addEventListener("click", function(){
+        overlay.classList.remove("active");
+        overlayparcialUno.classList.remove("active");
+        overlayparcialDos.classList.remove("active");
+        popup.classList.remove("active");
+        popup2.classList.remove("active");
+        popup3.classList.remove("active");
+        });
+})
+
+//eventos
+    btnAbrirPopup.addEventListener("click", function(){
+        overlay.classList.add("active");
+        popup.classList.add("active");
+	});
+
+    parcialUno.addEventListener("click", function(){
+        overlayparcialUno.classList.add("active");
+        popup2.classList.add("active");
+	});
+
+    parcialDos.addEventListener("click", function(){
+        overlayparcialDos.classList.add("active");
+        popup3.classList.add("active");
+	});
+
+}
+
+let inputsespacio=document.getElementById('imputs')
+let selector=document.getElementById('selector')
+let inputsespacio2=document.getElementById('imputs2')
+let selector2=document.getElementById('selector2')
+let imputFecha='<div class="form-group"><label class="control-label">Fecha de entrega</label><input class="form-control" type="date"></div>'
+let imputFile='<div class="form-group"><div><input type="text" readonly="" class="form-control" placeholder="Archivo..."><input type="file"  ></div></div>'
+
+selector.addEventListener('change',(e)=>{
+    let campo=e.target.value
+    if(campo==""){
+        inputsespacio.innerHTML=""
+    }else if(campo=='recursos'){
+        inputsespacio.innerHTML=imputFile
+    }else{
+        inputsespacio.innerHTML=imputFecha
+    }
+    console.log(campo)
+})
+
+selector2.addEventListener('change',(e)=>{
+    let campo=e.target.value
+    if(campo==""){
+        inputsespacio2.innerHTML=""
+    }else if(campo=='recursos'){
+        inputsespacio2.innerHTML=imputFile
+    }else{
+        inputsespacio2.innerHTML=imputFecha
+    }
+    console.log(campo)
+})

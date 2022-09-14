@@ -17,7 +17,7 @@ class CreateListadoEstudiantesTable extends Migration
             $table->string('cedula',10)->primary();
             $table->foreign('cedula')->references('cedula')->on('matriculas')->cascadeOnDelete()->cascadeOnUpdate();
             $table->date('fecha');
-            $table->string('descripcion', 20);
+            $table->string('descripcion');
             $table->timestamps();
         });
     }

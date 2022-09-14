@@ -38,7 +38,7 @@
 								<table class="table table-hover text-center w-8">
 									<thead>
 										<tr>
-											<th class="text-center">Codigo</th>
+
 											<th class="text-center">Nombre</th>
 											<th class="text-center">Descripcion</th>
 											<th class="text-center">Fecha de  Inicio</th>
@@ -52,16 +52,16 @@
 									<tbody>
                                         @foreach( $cursos as $curso )
                                             <tr>
-                                                <td>{{ $curso->codigo_curso }}</td>
+
                                                 <td>{{ $curso->nombre_curso }}</td>
                                                 <td style="max-width: 10px; overflow: hidden;">{{ $curso->descripcion }}</td>
                                                 <td>{{ $curso->fecha_inicio }}</td>
                                                 <td>{{ $curso->fecha_fin }}</td>
                                                 <td>{{ $curso->estado}}</td>
                                                 <td>{{ $curso->cedula }}</td>
-                                                <td><a href="{{ url('admin/cursos/'.$curso->codigo_curso.'/edit') }}" class="btn btn-success btn-raised btn-xs"><i class="zmdi zmdi-refresh"></i></a></td>
+                                                <td><a href="{{ url('admin/cursos/'.$curso->nombre_curso. '/edit') }}" class="btn btn-success btn-raised btn-xs"><i class="zmdi zmdi-refresh"></i></a></td>
                                                 <td>
-                                                    <form action="{{ url('admin/cursos'.'/'.$curso->codigo_curso) }}" method="post" class="Eliminar">
+                                                    <form action="{{ url('admin/cursos'.'/'.$curso->nombre_curso) }}" method="post" class="Eliminar">
                                                         @csrf
                                                         {{ method_field('DELETE') }}
                                                         <button type="submit"><a class="btn btn-danger btn-raised btn-xs"><i class="zmdi zmdi-delete"></i></a></button>

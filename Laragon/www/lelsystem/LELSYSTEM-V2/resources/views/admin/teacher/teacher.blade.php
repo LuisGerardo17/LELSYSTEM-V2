@@ -27,7 +27,7 @@
                                             @csrf
 									    	@include('admin.teacher.teacherForm')
 									    </form>
-
+ 
 									</div>
 								</div>
 							</div>
@@ -73,7 +73,8 @@
                                                 </td>
                                             </tr>
                                         @endforeach
-                                    </tbody>
+									</tbody>
+
 								</table>
 								{!! $docentes->links() !!}
 							</div>

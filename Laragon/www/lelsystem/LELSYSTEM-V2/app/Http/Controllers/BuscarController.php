@@ -1,27 +1,28 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Models\User;
 use App\Models\Estudiantes;
-use App\Models\ListadoEstudiantes;
-use App\Models\Matriculas;
-use App\Models\Cursos;
-use Illuminate\Support\Facades\DB;
+use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
-class ListaEstudiantesController extends Controller
+class BuscarController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $estudiantes = Estudiantes::all();
-        $cursos = Cursos::all();
-        $matriculas=Matriculas::paginate(7);
-        return view('docente.listados.listado', compact('matriculas','estudiantes','cursos'));
+    /*$texto=trim($request->get('texto'));
+    $matriculas=DB::table('users')
+    ->select('nombres','apellidos','correo')
+    ->where('apellidos','LIKE','%'.$texto.'%')
+    ->orWhere('cedula','LIKE','%'.$texto.'%')
+    ->orderBy('apellidos','asc')->paginate(7);
+    return view('docente.matricula.listamatricula',compact('matriculas','texto'));*/
+     
     }
 
     /**
@@ -48,10 +49,10 @@ class ListaEstudiantesController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\ListadoEstudiantes  $listadoEstudiantes
+     * @param  \App\Models\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function show(ListadoEstudiantes $listadoEstudiantes)
+    public function show(User $user)
     {
         //
     }
@@ -59,10 +60,10 @@ class ListaEstudiantesController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\ListadoEstudiantes  $listadoEstudiantes
+     * @param  \App\Models\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function edit(ListadoEstudiantes $listadoEstudiantes)
+    public function edit(User $user)
     {
         //
     }
@@ -71,10 +72,10 @@ class ListaEstudiantesController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\ListadoEstudiantes  $listadoEstudiantes
+     * @param  \App\Models\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, ListadoEstudiantes $listadoEstudiantes)
+    public function update(Request $request, User $user)
     {
         //
     }
@@ -82,10 +83,10 @@ class ListaEstudiantesController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\ListadoEstudiantes  $listadoEstudiantes
+     * @param  \App\Models\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function destroy(ListadoEstudiantes $listadoEstudiantes)
+    public function destroy(User $user)
     {
         //
     }

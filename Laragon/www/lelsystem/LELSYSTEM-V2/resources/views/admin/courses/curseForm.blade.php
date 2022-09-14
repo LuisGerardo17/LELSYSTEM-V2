@@ -1,10 +1,4 @@
-<div class="form-group label-floating">
-    <label class="control-label">Codigo</label>
-    <input class="form-control" type="text" name="codigo_curso" value="{{ isset($datos) ? $datos->codigo_curso : old('codigo_curso') }}">
-    @error('codigo_curso')
-        <p class="alertas">*{{$message}}</p>
-    @enderror
-  </div>
+
   <div class="form-group label-floating">
     <label class="control-label">Nombre</label>
     <input class="form-control" type="text" name="nombre_curso" value="{{ isset($datos) ? $datos->nombre_curso : old('nombre_curso') }}">

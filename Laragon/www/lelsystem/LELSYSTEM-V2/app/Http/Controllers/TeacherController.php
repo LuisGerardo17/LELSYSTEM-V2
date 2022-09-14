@@ -11,9 +11,9 @@ use Illuminate\Support\Facades\Storage;
 class TeacherController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * Display a listing of the resource. 
      *
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\Response 
      */
     public function index()
     {

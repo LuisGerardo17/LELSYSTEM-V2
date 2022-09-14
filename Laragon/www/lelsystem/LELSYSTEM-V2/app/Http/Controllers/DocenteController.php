@@ -13,4 +13,4 @@ class DocenteController extends Controller
         
 
    }
-}
+} 

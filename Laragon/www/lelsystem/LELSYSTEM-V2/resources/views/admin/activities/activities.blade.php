@@ -22,7 +22,7 @@
 								<div class="row">
 									<div class="col-xs-12 col-md-10 col-md-offset-1">
 									    <form action="{{ url('activities/activities')}}" method="POST">
-										@csrf
+										@csrf 
 											<div class="form-group label-floating">
 											  <label class="control-label">Codigo</label>
 											  <input class="form-control" type="text" name="codigo_actividad" >
@@ -36,7 +36,7 @@
 											  <input class="form-control" type="text" name="descripcion" >
 											</div>
 										    <p class="text-center">
-										    	<button href="#!" class="btn btn-info btn-raised btn-sm"><i class="zmdi zmdi-floppy"></i> Guardar</button>
+										    	<button href="#!" class="btn btn-info btn-raised btn-sm"><i class="zmdi zmdi-floppy"></i>Guardar</button>
 										    </p>
 									    </form>
 									</div>
@@ -54,9 +54,9 @@
 											<th class="text-center">Actualizar</th>
 											<th class="text-center">Eliminar</th>
 										</tr>
-									</thead>
+									</thead> 
 									<tbody>
-									@foreach ($actividades as $items)
+									@foreach ($actividades as $items) 
 										<tr>
 											<td>{{$items->codigo_actividad}}</td>
 											<td>{{$items->nombre_actividad}}</td>

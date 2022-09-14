@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Actividades;
 use Illuminate\Http\Request;
 
-class ActivitiesController extends Controller
+class ActivitiesController extends Controller 
 {
     /**
      * Display a listing of the resource.
@@ -17,7 +17,7 @@ class ActivitiesController extends Controller
         $actividades=Actividades::all(); 
         notify()->preset('Actividad registrada');
         return view('admin.activities.activities', compact('actividades'));
-    }
+    }  
 
     /**
      * Show the form for creating a new resource.
@@ -87,7 +87,7 @@ class ActivitiesController extends Controller
      * @param  \App\Models\Actividades  $actividades
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy($id) 
     {
         Actividades::destroy($id);
         notify()->preset('Actividad eliminada'); 
