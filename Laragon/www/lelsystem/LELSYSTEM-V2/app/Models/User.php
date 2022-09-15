@@ -25,7 +25,9 @@ class User extends Authenticatable
      * The attributes that are mass assignable.
      *
      * @var array<int, string>
+     *
      */
+
     protected $fillable = [
         'cedula',
         'nombres',
@@ -38,6 +40,8 @@ class User extends Authenticatable
         'rol',
 
     ];
+
+    //protected $guarded = [];
 
     protected $primaryKey = 'cedula';
 
