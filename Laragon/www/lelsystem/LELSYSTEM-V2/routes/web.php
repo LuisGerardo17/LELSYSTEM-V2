@@ -181,3 +181,6 @@ Route::get('/m',function (){
     return view('estudiante.materias');
 });
 
+Route::get("estudiante", function (){
+    return view("estudiante.inicioestudiante");
+});
