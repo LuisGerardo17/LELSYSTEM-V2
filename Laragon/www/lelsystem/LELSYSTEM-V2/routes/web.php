@@ -179,5 +179,11 @@ Route::get('docente', function () {
 });
 Route::get('notas', function () {
     return view('docente.notas.notas');
+});*/
+Route::get('/m',function (){
+    return view('estudiante.materias');
 });
 
+Route::get("estudiante", function (){
+    return view("estudiante.inicioestudiante");
+});

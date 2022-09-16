@@ -31,7 +31,8 @@
 
 				</figure>
 
-
+				<center><div class="text-uppercase"><p>Enrique Sebastian Mera Yela</p></div></center>
+				
 				<ul class="full-box list-unstyled text-center">
 
 					<li>
