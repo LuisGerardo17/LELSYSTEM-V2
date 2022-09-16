@@ -1,12 +1,12 @@
 @extends('admin.layouts.admin')
 
 @section('titulo','Section')
-@section('contenido')
+@section('contenido') 
 		<!-- Content page -->
 		<div class="container-fluid">
 			<div class="page-header">
 			  <h1 class="text-titles"><i class="zmdi zmdi-book zmdi-hc-fw"></i> Actividades <small>Activities</small></h1>
-			</div>
+			</div> 
 			<p class="lead">Las actividades son todas aquellas tareas o labores que cada individuo ejerce diariamente, están las actividades laborales, las actividades escolares, las actividades recreativas, las actividades físicas, etc.</p>
 		</div>
 		<div class="container-fluid">
