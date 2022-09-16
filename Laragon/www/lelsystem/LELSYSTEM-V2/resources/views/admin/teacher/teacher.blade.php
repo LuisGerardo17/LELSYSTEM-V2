@@ -8,7 +8,7 @@
 			<div class="page-header">
 			  <h1 class="text-titles"><i class="zmdi zmdi-account zmdi-hc-fw"></i>Docente<small>Docente</small></h1>
 			</div>
-			<p class="lead">Un dodente tiene planeación, organización, dirección y control estudiantil, donde sus objetivos están en la misma dirección de las metas y propósitos de la institución.</p>
+			<p class="lead">Un docente tiene planeación, organización, dirección y control estudiantil, donde sus objetivos están en la misma dirección de las metas y propósitos de la institución.</p>
 		</div>
 		<div class="container-fluid">
 			<div class="row">
@@ -27,7 +27,7 @@
                                             @csrf
 									    	@include('admin.teacher.teacherForm')
 									    </form>
- 
+
 									</div>
 								</div>
 							</div>

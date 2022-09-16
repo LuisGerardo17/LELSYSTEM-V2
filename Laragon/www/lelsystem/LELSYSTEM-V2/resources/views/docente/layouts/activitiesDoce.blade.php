@@ -47,7 +47,7 @@
 			<ul class="list-unstyled full-box dashboard-sideBar-Menu">
 				<li>
 					<a href="home.html">
-						<i class="zmdi zmdi-view-dashboard zmdi-hc-fw"></i> dashboard
+						<i class="zmdi zmdi-view-dashboard zmdi-hc-fw"></i> Dashboard
 					</a>
 				</li>
                 <li>
@@ -64,13 +64,7 @@
 				<li>
 					<a class="btn-sideBar-SubMenu" href="{{ url('listaMatriculado') }}"><i class="zmdi zmdi-font zmdi-hc-fw"></i> Lista de estudiantes</a>
 
-				</li>
-				<li>
-					<a href="#!" class="btn-sideBar-SubMenu">
-						<i class="zmdi zmdi-n-1-square zmdi-hc-fw"></i> Notas
-					</a>
 
-				</li>
 			</ul>
 		</div>
 	</section>

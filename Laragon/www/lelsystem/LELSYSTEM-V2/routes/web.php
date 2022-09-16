@@ -151,12 +151,13 @@ Route::resource('ActividadDoc',ActividadDocController::class);
 
 //Matricula->Leonardo
 Route::resource('matricula',MatriculaController::class);
-Route::resource('estudiantes',ListaController::class);
+//Route::resource('listaestudiantes',MatriculaController::class);
+//Route::resource('estudiantes',ListaController::class);
 
 
 //Buscar->Leonardo
 Route::resource('buscar',BuscarController::class);
-Route::resource('lista',ListaEstudiantesController::class); 
+Route::resource('lista',ListaEstudiantesController::class);
 Route::resource('listaMatriculado',listaMatriculadoController::class);
 
 //docente
