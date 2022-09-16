@@ -15,7 +15,6 @@ class ActividadDocController extends Controller
     public function index()
     {
         $actividad=Actividades::all(); 
-        notify()->preset('Actividad registrada');
         return view('docente.materias.materias', compact('actividad'));
     }
 
@@ -39,7 +38,8 @@ class ActividadDocController extends Controller
     {
         $datosActividades=Request()->except('_token');
         Actividades::insert($datosActividades);
-        return view('docente.materias.materias');
+        //return view('docente.materias.materias');
+        return redirect('ActividadDoc');
     }
 
     /**

@@ -54,7 +54,7 @@
                         <div class="campos">
                             <a class="link" href=""><p>{{$item->nombre_actividad}}</p></a>
                         </div>
-					@endforeach		 	
+					@endforeach			
                     </div>
                 </div>
                 <a class="edit" id="parcialUno"><i class="zmdi zmdi-plus zmdi-hc-fw"></i>Añadir</a>
