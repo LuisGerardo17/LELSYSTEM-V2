@@ -6,7 +6,7 @@ use App\Models\Actividades;
 use Illuminate\Http\Request;
 
 class ActividadDocController extends Controller
-{  
+{
     /**
      * Display a listing of the resource.
      *
@@ -14,7 +14,12 @@ class ActividadDocController extends Controller
      */
     public function index()
     {
+<<<<<<< HEAD
         $actividad=Actividades::all(); 
+=======
+        $actividad=Actividades::all();
+        notify()->preset('Actividad registrada');
+>>>>>>> 5824627169b57190900d8783729a8f778baf110c
         return view('docente.materias.materias', compact('actividad'));
     }
 
@@ -36,9 +41,14 @@ class ActividadDocController extends Controller
      */
     public function store(Request $request)
     {
+<<<<<<< HEAD
         $datosActividades=Request()->except('_token');
         Actividades::insert($datosActividades);
         //return view('docente.materias.materias');
+=======
+        $actividad=Request()->except('_token');
+        Actividades::insert($actividad);
+>>>>>>> 5824627169b57190900d8783729a8f778baf110c
         return redirect('ActividadDoc');
     }
 
