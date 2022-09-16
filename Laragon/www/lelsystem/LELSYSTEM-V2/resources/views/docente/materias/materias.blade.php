@@ -34,7 +34,9 @@
                     </div>
                 </center>
 
-            </div> 
+            </div>
+           
+
             <div>
                 <h2 class="titulo">Parcial 1</h2>
                 <a class="edit" id="parcialUno"><i class="zmdi zmdi-plus zmdi-hc-fw"></i>Añadir</a>
@@ -54,7 +56,7 @@
                         <div class="campos">
                             <a class="link" href=""><p>{{$item->nombre_actividad}}</p></a>
                         </div>
-					@endforeach		 	
+					@endforeach
                     </div>
                 </div>
                 <a class="edit" id="parcialUno"><i class="zmdi zmdi-plus zmdi-hc-fw"></i>Añadir</a>
@@ -76,7 +78,7 @@
                         <div class="campos">
                             <a class="link" href=""><p>Lorem </p></a>
                         </div>
-                       
+
                     </div>
                 </div>
                 <a class="edit" id="parcialUno"><i class="zmdi zmdi-plus zmdi-hc-fw"></i>Añadir</a>
@@ -87,8 +89,8 @@
                         <div class="campos">
                             <a class="link" href=""><p>{{$item->nombre_actividad}}</p></a>
                         </div>
-					@endforeach		
-                        
+					@endforeach
+
                     </div>
                 </div>
                 <a class="edit" id="parcialUno"><i class="zmdi zmdi-plus zmdi-hc-fw"></i>Añadir</a>
@@ -98,7 +100,7 @@
                         <div class="campos">
                             <a class="link" href=""><p>Lorem </p></a>
                         </div>
-                        
+
                     </div>
                 </div>
             </div>
