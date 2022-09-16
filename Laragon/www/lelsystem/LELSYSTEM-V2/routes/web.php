@@ -176,5 +176,8 @@ Route::get('lista', function () {
 });
 Route::get('notas', function () {
     return view('docente.notas.notas');
-});
+});*/
 
+Route::get("estudiante", function (){
+    return view("estudiante.inicioestudiante");
+});
