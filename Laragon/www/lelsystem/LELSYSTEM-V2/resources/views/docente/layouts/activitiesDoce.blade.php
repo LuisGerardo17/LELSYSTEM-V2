@@ -47,13 +47,11 @@
 			<ul class="list-unstyled full-box dashboard-sideBar-Menu">
 				<li>
 					<a href="home.html">
-						<i class="zmdi zmdi-view-dashboard zmdi-hc-fw"></i> dashboard
+						<i class="zmdi zmdi-view-dashboard zmdi-hc-fw"></i> Dashboard
 					</a>
 				</li>
                 <li>
-					<a href="arte.html" class="btn-sideBar-SubMenu">
-						<i class="zmdi zmdi-folder zmdi-hc-fw"></i> Cursos
-					</a>
+					<a href="{{url('lista')}}" class="btn-sideBar-SubMenu"><i class="zmdi zmdi-folder zmdi-hc-fw"></i>Asistencia</a>
 				</li>
 				<li>
 
@@ -61,16 +59,9 @@
 						<i class="zmdi zmdi-male-female zmdi-hc-fw"></i> Matriculas
 					</a>
 				</li>
-				<li>
-					<a class="btn-sideBar-SubMenu" href="{{ url('admin/estudiante') }}"><i class="zmdi zmdi-font zmdi-hc-fw"></i> Lista de estudiantes</a>
+				
 
-				</li>
-				<li>
-					<a href="#!" class="btn-sideBar-SubMenu">
-						<i class="zmdi zmdi-n-1-square zmdi-hc-fw"></i> Notas
-					</a>
 
-				</li>
 			</ul>
 		</div>
 	</section>

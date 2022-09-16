@@ -49,9 +49,9 @@
 											<th class="text-center">Update</th>
 											<th class="text-center">Delete</th>
 										</tr>
-									</thead>
-									<tbody>
-                                        @foreach($estudiantes as $admin)
+									 </thead>
+									 <tbody>
+                                         @foreach($estudiantes as $admin)
                                             <tr>
                                                 <td>{{ $admin->user->cedula }}</td>
                                                 <td><img src="{{ asset('storage').'/'.$admin->user->imagen }}" alt="" width="40px"></td>
@@ -71,15 +71,14 @@
                                                         <button type="submit"><a class="btn btn-danger btn-raised btn-xs"><i class="zmdi zmdi-delete"></i></a></button>
                                                     </form>
                                                 </td>
-                                            </tr>
-                                        @endforeach
+                                             </tr>
+                                           @endforeach
 
-
-									</tbody>
-								</table>
+                                        </tbody>
+								 </table>
 								{!! $estudiantes->links() !!}
 							</div>
-					  	</div>
+                        </div>
 					</div>
 				</div>
 			</div>

@@ -146,23 +146,26 @@ Route::resource('estudiante-registro',RegistroEstudiantesController::class);
 
 //Actividades->Leonardo
 Route::resource('activities/activities',ActivitiesController::class);
-
+//DOCENTE
 //Matricula->Leonardo
 Route::resource('matricula',MatriculaController::class);
-Route::resource('estudiantes',ListaController::class);
+//Route::resource('listaestudiantes',MatriculaController::class);
+//Route::resource('estudiantes',ListaController::class);
 
 
 //Buscar->Leonardo
 Route::resource('buscar',BuscarController::class);
 Route::resource('lista',ListaEstudiantesController::class);
-
+Route::resource('listaestudiantes',MatriculaController::class);
 //docente
 Route::get('docente', function () {
     return view('docente.inicio');
 });
 Route::get('materias', function () {
     return view('docente.materias.materias');
+
 });
+//Route::get('/docente.listaestudiante.listaEstudiantes', [App\Http\Controllers\ListaController::class, 'index'])->name('estudiantes');
 
 /*Route::get('lista', function () {
     return view('docente.listados.listados');

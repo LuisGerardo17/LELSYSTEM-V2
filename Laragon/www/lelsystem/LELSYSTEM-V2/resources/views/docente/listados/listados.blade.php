@@ -2,10 +2,10 @@
 @section('titulo', 'Materias')
 @section('seccion')
 		<!-- Content page -->
-		<div class="container-fluid"> 
+		<div class="container-fluid">
 			<div class="page-header">
 			  <h1 class="text-titles"><i class="zmdi zmdi-book zmdi-hc-fw"></i> Actividades <small>Activities</small></h1>
-			</div> 
+			</div>
 			<p class="lead">Las actividades son todas aquellas tareas o labores que cada individuo ejerce diariamente, están las actividades laborales, las actividades escolares, las actividades recreativas, las actividades físicas, etc.</p>
 		</div>
 		<div class="container-fluid">
@@ -13,7 +13,7 @@
 				<div class="col-xs-12">
 					<ul class="nav nav-tabs" style="margin-bottom: 15px;">
 					<li class="active"><a href="#list" data-toggle="tab">Lista</a></li>
-					    <li><a href="#new" data-toggle="tab">Asistencias</a></li>
+				    <li><a href="#new" data-toggle="tab">Asistencias</a></li>
 					</ul>
 					<div id="myTabContent" class="tab-content">
 						<div class="tab-pane fade {{ ($errors->any()) ? 'active in' : '' }}" id="new">
@@ -25,7 +25,7 @@
 									    	@include('docente.listados.listadosForm')
 									    </form>
 									</div>
-								</div> 
+								</div>
 							</div>
 						</div>
 					  	<div class="tab-pane fade {{ ($errors->any()) ? '' : 'active in' }}" id="list">
@@ -38,11 +38,11 @@
 											<th class="text-center">Fecha</th>
 											<th class="text-center">Actualizar</th>
 										</tr>
-									</thead> 
+									</thead>
 									<tbody>
                                     @foreach ($listadoEstudiantes as $items)
- 
-										<tr> 
+
+										<tr>
 											<td>{{$items->cedula}}</td>
 											<td>{{$items->fecha}}</td>
 											<td>{{$items->descripcion}}</td>
@@ -50,7 +50,7 @@
 											<td><a href="{{ url('lista/'.$items->cedula. '/edit' )}}" class="btn btn-success btn-raised btn-xs"><i class="zmdi zmdi-refresh"></i></a></td>
 										</tr>
 										@endforeach
-										
+
 									</tbody>
 								</table>
 								<ul class="pagination pagination-sm">
