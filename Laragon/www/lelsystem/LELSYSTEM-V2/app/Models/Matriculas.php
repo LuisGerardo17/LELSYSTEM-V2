@@ -18,7 +18,7 @@ class Matriculas extends Model
         'estado'
 
     ];
-
+ 
 
     protected $primaryKey = 'cedula';
     protected $keyType = 'string';

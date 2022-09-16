@@ -4,7 +4,7 @@
 
 <!-- Content page -->
 
-<div class="container-fluid">
+<div class="container-fluid"> 
     <div class="page-header">
         <h1 class="text-titles"><i class="zmdi zmdi-font zmdi-hc-fw"></i> Matrícula <small>Estudiantes</small></h1>
     </div>
@@ -26,11 +26,11 @@
                                     @csrf
                                     @include('docente.matricula.matriculaForm')
                                 </form>
-                            </div>
+                            </div> 
                         </div>
                     </div>
                 </div>
-
+ 
                 <div class="tab-pane fade {{ ($errors->any()) ? '' : 'active in' }}" id="list">
                     <div class="table-responsive">
                         <table class="table table-hover text-center" method="GET">
@@ -46,10 +46,10 @@
                                         <th class="text-center">Delete</th>
                                     </tr>
                                 </thead>
-                                <tbody>
+                                <tbody> 
                                     @foreach ($matriculas as $items)
                                     <tr>
-                                        <td>{{$items->cedula}}</td>
+                                        <td>{{$items->cedula}}</td> 
                                         <td>{{$items->nombre_curso}}</td>
                                         <td>{{$items->estado}}</td>
                                         <td><a href="{{ url('matricula/'.$items->cedula. '/edit' )}}" class="btn btn-success btn-raised btn-xs"><i class="zmdi zmdi-refresh"></i></a></td>
