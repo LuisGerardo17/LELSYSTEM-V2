@@ -5,20 +5,19 @@ namespace App\Http\Controllers;
 use App\Models\Actividades;
 use Illuminate\Http\Request;
 
-class ActivitiesController extends Controller 
+class ActividadDocController extends Controller
 {
-    /** 
+    /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()  
+    public function index()
     {
-        $actividades=Actividades::all(); 
-        notify()->preset('Actividad registrada');
-        return view('admin.activities.activities', compact('actividades'));
-    }  
- 
+        $actividad=Actividades::all();
+        return view('docente.materias.materias', compact('actividad'));
+    }
+
     /**
      * Show the form for creating a new resource.
      *
@@ -27,7 +26,7 @@ class ActivitiesController extends Controller
     public function create()
     {
         //
-    } 
+    }
 
     /**
      * Store a newly created resource in storage.
@@ -37,9 +36,11 @@ class ActivitiesController extends Controller
      */
     public function store(Request $request)
     {
+
         $datosActividades=Request()->except('_token');
         Actividades::insert($datosActividades);
-        return view('activities/activities');
+        return redirect('ActividadDoc');
+
     }
 
     /**
@@ -59,11 +60,9 @@ class ActivitiesController extends Controller
      * @param  \App\Models\Actividades  $actividades
      * @return \Illuminate\Http\Response
      */
-    public function edit($actividades)
+    public function edit(Actividades $actividades)
     {
-        $act=Actividades::find($actividades);
-        //return $act;
-        return view('admin.activities.activitiesEdit', compact('act'));
+        //
     }
 
     /**
@@ -73,12 +72,9 @@ class ActivitiesController extends Controller
      * @param  \App\Models\Actividades  $actividades
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Actividades $actividades)
     {
-        $datos1=$request->except(['_token','_method']);
-        Actividades::where('codigo_actividad','=',$id)->update($datos1);
-        return redirect('activities/activities');
-
+        //
     }
 
     /**
@@ -87,12 +83,8 @@ class ActivitiesController extends Controller
      * @param  \App\Models\Actividades  $actividades
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id) 
+    public function destroy(Actividades $actividades)
     {
-        Actividades::destroy($id);
-        notify()->preset('Actividad eliminada'); 
-        return redirect('activities/activities'); 
-        
-      
+        //
     }
 }

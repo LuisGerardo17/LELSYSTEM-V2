@@ -5,18 +5,16 @@ use App\Models\User;
 use App\Models\Estudiantes;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\Storage; 
 
 class EstudianteController extends Controller
 {
     public function index(){
-
-        $estudiantes=Estudiantes::paginate(10);
-        //$estudiantes = DB::table('users')->select('cedula','imagen','nombres','apellidos','direccion','correo','telefono')->where('rol','Estudiante')->get();
-
-       return view('admin.estudiante.estudiante',compact('estudiantes'));
-
-    }
+    
+    $estudiantes=Estudiantes::paginate(10);
+    return view('admin.estudiante.estudiante',compact('estudiantes'));
+ 
+    } 
 
 
 

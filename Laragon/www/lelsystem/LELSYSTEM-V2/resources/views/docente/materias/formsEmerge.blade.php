@@ -37,23 +37,28 @@
             <div class="popup" id="popup2">
                 <a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup"><i class="zmdi zmdi-close"></i></a>
                 <h3>Parcial 1</h3>
-                <form action="">
-                    <div class="form-group label-floating">
+                <form action="" method="POST">
+                @csrf 
+                    <!--<div class="form-group label-floating">
                         <label class="control-label">Recurso a utilizar</label>
-                        <select class="form-control" name="id_tipo_archivo" id="selector">
+                        <select class="form-control" name="" id="selector">
                             <option>Recurso-----</option>
                             <option value="recursos">recursos</option>
                             <option value="tareas">tareas</option>
                             <option value="examenes">examenes</option>
                         </select>
+                    </div>-->
+                    <div class="form-group label-floating">
+                        <label class="control-label">Nombre</label>
+                        <input class="form-control" type="text" name="codigo_actividad">
                     </div>
                     <div class="form-group label-floating">
-                        <label class="control-label">Titulo</label>
-                        <input class="form-control" type="password" name="contrasena">
+                        <label class="control-label">Descripcion</label>
+                        <input class="form-control" type="text" name="nombre_actividad">
                     </div>
                     <div class="form-group label-floating">
-                        <label class="control-label">Descripccion</label>
-                        <input class="form-control" type="password" name="contrasena">
+                        <label class="control-label">Tipo de archivo</label>
+                        <input class="form-control" type="text" name="descripcion">
                     </div>
                     <div id="imputs">
                     </div>
@@ -67,27 +72,54 @@
             <div class="popup" id="popup3">
                 <a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup"><i class="zmdi zmdi-close"></i></a>
                 <h3>Parcial 2</h3>
-                <form action="">
+                <form action="{{ url('ActividadDoc')}}" method="POST">
+                @csrf 
                     <div class="form-group label-floating">
-                        <label class="control-label">Recurso a utilizar</label>
-                        <select class="form-control" name="id_tipo_archivo" id="selector2">
-                            <option>Recurso-----</option>
-                            <option value="recursos">recursos</option>
-                            <option value="tareas">tareas</option>
-                            <option value="examenes">examenes</option>
-                        </select>
+                        <label class="control-label">Codigo</label>
+                        <input class="form-control" type="text" name="codigo_actividad">
                     </div>
                     <div class="form-group label-floating">
                         <label class="control-label">Titulo</label>
-                        <input class="form-control" type="password" name="contrasena">
+                        <input class="form-control" type="text" name="nombre_actividad">
                     </div>
                     <div class="form-group label-floating">
-                        <label class="control-label">Descripccion</label>
-                        <input class="form-control" type="password" name="contrasena">
+                        <label class="control-label">Descripcion</label>
+                        <input class="form-control" type="text" name="descripcion">
                     </div>
                     <div id="imputs2">
                     </div>
                     <center><input type="submit" class="btn-submit" value="Enviar"></center>
                 </form>
             </div>
-        </div>
+        </div> 
+
+        <!--parcial3-->
+        <div class="overlay" id="overlayparcialTres">
+            <div class="popup" id="popup4">
+                <a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup"><i class="zmdi zmdi-close"></i></a>
+                <h3>Parcial 2</h3>
+                <form action="">
+                @csrf 
+                    <div class="form-group label-floating">
+                        <label class="control-label">Codigo</label>
+                        <input class="form-control" type="text" name="codigo_actividad">
+                    </div>
+                    <div class="form-group label-floating">
+                        <label class="control-label">Titulo</label>
+                        <input class="form-control" type="text" name="nombre_actividad">
+                    </div>
+                    <div class="form-group label-floating">
+                        <label class="control-label">Descripcion</label>
+                        <input class="form-control" type="text" name="descripcion">
+                    </div>
+                    <div id="imputs2">
+                    </div>
+                    <div class="form-group label-floating">
+                        <label class="control-label">Examen</label>
+                        <input class="form-control" type="text" name="codigo_actividad">
+                    </div>
+                    <center><input type="submit" class="btn-submit" value="Enviar"></center>
+                </form>
+            </div>
+        </div> 
+ 

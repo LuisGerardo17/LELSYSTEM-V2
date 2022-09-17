@@ -35,6 +35,8 @@
                 </center>
 
             </div>
+           
+
             <div>
                 <h2 class="titulo">Parcial 1</h2>
                 <a class="edit" id="parcialUno"><i class="zmdi zmdi-plus zmdi-hc-fw"></i>Añadir</a>
@@ -44,206 +46,69 @@
                         <div class="campos">
                             <a class="link" href=""><p>Lorem </p></a>
                         </div>
-                        <div class="campos">
-                            <a class="link" href=""><p>Lorem </p></a>
-                        </div>
-                        <div class="campos">
-                            <a class="link" href=""><p>Lorem </p></a>
-                        </div>
-                        <div class="campos">
-                            <a class="link" href=""><p>Lorem </p></a>
-                        </div>
-                        <div class="campos">
-                            <a class="link" href=""><p>Lorem </p></a>
-                        </div>
-                        <div class="campos">
-                            <a class="link" href=""><p>Lorem </p></a>
-                        </div>
-                        <div class="campos">
-                            <a class="link" href=""><p>Lorem </p></a>
-                        </div>
-                        <div class="campos">
-                            <a class="link" href=""><p>Lorem </p></a>
-                        </div>
-                        <div class="campos">
-                            <a class="link" href=""><p>Lorem </p></a>
-                        </div><div class="campos">
-                            <a class="link" href=""><p>Lorem </p></a>
-                        </div>
                     </div>
                 </div>
+                <a class="edit" id="parcialDos"><i class="zmdi zmdi-plus zmdi-hc-fw"></i>Añadir</a>
                 <div class="row espacio">
-                    <h3>Deberes</h3>
+                    <h3>Actividades</h3>
                     <div class="flex2">
+                    @foreach ($actividad as $item)
                         <div class="campos">
-                            <a class="link" href=""><p>Lorem </p></a>
+                        <a class="link" href=""><p>{{$item->nombre_actividad}}</p></a>
                         </div>
-                        <div class="campos">
-                            <a class="link" href=""><p>Lorem </p></a>
-                        </div>
-                        <div class="campos">
-                            <a class="link" href=""><p>Lorem </p></a>
-                        </div>
-                        <div class="campos">
-                            <a class="link" href=""><p>Lorem </p></a>
-                        </div>
-                        <div class="campos">
-                            <a class="link" href=""><p>Lorem </p></a>
-                        </div>
-                        <div class="campos">
-                            <a class="link" href=""><p>Lorem </p></a>
-                        </div>
-                        <div class="campos">
-                            <a class="link" href=""><p>Lorem </p></a>
-                        </div>
-                        <div class="campos">
-                            <a class="link" href=""><p>Lorem </p></a>
-                        </div>
-                        <div class="campos">
-                            <a class="link" href=""><p>Lorem </p></a>
-                        </div><div class="campos">
-                            <a class="link" href=""><p>Lorem </p></a>
-                        </div>
+					@endforeach
                     </div>
                 </div>
+                <a class="edit" id="parcialTres"><i class="zmdi zmdi-plus zmdi-hc-fw"></i>Añadir</a>
                 <div class="row espacio">
                     <h3>Examenes</h3>
                     <div class="flex2">
+                    @foreach ($actividad as $item)
                         <div class="campos">
-                            <a class="link" href=""><p>Lorem </p></a>
+                            <a class="link" href=""><p>{{$item->descripcion}}</p></a>
                         </div>
-                        <div class="campos">
-                            <a class="link" href=""><p>Lorem </p></a>
-                        </div>
-                        <div class="campos">
-                            <a class="link" href=""><p>Lorem </p></a>
-                        </div>
-                        <div class="campos">
-                            <a class="link" href=""><p>Lorem </p></a>
-                        </div>
-                        <div class="campos">
-                            <a class="link" href=""><p>Lorem </p></a>
-                        </div>
-                        <div class="campos">
-                            <a class="link" href=""><p>Lorem </p></a>
-                        </div>
-                        <div class="campos">
-                            <a class="link" href=""><p>Lorem </p></a>
-                        </div>
-                        <div class="campos">
-                            <a class="link" href=""><p>Lorem </p></a>
-                        </div>
-                        <div class="campos">
-                            <a class="link" href=""><p>Lorem </p></a>
-                        </div><div class="campos">
-                            <a class="link" href=""><p>Lorem </p></a>
-                        </div>
+					@endforeach	
                     </div>
                 </div>
             </div>
             <div>
                 <h2 class="titulo">Parcial 2</h2>
-                <a class="edit" id="parcialDos"><i class="zmdi zmdi-plus zmdi-hc-fw"></i>Añadir</a>
+                <a class="edit" id="parcialUno"><i class="zmdi zmdi-plus zmdi-hc-fw"></i>Añadir</a>
                 <div class="row espacio">
                     <h3>Recursos</h3>
                     <div class="flex2">
                         <div class="campos">
                             <a class="link" href=""><p>Lorem </p></a>
                         </div>
-                        <div class="campos">
-                            <a class="link" href=""><p>Lorem </p></a>
-                        </div>
-                        <div class="campos">
-                            <a class="link" href=""><p>Lorem </p></a>
-                        </div>
-                        <div class="campos">
-                            <a class="link" href=""><p>Lorem </p></a>
-                        </div>
-                        <div class="campos">
-                            <a class="link" href=""><p>Lorem </p></a>
-                        </div>
-                        <div class="campos">
-                            <a class="link" href=""><p>Lorem </p></a>
-                        </div>
-                        <div class="campos">
-                            <a class="link" href=""><p>Lorem </p></a>
-                        </div>
-                        <div class="campos">
-                            <a class="link" href=""><p>Lorem </p></a>
-                        </div>
-                        <div class="campos">
-                            <a class="link" href=""><p>Lorem </p></a>
-                        </div><div class="campos">
-                            <a class="link" href=""><p>Lorem </p></a>
-                        </div>
+
                     </div>
                 </div>
+                <a class="edit" id="parcialDos"><i class="zmdi zmdi-plus zmdi-hc-fw"></i>Añadir</a>
                 <div class="row espacio">
                     <h3>Deberes</h3>
                     <div class="flex2">
+                    @foreach ($actividad as $item)
                         <div class="campos">
-                            <a class="link" href=""><p>Lorem </p></a>
+                            <a class="link" href=""><p>{{$item->nombre_actividad}}</p></a>
                         </div>
-                        <div class="campos">
-                            <a class="link" href=""><p>Lorem </p></a>
-                        </div>
-                        <div class="campos">
-                            <a class="link" href=""><p>Lorem </p></a>
-                        </div>
-                        <div class="campos">
-                            <a class="link" href=""><p>Lorem </p></a>
-                        </div>
-                        <div class="campos">
-                            <a class="link" href=""><p>Lorem </p></a>
-                        </div>
-                        <div class="campos">
-                            <a class="link" href=""><p>Lorem </p></a>
-                        </div>
-                        <div class="campos">
-                            <a class="link" href=""><p>Lorem </p></a>
-                        </div>
-                        <div class="campos">
-                            <a class="link" href=""><p>Lorem </p></a>
-                        </div>
-                        <div class="campos">
-                            <a class="link" href=""><p>Lorem </p></a>
-                        </div><div class="campos">
-                            <a class="link" href=""><p>Lorem </p></a>
-                        </div>
+					@endforeach
+
                     </div>
                 </div>
+                <a class="edit" id="parcialTres"><i class="zmdi zmdi-plus zmdi-hc-fw"></i>Añadir</a>
                 <div class="row espacio">
                     <h3>Examenes</h3>
                     <div class="flex2">
+                    @foreach ($actividad as $item)
                         <div class="campos">
-                            <a class="link" href=""><p>Lorem </p></a>
+                            <a class="link" href=""><p>{{ $item->descripcion}}</p></a>
                         </div>
-                        <div class="campos">
-                            <a class="link" href=""><p>Lorem </p></a>
-                        </div>
-                        <div class="campos">
-                            <a class="link" href=""><p>Lorem </p></a>
-                        </div>
-                        <div class="campos">
-                            <a class="link" href=""><p>Lorem </p></a>
-                        </div>
-                        <div class="campos">
-                            <a class="link" href=""><p>Lorem </p></a>
-                        </div>
-                        <div class="campos">
-                            <a class="link" href=""><p>Lorem </p></a>
-                        </div>
-                        <div class="campos">
-                            <a class="link" href=""><p>Lorem </p></a>
-                        </div>
-                        <div class="campos">
-                            <a class="link" href=""><p>Lorem </p></a>
-                        </div>
-                        <div class="campos">
-                            <a class="link" href=""><p>Lorem </p></a>
-                        </div><div class="campos">
-                            <a class="link" href=""><p>Lorem </p></a>
-                        </div>
+<<<<<<< HEAD
+					@endforeach	
+                        
+=======
+
+>>>>>>> 5824627169b57190900d8783729a8f778baf110c
                     </div>
                 </div>
             </div>

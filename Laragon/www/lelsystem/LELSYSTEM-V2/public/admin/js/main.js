@@ -1,5 +1,5 @@
 $(document).ready(function(){
-	/*$('.btn-sideBar-SubMenu').on('click', function(){
+	$('.btn-sideBar-SubMenu').on('click', function(){
 		var SubMenu=$(this).next('ul');
 		var iconBtn=$(this).children('.zmdi-caret-down');
 		if(SubMenu.hasClass('show-sideBar-SubMenu')){
@@ -9,7 +9,7 @@ $(document).ready(function(){
 			iconBtn.addClass('zmdi-hc-rotate-180');
 			SubMenu.addClass('show-sideBar-SubMenu');
 		}
-	});*/
+	});
 	$('.btn-exit-system').on('click', function(){
 		swal({
 		  	title: 'Are you sure?',
@@ -110,17 +110,21 @@ function ventanaemergente(){
 /*======= form emerge*/
 const overlay = document.getElementById("overlay"),
 overlayparcialUno=document.getElementById('overlayparcialUno'),
-overlayparcialDos=document.getElementById('overlayparcialDos')
+overlayparcialDos=document.getElementById('overlayparcialDos'),
+overlayparcialTres=document.getElementById('overlayparcialTres')
+
 
 //popus
 const popup = document.getElementById("popup"),
 popup2 = document.getElementById("popup2"),
-popup3 = document.getElementById("popup3")
+popup3 = document.getElementById("popup3"),
+popup4 = document.getElementById("popup4")
 //botones
 var btnCerrarPopup = document.querySelectorAll('.btn-cerrar-popup')
 const btnAbrirPopup = document.querySelector("#edit"),
 parcialUno = document.querySelector("#parcialUno"),
 parcialDos = document.querySelector("#parcialDos")
+parcialTres = document.querySelector("#parcialTres")
 
 //boton eliminar
 btnCerrarPopup.forEach(e=>{
@@ -128,9 +132,11 @@ btnCerrarPopup.forEach(e=>{
         overlay.classList.remove("active");
         overlayparcialUno.classList.remove("active");
         overlayparcialDos.classList.remove("active");
+        overlayparcialTres.classList.remove("active");
         popup.classList.remove("active");
         popup2.classList.remove("active");
         popup3.classList.remove("active");
+        popup4.classList.remove("active");
         });
 })
 
@@ -148,6 +154,11 @@ btnCerrarPopup.forEach(e=>{
     parcialDos.addEventListener("click", function(){
         overlayparcialDos.classList.add("active");
         popup3.classList.add("active");
+	});
+
+	parcialTres.addEventListener("click", function(){
+        overlayparcialTres.classList.add("active");
+        popup4.classList.add("active");
 	});
 
 }
