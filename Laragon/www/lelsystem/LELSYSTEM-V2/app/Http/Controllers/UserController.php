@@ -6,6 +6,7 @@ use App\Models\Docentes;
 use App\Models\Estudiantes;
 use App\Models\Matriculas;
 use App\Models\Administradores;
+use Illuminate\Support\Facades\DB;
 
 use Illuminate\Http\Request;
 
@@ -57,5 +58,10 @@ class UserController extends Controller
         return view('auth.login');
     }
 
+    public function show($nombres){
+       $user =User::where('nombres', $nombres)->firstOrFail();
+       dd($user);
+
+    }
 
 }

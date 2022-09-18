@@ -31,8 +31,8 @@
 
 				</figure>
 
-				<center><div class="text-uppercase"><p>Enrique Sebastian Mera Yela</p></div></center>
-				
+				//<center><div class="text-uppercase"><p> Bienvenido {{$user->nombres}}</p></div></center>
+
 				<ul class="full-box list-unstyled text-center">
 
 					<li>
@@ -50,7 +50,7 @@
 						<i class="zmdi zmdi-view-dashboard zmdi-hc-fw"></i> Dashboard
 					</a>
 				</li>
- 
+
 				<li>
 					<a href="{{ url('admin/admin') }}"><i class="zmdi zmdi-account zmdi-hc-fw"></i> Administrar Admin</a>
 				</li>
