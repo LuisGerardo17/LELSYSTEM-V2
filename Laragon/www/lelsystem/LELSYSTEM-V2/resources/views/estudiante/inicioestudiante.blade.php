@@ -1,6 +1,11 @@
-@extends('docente.layouts.layouts')
-@section('titulo', 'Docente')
-@section('seccion')
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<title>A</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="stylesheet" href="{{ asset('admin/css/main.css') }}">
+</head>
 
 <style>
 .dashboard-contentPage{
@@ -78,10 +83,11 @@ button{
 }
 .li{
 	margin: .5em 0;
-	
 }
 
 </style>
+<body>
+	
 
 	<!-- menu-->
 	<section class="full-box dashboard-contentPage">
@@ -152,7 +158,6 @@ button{
 			</article>
 		</a>
 		</div>
-
 		
 	<!-- NavBar -->
 	<nav class="full-box dashboard-Navbar">
@@ -169,5 +174,5 @@ button{
 		    nav.classList.toggle('activo')
 	        })
         </script>
-
-    @endsection
+    </body>
+    
