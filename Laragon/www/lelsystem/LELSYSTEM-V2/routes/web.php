@@ -20,6 +20,7 @@ use App\Http\Controllers\TeacherController;
 use App\Http\Controllers\ListaController;
 use App\Http\Controllers\ActividadDocController;
 use App\Http\Controllers\listaMatriculadoController;
+use App\Http\Controllers\listaCursoController;
 
 Route::get('/',function (){return redirect('/homepage');});
 Route::get('/homepage',function (){
@@ -159,7 +160,7 @@ Route::resource('matricula',MatriculaController::class);
 Route::resource('buscar',BuscarController::class);
 Route::resource('lista',ListaEstudiantesController::class);
 Route::resource('listaMatriculado',listaMatriculadoController::class);
-
+Route::resource('listaxcurso',listaCursoController::class);
 //docente
 Route::get('docente', function () {
     return view('docente.inicio');
