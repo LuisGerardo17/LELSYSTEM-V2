@@ -137,6 +137,7 @@ button{
                     <img width="12%" src="{{ asset('admin/assets/img/gmail.png') }}"><a href="#" class="ic">aal.proano@yavirac.edu.ec</a>
 				</div>
 			</article>
+			
 		</a>
 		<a href="#">
 			<article class="full-box tile">
