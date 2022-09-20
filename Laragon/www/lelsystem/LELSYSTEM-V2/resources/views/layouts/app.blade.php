@@ -44,10 +44,10 @@
 						<a class="nav-link marign" href="{{route('admisiones')}}">Admisiones</a>
 					</li>
 					<li class="nav-item sesiones">
-						<a class="nav-link marign colorq" href="{{route('login')}}">Login</a>
+						<a class="nav-link marign colorq" href="{{url('login')}}">Login</a>
                     </li>
 					<li class="nav-item sesiones">
-						<a class="nav-link marign colorq" href="{{route('register')}}">Registrate</a>
+						<a class="nav-link marign colorq" href="{{url('register')}}">Registrate</a>
                     </li>
                 </ul>
 			</nav>

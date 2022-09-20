@@ -22,33 +22,26 @@ use App\Http\Controllers\ActividadDocController;
 use App\Http\Controllers\listaMatriculadoController;
 use App\Http\Controllers\listaCursoController;
 
-Route::get('/',function (){return redirect('/homepage');});
-Route::get('/homepage',function (){
+//Route::get('/',function (){return redirect('home');});
+Route::get('/',function (){
     return view('home');
 })->name('home');
 
-/*
 
-Route::resource('auth/register',UserController::class);
-Route::resource('auth/login',SessionsController::class);
+//Register y Login
+Route::resource('register',RegisterController::class)->middleware('auth');
+Route::resource('login',LoginController::class)->middleware('auth');
+/*
+Route::get('/auth.login', [LoginController::class, 'create'])
+->middleware('guest')
+->name('login');
+Route::post('/auth.login', [LoginController::class, 'store'])->name('login.store');
+Route::get('/logout', [LoginController::class, 'destroy'])
+
+->name('login.destroy');
 */
 
 
-
-
-//Register y Login
-
-Route::get('/auth.login', [SessionsController::class, 'create'])
-->middleware('guest')
-->name('login');
-Route::post('/auth.login', [SessionsController::class, 'store'])->name('login.store');
-Route::get('/logout', [SessionsController::class, 'destroy'])
-->middleware('auth')
-->name('login.destroy');
-Route::get('/auth.register', [UserController::class, 'create'])
-->middleware('guest')
-->name('register');
-Route::post('/auth.register', [UserController::class, 'store'])->name('register.store');
 
 //CREACIÓN DE RUTAS PARA EL HOMEPAGE
 Route::get('/home.homepage', [App\Http\Controllers\HomeController::class, 'index'])->name('homepage');
@@ -114,6 +107,11 @@ Route::resource('docente/docente', DocenteController::class);
     return view('admin.estudiante.estudiante');
 })->name('curse');
 
+
+Route::get('/auth.register', [RegisterController::class,'create'])
+->middleware('guest')
+->name('register');
+Route::post('/auth.register', [RegisterController::class, 'store'])->name('register.store');
 Route::get('/EstudianteEdit',function (){
     return view('admin.estudiante.estudianteEdit');
 })->name('curseEdit');*/

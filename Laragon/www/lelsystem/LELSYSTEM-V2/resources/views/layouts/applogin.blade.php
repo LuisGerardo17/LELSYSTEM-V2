@@ -7,10 +7,10 @@
 </head>
 <body>
 @yield('content')
-   
-   <a href="{{route('home')}}">
-    <input class="home" type="submit" value="Homepage">
+
+   <a href="/">
+    <input class="home" type="submit" value="Homepge">
    </a>
-    
+
 </body>
 </html>

@@ -12,6 +12,7 @@ use App\Models\Estudiantes;
 use App\Models\Docentes;
 use App\Models\Administradores;
 use App\Models\Matriculas;
+use App\Models\Rol;
 
 class User extends Authenticatable
 {
@@ -84,4 +85,16 @@ class User extends Authenticatable
     public function matricula(){
         return $this->hasMany(Matriculas::class,'cedula','cedula');
     }
+    public function rol(){
+        return $this->belongsToMany(Rol::class);
+    }
+
+    public function asignarRol($rol){
+       $this->rol()->sync($rol, 'detaching: false');
+
+    }
+    public function tieneRol(){
+        return $this->rol()->flatten()->pluck('nombre')->unique();
+
+     }
 }

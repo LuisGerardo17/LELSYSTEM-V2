@@ -29,7 +29,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = RouteServiceProvider::HOME;
+    protected $redirectTo = 'auth.login';
 
     /**
      * Create a new controller instance.
@@ -50,9 +50,11 @@ class RegisterController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            'password' => ['required', 'string', 'min:8', 'confirmed'],
+            'cedula' => ['required', 'string', 'max:10'],
+            'nombres' => ['required', 'string', 'max:100'],
+            'correo' => ['required', 'string', 'email', 'max:50'],
+            'contrasena' => ['required', 'string', 'min:3','max:10', 'confirmed'],
+
         ]);
     }
 
@@ -62,12 +64,19 @@ class RegisterController extends Controller
      * @param  array  $data
      * @return \App\Models\User
      */
+
+
+
     protected function create(array $data)
     {
-        return User::create([
-            'name' => $data['name'],
-            'email' => $data['email'],
-            'password' => Hash::make($data['password']),
+        $user = User::create([
+            'cedula' => $data['cedula'],
+            'nombres' => $data['nombres'],
+            'correo' => $data['correo'],
+            'contrasena' => Hash::make($data['contrasena']),
+
         ]);
+          $user->asignarRol(1);
+        return redirect('auth.login');
     }
 }

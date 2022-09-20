@@ -16,16 +16,17 @@ class CreateUsersTable extends Migration
         Schema::create('users', function (Blueprint $table) {
             $table->string('cedula',10)->unique()->primary();
             $table->string('nombres');
-            $table->string('apellidos');
+            $table->string('apellidos')->nullable();
             $table->string('correo')->unique();
-            $table->string('direccion');
+            $table->string('direccion')->nullable();
             $table->string('contrasena');
             $table->string('contrasena_verified_at')->nullable();
-            $table->string('telefono');
-            $table->string('imagen');
-            $table->string('rol');
+            $table->string('telefono')->nullable();
+            $table->string('imagen')->nullable();
+            $table->string('rol')->nullable();
             $table->timestamps();
         });
+        
     }
 
     /**
