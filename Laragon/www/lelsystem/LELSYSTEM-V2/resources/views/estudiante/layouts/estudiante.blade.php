@@ -1,8 +1,4 @@
 
-
-
-
-
     <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -164,7 +160,7 @@ button{
 				btnCerrarPopup.addEventListener("click", function(){
 					subirArven.classList.remove("active");
         		});
-	            
+
             </script>
     </body>
     </html>
