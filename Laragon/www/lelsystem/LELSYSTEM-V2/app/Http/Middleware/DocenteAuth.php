@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Middleware;
-
+use Illuminate\Support\Facades\Auth;
 use Closure;
 use Illuminate\Http\Request;
 
@@ -16,11 +16,19 @@ class DocenteAuth
      */
     public function handle(Request $request, Closure $next)
     {
-        if(auth()->check()){
-            if(auth()->user()->role == 'docente'){
+        switch(auth::user()->rol){
+            case('Administrador'):
+                return redirect('admin.admin');
+                 break;
+             case('Docente'):
                 return $next($request);
-                }
-            }
-        return redirect()->to('docente.docente');
+
+                 break;
+             case('Estudiante'):
+                 return redirect('estudiante.estudiante');
+                 break;
+             default:
+              return redirect('login');
+        }
     }
 }

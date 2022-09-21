@@ -92,17 +92,13 @@ Route::resource('admin/cursos',CursoController::class);
 
 
 
-//matricula
-
-Route::resource('matricula',MatriculaController::class);
-
 //endmatricula
 
 
 //ADMINISTRAR ESTUDIANTE
 
 Route::resource('admin/estudiante', EstudianteController::class);
-Route::resource('docente/docente', DocenteController::class);
+Route::resource('docente/docente', DocenteController::class)->middleware('auth');
 
 /*Route::get('/admin.estudiante',function (){
     return view('admin.estudiante.estudiante');
@@ -126,14 +122,7 @@ Route::get('/admin.index',function (){
 
 //Docente
 Route::resource('Teacher.Teacher',TeacherController::class);
-/*
-Route::get('/admin.teacher',function (){
-    return view('admin.teacher.teacher');
-})->name('teacher');
 
-Route::get('/TeacherEdit',function (){
-    return view('admin.teacher.teacherEdit');
-})->name('teacherEdit');*/
 
 //ADMINISTRARDOCENTE
 
@@ -163,6 +152,11 @@ Route::resource('buscar',BuscarController::class);
 Route::resource('lista',ListaEstudiantesController::class);
 Route::resource('listaMatriculado',listaMatriculadoController::class);
 Route::resource('listaxcurso',listaCursoController::class);
+
+//matricula
+
+Route::resource('matricula',MatriculaController::class);
+
 //docente
 Route::get('docente', function () {
     return view('docente.inicio');
@@ -192,6 +186,6 @@ Route::get("estudiante", function (){
     return view("estudiante.inicioestudiante");
 });
 
-Auth::routes();
 
+Auth::routes();
 //Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

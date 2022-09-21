@@ -16,10 +16,20 @@ class EstudianteAuth
      */
     public function handle(Request $request, Closure $next)
     {
-        if(auth::user()->rol=='Estudiante'){
+        switch(auth::user()->rol)
+        {
+            case('Administrador'):
+                return redirect('admin.admin');
+                 break;
+             case('Docente'):
+               return redirect('docente.docente');
+                 break;
+             case('Estudiante'):
+                return $next($request);
 
-            return $next($request);
-        }
-        return redirect()->to('login');
-    }
+                 break;
+             default:
+              return redirect('login');
+            }
+}
 }
