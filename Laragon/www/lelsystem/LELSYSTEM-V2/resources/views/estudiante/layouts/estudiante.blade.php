@@ -63,10 +63,10 @@ p{
 }
 .a{
 	color: #fff;
-
 }
 .a:hover{
-    color: #009688
+    color: #009688;
+    text-decoration: none;
 }
 button{
 	background: transparent;
@@ -100,7 +100,10 @@ button{
     align-items: center;
     height: 80px;
 }
-
+.overlay{
+	background: rgba(0, 0, 0, 0.856);
+	left: 0;
+}
 </style>
 <body>
 
@@ -144,12 +147,24 @@ button{
             <script src="{{ asset('admin/js/main.js') }}"></script>
             <script>
                 $.material.init();
+				let subirArven=document.getElementById('subirArven'),
+				subirArven2 = document.getElementById("subirArven2"),
+				subirAr = document.querySelector("#subirAr"),
+				btnCerrarPopup = document.querySelector('#btn-cerrar-popup')
 	            const button = document.querySelector('#button')
 	            const nav    = document.querySelector('#nav')
 
-	            button.addEventListener('click', ()=>{
+				button.addEventListener('click', ()=>{
 		        nav.classList.toggle('activo')
-	        })
+	        	})
+				subirAr.addEventListener("click", function(){
+					subirArven.classList.add("active");
+					subirArven2.classList.add("active");
+				});
+				btnCerrarPopup.addEventListener("click", function(){
+					subirArven.classList.remove("active");
+        		});
+	            
             </script>
     </body>
     </html>

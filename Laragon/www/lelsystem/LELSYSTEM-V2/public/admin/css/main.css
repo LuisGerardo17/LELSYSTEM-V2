@@ -648,6 +648,12 @@ body, html{
 .link{
 	text-decoration: none;
 }
+.link:hover{
+    text-decoration: none;
+}
+.link p:hover{
+    color: #009688;
+}
 .imagenPresentacion img{
     min-width: 250px;
     max-width: 550px;
@@ -702,7 +708,7 @@ body, html{
 
 
 
-    transition: .3s ease all;
+
 	transform: scale(0.7);
 	opacity: 0;
 
@@ -715,7 +721,7 @@ body, html{
 	display: block;
 	text-align: right;
 	color: #bbbbbb;
-	transition: .3s ease all;
+
 }
 .popup .btn-cerrar-popup:hover{
 	color: #000;
@@ -743,7 +749,7 @@ body, html{
 	font-family: "RobotoCondensedLight";
 	font-size: 16px;
 	cursor: pointer;
-	transition: .3s ease all;
+
 }
 
 .popup form .btn-submit:hover{
@@ -758,5 +764,27 @@ body, html{
 }
 .reprobado{
     background-color: rgb(238, 57, 57);
+}
+
+.partes{
+	padding-top: 20px;
+	background-color: white;
+	height: 85vh;
+}
+.estado{
+	max-width: 50%;
+	margin: auto;
+}
+.bacgraun{
+	background-color: #009688;
+	padding: 10px;
+}
+.botonmas{
+	display: flex;
+	justify-content: center;
+	margin-bottom: 10px;
+}
+.botonmas button span{
+	margin-left: 5px;
 }
 
