@@ -87,7 +87,11 @@
                     @foreach ($recursos as $rec)
                         <div class="campos">
                             <a class="link" href=""><p>{{$rec->nombre_recurso}}</p></a>
-                            <a class="link" href=""><p>{{$rec->id_tipo_archivo}}</p></a>
+                        </div>
+					@endforeach
+                    @foreach ($forms as $form)
+                    <div class="campos">
+                            <a class="link" href=""><p>{{$form->tipo}}</p></a>
                         </div>
 					@endforeach
                     </div>
@@ -112,14 +116,9 @@
                         <div class="campos">
                             <a class="link" href=""><p>{{ $item->descripcion}}</p></a>
                         </div>
-<<<<<<< HEAD
-					@endforeach	
-                        
-
-=======
 
 					@endforeach
->>>>>>> 4ca1b613ea97689599324ebedaeaa1ec640256bd
+
 
 
                     </div>

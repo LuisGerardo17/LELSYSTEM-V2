@@ -39,7 +39,7 @@ class ActividadDocController extends Controller
      */
     public function store(Request $request)
     {
-
+        
         $datosActividades=Request()->except('_token');
         Actividades::insert($datosActividades);
         return redirect('ActividadDoc');
