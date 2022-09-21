@@ -192,3 +192,7 @@ Route::get('/m',function (){
 Route::get("estudiante", function (){
     return view("estudiante.inicioestudiante");
 });
+
+Route::get('subir',function (){
+    return view('estudiante.SubirArchivos');
+});

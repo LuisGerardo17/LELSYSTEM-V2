@@ -14,6 +14,16 @@ class Cursos extends Model
     protected $table = 'cursos';
 
 
+    protected $fillable = [
+
+        'nombre_curso',
+        'descripcion',
+        'fecha_inicio',
+        'fecha_fin',
+        'estado',
+        'cedula',
+    ];
+
     public function cedula(){
         return $this->belongsTo(Docentes::class,'cedula','cedula');
 

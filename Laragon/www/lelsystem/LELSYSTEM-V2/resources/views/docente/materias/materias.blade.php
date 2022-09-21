@@ -35,7 +35,7 @@
                 </center>
 
             </div>
-           
+
 
             <div>
                 <h2 class="titulo">Parcial 1</h2>
@@ -74,7 +74,7 @@
                         <div class="campos">
                             <a class="link" href=""><p>{{$item->descripcion}}</p></a>
                         </div>
-					@endforeach	
+					@endforeach
                     </div>
                 </div>
             </div>
@@ -112,9 +112,14 @@
                         <div class="campos">
                             <a class="link" href=""><p>{{ $item->descripcion}}</p></a>
                         </div>
+<<<<<<< HEAD
 					@endforeach	
                         
 
+=======
+
+					@endforeach
+>>>>>>> 4ca1b613ea97689599324ebedaeaa1ec640256bd
 
 
                     </div>

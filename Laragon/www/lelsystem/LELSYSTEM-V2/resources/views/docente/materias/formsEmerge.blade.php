@@ -130,4 +130,10 @@
                     <center><input type="submit" class="btn-submit" value="Enviar"></center>
                 </form>
             </div>
+<<<<<<< HEAD
         </div>
+=======
+        </div> 
+
+ 
+>>>>>>> 4ca1b613ea97689599324ebedaeaa1ec640256bd

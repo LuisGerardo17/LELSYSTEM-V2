@@ -123,8 +123,9 @@ popup4 = document.getElementById("popup4")
 var btnCerrarPopup = document.querySelectorAll('.btn-cerrar-popup')
 const btnAbrirPopup = document.querySelector("#edit"),
 parcialUno = document.querySelector("#parcialUno"),
-parcialDos = document.querySelector("#parcialDos")
+parcialDos = document.querySelector("#parcialDos"),
 parcialTres = document.querySelector("#parcialTres")
+
 
 //boton eliminar
 btnCerrarPopup.forEach(e=>{
@@ -132,6 +133,7 @@ btnCerrarPopup.forEach(e=>{
         overlay.classList.remove("active");
         overlayparcialUno.classList.remove("active");
         overlayparcialDos.classList.remove("active");
+		subirArven.classList.remove("active");
         overlayparcialTres.classList.remove("active");
         popup.classList.remove("active");
         popup2.classList.remove("active");
@@ -161,7 +163,7 @@ btnCerrarPopup.forEach(e=>{
         popup4.classList.add("active");
 	});
 
-}
+
 
 let inputsespacio=document.getElementById('imputs')
 let selector=document.getElementById('selector')
@@ -193,3 +195,4 @@ selector2.addEventListener('change',(e)=>{
     }
     console.log(campo)
 })
+}
