@@ -5,10 +5,12 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use App\Models\User;
+use App\Models\Rol;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 
+use Illuminate\Support\Facades\Auth;
 class RegisterController extends Controller
 {
     /*
@@ -29,17 +31,18 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = 'auth.login';
+    protected $redirectTo = 'login';
 
     /**
      * Create a new controller instance.
      *
      * @return void
+     * public function __construct()
+    *{
+        *$this->middleware('guest');
+    *}
      */
-    public function __construct()
-    {
-        $this->middleware('guest');
-    }
+
 
     /**
      * Get a validator for an incoming registration request.
@@ -47,6 +50,12 @@ class RegisterController extends Controller
      * @param  array  $data
      * @return \Illuminate\Contracts\Validation\Validator
      */
+
+     public function index() {
+
+           return view('auth.register');
+     }
+
     protected function validator(array $data)
     {
         return Validator::make($data, [
@@ -76,7 +85,7 @@ class RegisterController extends Controller
             'contrasena' => Hash::make($data['contrasena']),
 
         ]);
-          $user->asignarRol(1);
-        return redirect('auth.login');
+        $user->roles()->attach(Rol::where('nombre', 'Estudiante')->first());
+        return $user;
     }
 }

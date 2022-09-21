@@ -8,7 +8,7 @@
 <div class="login-box">
     <img class="avatar" src="static/img/logo5.png" alt="">
     <h1>REGISTRATE AQUÍ</h1>
-    <form class="row g-3 needs-validation" method= "post" action="" enctype="multipart/form-data"  >
+    <form class="row g-3 needs-validation" method= "post" action="{{url('/register')}}" enctype="multipart/form-data"  >
         @csrf
 
         <div class="col-md-4">

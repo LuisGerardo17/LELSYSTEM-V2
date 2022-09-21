@@ -14,9 +14,9 @@ class AdminController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-
+        $request->user()->authorizeRoles(['Administrador']);
         $administradores=Administradores::paginate(5);
         return view('admin.admin.admin',compact('administradores'));
     }

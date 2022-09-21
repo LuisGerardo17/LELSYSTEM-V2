@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Middleware;
-
+use Illuminate\Support\Facades\Auth;
 use Closure;
 use Illuminate\Http\Request;
 
@@ -16,11 +16,10 @@ class EstudianteAuth
      */
     public function handle(Request $request, Closure $next)
     {
-        if(auth()->check()){
-            if(auth()->user()->role == 'estudiante'){
-                return $next($request);
-                }
-            }
-        return redirect()->to('estudiante.estudiante');
+        if(auth::user()->rol=='Estudiante'){
+
+            return $next($request);
+        }
+        return redirect()->to('login');
     }
 }

@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Middleware;
-
+use Illuminate\Support\Facades\Auth;
 use Closure;
 use Illuminate\Http\Request;
 
@@ -16,11 +16,13 @@ class AdminAuth
      */
     public function handle(Request $request, Closure $next)
     {
-        if(auth()->check()){
-            if(auth()->user()->rol == 'Administrador'){
-                return $next($request);
-                }
-            }
-        return redirect()->to('auth.login');
+        if(auth::user()->rol=='Administrador'){
+
+            return $next($request);
+        }
+        
+         return redirect('login');
+
+
     }
 }

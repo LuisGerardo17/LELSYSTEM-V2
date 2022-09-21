@@ -21,6 +21,7 @@ use App\Http\Controllers\ListaController;
 use App\Http\Controllers\ActividadDocController;
 use App\Http\Controllers\listaMatriculadoController;
 use App\Http\Controllers\listaCursoController;
+use Illuminate\Support\Facades\Auth;
 
 //Route::get('/',function (){return redirect('home');});
 Route::get('/',function (){
@@ -64,7 +65,7 @@ Route::get('/homeadmin',function (){
 })->name('adminHome');
 
 //admin
-Route::resource('admin.admin',AdminController::class);
+Route::resource('admin.admin',AdminController::class)->middleware('auth');
 //endadmin
 //recursos
 Route::resource('admin/recursos',RecursosController::class);
@@ -193,4 +194,4 @@ Route::get("estudiante", function (){
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+//Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

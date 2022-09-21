@@ -17,8 +17,8 @@ class CreateRolUserTable extends Migration
             $table->id();
             $table->bigInteger('rol_id');
             $table->foreign('rol_id')->references('id')->on('rols')->cascadeOnDelete()->cascadeOnUpdate();
-            $table->string('cedula');
-            $table->foreign('cedula')->references('cedula')->on('users')->cascadeOnDelete()->cascadeOnUpdate();
+            $table->string('user_cedula');
+            $table->foreign('user_cedula')->references('cedula')->on('users')->cascadeOnDelete()->cascadeOnUpdate();
             $table->timestamps();
         });
     }

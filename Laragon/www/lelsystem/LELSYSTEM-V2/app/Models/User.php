@@ -85,16 +85,36 @@ class User extends Authenticatable
     public function matricula(){
         return $this->hasMany(Matriculas::class,'cedula','cedula');
     }
-    public function rol(){
+    public function roles(){
         return $this->belongsToMany(Rol::class);
     }
 
-    public function asignarRol($rol){
-       $this->rol()->sync($rol, 'detaching: false');
-
+    public function authorizeRoles($roles)
+    {
+        abort_unless($this->hasAnyRole($roles), 401);
+        return true;
     }
-    public function tieneRol(){
-        return $this->rol()->flatten()->pluck('nombre')->unique();
+    public function hasAnyRole($roles)
+    {
+        if (is_array($roles)) {
+            foreach ($roles as $role) {
+                if ($this->hasRole($role)) {
+                    return true;
+                }
+            }
+        } else {
+            if ($this->hasRole($roles)) {
+                 return true;
+            }
+        }
+        return false;
+    }
 
-     }
+    public function hasRole($role)
+    {
+        if ($this->roles()->where('nombre', $role)->first()) {
+            return true;
+        }
+        return false;
+    }
 }

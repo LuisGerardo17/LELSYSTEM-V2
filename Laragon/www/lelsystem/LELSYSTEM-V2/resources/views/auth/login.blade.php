@@ -8,7 +8,7 @@
 <div class="login-box">
     <img class="avatar" src="static/img/logo5.png" alt="">
     <h1>LOGIN</h1>
-    <form class="row g-3 needs-validation" method="post" action="">
+    <form class="row g-3 needs-validation" method="post" action="{{url('/login')}}">
         @csrf
         <div class="col-md-12">
           <label for="validationCustomUsername" class="form-label">Correo</label>
