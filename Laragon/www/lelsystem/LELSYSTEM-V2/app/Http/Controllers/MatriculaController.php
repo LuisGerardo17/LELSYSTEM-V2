@@ -74,7 +74,7 @@ class MatriculaController extends Controller
      */
     public function show(matriculas $matriculas)
     {
-        //
+        // 
     }
 
     /**
@@ -96,7 +96,7 @@ class MatriculaController extends Controller
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  \App\Models\matriculas  $matriculas
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\Response 
      */
     public function update(Request $request,$id)
     {

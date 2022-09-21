@@ -1,4 +1,5 @@
 @extends('estudiante.layouts.estudiante')
+@section('fondo','rgb(173, 173, 173)')
 @section('titulo', 'Materias')
 @section('seccion')
 
