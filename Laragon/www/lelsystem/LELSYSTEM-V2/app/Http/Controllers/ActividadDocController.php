@@ -1,21 +1,24 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\TipoArchivos;
+use App\Models\Recursos;
 use App\Models\Actividades;
 use Illuminate\Http\Request;
 
 class ActividadDocController extends Controller
 {
-    /**
+    /** 
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
     public function index()
     {
+        $forms=TipoArchivos::all();
+        $recursos=Recursos::paginate(10);
         $actividad=Actividades::all();
-        return view('docente.materias.materias', compact('actividad'));
+        return view('docente.materias.materias', compact('actividad','recursos','forms'));
     }
 
     /**
@@ -26,8 +29,8 @@ class ActividadDocController extends Controller
     public function create()
     {
         //
-    }
-
+    } 
+ 
     /**
      * Store a newly created resource in storage.
      *

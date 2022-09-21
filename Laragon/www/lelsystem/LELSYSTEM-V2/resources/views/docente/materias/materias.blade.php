@@ -43,9 +43,16 @@
                 <div class="row espacio">
                     <h3>Recursos</h3>
                     <div class="flex2">
+                    @foreach ($recursos as $rec)
                         <div class="campos">
-                            <a class="link" href=""><p>Lorem </p></a>
+                            <a class="link" href=""><p>{{$rec->nombre_recurso}}</p></a>
                         </div>
+					@endforeach
+                    @foreach ($forms as $form)
+                    <div class="campos">
+                            <a class="link" href=""><p>{{$form->tipo}}</p></a>
+                        </div>
+					@endforeach
                     </div>
                 </div>
                 <a class="edit" id="parcialDos"><i class="zmdi zmdi-plus zmdi-hc-fw"></i>Añadir</a>
@@ -77,10 +84,12 @@
                 <div class="row espacio">
                     <h3>Recursos</h3>
                     <div class="flex2">
+                    @foreach ($recursos as $rec)
                         <div class="campos">
-                            <a class="link" href=""><p>Lorem </p></a>
+                            <a class="link" href=""><p>{{$rec->nombre_recurso}}</p></a>
+                            <a class="link" href=""><p>{{$rec->id_tipo_archivo}}</p></a>
                         </div>
-
+					@endforeach
                     </div>
                 </div>
                 <a class="edit" id="parcialDos"><i class="zmdi zmdi-plus zmdi-hc-fw"></i>Añadir</a>
@@ -103,12 +112,11 @@
                         <div class="campos">
                             <a class="link" href=""><p>{{ $item->descripcion}}</p></a>
                         </div>
-<<<<<<< HEAD
 					@endforeach	
                         
-=======
 
->>>>>>> 5824627169b57190900d8783729a8f778baf110c
+
+
                     </div>
                 </div>
             </div>
