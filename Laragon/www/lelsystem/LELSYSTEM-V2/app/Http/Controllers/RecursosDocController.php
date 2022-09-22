@@ -1,24 +1,21 @@
 <?php
 
-namespace App\Http\Controllers;
-use App\Models\TipoArchivos;
-use App\Models\Recursos;
+namespace App\Http\Controllers; 
 use App\Models\Actividades;
+use App\Models\Recursos;
+use App\Models\TipoArchivos;
 use Illuminate\Http\Request;
 
-class ActividadDocController extends Controller
+class RecursosDocController extends Controller
 {
-    /** 
+    /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
     public function index()
     {
-        $forms=TipoArchivos::all();
-        $recursos=Recursos::paginate(10);
-        $actividad=Actividades::all();
-        return view('docente.materias.materias', compact('actividad','recursos','forms'));
+         
     }
 
     /**
@@ -29,8 +26,8 @@ class ActividadDocController extends Controller
     public function create()
     {
         //
-    } 
- 
+    }
+
     /**
      * Store a newly created resource in storage.
      *
@@ -39,9 +36,8 @@ class ActividadDocController extends Controller
      */
     public function store(Request $request)
     {
-        
-        $datosActividades=Request()->except('_token');
-        Actividades::insert($datosActividades);
+        $datosRecursos=Request()->except('_token');
+        Recursos::insert($datosRecursos);
         return redirect('ActividadDoc');
 
     }
@@ -49,10 +45,10 @@ class ActividadDocController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Actividades  $actividades
+     * @param  \App\Models\Recursos  $recursos
      * @return \Illuminate\Http\Response
      */
-    public function show(Actividades $actividades)
+    public function show(Recursos $recursos)
     {
         //
     }
@@ -60,10 +56,10 @@ class ActividadDocController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Actividades  $actividades
+     * @param  \App\Models\Recursos  $recursos
      * @return \Illuminate\Http\Response
      */
-    public function edit(Actividades $actividades)
+    public function edit(Recursos $recursos)
     {
         //
     }
@@ -72,10 +68,10 @@ class ActividadDocController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Actividades  $actividades
+     * @param  \App\Models\Recursos  $recursos
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Actividades $actividades)
+    public function update(Request $request, Recursos $recursos)
     {
         //
     }
@@ -83,10 +79,10 @@ class ActividadDocController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Actividades  $actividades
+     * @param  \App\Models\Recursos  $recursos
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Actividades $actividades)
+    public function destroy(Recursos $recursos)
     {
         //
     }

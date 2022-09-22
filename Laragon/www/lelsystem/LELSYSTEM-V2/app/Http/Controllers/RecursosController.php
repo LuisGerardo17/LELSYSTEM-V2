@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+ 
 use App\Models\Recursos;
 use App\Models\TipoArchivos;
 use Illuminate\Http\Request;
@@ -18,7 +18,7 @@ class RecursosController extends Controller
         $forms=TipoArchivos::all();
         $recursos=Recursos::paginate(8);
         return view('admin.recursos.recursos',compact('forms','recursos'));
-    }
+    } 
 
     /**
      * Show the form for creating a new resource.
@@ -27,7 +27,7 @@ class RecursosController extends Controller
      */
     public function create()
     {
-        //
+        // 
     }
 
     /**
@@ -36,7 +36,7 @@ class RecursosController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request) 
     {
         $datos=$request->except('_token');
         $campos=[

@@ -6,7 +6,7 @@
                     <div class="form-group">
                         <div>
                             <input type="text" readonly="" class="form-control" placeholder="icono clase...">
-                            <input type="file"  >
+                            <input type="file">
                         </div>
                     </div>
                     <div class="form-group label-floating">
@@ -24,7 +24,7 @@
                     <div class="form-group">
                         <div>
                             <input type="text" readonly="" class="form-control" placeholder="Foto...">
-                            <input type="file"  >
+                            <input type="file">
                         </div>
                     </div>
                     <center><input type="submit" class="btn-submit" value="Enviar"></center>
@@ -32,13 +32,13 @@
             </div>
         </div>
 
-<!--parcial1-->
+        <!--parcial1-->
         <div class="overlay" id="overlayparcialUno">
             <div class="popup" id="popup2">
                 <a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup"><i class="zmdi zmdi-close"></i></a>
-                <h3>Parcial 1</h3>
-                <form action="" method="POST">
-                @csrf 
+                <h3>Recursos</h3>
+                <form action="{{ url('RecursosDoc' )}}" method="POST">
+                    @csrf
                     <!--<div class="form-group label-floating">
                         <label class="control-label">Recurso a utilizar</label>
                         <select class="form-control" name="" id="selector">
@@ -49,18 +49,27 @@
                         </select>
                     </div>-->
                     <div class="form-group label-floating">
+                        <label class="control-label">Codigo</label>
+                        <input class="form-control" type="text" name="codigo_recurso">
+                    </div>
+                    <div class="form-group label-floating">
                         <label class="control-label">Nombre</label>
-                        <input class="form-control" type="text" name="codigo_actividad">
+                        <input class="form-control" type="text" name="nombre_recurso">
                     </div>
                     <div class="form-group label-floating">
                         <label class="control-label">Descripcion</label>
-                        <input class="form-control" type="text" name="nombre_actividad">
-                    </div>
-                    <div class="form-group label-floating">
-                        <label class="control-label">Tipo de archivo</label>
                         <input class="form-control" type="text" name="descripcion">
                     </div>
-                    <div id="imputs">
+                    <div class="form-group label-floating">
+                        <label class="control-label">Tipo archivo</label>
+                        <select class="form-control" name="id_tipo_archivo">
+                            <option>tipo archivo-----</option>
+                            <option value="1">pdf</option>
+                            <option value="2">excel</option>
+                            <option value="3">word</option>
+                        </select>
+                    </div>
+                    <div id="imputs"> 
                     </div>
                     <center><input type="submit" class="btn-submit" value="Enviar"></center>
                 </form>
@@ -71,9 +80,9 @@
         <div class="overlay" id="overlayparcialDos">
             <div class="popup" id="popup3">
                 <a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup"><i class="zmdi zmdi-close"></i></a>
-                <h3>Parcial 2</h3>
+                <h3>Actividades</h3>
                 <form action="{{ url('ActividadDoc')}}" method="POST">
-                @csrf 
+                    @csrf
                     <div class="form-group label-floating">
                         <label class="control-label">Codigo</label>
                         <input class="form-control" type="text" name="codigo_actividad">
@@ -91,15 +100,15 @@
                     <center><input type="submit" class="btn-submit" value="Enviar"></center>
                 </form>
             </div>
-        </div> 
+        </div>
 
         <!--parcial3-->
         <div class="overlay" id="overlayparcialTres">
             <div class="popup" id="popup4">
                 <a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup"><i class="zmdi zmdi-close"></i></a>
-                <h3>Parcial 2</h3>
+                <h3>Examenes</h3>
                 <form action="">
-                @csrf 
+                    @csrf
                     <div class="form-group label-floating">
                         <label class="control-label">Codigo</label>
                         <input class="form-control" type="text" name="codigo_actividad">
@@ -121,5 +130,6 @@
                     <center><input type="submit" class="btn-submit" value="Enviar"></center>
                 </form>
             </div>
-        </div> 
- 
+
+        </div>
+

@@ -21,6 +21,7 @@ use App\Http\Controllers\ListaController;
 use App\Http\Controllers\ActividadDocController;
 use App\Http\Controllers\listaMatriculadoController;
 use App\Http\Controllers\listaCursoController;
+use App\Http\Controllers\RecursosDocController;
 
 Route::get('/',function (){return redirect('/homepage');});
 Route::get('/homepage',function (){
@@ -149,6 +150,8 @@ Route::resource('estudiante-registro',RegistroEstudiantesController::class);
 //Actividades->Leonardo
 Route::resource('activities/activities',ActivitiesController::class);
 Route::resource('ActividadDoc',ActividadDocController::class);
+//Recursos Leonardo
+Route::resource('RecursosDoc',RecursosDocController::class);
 
 //Matricula->Leonardo
 Route::resource('matricula',MatriculaController::class);
@@ -188,4 +191,11 @@ Route::get('/m',function (){
 
 Route::get("estudiante", function (){
     return view("estudiante.inicioestudiante");
+});
+
+Route::get('subir',function (){
+    return view('estudiante.SubirArchivos');
+});
+Route::get('notas',function (){
+    return view('estudiante.verNotas');
 });
