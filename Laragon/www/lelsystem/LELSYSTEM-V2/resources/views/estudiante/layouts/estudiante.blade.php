@@ -143,7 +143,8 @@ img {
 	padding: 20px;
 }
 .a:hover{
-	color: #fff;
+	color: #009688;
+	text-decoration:  none;
 }
 button{
 	background: transparent;
@@ -219,11 +220,14 @@ button{
 			<nav class="nav" id="nav">
 			    <ul class="ul" >
 				    <li class="li">
-						<a class="a" href="#"><i class="zmdi zmdi-account zmdi-hc-fw"></i> Area personal</a>
+						<a class="a" href="#"><i class="zmdi zmdi-n-1-square zmdi-hc-fw"></i> Notas</a>
 					</li>
 					<li class="li">
-						<a class="a" href="#"><i class="zmdi zmdi-settings zmdi-hc-fw"></i> Configuración</a>
+						<a class="a" href="#"><i class="zmdi zmdi-account-box zmdi-hc-fw"></i> Asistencias</a>
 					</li>
+					<!--<li class="li">
+						<a class="a" href="#"><i class="zmdi zmdi-settings zmdi-hc-fw"></i> Configuración</a>
+					</li>-->
 				    <li class="li">
 						<a class="a" href="#"><i class="zmdi zmdi-long-arrow-tab zmdi-hc-fw"></i> Cerrar seción</a>
 					</li>
