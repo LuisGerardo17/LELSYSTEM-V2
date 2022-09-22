@@ -178,6 +178,9 @@ button{
 	background: rgba(0, 0, 0, 0.856);
 	left: 0;
 }
+.partes{
+	height: 90vh;
+}
 </style>
 <body>
 
