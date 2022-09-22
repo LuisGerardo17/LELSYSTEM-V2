@@ -4,13 +4,7 @@
 @section('seccion')
 
 <body>
-	
 
-	
-		
-
-
-</style>
 <ol class="breadcrumb">
 	<li class="active">Home</li>
 </ol>
