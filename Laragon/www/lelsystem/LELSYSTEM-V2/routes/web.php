@@ -1,12 +1,14 @@
 <?php
 
-use App\Http\Controllers\AdminController;
+
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\AdministradoresController;
+use App\Http\Controllers\DocentesController;
+use App\Http\Controllers\EstudiantesController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ActivitiesController;
-use App\Http\Controllers\SessionsController;
-use App\Http\Controllers\AdministradorController;
 use App\Http\Controllers\BuscarController;
 use App\Http\Controllers\DocenteController;
 use App\Http\Controllers\EstudianteController;
@@ -22,26 +24,17 @@ use App\Http\Controllers\ActividadDocController;
 use App\Http\Controllers\listaMatriculadoController;
 use App\Http\Controllers\listaCursoController;
 use App\Http\Controllers\RecursosDocController;
+use Illuminate\Support\Facades\Auth;
 
-//Route::get('/',function (){return redirect('home');});
+
 Route::get('/',function (){
     return view('home');
 })->name('home');
 
 
 //Register y Login
-Route::resource('register',RegisterController::class)->middleware('auth');
-Route::resource('login',LoginController::class)->middleware('auth');
-/*
-Route::get('/auth.login', [LoginController::class, 'create'])
-->middleware('guest')
-->name('login');
-Route::post('/auth.login', [LoginController::class, 'store'])->name('login.store');
-Route::get('/logout', [LoginController::class, 'destroy'])
-
-->name('login.destroy');
-*/
-
+//Route::resource('register',RegisterController::class)->middleware('auth');
+//Route::resource('login',LoginController::class)->middleware('auth');
 
 
 //CREACIÓN DE RUTAS PARA EL HOMEPAGE
@@ -65,21 +58,12 @@ Route::get('/homeadmin',function (){
 })->name('adminHome');
 
 //admin
-Route::resource('admin.admin',AdminController::class)->middleware('auth');
-//endadmin
+
+Route::resource('admin.admin',AdminController::class);
 //recursos
 Route::resource('admin/recursos',RecursosController::class);
 Route::resource('admin/cursos',CursoController::class);
 //endrecursos
-
-    //admin
-    /*Route::get('/admin.admin',function (){
-        return view('admin.admin.admin');
-    })->name('admin');
-
-    Route::get('/adminEdit',function (){
-        return view('admin.admin.adminEdit');
-    })->name('adminEdit');*/
 
     //courses
     Route::get('/admin.curse',function (){
@@ -91,27 +75,10 @@ Route::resource('admin/cursos',CursoController::class);
     })->name('curseEdit');
 
 
-
-//endmatricula
-
-
 //ADMINISTRAR ESTUDIANTE
 
 Route::resource('admin/estudiante', EstudianteController::class);
-Route::resource('docente/docente', DocenteController::class)->middleware('auth');
 
-/*Route::get('/admin.estudiante',function (){
-    return view('admin.estudiante.estudiante');
-})->name('curse');
-
-
-Route::get('/auth.register', [RegisterController::class,'create'])
-->middleware('guest')
-->name('register');
-Route::post('/auth.register', [RegisterController::class, 'store'])->name('register.store');
-Route::get('/EstudianteEdit',function (){
-    return view('admin.estudiante.estudianteEdit');
-})->name('curseEdit');*/
 
 Route::get('/admin.index',function (){
     return view('admin.admin.index');
@@ -126,14 +93,6 @@ Route::resource('Teacher.Teacher',TeacherController::class);
 
 //ADMINISTRARDOCENTE
 
-//Route::delete('Teacher/Teacher/{cedula}', [TeacherController::class, 'destroy'])->name('user.delete');
-
-//Estudiante
-
-/*Route::get('/estudiante.estudiante', [App\Http\Controllers\EstudianteController::class, 'index'])
-->middleware('auth.estudiante')
-->name('estudiante.index');
-*/
 
 Route::resource('estudiante-registro',RegistroEstudiantesController::class);
 
@@ -145,8 +104,7 @@ Route::resource('RecursosDoc',RecursosDocController::class);
 
 //Matricula->Leonardo
 Route::resource('matricula',MatriculaController::class);
-//Route::resource('listaestudiantes',MatriculaController::class);
-//Route::resource('estudiantes',ListaController::class);
+
 
 
 //Buscar->Leonardo
@@ -155,31 +113,19 @@ Route::resource('lista',ListaEstudiantesController::class);
 Route::resource('listaMatriculado',listaMatriculadoController::class);
 Route::resource('listaxcurso',listaCursoController::class);
 
-//matricula
 
-Route::resource('matricula',MatriculaController::class);
+//docente*******************************************************************
 
-//docente
+Route::resource('docente/docente', DocenteController::class);
 Route::get('docente', function () {
     return view('docente.inicio');
 });
-/*Route::get('materias', function () {
-    return view('docente.materias.materias');
-});*/
 
-/*Route::get('lista', function () {
-    return view('docente.listados.listados');
-});*/
-/*Route::get('matricula', function () {
-    return view('docente.matricula.matricula');
-});*/
 
-/*Route::get('listaestudiantes', function () {
-    return view('docente.listados.listaestudiantes');
-});
-Route::get('notas', function () {
-    return view('docente.notas.notas');
-});*/
+//matricula
+
+Route::resource('matricula',MatriculaController::class);
+//Estudiantes***********************************************************
 Route::get('/m',function (){
     return view('estudiante.materias');
 });
@@ -191,3 +137,8 @@ Route::get("estudiante", function (){
 Route::get('subir',function (){
     return view('estudiante.SubirArchivos');
 });
+
+Auth::routes();
+Route::resource('administradores',AdministradoresController::class);
+Route::resource('docentes',DocentesController::class);
+Route::resource('estudiantes',EstudiantesController::class);

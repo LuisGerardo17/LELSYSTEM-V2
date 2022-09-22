@@ -19,10 +19,10 @@ class EstudianteAuth
         switch(auth::user()->rol)
         {
             case('Administrador'):
-                return redirect('admin.admin');
+                return redirect('administrador');
                  break;
              case('Docente'):
-               return redirect('docente.docente');
+               return redirect('docente');
                  break;
              case('Estudiante'):
                 return $next($request);

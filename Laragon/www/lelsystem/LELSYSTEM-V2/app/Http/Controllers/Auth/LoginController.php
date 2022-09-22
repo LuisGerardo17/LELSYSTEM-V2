@@ -26,28 +26,17 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo ='auth.login';
-
+       protected $redirectTo ='admin.admin';
+       //protected $redirectTo = RouteServiceProvider::HOME;
     /**
      * Create a new controller instance.
      *
      * @return void
-     *  public function __construct()
-    *{
-        *$this->middleware('guest')->except('logout');
-    *}
+     *
      */
+    public function __construct()
+    {
+        $this->middleware('guest')->except('logout');
+    }
 
-   public function redirectPath()
-   {/*
-    if(Auth::user()->rol=='Administrador'){
-        return 'admin.admin.admin';
-    }elseif(Auth::user()->rol=='Docente'){
-        return 'docente.docente.docente';
-
-    }else                                                                                                                                                                                                                               if(Auth::user()->rol=='Estudiante')                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 if(Auth::user()->rol=='Estudiante'){
-        return 'estudiante.estudiante.estudiante';
- }
-*/
-}
 }

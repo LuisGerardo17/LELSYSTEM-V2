@@ -22,13 +22,13 @@ class AdminAuth
                return $next($request);
                 break;
             case('Docente'):
-                return redirect('docente.docente');
+                return redirect('docente');
                 break;
             case('Estudiante'):
-                return redirect('estudiante.estudiante');
+                return redirect('estudiante');
                 break;
-            default:
-             return redirect('login');
+                default:
+               return redirect('login');
        }
 
     }
