@@ -2,12 +2,10 @@
 @section('fondo','rgb(233, 233, 233)')
 @section('titulo', 'Index')
 @section('seccion')
-<style>
-
-</style>
-<ol class="breadcrumb">
-	<li class="active">Home</li>
-</ol>
+<div class="container" style="background-color: white;">
+	<ol class="breadcrumb">
+		<li class="active">Home</li>
+	</ol>
 		<!-- Content page -->
 		<div class="container-fluid">
 			<div class="page-header text-center">
@@ -102,5 +100,7 @@
                 <h3 class="titulo">BIENVENIDO ESTUDIANTE</h3>
 			</div>
 		</nav>-->
+</div>
+	
 @endsection
 

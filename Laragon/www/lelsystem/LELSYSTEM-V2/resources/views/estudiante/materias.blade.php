@@ -4,8 +4,12 @@
 @section('seccion')
 
 		<!-- Content page -->
-    <div class="container" style="background-color: white">
-		<div class="container-fluid">
+    <div class="container" style="background-color: white;">     
+		<div class="container-fluid" style="padding-top: 20px;">
+            <ol class="breadcrumb">
+                <li><a href="#">Home</a></li>
+                <li class="active">nombre materia</li>
+            </ol>
 			<div class="page-header">
 			  <h1 class="text-titles titulo">ARTE CULINARIO</h1>
 		    </div>

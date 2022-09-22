@@ -118,10 +118,13 @@ button{
 			<nav class="nav" id="nav">
 			    <ul class="ul" >
 				    <li class="li">
-						<a class="a" href="#">Area personal</a>
+						<a class="a" href="#">Ver notas</a>
+					</li>
+					<li class="li">
+						<a class="a" href="#">Ver asistencias</a>
 					</li>
 				    <li class="li">
-						<a class="a" href="#">Cerrar sección</a>
+						<a class="a" href="#">Cerrar sesión</a>
 					</li>
 			    </ul>
 			</nav>

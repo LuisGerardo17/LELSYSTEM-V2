@@ -196,3 +196,6 @@ Route::get("estudiante", function (){
 Route::get('subir',function (){
     return view('estudiante.SubirArchivos');
 });
+Route::get('notas',function (){
+    return view('estudiante.verNotas');
+});
