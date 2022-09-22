@@ -57,7 +57,10 @@ img {
 }
 .a{
 	color: #fff;
-	
+	padding: 20px;
+}
+.a:hover{
+	color: #fff;
 }
 button{
 	background: transparent;
@@ -72,17 +75,21 @@ button{
 	float: right;
 	display: none;
 	position: relative;
-    top: 30px;
-	left: 10%;
+    top: 40px;
+	left: 13%;
+    
 }
 .activo{
 	display: block;
 }
 .ul{
-	background: rgba(0,0,0,.6);
+	background: #000;
+	list-style-type: none;
+	padding: 7px;
 }
 .li{
-	margin: .5em 0;
+	margin-top: 20px;
+	margin-bottom: 20px;
 }
 
 </style>
@@ -101,10 +108,13 @@ button{
 			<nav class="nav" id="nav">
 			    <ul class="ul" >
 				    <li class="li">
-						<a class="a" href="#">Area personal</a>
+						<a class="a" href="#"><i class="zmdi zmdi-account zmdi-hc-fw"></i> Area personal</a>
+					</li>
+					<li class="li">
+						<a class="a" href="#"><i class="zmdi zmdi-settings zmdi-hc-fw"></i> Configuración</a>
 					</li>
 				    <li class="li">
-						<a class="a" href="#">Cerrar seción</a>
+						<a class="a" href="#"><i class="zmdi zmdi-long-arrow-tab zmdi-hc-fw"></i> Cerrar seción</a>
 					</li>
 			    </ul>
 			</nav>	
