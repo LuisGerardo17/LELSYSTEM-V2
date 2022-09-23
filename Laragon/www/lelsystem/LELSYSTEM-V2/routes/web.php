@@ -204,4 +204,10 @@ Route::get('notasmateria',function (){
 });
 Route::get('listado',function (){
     return view('estudiante.listadoscursos.listado');
+
+    return view('estudiante.verNotas');
+});
+Route::get('asistencias',function (){
+    return view('estudiante.verAsistencias');
+
 });
