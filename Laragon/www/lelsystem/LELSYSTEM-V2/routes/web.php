@@ -197,5 +197,11 @@ Route::get('subir',function (){
     return view('estudiante.SubirArchivos');
 });
 Route::get('notas',function (){
-    return view('estudiante.verNotas');
+    return view('estudiante.notas.verNotas');
+});
+Route::get('notasmateria',function (){
+    return view('estudiante.notas.vernotasMateria');
+});
+Route::get('listado',function (){
+    return view('estudiante.listadoscursos.listado');
 });

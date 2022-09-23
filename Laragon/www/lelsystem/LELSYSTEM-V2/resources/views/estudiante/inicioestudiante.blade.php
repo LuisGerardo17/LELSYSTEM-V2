@@ -17,84 +17,71 @@
 		</div>
 
 		<div class="full-box text-center" >
-		<a href="#">
-			<article class="full-box tile">
-				<div  class="full-box tile-title text-center text-titles text-uppercase">
-					Arte Culinario
-				</div>
-				<div class="full-box tile-icon text-center">
-                    <h4>Ing. Anshelo Proaño</h4>
-                    <img class="sup" width="90%" src="{{ asset('admin/assets/img/img.jpg') }}" alt="arte">
-                    <img width="12%" src="{{ asset('admin/assets/img/what.png') }}">+593 999999999 <br><br>
-                    <img width="12%" src="{{ asset('admin/assets/img/gmail.png') }}">aal.proano@yavirac.edu.ec
-                </div>
-			</article>
-		</a>
-		<a href="#">
-			<article class="full-box tile">
-				<div  class="full-box tile-title text-center text-titles text-uppercase">
-					Arte Culinario
-				</div>
-				<div class="full-box tile-icon text-center">
-                    <h4>Ing. Anshelo Proaño</h4>
-                    <img class="sup" width="90%" src="{{ asset('admin/assets/img/img.jpg') }}" alt="arte">
-                    <img width="12%" src="{{ asset('admin/assets/img/what.png') }}">+593 999999999 <br><br>
-                    <img width="12%" src="{{ asset('admin/assets/img/gmail.png') }}">aal.proano@yavirac.edu.ec
-                </div>
-			</article>
-		</a>
-        <a href="#">
-			<article class="full-box tile">
-				<div  class="full-box tile-title text-center text-titles text-uppercase">
-					Arte Culinario
-				</div>
-				<div class="full-box tile-icon text-center">
-                    <h4>Ing. Anshelo Proaño</h4>
-                    <img class="sup" width="90%" src="{{ asset('admin/assets/img/img.jpg') }}" alt="arte">
-                    <img width="12%" src="{{ asset('admin/assets/img/what.png') }}">+593 999999999 <br><br>
-                    <img width="12%" src="{{ asset('admin/assets/img/gmail.png') }}">aal.proano@yavirac.edu.ec
-                </div>
-			</article>
-		</a>
-        <a href="#">
-			<article class="full-box tile">
-				<div  class="full-box tile-title text-center text-titles text-uppercase">
-					Arte Culinario
-				</div>
-				<div class="full-box tile-icon text-center">
-                    <h4>Ing. Anshelo Proaño</h4>
-                    <img class="sup" width="90%" src="{{ asset('admin/assets/img/img.jpg') }}" alt="arte">
-                    <img width="12%" src="{{ asset('admin/assets/img/what.png') }}">+593 999999999 <br><br>
-                    <img width="12%" src="{{ asset('admin/assets/img/gmail.png') }}">aal.proano@yavirac.edu.ec
-                </div>
-			</article>
-		</a>
-        <a href="#">
-			<article class="full-box tile">
-				<div  class="full-box tile-title text-center text-titles text-uppercase">
-					Arte Culinario
-				</div>
-				<div class="full-box tile-icon text-center">
-                    <h4>Ing. Anshelo Proaño</h4>
-                    <img class="sup" width="90%" src="{{ asset('admin/assets/img/img.jpg') }}" alt="arte">
-                    <img width="12%" src="{{ asset('admin/assets/img/what.png') }}">+593 999999999 <br><br>
-                    <img width="12%" src="{{ asset('admin/assets/img/gmail.png') }}">aal.proano@yavirac.edu.ec
-                </div>
-			</article>
-		</a>
-        <a href="#">
-			<article class="full-box tile">
-				<div  class="full-box tile-title text-center text-titles text-uppercase">
-					Arte Culinario
-				</div>
-				<div class="full-box tile-icon text-center">
-                    <h4>Ing. Anshelo Proaño</h4>
-                    <img class="sup" width="90%" src="{{ asset('admin/assets/img/img.jpg') }}" alt="arte">
-                    <img width="12%" src="{{ asset('admin/assets/img/what.png') }}">+593 999999999 <br><br>
-                    <img width="12%" src="{{ asset('admin/assets/img/gmail.png') }}">aal.proano@yavirac.edu.ec
-                </div>
-			</article>
-		</a>
+			<a href="#">
+				<article class="full-box tile tilel">
+					<div  class="full-box tile-title text-center text-titles text-uppercase">
+						Arte Culinario
+					</div>
+					<div class="full-box tile-icon tile-icono text-center">
+						<h4>Ing. Anshelo Proaño</h4>
+						<img class="sup" width="90%" src="{{ asset('admin/assets/img/img.jpg') }}" alt="arte">
+						<img width="12%" src="{{ asset('admin/assets/img/what.png') }}">+593 999999999 <br><br>
+						<img width="12%" src="{{ asset('admin/assets/img/gmail.png') }}">aal.proano@yavirac.edu.ec
+					</div>
+				</article>
+			</a>
+			<a href="#">
+				<article class="full-box tile tilel">
+					<div  class="full-box tile-title text-center text-titles text-uppercase">
+						Arte Culinario
+					</div>
+					<div class="full-box tile-icon tile-icono text-center">
+						<h4>Ing. Anshelo Proaño</h4>
+						<img class="sup" width="90%" src="{{ asset('admin/assets/img/img.jpg') }}" alt="arte">
+						<img width="12%" src="{{ asset('admin/assets/img/what.png') }}">+593 999999999 <br><br>
+						<img width="12%" src="{{ asset('admin/assets/img/gmail.png') }}">aal.proano@yavirac.edu.ec
+					</div>
+				</article>
+			</a>
+			<a href="#">
+				<article class="full-box tile tilel">
+					<div  class="full-box tile-title text-center text-titles text-uppercase">
+						Arte Culinario
+					</div>
+					<div class="full-box tile-icon tile-icono text-center">
+						<h4>Ing. Anshelo Proaño</h4>
+						<img class="sup" width="90%" src="{{ asset('admin/assets/img/img.jpg') }}" alt="arte">
+						<img width="12%" src="{{ asset('admin/assets/img/what.png') }}">+593 999999999 <br><br>
+						<img width="12%" src="{{ asset('admin/assets/img/gmail.png') }}">aal.proano@yavirac.edu.ec
+					</div>
+				</article>
+			</a>
+			<a href="#">
+				<article class="full-box tile tilel">
+					<div  class="full-box tile-title text-center text-titles text-uppercase">
+						Arte Culinario
+					</div>
+					<div class="full-box tile-icon tile-icono text-center">
+						<h4>Ing. Anshelo Proaño</h4>
+						<img class="sup" width="90%" src="{{ asset('admin/assets/img/img.jpg') }}" alt="arte">
+						<img width="12%" src="{{ asset('admin/assets/img/what.png') }}">+593 999999999 <br><br>
+						<img width="12%" src="{{ asset('admin/assets/img/gmail.png') }}">aal.proano@yavirac.edu.ec
+					</div>
+				</article>
+			</a>
+			<a href="#">
+				<article class="full-box tile tilel">
+					<div  class="full-box tile-title text-center text-titles text-uppercase">
+						Arte Culinario
+					</div>
+					<div class="full-box tile-icon tile-icono text-center">
+						<h4>Ing. Anshelo Proaño</h4>
+						<img class="sup" width="90%" src="{{ asset('admin/assets/img/img.jpg') }}" alt="arte">
+						<img width="12%" src="{{ asset('admin/assets/img/what.png') }}">+593 999999999 <br><br>
+						<img width="12%" src="{{ asset('admin/assets/img/gmail.png') }}">aal.proano@yavirac.edu.ec
+					</div>
+				</article>
+			</a>
 		</div>
 
 	<!-- NavBar

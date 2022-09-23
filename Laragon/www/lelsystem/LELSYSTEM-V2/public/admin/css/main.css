@@ -765,6 +765,9 @@ body, html{
 .reprobado{
     background-color: rgb(238, 57, 57);
 }
+.justificado{
+	background-color: yellow;
+}
 
 .partes{
 	padding-top: 20px;
@@ -786,5 +789,8 @@ body, html{
 }
 .botonmas button span{
 	margin-left: 5px;
+}
+.margin{
+	margin-top: 20px;
 }
 

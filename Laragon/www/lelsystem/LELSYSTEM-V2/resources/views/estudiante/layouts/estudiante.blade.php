@@ -14,94 +14,12 @@
 	z-index: 0;
 	padding-left: 0px;
 }
-.tile{
+.tilel{
     width: 300px;
 	height: 450px;
     
 }
-.tile-icon{
-	bottom: 0;
-	height: 400px;
-	width: 300px;
-}
-h4 {
-    color: #000;
-    text-align: center;
-    padding-bottom: 10px;
-}
-p{
-    color: #000;
-}
-.sup {
-    padding-bottom: 20px; 
-}
-img {
-    padding: 5px;
-}
-.dashboard-Navbar{
-	background-color: #009688; 
-	overflow: hidden;
-}
-
-/*menu*/
-.Navbar-superior{
-	width: 100%;
-	background: #009688;
-	padding: 1em;
-}
-.logoEmpresa{
-	background: #fff;
-	border-radius: 10%;
-}
-.avatar{
-	float: right;
-}
-.a{
-	color: #fff;
-	padding: 20px;
-}
-.a:hover{
-	color: #fff;
-}
-button{
-	background: transparent;
-	color: #fff;
-	border: none;
-	font-size: 22px;
-	float: right;
-	padding-bottom: 10px;
-}
-.nav{
-	color: #fff;
-	float: right;
-	display: none;
-	position: relative;
-    top: 40px;
-	left: 13%;
-    
-}
-.activo{
-	display: block;
-}
-.ul{
-	background: #000;
-	list-style-type: none;
-	padding: 7px;
-}
-.li{
-	margin-top: 20px;
-	margin-bottom: 20px;
-}.dashboard-contentPage{
-	right: 0;
-	z-index: 0;
-	padding-left: 0px;
-}
-.tile{
-    width: 300px;
-	height: 450px;
-    
-}
-.tile-icon{
+.tile-icono{
 	bottom: 0;
 	height: 400px;
 	width: 300px;
@@ -212,7 +130,7 @@ button{
 			</nav>
 		</div>-->
 		<!-- menu-->
-	<section class="full-box dashboard-contentPage">
+	<section class="full-box dashboard-contentPage" style="background-color: @yield('fondo')">
 	        
 		<div class="Navbar-superior">
 		    <img class="logoEmpresa" width="150px" src="{{ asset('static/img/logo5.png') }}" alt="">
@@ -232,7 +150,7 @@ button{
 						<a class="a" href="#"><i class="zmdi zmdi-settings zmdi-hc-fw"></i> Configuración</a>
 					</li>-->
 				    <li class="li">
-						<a class="a" href="#"><i class="zmdi zmdi-long-arrow-tab zmdi-hc-fw"></i> Cerrar seción</a>
+						<a class="a" href="#"><i class="zmdi zmdi-long-arrow-tab zmdi-hc-fw"></i> Cerrar sessión</a>
 					</li>
 			    </ul>
 			</nav>	

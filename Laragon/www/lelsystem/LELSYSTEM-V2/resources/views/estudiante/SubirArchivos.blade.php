@@ -4,9 +4,9 @@
 @section('seccion')
 <div class="container partes">
     <ol class="breadcrumb">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">nombre curso</a></li>
-        <li class="active">nombredeber</li>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">nombre curso</a></li>
+    <li class="active">nombredeber</li>
     </ol>
     <center><h1 class="text-uppercase">Nombre del deber</h1></center>
     <h3>Descripccion</h3>
