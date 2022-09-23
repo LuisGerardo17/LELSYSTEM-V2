@@ -761,9 +761,11 @@ body, html{
 
 .aprobado{
     background-color: rgb(39, 133, 39);
+	color: #fff;
 }
 .reprobado{
     background-color: rgb(238, 57, 57);
+	color: #fff;
 }
 
 .partes{

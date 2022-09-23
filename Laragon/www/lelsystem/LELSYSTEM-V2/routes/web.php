@@ -199,3 +199,6 @@ Route::get('subir',function (){
 Route::get('notas',function (){
     return view('estudiante.verNotas');
 });
+Route::get('asistencias',function (){
+    return view('estudiante.verAsistencias');
+});
