@@ -17,7 +17,7 @@
 		</div>
 
 		<div class="full-box text-center" >
-			<a href="#">
+			<a href="{{ url('/m') }}">
 				<article class="full-box tile tilel">
 					<div  class="full-box tile-title text-center text-titles text-uppercase">
 						Arte Culinario

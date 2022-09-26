@@ -22,21 +22,18 @@
 		<div class="table-responsive estado">
 			<table class="table table-hover text-center">
 				<thead>
-					<th>Materia </th>
-					<th>semestre</th>
+					<th>Materia</th>
 					<th>Nota</th>
 					<th>Estado</th>
 				</thead>
 				<tbody>
 					<tr>
 						<th>Matematicas</th>
-						<th>Primero</th>
 						<td>9.00</td>
 						<td class="aprobado">aprobado</td>
 					</tr>
 					<tr>
 						<th>Matematicas</th>
-						<th>Segundo</th>
 						<td>6.00</td>
 						<td class="reprobado">reprobado</td>
 					</tr>
