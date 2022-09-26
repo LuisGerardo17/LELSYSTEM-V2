@@ -62,7 +62,7 @@
       <input type="file" name="imagen" >
       @error('imagen')
         <p class="alertas">*{{$message}}</p>
-    @enderror
+       @enderror
     </div>
   </div>
   <p class="text-center">

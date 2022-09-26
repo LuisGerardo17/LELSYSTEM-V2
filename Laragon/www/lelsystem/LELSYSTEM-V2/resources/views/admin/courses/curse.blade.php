@@ -45,6 +45,7 @@
                                             <th class="text-center">Fecha de Finalización</th>
                                             <th class="text-center">Estado</th>
                                             <th class="text-center">Cedula Docente</th>
+                                            <th class="text-center">Imagen</th>
 											<th class="text-center">Actualizar</th>
 											<th class="text-center">Eliminar</th>
 										</tr>
@@ -59,6 +60,7 @@
                                                 <td>{{ $curso->fecha_fin }}</td>
                                                 <td>{{ $curso->estado}}</td>
                                                 <td>{{ $curso->cedula }}</td>
+                                                <td>{{ $curso->urlfoto }}</td>
                                                 <td><a href="{{ url('admin/cursos/'.$curso->nombre_curso. '/edit') }}" class="btn btn-success btn-raised btn-xs"><i class="zmdi zmdi-refresh"></i></a></td>
                                                 <td>
                                                     <form action="{{ url('admin/cursos'.'/'.$curso->nombre_curso) }}" method="post" class="Eliminar">

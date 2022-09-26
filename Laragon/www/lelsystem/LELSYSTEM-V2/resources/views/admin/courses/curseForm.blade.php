@@ -13,14 +13,14 @@
         <p class="alertas">*{{$message}}</p>
     @enderror
   </div>
- 
+
   <div class="form-group label-floating">
     <label class="control-label">Fecha de Inicio</label>
-    <input class="form-control" name="fecha_inicio" type="date" value = "{{ isset($datos) ? $datos->fecha_inico : old('fecha_inicio') }}">
+    <input class="form-control" name="fecha_inicio" type="date" value = "{{ isset($datos) ? $datos->fecha_inico : old('fecha_inicio')}}">
     @error('fecha_inicio')
         <p class="alertas">*{{$message}}</p>
     @enderror
-  </div> 
+  </div>
 
 
   <div class="form-group label-floating">
@@ -54,6 +54,17 @@
     @enderror
   </div>
 
-  <p class="text-center">
-      <button type="submit" class="btn btn-info btn-raised btn-sm"><i class="zmdi zmdi-floppy"></i> Guardar</button>
-  </p>
+  <div class="form-group">
+    <div>
+      <input type="text" readonly="" class="form-control" value="{{ isset($datos) ? $datos->urlfoto : '' }}" placeholder="Foto...">
+      <input type="file" name="urlfoto" >
+      @error('urlfoto')
+        <p class="alertas">*{{$message}}</p>
+    @enderror
+    </div>
+</div>
+
+    <p class="text-center">
+        <button type="submit" class="btn btn-info btn-raised btn-sm"><i class="zmdi zmdi-floppy"></i> Guardar</button>
+    </p>
+
