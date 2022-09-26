@@ -12,7 +12,8 @@ class DatabaseSeeder extends Seeder
     /**
      * Run the database seeders.
      *
-     * @return vo
+     * @return void
+     */
     public function run()
     {
         //$this->call(RolTableSeeder::class);
