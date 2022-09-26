@@ -168,6 +168,8 @@ Route::resource('listaxcurso',listaCursoController::class);
 Route::get('docente', function () {
     return view('docente.inicio');
 });
+
+
 /*Route::get('materias', function () {
     return view('docente.materias.materias');
 });*/
