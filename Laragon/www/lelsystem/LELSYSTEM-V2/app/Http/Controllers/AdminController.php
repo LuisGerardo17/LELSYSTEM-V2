@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use App\Models\Administradores;
-use Illuminate\Http\Middleware\AdminAuth;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
@@ -16,11 +15,6 @@ class AdminController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-    public function __construct()
-    {
-        $this->middleware('auth');
-        $this->middleware('auth.admin');
-    }
     public function index(Request $request)
     {
 
@@ -77,10 +71,11 @@ class AdminController extends Controller
      * @param  \App\Models\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function show(User $user)
-    {
-        //
-    }
+    public function show($nombres){
+        $user =User::where('nombres', $nombres)->firstOrFail();
+        dd($user);
+
+     }
 
     /**
      * Show the form for editing the specified resource.

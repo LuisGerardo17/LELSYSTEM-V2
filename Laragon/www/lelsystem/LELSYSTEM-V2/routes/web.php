@@ -27,18 +27,18 @@ use App\Http\Controllers\RecursosDocController;
 use Illuminate\Support\Facades\Auth;
 
 
+
 Route::get('/',function (){
-    return view('home');
-})->name('home');
+    return view('homepage');
+})->name('homepage');
 
 
-//Register y Login
-//Route::resource('register',RegisterController::class)->middleware('auth');
-//Route::resource('login',LoginController::class)->middleware('auth');
+Route::resource('register',App\Http\Controllers\Auth\RegisterController::class);
+Route::resource('login',App\Http\Controllers\Auth\LoginController::class);
 
 
 //CREACIÓN DE RUTAS PARA EL HOMEPAGE
-Route::get('/home.homepage', [App\Http\Controllers\HomeController::class, 'index'])->name('homepage');
+
 Route::get('/homepage.historia', [App\Http\Controllers\Historia::class, 'index'])->name('historia');
 Route::get('/homepage.vision', [App\Http\Controllers\vision::class, 'index'])->name('vision');
 Route::get('/homepage.oferta', [App\Http\Controllers\Oferta::class, 'index'])->name('oferta');
@@ -96,18 +96,18 @@ Route::resource('Teacher.Teacher',TeacherController::class);
 
 Route::resource('estudiante-registro',RegistroEstudiantesController::class);
 
-//Actividades->Leonardo
+//Actividades
 Route::resource('activities/activities',ActivitiesController::class);
 Route::resource('ActividadDoc',ActividadDocController::class);
-//Recursos Leonardo
+//Recursos
 Route::resource('RecursosDoc',RecursosDocController::class);
 
-//Matricula->Leonardo
+//Matricula
 Route::resource('matricula',MatriculaController::class);
 
 
 
-//Buscar->Leonardo
+//Buscar
 Route::resource('buscar',BuscarController::class);
 Route::resource('lista',ListaEstudiantesController::class);
 Route::resource('listaMatriculado',listaMatriculadoController::class);
@@ -138,7 +138,30 @@ Route::get('subir',function (){
     return view('estudiante.SubirArchivos');
 });
 
-Auth::routes();
+
+
+
+
+/*
 Route::resource('administradores',AdministradoresController::class);
 Route::resource('docentes',DocentesController::class);
 Route::resource('estudiantes',EstudiantesController::class);
+
+
+Route::get('/administrador', [App\Http\Controllers\AdministradoresController::class, 'index'])
+    ->middleware('admin')
+    ->name('administrador');
+
+
+Route::get('/administrador', [App\Http\Controllers\AdministradoresController::class, 'index'])->name('administrador');
+Route::get('/docente', [App\Http\Controllers\DocentesController::class, 'index'])->name('docente');
+Route::get('/estudiante', [App\Http\Controllers\EstudiantesController::class, 'index'])->name('estudiante');
+*/
+//Register y Login
+
+Auth::routes();
+
+Route::resource('administradores',AdministradoresController::class);
+Route::resource('docentes',DocentesController::class);
+Route::resource('estudiantes',EstudiantesController::class);
+

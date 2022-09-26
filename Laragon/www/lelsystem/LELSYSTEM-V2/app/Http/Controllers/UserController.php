@@ -13,20 +13,16 @@ use Illuminate\Http\Request;
 class UserController extends Controller
 {
 
-    public function __construct(){
-
-        $this->middleware('auth');
-    }
      public function index(){
-        $users =  User::all();
-        return view('admin.admin.admin', compact('users'));
+        $user =  User::all();
+        return view('admin.admin.admin', compact('user'));
 
      }
 
 
     public function create() {
 
-        
+
         return view('auth.register');
     }
 

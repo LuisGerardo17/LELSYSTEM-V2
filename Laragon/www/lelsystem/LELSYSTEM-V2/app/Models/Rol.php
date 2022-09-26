@@ -9,8 +9,8 @@ class Rol extends Model
 {
     use HasFactory;
    protected $guarded = [];
-   
-   public function users()
+
+   public function user()
    {
        return $this->belongsToMany(User::class)->withTimestamps();
    }

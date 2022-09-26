@@ -1,4 +1,4 @@
-@extends('estudiante.layouts.estudiante')
+@extends('layouts.applr')
 @section('titulo','Estudiantes')
 @section('contenido')
 

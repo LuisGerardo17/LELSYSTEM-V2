@@ -13,41 +13,43 @@ class UserTableSeeder extends Seeder
     public function run()
     {
        //Crearemos un Administrador.
-       $user = User::create([
 
-        'cedula' => '1720545678',
-        'nombres' =>'Luis',
-        'apellidos'=>'Pozo',
-        'correo'=> 'dmin@gmail.com',
-        'direccion'=>'Cdla.Ibarra',
-        'contrasena' => Hash::make('admin'),
-        'telefono'=>'0987295066',
-        'imagen'=>'uploadsEstudiante/216qrrGe2epvD0qIOOELOqUCCuSuuSAZsJkmuBCW.jpg',
-        'rol' => 'Administrador',
-       ]);
+          $user1 = new User();
+          $user1->cedula = '1720545678';
+          $user1->nombres ='Luis';
+          $user1->apellidos ='Pozo';
+          $user1->correo = 'admin@gmail.com';
+          $user1->direccion='Cdla.Ibarra';
+          $user1->contrasena = Hash::make('admin');
+          $user1->telefono= '0987295066';
+          $user1->imagen='uploadsEstudiante/216qrrGe2epvD0qIOOELOqUCCuSuuSAZsJkmuBCW.jpg';
+          $user1->rol ='Administrador';
+          $user1->save();
 
-    $user = User::create([
-        'cedula' => '1734563452',
-        'nombres' =>'Jose',
-        'apellidos'=>'Paez',
-        'correo'=> 'jose@gmail.com',
-        'direccion'=>'La Mena Dos',
-        'contrasena' => Hash::make('123'),
-        'telefono'=>'0987223452',
-        'imagen'=>'uploadsEstudiante/216qrrGe2epvD0qIOOELOqUCCuSuuSAZsJkmuBCW.jpg',
-        'rol' => 'Docente',
-    ]);
+          $user2 = new User();
+          $user2->cedula = '1724567890';
+          $user2->nombres ='Jose';
+          $user2->apellidos ='Paez';
+          $user2->correo = 'docente@gmail.com';
+          $user2->direccion='Cdla.Ibarra';
+          $user2->contrasena = Hash::make('123');
+          $user2->telefono= '0987295066';
+          $user2->imagen='uploadsEstudiante/216qrrGe2epvD0qIOOELOqUCCuSuuSAZsJkmuBCW.jpg';
+          $user2->rol ='Docente';
+          $user2->save();
 
-    $user = User::create([
-        'cedula' => '1720234562',
-        'nombres' =>'David',
-        'apellidos'=>'Erazo',
-        'correo'=> 'david@gmail.com',
-        'direccion'=>'Cdla.Ibarra',
-        'contrasena' => Hash::make('1234'),
-        'telefono'=>'0843563333',
-        'imagen'=>'uploadsEstudiante/OOXxoeIfjfbnpJLKmw4rFo3fqPoPoKdsqUa9rSwh.jpg',
-        'rol' => 'Estudiante',
-       ]);
+          $user3 = new User();
+          $user3->cedula = '1755567823';
+          $user3->nombres ='Andres';
+          $user3->apellidos ='Acosta';
+          $user3->correo = 'andres@gmail.com';
+          $user3->direccion='Cdla.Ibarra';
+          $user3->contrasena = Hash::make('1234');
+          $user3->telefono= '0987295034';
+          $user3->imagen='uploadsEstudiante/216qrrGe2epvD0qIOOELOqUCCuSuuSAZsJkmuBCW.jpg';
+          $user3->rol ='Estudiante';
+          $user3->save();
+
+
     }
 }

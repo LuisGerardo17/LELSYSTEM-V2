@@ -17,19 +17,20 @@ class AdminAuth
     public function handle(Request $request, Closure $next)
     {
 
-       switch(auth::user()->rol){
-           case('Administrador'):
-               return $next($request);
-                break;
-            case('Docente'):
-                return redirect('docente');
-                break;
-            case('Estudiante'):
-                return redirect('estudiante');
-                break;
-                default:
-               return redirect('login');
-       }
+        switch(auth::user()->rol){
+            case('Administrador'):
+                return $next($request);
+                 break;
+             case('Docente'):
+                 return redirect('docentes');
+                 break;
+             case('Estudiante'):
+                 return redirect('estudiantes');
+                 break;
+
+        }
+
+
 
     }
 }

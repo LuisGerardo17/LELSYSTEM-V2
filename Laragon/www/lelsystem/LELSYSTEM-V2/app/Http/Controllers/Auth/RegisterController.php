@@ -10,7 +10,6 @@ use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 
-use Illuminate\Support\Facades\Auth;
 class RegisterController extends Controller
 {
     /*
@@ -31,18 +30,17 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = 'login';
+    protected $redirectTo = RouteServiceProvider::HOME;
 
     /**
      * Create a new controller instance.
      *
      * @return void
-     * public function __construct()
-    *{
-        *$this->middleware('guest');
-    *}
      */
-
+    public function __construct()
+    {
+        $this->middleware('guest');
+    }
 
     /**
      * Get a validator for an incoming registration request.
@@ -50,20 +48,13 @@ class RegisterController extends Controller
      * @param  array  $data
      * @return \Illuminate\Contracts\Validation\Validator
      */
-
-     public function index() {
-
-           return view('auth.register');
-     }
-
     protected function validator(array $data)
     {
         return Validator::make($data, [
             'cedula' => ['required', 'string', 'max:10'],
-            'nombres' => ['required', 'string', 'max:100'],
-            'correo' => ['required', 'string', 'email', 'max:50'],
-            'contrasena' => ['required', 'string', 'min:3','max:10', 'confirmed'],
-
+            'nombres' => ['required', 'string', 'max:255'],
+            'correo' => ['required', 'string', 'max:50'],
+            'contrasena' => ['required', 'string', 'min:3', 'confirmed'],
         ]);
     }
 
@@ -73,19 +64,15 @@ class RegisterController extends Controller
      * @param  array  $data
      * @return \App\Models\User
      */
-
-
-
     protected function create(array $data)
     {
-        $user = User::create([
+          User::create([
             'cedula' => $data['cedula'],
             'nombres' => $data['nombres'],
             'correo' => $data['correo'],
             'contrasena' => Hash::make($data['contrasena']),
-
         ]);
-        $user->roles()->attach(Rol::where('nombre', 'Estudiante')->first());
-        return $user;
+        //$user->roles()->attach(Rol::where('nombre', 'Estudiante')->first());
+       // return $user;
     }
 }

@@ -18,7 +18,7 @@ class DocenteAuth
     {
         switch(auth::user()->rol){
             case('Administrador'):
-                return redirect('administrador');
+                return redirect('administradores');
                  break;
              case('Docente'):
                 return $next($request);
@@ -27,8 +27,7 @@ class DocenteAuth
              case('Estudiante'):
                  return redirect('estudiantes');
                  break;
-             default:
-              return redirect('login');
+            
         }
     }
 }

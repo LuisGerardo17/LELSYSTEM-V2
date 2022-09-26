@@ -8,27 +8,29 @@
 <div class="login-box">
     <img class="avatar" src="static/img/logo5.png" alt="">
     <h1>LOGIN</h1>
-    <form class="row g-3 needs-validation" method="post" action="{{url('/login')}}">
+    <form class="row g-3 needs-validation" method="post" action="{{url('login')}}">
         @csrf
         <div class="col-md-12">
           <label for="validationCustomUsername" class="form-label">Correo</label>
 
           <input type="text" class="form-control" name="correo" id="validationCustomUsername" aria-describedby="inputGroupPrepend" placeholder="example.1@yavirac.edu.ec" required>
+          @error('crreo')
+          <p class="alertas">*{{$message}}</p>
+          @enderror
+         </div>
 
-        </div>
-         @error('message')
-         <p class="error"> *Error</p>
-         @enderror
-        <div class="col-md-12">
+         <div class="col-md-12">
             <label for="validationCustom03" class="form-label">Contraseña</label>
 
             <input type="password" class="form-control" name="contrasena" id="validationCustom03" placeholder="Contraseña" required>
-
-        </div>
+            @error('contrasena')
+            <p class="alertas">*{{$message}}</p>
+            @enderror
+         </div>
 
         <a class="o" href="#">¿Olvidaste tu contraseña?</a><br>
 
-        <div>
+        <div class="col-12">
             <button class="btn btn-primary" type="submit">Ingresar</button>
         </div>
 

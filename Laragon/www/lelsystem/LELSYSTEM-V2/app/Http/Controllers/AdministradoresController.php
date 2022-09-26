@@ -11,6 +11,7 @@ class AdministradoresController extends Controller
         $this->middleware('auth');
         $this->middleware('admin', ['only' => 'index']);
     }
+    
      public function index(){
 
         return view('administrador');

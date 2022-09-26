@@ -128,11 +128,6 @@ button{
 		</div>
 
         @yield('seccion')
-
-
-
-
-
     		<!--====== Scripts -->
             <script src="{{ asset('admin/js/jquery-3.1.1.min.js') }}"></script>
             <script src="{{ asset('admin/js/sweetalert2.min.js') }}"></script>

@@ -23,60 +23,33 @@
 			<!-- SideBar User info -->
 			<div class="full-box dashboard-sideBar-UserInfo">
 
-				<figure class="full-box">
-
-					<img src="{{ asset('admin/assets/img/avatar.jpg') }}" alt="UserIcon">
-
-				</figure>
-                @if(auth()->check())
-                <li class="mx-8">
-                  <p class="text-xl">Welcome <b>{{ auth()->user()->$nombres->firstOrFail() }}</b></p>
-                </li>
-                <li>
-                  <a href="{{ route('login.destroy') }}" class="font-bold
-                  py-3 px-4 rounded-md bg-red-500 hover:bg-red-600">Log Out</a>
-                </li>
-                @endif
-
-
-				<ul class="full-box list-unstyled text-center">
-
-					<li>
-						<a href="{{route('login.destroy')}}" class="btn-exit-system">
-							<i class="zmdi zmdi-power"></i>
-						</a>
-					</li>
-				</ul>
+             @if(auth()->check())
+             <li class="mx-8">
+                <p class="text-xl">Welcome <b>{{ auth()->user()->nombres }}</b></p>
+             </li>
+              <li>
+              <a href="{{ route('login.destroy') }}" class="font-bold
+             py-3 px-4 rounded-md bg-red-500 hover:bg-red-600">Log Out</a>
+            </li>
+          @else
+            <li class="mx-6">
+              <a href="{{ route('login') }}" class="font-semibold
+          hover:bg-indigo-700 py-3 px-4 rounded-md">Log In</a>
+           </li>
+            <li>
+          <a href="{{ route('register') }}" class="font-semibold
+          border-2 border-white py-2 px-4 rounded-md hover:bg-white
+          hover:text-indigo-700">Register</a>
+        </li>
+         @endif
 
 			</div>
 			<!-- SideBar Menu -->
 			<ul class="list-unstyled full-box dashboard-sideBar-Menu">
-				<li>
-					<a href="{{ Route('adminHome') }}">
-						<i class="zmdi zmdi-view-dashboard zmdi-hc-fw"></i> Dashboard
-					</a>
-				</li>
 
-				<li>
-					<a href="{{ url('admin/admin') }}"><i class="zmdi zmdi-account zmdi-hc-fw"></i> Administrar Admin</a>
+                  <li>
+					<a href="{{ route('homepage') }}"><i class="zmdi zmdi-account zmdi-hc-fw"></i>Homepage</a>
 				</li>
-				<li>
-					<a href="{{ url('Teacher/Teacher') }}"><i class="zmdi zmdi-male-alt zmdi-hc-fw"></i> Administrar docente</a>
-				</li>
-                <li>
-					<a href="{{ url('admin/estudiante') }}"><i class="zmdi zmdi-face"></i> Administrar estudiante</a>
-				</li>
-				<li>
-					<a href="{{ url('activities/activities') }}"><i class="zmdi zmdi-book zmdi-hc-fw"></i> Administrar actividad</a>
-				</li>
-				<li>
-					<a href="{{ url('admin/cursos') }}"><i class="zmdi zmdi-balance zmdi-hc-fw"></i> Administrar curso</a>
-				</li>
-				<li>
-					<a href="{{ url('admin/recursos') }}"><i class="zmdi zmdi-font zmdi-hc-fw"></i> Administrar Recursos</a>
-				</li>
-
-
 
 			</ul>
 		</div>
@@ -86,26 +59,7 @@
 		<!-- NavBar -->
 		<nav class="full-box dashboard-Navbar ">
 			<ul class="full-box list-unstyled text-right">
-				<li class="pull-left">
-					<a href="#!" class="btn-menu-dashboard"><i class="zmdi zmdi-more-vert"></i></a>
-				</li>
-				<li>
-					<a href="#!" class="btn-Notifications-area">
-						<i class="zmdi zmdi-notifications-none"></i>
-						<span class="badge">4</span>
-					</a>
-				</li>
-				<li>
-					<a href="#!" class="btn-search">
-						<i class="zmdi zmdi-search"></i>
-					</a>
-				</li>
-				<li>
-					<a href="#!" class="btn-modal-help">
-						<i class="zmdi zmdi-help-outline"></i>
-					</a>
-				</li>
-			</ul>
+
 		</nav>
 
 		@yield('contenido')
