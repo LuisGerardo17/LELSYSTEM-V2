@@ -22,7 +22,7 @@
 			<table class="table table-hover text-center">
 				<thead>
 					<th>Materia </th>
-					<th>Porciento</th>
+					<th>Porcentaje</th>
 					<th>Estado</th>
 				</thead>
 				<tbody>
