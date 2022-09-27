@@ -95,7 +95,7 @@ Route::resource('admin/cursos',CursoController::class);
     })->name('curseEdit');
 
 //Configuración
-Route::resource('/configuracion',ConfiguracionController::class);
+Route::resource('/configuracion',App\Http\Controllers\Admin\ConfiguracionController::class);
 
 /********************DOCENTE********************************** */
 

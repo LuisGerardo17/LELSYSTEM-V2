@@ -76,7 +76,7 @@
     @enderror
   </div>
   <div class="form-group label-floating">
-    <label class="control-label">telefono</label>
+    <label class="control-label">Telefono</label>
     <input class="form-control" type="text" name="telefono" value="{{ isset($admin) ? $admin->telefono : old('telefono') }}">
     @error('telefono')
         <p class="alertas">*{{$message}}</p>

@@ -39,37 +39,46 @@ v
 								<table class="table table-hover text-center">
 									<thead>
 										<tr>
-                                            <th class="text-center">Cedula</th>
-                                            <th class="text-center">Foto</th>
-											<th class="text-center">Nombres</th>
-											<th class="text-center">Apellido</th>
-											<th class="text-center">direccion</th>
-											<th class="text-center">Email</th>
+                                            <th class="text-center">Titulo</th>
+                                            <th class="text-center">Descripcion</th>
+                                            <th class="text-center">Imagen</th>
+											<th class="text-center">Logo</th>
+											<th class="text-center">Slogan</th>
+                                            <th class="text-center">Frase1</th>
+                                            <th class="text-center">Frase2</th>
+                                            <th class="text-center">Frase3</th>
+											<th class="text-center">Razon Social</th>
+                                            <th class="text-center">Celular</th>
 											<th class="text-center">Telefono</th>
+                                            <th class="text-center">Dirección</th>
+                                            <th class="text-center">Email</th>
+                                            <th class="text-center">Facebooh</th>
+                                            <th class="text-center">Youtube</th>
 											<th class="text-center">Update</th>
-											<th class="text-center">Delete</th>
+
 										</tr>
 									</thead>
 									<tbody>
-                                        @foreach($administradores as $admin)
+                                        @foreach($registro as $admin)
                                             <tr>
-                                                <td>{{ $admin->user->cedula }}</td>
-                                                <td><img src="{{ asset('storage').'/'.$admin->user->imagen }}" alt="" width="40px"></td>
-                                                <td>{{ $admin->user->nombres }}</td>
-                                                <td>{{ $admin->user->apellidos }}</td>
-                                                <td>{{ $admin->user->direccion }}</td>
-                                                <td>{{ $admin->user->correo }}</td>
-                                                <td>{{ $admin->user->telefono }}</td>
-                                                <td>
+                                                <td>{{ $admin->titulo }}</td>
+                                                <td>{{ $admin->descripcion }}</td>
+                                                <td><img src="{{ asset('storage').'/'.$admin->imagen }}" alt="" width="40px"></td>
+                                                <td><img src="{{ asset('storage').'/'.$admin->logo }}" alt="" width="40px"></td>
+                                                <td>{{ $admin->slogan }}</td>
+                                                <td>{{ $admin->frase1}}</td>
+                                                <td>{{ $admin->frase2}}</td>
+                                                <td>{{ $admin->frase3}}</td>
+                                                <td>{{ $admin->razonsocial}}</td>
+                                                <td>{{ $admin->celular}}</td>
+                                                <td>{{ $admin->telefono }}</td>
+                                                <td>{{ $admin->direccion}}</td>
+                                                <td>{{ $admin->email}}</td>
+                                                <td>{{ $admin->facebook}}</td>
+                                                <td>{{ $admin->youtube}}</td>
 
-                                                    <a href="{{ url('admin/admin/'. $admin->cedula .'/edit') }}" class="btn btn-success btn-raised btn-xs"><i class="zmdi zmdi-refresh"></i></a></td>
-
                                                 <td>
-                                                    <form action="{{ url('/admin/admin/').'/'.$admin->cedula }}" method="post" class="Eliminar">
-                                                        @csrf
-                                                        {{ method_field('DELETE') }}
-                                                        <button type="submit"><a class="btn btn-danger btn-raised btn-xs"><i class="zmdi zmdi-delete"></i></a></button>
-                                                    </form>
+                                                    <a href="{{ url('/configuracion'. $admin->id .'/edit') }}" class="btn btn-success btn-raised btn-xs"><i class="zmdi zmdi-refresh"></i></a>
                                                 </td>
                                             </tr>
                                         @endforeach
@@ -77,7 +86,7 @@ v
 
 									</tbody>
 								</table>
-								{!! $administradores->links() !!}
+								{!! $registros->links() !!}
 							</div>
 					  	</div>
 					</div>
