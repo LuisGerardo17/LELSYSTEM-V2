@@ -1,5 +1,5 @@
 /*========= Importando hojas de estilo =========*/
-/* Bootstrap 3.3.7 */
+/* c */
 @import url('./bootstrap.min.css');
 /* Material desing for Bootstrap */
 @import url('./bootstrap-material-design.min.css');
@@ -761,9 +761,14 @@ body, html{
 
 .aprobado{
     background-color: rgb(39, 133, 39);
+	color: #fff;
 }
 .reprobado{
     background-color: rgb(238, 57, 57);
+	color: #fff;
+}
+.justificado{
+	background-color: yellow;
 }
 
 .partes{
@@ -786,5 +791,8 @@ body, html{
 }
 .botonmas button span{
 	margin-left: 5px;
+}
+.margin{
+	margin-top: 20px;
 }
 

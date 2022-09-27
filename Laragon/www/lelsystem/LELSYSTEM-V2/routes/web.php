@@ -209,8 +209,28 @@ Route::get("estudiante", function (){
 
 Route::get('subir',function (){
     return view('estudiante.SubirArchivos');
+<<<<<<< HEAD
 }); 
 
 /*Route::get('activities',function(){
     return view('docente.materias.activities');
 });*/
+=======
+});
+Route::get('notas',function (){
+    return view('estudiante.notas.verNotas');
+});
+Route::get('notasmateria',function (){
+    return view('estudiante.notas.vernotasMateria');
+});
+Route::get('listado',function (){
+    return view('estudiante.listadoscursos.listado');
+});
+Route::get('asistencias',function (){
+    return view('estudiante.listadoscursos.verAsistencias');
+
+});
+Route::get('recursos', function () {
+    return view('estudiante.recursos');
+});
+>>>>>>> 0c9fcdac9571dcfda18d9d8aedd1bc3cbb0a3655

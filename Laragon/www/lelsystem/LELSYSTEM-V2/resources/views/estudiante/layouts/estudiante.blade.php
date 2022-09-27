@@ -1,8 +1,4 @@
 
-
-
-
-
     <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -18,12 +14,12 @@
 	z-index: 0;
 	padding-left: 0px;
 }
-.tile{
+.tilel{
     width: 300px;
 	height: 450px;
-
+    
 }
-.tile-icon{
+.tile-icono{
 	bottom: 0;
 	height: 400px;
 	width: 300px;
@@ -37,14 +33,13 @@ p{
     color: #000;
 }
 .sup {
-    padding-bottom: 20px;
+    padding-bottom: 20px; 
 }
-.img {
+img {
     padding: 5px;
-    border-radius: 20px 0;
 }
 .dashboard-Navbar{
-	background-color: #009688;
+	background-color: #009688; 
 	overflow: hidden;
 }
 
@@ -63,10 +58,11 @@ p{
 }
 .a{
 	color: #fff;
+	padding: 20px;
 }
 .a:hover{
-    color: #009688;
-    text-decoration: none;
+	color: #009688;
+	text-decoration:  none;
 }
 button{
 	background: transparent;
@@ -81,34 +77,34 @@ button{
 	float: right;
 	display: none;
 	position: relative;
-    top: 45px;
+    top: 40px;
 	left: 13%;
+    
 }
 .activo{
 	display: block;
 }
 .ul{
-	background: rgba(0, 0, 0, 0.788);
-    padding: 0 40px;
+	background: #000;
+	list-style-type: none;
+	padding: 7px;
 }
 .li{
-	margin: .5em 0;
-    list-style: none;
-}
-.center{
-    display: flex;
-    align-items: center;
-    height: 80px;
+	margin-top: 20px;
+	margin-bottom: 20px;
 }
 .overlay{
 	background: rgba(0, 0, 0, 0.856);
 	left: 0;
 }
+.partes{
+	height: 90vh;
+}
 </style>
 <body>
 
 
-	<!-- menu-->
+	<!-- menu
 	<section class="full-box dashboard-contentPage" style="background-color: @yield('fondo')">
 
 		<div class="Navbar-superior">
@@ -122,13 +118,42 @@ button{
 			<nav class="nav" id="nav">
 			    <ul class="ul" >
 				    <li class="li">
-						<a class="a" href="#">Area personal</a>
+						<a class="a" href="#">Ver notas</a>
+					</li>
+					<li class="li">
+						<a class="a" href="#">Ver asistencias</a>
 					</li>
 				    <li class="li">
-						<a class="a" href="#">Cerrar sección</a>
+						<a class="a" href="#">Cerrar sesión</a>
 					</li>
 			    </ul>
 			</nav>
+		</div>-->
+		<!-- menu-->
+	<section class="full-box dashboard-contentPage" style="background-color: @yield('fondo')">
+	        
+		<div class="Navbar-superior">
+		    <img class="logoEmpresa" width="150px" src="{{ asset('static/img/logo5.png') }}" alt="">
+			<img  class="avatar" width="100px" src="{{ asset('admin/assets/img/avatar.jpg') }}" alt="">
+			<button id="button">
+			    NOMBRE ESTUDIANTE<i class="zmdi-hc-fw zmdi zmdi-caret-down"></i>
+			</button>
+			<nav class="nav" id="nav">
+			    <ul class="ul" >
+				    <li class="li">
+						<a class="a" href="{{ url('/notas') }}"><i class="zmdi zmdi-n-1-square zmdi-hc-fw"></i> Notas</a>
+					</li>
+					<li class="li">
+						<a class="a" href="{{ url('/asistencias') }}"><i class="zmdi zmdi-account-box zmdi-hc-fw"></i> Asistencias</a>
+					</li>
+					<!--<li class="li">
+						<a class="a" href="#"><i class="zmdi zmdi-settings zmdi-hc-fw"></i> Configuración</a>
+					</li>-->
+				    <li class="li">
+						<a class="a" href="#"><i class="zmdi zmdi-long-arrow-tab zmdi-hc-fw"></i> Cerrar sessión</a>
+					</li>
+			    </ul>
+			</nav>	
 		</div>
 
         @yield('seccion')
@@ -164,7 +189,7 @@ button{
 				btnCerrarPopup.addEventListener("click", function(){
 					subirArven.classList.remove("active");
         		});
-	            
+
             </script>
     </body>
     </html>
