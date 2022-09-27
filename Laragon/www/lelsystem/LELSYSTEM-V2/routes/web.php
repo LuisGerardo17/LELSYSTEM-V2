@@ -64,7 +64,7 @@ Route::get('/docente.informatica', [App\Http\Controllers\InformaticaController::
 Route::get('/docente.mecanica', [App\Http\Controllers\MecanicaController::class, 'index'])->name('mecanica');
 Route::get('/docente.electricidad', [App\Http\Controllers\ElectricidadController::class, 'index'])->name('electricidad');
 
-/****************************Administrador****************************************/
+/****************************ADMINISTRADOR****************************************/
 
 
 Route::get('/homeadmin',function (){
@@ -85,7 +85,7 @@ Route::resource('admin/cursos',CursoController::class);
     })->name('login');
 */
 
-    //courses
+//courses
     Route::get('/admin.curse',function (){
         return view('admin.courses.curse');
     })->name('curse');
@@ -94,13 +94,16 @@ Route::resource('admin/cursos',CursoController::class);
         return view('admin.courses.curseEdit');
     })->name('curseEdit');
 
+//Configuración
+Route::resource('/configuracion',ConfiguracionController::class);
 
+/********************DOCENTE********************************** */
 
 //matricula
 
 Route::resource('matricula',MatriculaController::class);
 
-//endmatricula
+
 
 
 //ADMINISTRAR ESTUDIANTE
