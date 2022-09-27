@@ -7,11 +7,11 @@ use Illuminate\Http\Request;
 
 class ActivitiesController extends Controller 
 {
-    /** 
+    /**  
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
-     */
+     */ 
     public function index()  
     {
         $actividades=Actividades::all(); 
@@ -27,7 +27,7 @@ class ActivitiesController extends Controller
     public function create()
     {
         //
-    } 
+    }   
 
     /**
      * Store a newly created resource in storage.
@@ -65,7 +65,7 @@ class ActivitiesController extends Controller
         //return $act;
         return view('admin.activities.activitiesEdit', compact('act'));
     }
-
+ 
     /**
      * Update the specified resource in storage.
      *

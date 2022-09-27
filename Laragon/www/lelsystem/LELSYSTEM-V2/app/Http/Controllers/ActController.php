@@ -1,24 +1,22 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Models\TipoArchivos;
-use App\Models\Recursos;
+
 use App\Models\Actividades;
 use Illuminate\Http\Request;
 
-class ActividadDocController extends Controller
-{
-    /** 
+class ActController extends Controller
+{ 
+    /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
     public function index()
     {
-        $forms=TipoArchivos::all();
-        $recursos=Recursos::paginate(10);
-        $actividad=Actividades::all();
-        return view('docente.materias.materias', compact('actividad','recursos','forms'));
+        $actividades=Actividades::all(); 
+        notify()->preset('Actividad registrada');
+        return view('docente.materias.activities', compact('actividades'));
     }
 
     /**
@@ -29,8 +27,8 @@ class ActividadDocController extends Controller
     public function create()
     {
         //
-    } 
- 
+    }
+
     /**
      * Store a newly created resource in storage.
      *
@@ -40,10 +38,6 @@ class ActividadDocController extends Controller
     public function store(Request $request)
     {
         
-        $datosActividades=Request()->except('_token');
-        Actividades::insert($datosActividades);
-        return redirect('ActividadDoc');
-
     }
 
     /**
@@ -54,8 +48,8 @@ class ActividadDocController extends Controller
      */
     public function show(Actividades $actividades)
     {
-        // 
-    } 
+        //
+    }
 
     /**
      * Show the form for editing the specified resource.
@@ -63,8 +57,8 @@ class ActividadDocController extends Controller
      * @param  \App\Models\Actividades  $actividades
      * @return \Illuminate\Http\Response
      */
-    public function edit($actividades)
-    {
+    public function edit( $actividades)
+    { 
         $act=Actividades::find($actividades);
         return view('docente.materias.actividadEdit', compact('act'));
     }
@@ -80,7 +74,7 @@ class ActividadDocController extends Controller
     {
         $datos1=$request->except(['_token','_method']);
         Actividades::where('codigo_actividad','=',$id)->update($datos1);
-        return redirect('actividadEdit');
+        return redirect('Act');
     }
 
     /**
@@ -93,6 +87,6 @@ class ActividadDocController extends Controller
     {
         Actividades::destroy($id);
         notify()->preset('Actividad eliminada'); 
-        return redirect('actividadEdit'); 
+        return redirect('Act'); 
     }
 }

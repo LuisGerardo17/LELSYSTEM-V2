@@ -7,7 +7,7 @@
                         <div>
                             <input type="text" readonly="" class="form-control" placeholder="icono clase...">
                             <input type="file">
-                        </div>
+                        </div> 
                     </div>
                     <div class="form-group label-floating">
                         <label class="control-label">descripccion</label>

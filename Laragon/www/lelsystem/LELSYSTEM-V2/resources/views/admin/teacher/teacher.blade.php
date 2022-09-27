@@ -63,7 +63,7 @@
                                                 <td>
 
                                                     <a href="{{ url('Teacher/Teacher/'. $admin->cedula .'/edit') }}" class="btn btn-success btn-raised btn-xs"><i class="zmdi zmdi-refresh"></i></a></td>
-
+ 
                                                 <td>
                                                     <form action="{{ url('/Teacher/Teacher/').'/'.$admin->cedula }}" method="post" class="Eliminar">
                                                         @csrf

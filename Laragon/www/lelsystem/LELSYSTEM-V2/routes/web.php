@@ -22,6 +22,8 @@ use App\Http\Controllers\ActividadDocController;
 use App\Http\Controllers\listaMatriculadoController;
 use App\Http\Controllers\listaCursoController;
 use App\Http\Controllers\RecursosDocController;
+use App\Http\Controllers\ActController;
+
 
 Route::get('/',function (){return redirect('/homepage');});
 Route::get('/homepage',function (){
@@ -150,6 +152,8 @@ Route::resource('estudiante-registro',RegistroEstudiantesController::class);
 //Actividades->Leonardo
 Route::resource('activities/activities',ActivitiesController::class);
 Route::resource('ActividadDoc',ActividadDocController::class);
+Route::resource('Act',ActController::class);
+
 //Recursos Leonardo
 Route::resource('RecursosDoc',RecursosDocController::class);
 
@@ -157,16 +161,26 @@ Route::resource('RecursosDoc',RecursosDocController::class);
 Route::resource('matricula',MatriculaController::class);
 //Route::resource('listaestudiantes',MatriculaController::class);
 //Route::resource('estudiantes',ListaController::class);
-
+ 
 
 //Buscar->Leonardo
 Route::resource('buscar',BuscarController::class);
 Route::resource('lista',ListaEstudiantesController::class);
 Route::resource('listaMatriculado',listaMatriculadoController::class);
 Route::resource('listaxcurso',listaCursoController::class);
+
 //docente
+//Arte culinario
 Route::get('docente', function () {
-    return view('docente.inicio');
+    return view('docente.inicio'); 
+});
+//Mecanica
+Route::get('mecanica', function () {
+    return view('docente.mecanica'); 
+});
+//Informatica
+Route::get('informatica', function () {
+    return view('docente.informatica'); 
 });
 /*Route::get('materias', function () {
     return view('docente.materias.materias');
@@ -191,8 +205,12 @@ Route::get('/m',function (){
 
 Route::get("estudiante", function (){
     return view("estudiante.inicioestudiante");
-});
+}); 
 
 Route::get('subir',function (){
     return view('estudiante.SubirArchivos');
-});
+}); 
+
+/*Route::get('activities',function(){
+    return view('docente.materias.activities');
+});*/
