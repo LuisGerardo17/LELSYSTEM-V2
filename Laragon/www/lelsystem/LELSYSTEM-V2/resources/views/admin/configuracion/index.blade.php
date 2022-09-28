@@ -1,6 +1,6 @@
-v
+
 @extends('admin.layouts.admin')
-@section('titulo','Configuracion')
+@section('titulo','Admin')
 @section('contenido')
 		<!-- Content page -->
 
@@ -41,44 +41,51 @@ v
 										<tr>
                                             <th class="text-center">Titulo</th>
                                             <th class="text-center">Descripcion</th>
-                                            <th class="text-center">Imagen</th>
+											<th class="text-center">Imagen</th>
 											<th class="text-center">Logo</th>
 											<th class="text-center">Slogan</th>
-                                            <th class="text-center">Frase1</th>
-                                            <th class="text-center">Frase2</th>
+											<th class="text-center">Frase1</th>
+											<th class="text-center">Frase2</th>
                                             <th class="text-center">Frase3</th>
-											<th class="text-center">Razon Social</th>
+                                            <th class="text-center">Razon Socail</th>
                                             <th class="text-center">Celular</th>
-											<th class="text-center">Telefono</th>
-                                            <th class="text-center">Dirección</th>
+                                            <th class="text-center">Telefono</th>
+                                            <th class="text-center">Direccion</th>
                                             <th class="text-center">Email</th>
-                                            <th class="text-center">Facebooh</th>
+                                            <th class="text-center">Facebook</th>
                                             <th class="text-center">Youtube</th>
 											<th class="text-center">Update</th>
-
+											<th class="text-center">Delete</th>
 										</tr>
 									</thead>
 									<tbody>
-                                        @foreach($registro as $admin)
+                                        @foreach($registros as $admin)
                                             <tr>
                                                 <td>{{ $admin->titulo }}</td>
                                                 <td>{{ $admin->descripcion }}</td>
-                                                <td><img src="{{ asset('storage').'/'.$admin->imagen }}" alt="" width="40px"></td>
-                                                <td><img src="{{ asset('storage').'/'.$admin->logo }}" alt="" width="40px"></td>
+                                                <td><img src="{{ 'static/img/configuracion'.$admin->imagen }}" alt="" width="40px"></td>
+                                                <td><img src="{{ 'static/img/configuracion'.$admin->logo }}" alt="" width="40px"></td>
                                                 <td>{{ $admin->slogan }}</td>
-                                                <td>{{ $admin->frase1}}</td>
-                                                <td>{{ $admin->frase2}}</td>
-                                                <td>{{ $admin->frase3}}</td>
-                                                <td>{{ $admin->razonsocial}}</td>
-                                                <td>{{ $admin->celular}}</td>
+                                                <td>{{ $admin->frase1 }}</td>
+                                                <td>{{ $admin->frase2 }}</td>
+                                                <td>{{ $admin->frase3 }}</td>
+                                                <td>{{ $admin->razonsocial }}</td>
+                                                <td>{{ $admin->celular }}</td>
                                                 <td>{{ $admin->telefono }}</td>
-                                                <td>{{ $admin->direccion}}</td>
-                                                <td>{{ $admin->email}}</td>
-                                                <td>{{ $admin->facebook}}</td>
-                                                <td>{{ $admin->youtube}}</td>
+                                                <td>{{ $admin->direccion }}</td>
+                                                <td>{{ $admin->email }}</td>
+                                                <td>{{ $admin->facebook }}</td>
+                                                <td>{{ $admin->youtube }}</td>
+                                                <td>
+
+                                                    <a href="{{ url('/configuracion'. $admin->id .'/edit') }}" class="btn btn-success btn-raised btn-xs"><i class="zmdi zmdi-refresh"></i></a></td>
 
                                                 <td>
-                                                    <a href="{{ url('/configuracion'. $admin->id .'/edit') }}" class="btn btn-success btn-raised btn-xs"><i class="zmdi zmdi-refresh"></i></a>
+                                                    <form action="{{ url('/configuracion').'/'.$admin->id }}" method="post" class="Eliminar">
+                                                        @csrf
+                                                        {{ method_field('DELETE') }}
+                                                        <button type="submit"><a class="btn btn-danger btn-raised btn-xs"><i class="zmdi zmdi-delete"></i></a></button>
+                                                    </form>
                                                 </td>
                                             </tr>
                                         @endforeach
