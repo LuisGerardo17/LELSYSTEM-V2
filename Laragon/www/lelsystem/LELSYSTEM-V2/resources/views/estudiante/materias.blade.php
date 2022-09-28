@@ -46,13 +46,13 @@
                 <div class="row espacio">
                     <center>
                         <div class="row espacio flex">
-                            <a href="#">
+                            <a href="{{ url('/notasmateria') }}">
                                 <div class="col espacio2">
                                     <h3 class="text-center">Notas</h3>
                                     <img class="margin" src="{{ asset('admin/assets/img/notas.png') }}" width="150px" alt="">
                                 </div>
                             </a>
-                            <a href="#">
+                            <a href="{{ url('/listado') }}">
                                 <div class="col espacio2">
                                     <h3 class="text-center">Asistencias</h3>
                                     <img src="{{ asset('admin/assets/img/listado.jpg') }}" width="250px" alt="">
@@ -104,7 +104,7 @@
                     <h3>Deberes</h3>
                     <div class="flex2">
                         <div class="campos">
-                            <a class="link" href=""><p>Lorem </p></a>
+                            <a class="link" href="{{ url('/subir') }}"><p>Lorem </p></a>
                         </div>
                         <div class="campos">
                             <a class="link" href=""><p>Lorem </p></a>
@@ -138,7 +138,7 @@
                     <h3>Examenes</h3>
                     <div class="flex2">
                         <div class="campos">
-                            <a class="link" href=""><p>Lorem </p></a>
+                            <a class="link" href="{{ url('/subir') }}"><p>Lorem </p></a>
                         </div>
                         <div class="campos">
                             <a class="link" href=""><p>Lorem </p></a>

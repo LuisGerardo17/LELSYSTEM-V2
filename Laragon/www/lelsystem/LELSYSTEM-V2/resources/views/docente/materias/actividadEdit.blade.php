@@ -1,33 +1,31 @@
-@extends('admin.layouts.admin')
-
-@section('titulo','Section')
-@section('contenido')
-<!-- Content page -->
+@extends('docente.layouts.activitiesDoce')
+@section('titulo', 'Materias')
+@section('seccion')
+<!-- Content page --> 
 <div class="container-fluid">
-	<div class="page-header">
+	<div class="page-header"> 
 		<h1 class="text-titles"><i class="zmdi zmdi-book zmdi-hc-fw"></i> Actividades <small>Activities</small></h1>
 	</div>
 	<p class="lead">Las actividades son todas aquellas tareas o labores que cada individuo ejerce diariamente, están las actividades laborales, las actividades escolares, las actividades recreativas, las actividades físicas, etc.</p>
 </div>
 <div class="container-fluid">
 	<div class="row">
-		<div class="col-xs-12">      
+		<div class="col-xs-12">
 			<ul class="nav nav-tabs" style="margin-bottom: 15px;">
-				<li class="active"><a href="#new" data-toggle="tab">New</a></li>
-				<li><a href="#list" data-toggle="tab">List</a></li>
+				<li class="active"><a href="#new" data-toggle="tab">Editar Actividad</a></li>
 			</ul>
 			<div id="myTabContent" class="tab-content">
-				<div class="tab-pane fade active in" id="new"> 
+				<div class="tab-pane fade active in" id="new">
 					<div class="container-fluid">
 						<div class="row">
 							<div class="col-xs-12 col-md-10 col-md-offset-1">
-								<form action="{{ url('activities/activities/'.$act->codigo_actividad) }}" method="POST">
-								@csrf   
-								@method('PUT')   
+								<form action="{{ url('Act/'.$act->codigo_actividad) }}" method="POST">
+								@csrf  
+								@method('PUT')  
 									<div class="form-group label-floating">
 										<label class="control-label">Codigo</label>
 										<input class="form-control" type="text" name="codigo_actividad" value="{{$act->codigo_actividad}}">
-									</div>
+									</div> 
 									<div class="form-group label-floating">
 										<label class="control-label">Nombre</label>
 										<input class="form-control" type="text" name="nombre_actividad" value="{{$act->nombre_actividad}}">

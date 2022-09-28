@@ -11,19 +11,19 @@
 </div>
 <div class="container-fluid">
 	<div class="row">
-		<div class="col-xs-12">      
+		<div class="col-xs-12">
 			<ul class="nav nav-tabs" style="margin-bottom: 15px;">
 				<li class="active"><a href="#new" data-toggle="tab">New</a></li>
 				<li><a href="#list" data-toggle="tab">List</a></li>
 			</ul>
 			<div id="myTabContent" class="tab-content">
-				<div class="tab-pane fade active in" id="new"> 
+				<div class="tab-pane fade active in" id="new">
 					<div class="container-fluid">
 						<div class="row">
 							<div class="col-xs-12 col-md-10 col-md-offset-1">
 								<form action="{{ url('activities/activities/'.$act->codigo_actividad) }}" method="POST">
-								@csrf   
-								@method('PUT')   
+								@csrf  
+								@method('PUT')  
 									<div class="form-group label-floating">
 										<label class="control-label">Codigo</label>
 										<input class="form-control" type="text" name="codigo_actividad" value="{{$act->codigo_actividad}}">

@@ -141,10 +141,10 @@ button{
 			<nav class="nav" id="nav">
 			    <ul class="ul" >
 				    <li class="li">
-						<a class="a" href="#"><i class="zmdi zmdi-n-1-square zmdi-hc-fw"></i> Notas</a>
+						<a class="a" href="{{ url('/notas') }}"><i class="zmdi zmdi-n-1-square zmdi-hc-fw"></i> Notas</a>
 					</li>
 					<li class="li">
-						<a class="a" href="#"><i class="zmdi zmdi-account-box zmdi-hc-fw"></i> Asistencias</a>
+						<a class="a" href="{{ url('/asistencias') }}"><i class="zmdi zmdi-account-box zmdi-hc-fw"></i> Asistencias</a>
 					</li>
 					<!--<li class="li">
 						<a class="a" href="#"><i class="zmdi zmdi-settings zmdi-hc-fw"></i> Configuración</a>

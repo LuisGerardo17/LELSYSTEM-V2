@@ -22,6 +22,8 @@ use App\Http\Controllers\ActividadDocController;
 use App\Http\Controllers\listaMatriculadoController;
 use App\Http\Controllers\listaCursoController;
 use App\Http\Controllers\RecursosDocController;
+use App\Http\Controllers\ActController;
+
 
 Route::get('/',function (){return redirect('/homepage');});
 Route::get('/homepage',function (){
@@ -153,6 +155,8 @@ Route::resource('estudiante-registro',RegistroEstudiantesController::class);
 //Actividades->Leonardo
 Route::resource('activities/activities',ActivitiesController::class);
 Route::resource('ActividadDoc',ActividadDocController::class);
+Route::resource('Act',ActController::class);
+
 //Recursos Leonardo
 Route::resource('RecursosDoc',RecursosDocController::class);
 
@@ -167,12 +171,20 @@ Route::resource('buscar',BuscarController::class);
 Route::resource('lista',ListaEstudiantesController::class);
 Route::resource('listaMatriculado',listaMatriculadoController::class);
 Route::resource('listaxcurso',listaCursoController::class);
+
 //docente
+//Arte culinario
 Route::get('docente', function () {
     return view('docente.inicio');
 });
-
-
+//Mecanica
+Route::get('mecanica', function () {
+    return view('docente.mecanica');
+});
+//Informatica
+Route::get('informatica', function () {
+    return view('docente.informatica');
+});
 /*Route::get('materias', function () {
     return view('docente.materias.materias');
 });*/
@@ -209,10 +221,12 @@ Route::get('notasmateria',function (){
 });
 Route::get('listado',function (){
     return view('estudiante.listadoscursos.listado');
-
-    return view('estudiante.verNotas');
 });
 Route::get('asistencias',function (){
-    return view('estudiante.verAsistencias');
+    return view('estudiante.listadoscursos.verAsistencias');
 
+});
+
+Route::get('recursos', function () {
+    return view('estudiante.recursos');
 });

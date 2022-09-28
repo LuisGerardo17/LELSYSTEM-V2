@@ -5,7 +5,7 @@
 		<!-- Content page -->
 		<div class="container-fluid">
 			<div class="page-header">
-			  <h1 class="text-titles titulo">ARTE CULINARIO</h1>
+			  <h1 class="text-titles titulo">MECANICA</h1>
 		    </div>
             <a class="edit" id="edit"><i class="zmdi zmdi-edit zmdi-hc-fw"></i>Editar</a>
             <div class="imagenPresentacion">
@@ -17,7 +17,7 @@
                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consectetur similique doloremque dignissimos molestiae? Sed veniam quaerat nostrum, reiciendis quos eius deleniti. Ex optio labore nemo dignissimos nesciunt harum qui architecto?</p>
                     <h2>Datos personales</h2>
                 </div>
-                <center>         
+                <center>
                     <div class="row espacio flex">
                         <div class="col espacio2">
                             <h3 class="text-center">Foto</h3>
@@ -43,38 +43,30 @@
                 <div class="row espacio">
                     <h3>Recursos</h3>
                     <div class="flex2">
-                    @foreach ($recursos as $rec)
                         <div class="campos">
-                            <a class="link" href=""><p>{{$rec->nombre_recurso}}</p></a>
+                            <a class="link" href=""><p></p></a>
                         </div>
-					@endforeach
-                    @foreach ($forms as $form)
                     <div class="campos">
-                            <a class="link" href=""><p>{{$form->tipo}}</p></a>
+                            <a class="link" href=""><p></p></a>
                         </div>
-					@endforeach
                     </div>
                 </div>
                 <a class="edit" id="parcialDos"><i class="zmdi zmdi-plus zmdi-hc-fw"></i>Añadir</a>
                 <div class="row espacio">
                     <h3>Actividades</h3>
                     <div class="flex2">
-                    @foreach ($actividad as $item)
                         <div class="campos">
-                        <a class="link" href="{{url('Act')}}"><p>{{$item->nombre_actividad}}</p></a>
+                        <a class="link" href=""><p></p></a>
                         </div>
-					@endforeach
                     </div>
                 </div>
                 <a class="edit" id="parcialTres"><i class="zmdi zmdi-plus zmdi-hc-fw"></i>Añadir</a>
                 <div class="row espacio">
                     <h3>Examenes</h3>
                     <div class="flex2">
-                    @foreach ($actividad as $item)
                         <div class="campos">
-                            <a class="link" href=""><p>{{$item->descripcion}}</p></a>
+                            <a class="link" href=""><p></p></a>
                         </div>
-					@endforeach
                     </div>
                 </div>
             </div>
@@ -84,27 +76,22 @@
                 <div class="row espacio">
                     <h3>Recursos</h3>
                     <div class="flex2">
-                    @foreach ($recursos as $rec)
                         <div class="campos">
-                            <a class="link" href=""><p>{{$rec->nombre_recurso}}</p></a>
+                            <a class="link" href=""><p></p></a>
                         </div>
-					@endforeach
-                    @foreach ($forms as $form)
                     <div class="campos">
-                            <a class="link" href=""><p>{{$form->tipo}}</p></a>
+                            <a class="link" href=""><p></p></a>
                         </div>
-					@endforeach
                     </div>
                 </div>
                 <a class="edit" id="parcialDos"><i class="zmdi zmdi-plus zmdi-hc-fw"></i>Añadir</a>
                 <div class="row espacio">
-                    <h3>Actividades</h3>
+                    <h3>Deberes</h3>
                     <div class="flex2">
-                    @foreach ($actividad as $item)
                         <div class="campos">
-                            <a class="link" href="{{url('Act')}}"><p>{{$item->nombre_actividad}}</p></a>
+                            <a class="link" href=""><p></p></a>
                         </div>
-					@endforeach
+			
 
                     </div>
                 </div>
@@ -112,12 +99,12 @@
                 <div class="row espacio">
                     <h3>Examenes</h3>
                     <div class="flex2">
-                    @foreach ($actividad as $item)
+              
                         <div class="campos">
-                            <a class="link" href=""><p>{{ $item->descripcion}}</p></a>
+                            <a class="link" href=""><p></p></a>
                         </div>
 
-					@endforeach
+			
 
 
 
