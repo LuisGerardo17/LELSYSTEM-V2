@@ -161,7 +161,7 @@ Route::resource('RecursosDoc',RecursosDocController::class);
 Route::resource('matricula',MatriculaController::class);
 //Route::resource('listaestudiantes',MatriculaController::class);
 //Route::resource('estudiantes',ListaController::class);
- 
+
 
 //Buscar->Leonardo
 Route::resource('buscar',BuscarController::class);
@@ -172,15 +172,15 @@ Route::resource('listaxcurso',listaCursoController::class);
 //docente
 //Arte culinario
 Route::get('docente', function () {
-    return view('docente.inicio'); 
+    return view('docente.inicio');
 });
 //Mecanica
 Route::get('mecanica', function () {
-    return view('docente.mecanica'); 
+    return view('docente.mecanica');
 });
 //Informatica
 Route::get('informatica', function () {
-    return view('docente.informatica'); 
+    return view('docente.informatica');
 });
 /*Route::get('materias', function () {
     return view('docente.materias.materias');
@@ -205,17 +205,10 @@ Route::get('/m',function (){
 
 Route::get("estudiante", function (){
     return view("estudiante.inicioestudiante");
-}); 
+});
 
 Route::get('subir',function (){
     return view('estudiante.SubirArchivos');
-<<<<<<< HEAD
-}); 
-
-/*Route::get('activities',function(){
-    return view('docente.materias.activities');
-});*/
-=======
 });
 Route::get('notas',function (){
     return view('estudiante.notas.verNotas');
@@ -233,4 +226,3 @@ Route::get('asistencias',function (){
 Route::get('recursos', function () {
     return view('estudiante.recursos');
 });
->>>>>>> 0c9fcdac9571dcfda18d9d8aedd1bc3cbb0a3655
