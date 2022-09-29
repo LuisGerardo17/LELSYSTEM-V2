@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\Docentes;
 use App\Models\Matriculas;
+use App\Models\Examen;
 
 class Cursos extends Model
 {
@@ -35,6 +36,11 @@ class Cursos extends Model
     public function matriculas(){
         return $this->hasMany(Matriculas::class,'nombre_curso','nombre_curso');
 
+    }
+
+     public function examenes()
+    {
+        return $this->belongsToMany(Examen::class);
     }
 
 }
