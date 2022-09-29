@@ -39,7 +39,7 @@ class ActivitiesController extends Controller
     {
         $datosActividades=Request()->except('_token');
         Actividades::insert($datosActividades);
-        return view('activities/activities');
+        return redirect('activities/activities');
     }
 
     /**

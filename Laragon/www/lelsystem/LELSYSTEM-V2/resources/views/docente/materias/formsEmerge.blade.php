@@ -77,10 +77,10 @@
         </div>
 
         <!--parcial2-->
-        <div class="overlay" id="overlayparcialDos">
-            <div class="popup" id="popup3">
+        <div class="overlay" id="overlayparcialCuatro">
+            <div class="popup" id="popup5">
                 <a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup"><i class="zmdi zmdi-close"></i></a>
-                <h3>Actividades</h3>
+                <h3>Actividades</h3> 
                 <form action="{{ url('ActividadDoc')}}" method="POST">
                     @csrf
                     <div class="form-group label-floating">
