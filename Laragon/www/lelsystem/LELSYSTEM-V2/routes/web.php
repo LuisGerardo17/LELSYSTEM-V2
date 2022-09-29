@@ -23,7 +23,7 @@ use App\Http\Controllers\listaMatriculadoController;
 use App\Http\Controllers\listaCursoController;
 use App\Http\Controllers\RecursosDocController;
 use App\Http\Controllers\ActController;
-
+use App\Http\Controllers\RecController;
 
 Route::get('/',function (){return redirect('/homepage');});
 Route::get('/homepage',function (){
@@ -168,6 +168,7 @@ Route::resource('buscar',BuscarController::class);
 Route::resource('lista',ListaEstudiantesController::class);
 Route::resource('listaMatriculado',listaMatriculadoController::class);
 Route::resource('listaxcurso',listaCursoController::class);
+Route::resource('Rec',RecController::class);
 
 //docente
 //Arte culinario
@@ -209,14 +210,13 @@ Route::get("estudiante", function (){
 
 Route::get('subir',function (){
     return view('estudiante.SubirArchivos');
-<<<<<<< HEAD
+
 }); 
 
 /*Route::get('activities',function(){
     return view('docente.materias.activities');
 });*/
-=======
-});
+
 Route::get('notas',function (){
     return view('estudiante.notas.verNotas');
 });
@@ -233,4 +233,4 @@ Route::get('asistencias',function (){
 Route::get('recursos', function () {
     return view('estudiante.recursos');
 });
->>>>>>> 0c9fcdac9571dcfda18d9d8aedd1bc3cbb0a3655
+
