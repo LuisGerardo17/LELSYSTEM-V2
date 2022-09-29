@@ -2,7 +2,8 @@
 @section('fondo','rgb(173, 173, 173)')
 @section('titulo','recurso')
 @section('seccion')
-<div class="container partes">
+
+<div class="container" style="background-color: white;">
     <ol class="breadcrumb">
     <li><a href="#">Home</a></li>
     <li><a href="#">nombre curso</a></li>
@@ -10,12 +11,12 @@
     </ol>
    
     <h3 class="bacgraun"><center><b>Titulo del recurso</b></center> </h3>
-    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum nihil aut commodi rerum officia impedit molestias quisquam eos deserunt tempore, odio in accusantium id deleniti ab. Molestiae error tenetur dolores?</p>
-    <div class="table-responsive estado">
-        <iframe src="https://es.wikipedia.org/wiki/Ecuador" frameborder="0" width="200%"></iframe>
-    </div>
+    <br>
+    <br>
+    <!--https://www.youtube.com/embed/..-->
+    <center><iframe src="https://www.youtube.com/embed/PGQxIILBb7M" width="90%" height="500"></iframe></center>
     <div class="botonmas">
-        <button id="subirAr" class="btn btn-primary btn-raised"><i class="zmdi zmdi-long-arrow-left"></i><span>volver</span></button>
+        <a href="www.google.com"><button class="btn btn-primary btn-raised"><i class="zmdi zmdi-long-arrow-left"></i><span>volver</span></button></a>
     </div>
 
 </div>
