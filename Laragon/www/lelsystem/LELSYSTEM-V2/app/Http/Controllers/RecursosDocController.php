@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers; 
+namespace App\Http\Controllers;
 use App\Models\Actividades;
 use App\Models\Recursos;
 use App\Models\TipoArchivos;
@@ -15,7 +15,7 @@ class RecursosDocController extends Controller
      */
     public function index()
     {
-         
+
     }
 
     /**
@@ -59,9 +59,12 @@ class RecursosDocController extends Controller
      * @param  \App\Models\Recursos  $recursos
      * @return \Illuminate\Http\Response
      */
-    public function edit(Recursos $recursos)
+    public function edit(Recursos $id)
     {
-        //
+
+        $datos=Recursos::find($id);
+        $forms=TipoArchivos::all();
+        return view('docente.materias.recursosEdit',compact('datos','forms'));
     }
 
     /**
@@ -71,9 +74,12 @@ class RecursosDocController extends Controller
      * @param  \App\Models\Recursos  $recursos
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Recursos $recursos)
+    public function update(Request $request, Recursos $id)
     {
-        //
+        $datos=$request->except(['_token','_method']);
+        Recursos::where('codigo_recurso','=',$id)->update($datos);
+        notify()->preset('editartodo');
+        return redirect('RecursosDoc');
     }
 
     /**

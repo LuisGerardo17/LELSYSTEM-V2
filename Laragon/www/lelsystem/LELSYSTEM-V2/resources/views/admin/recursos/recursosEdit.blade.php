@@ -21,10 +21,26 @@
 							<div class="container-fluid">
 								<div class="row">
 									<div class="col-xs-12 col-md-10 col-md-offset-1">
-									    <form action="{{ url('admin/recursos/'.$datos->codigo_recurso) }}" method="post" enctype="multipart/form-data">
+									    <form action="{{ url('admin/recursos/'.$datos->codigo_recurso) }}" method="POST" >
                                             @csrf
-                                            {{ method_field('PATCH') }}
-                                            @include('admin.recursos.recursosForm')
+								            @method('PUT')
+									   <div class="form-group label-floating">
+										<label class="control-label">Codigo</label>
+										<input class="form-control" type="text" name="codigo_recurso" value="{{$datos->codigo_recurso}}">
+									     </div>
+									   <div class="form-group label-floating">
+										<label class="control-label">Nombre</label>
+										<input class="form-control" type="text" name="nombre_actividad" value="{{$datos->nombre_recurso}}">
+									   </div>
+									   <div class="form-group label-floating">
+										<label class="control-label">Descripcion</label>
+										<input class="form-control" type="text" name="descripcion" value="{{$datos->descripcion}}">
+								   	</div>
+                                   >
+
+									<p class="text-center">
+										<button href="#!" class="btn btn-info btn-raised btn-sm"><i class="zmdi zmdi-floppy"></i> Guardar cambios</button>
+									</p>
 
 
 									    </form>

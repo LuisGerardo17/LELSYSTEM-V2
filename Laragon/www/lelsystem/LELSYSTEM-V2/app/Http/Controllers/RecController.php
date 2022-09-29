@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Recursos;
-use App\Models\TipoArchivos; 
+use App\Models\TipoArchivos;
 use Illuminate\Http\Request;
 
 class RecController extends Controller

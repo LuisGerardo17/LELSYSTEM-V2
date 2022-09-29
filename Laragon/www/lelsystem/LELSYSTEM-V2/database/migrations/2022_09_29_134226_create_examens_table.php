@@ -18,6 +18,7 @@ class CreateExamensTable extends Migration
             $table->string('nombre_examen',100);
             $table->string( 'descripcion',200);
             $table->string( 'parcial');
+            $table->timestamps();
        });
     }
 
