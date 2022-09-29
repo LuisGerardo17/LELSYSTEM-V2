@@ -210,17 +210,13 @@ Route::get("estudiante", function (){
 
 Route::get('subir',function (){
     return view('estudiante.SubirArchivos');
-<<<<<<< HEAD
-
 }); 
 
 /*Route::get('activities',function(){
     return view('docente.materias.activities');
 });*/
 
-=======
-});
->>>>>>> c12e491d2871e324bb6d7c46f759626890200bbb
+
 Route::get('notas',function (){
     return view('estudiante.notas.verNotas');
 });
@@ -237,7 +233,3 @@ Route::get('asistencias',function (){
 Route::get('recursos', function () {
     return view('estudiante.recursos');
 });
-<<<<<<< HEAD
-
-=======
->>>>>>> c12e491d2871e324bb6d7c46f759626890200bbb
