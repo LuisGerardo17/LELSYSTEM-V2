@@ -63,9 +63,8 @@
                                             <tr>
                                                 <td>{{ $admin->titulo }}</td>
                                                 <td>{{ $admin->descripcion }}</td>
-                                                <td><img src="{{ 'static/img/configuracion'.$admin->imagen }}" alt="" width="40px"></td>
-                                                <td><img src="{{ 'static/img/configuracion'.$admin->logo }}" alt="" width="40px"></td>
-                                                <td>{{ $admin->slogan }}</td>
+                                                <td><img src="{{ asset('storage').'/'.$admin->imagen }}" alt="20px" width="40px"></td>
+                                                <td><img src="{{ asset('storage').'/'.$admin->logo }}" alt="" width="40px"></td> <td>{{ $admin->slogan }}</td>
                                                 <td>{{ $admin->frase1 }}</td>
                                                 <td>{{ $admin->frase2 }}</td>
                                                 <td>{{ $admin->frase3 }}</td>

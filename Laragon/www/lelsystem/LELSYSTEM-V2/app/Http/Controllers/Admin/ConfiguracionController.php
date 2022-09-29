@@ -10,7 +10,7 @@ use Intervention\Image\Facades\Image;
 class ConfiguracionController extends Controller
 {
     public function index(){
-           $registros = Configuracion::all();
+           $registros = Configuracion::Paginate(5);
        return view('admin.configuracion.index',compact('registros'));
 
     }
@@ -51,7 +51,7 @@ class ConfiguracionController extends Controller
         notify()->preset('registrado');
         return redirect('/configuracion');
     }
-    
+
     public function update(Request $request,$id){
         $registro =Configuracion::findOrFail($id);
         $registro->fill($request->all());
