@@ -78,7 +78,7 @@ class RecursosController extends Controller
         return view('admin.recursos.recursosEdit',compact('datos','forms'));
 
     }
-
+  
     /**
      * Update the specified resource in storage.
      *

@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Models;
-use App\Models\Cursos;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
@@ -12,14 +11,12 @@ class Examen extends Model
     protected $fillable = [
         'codigo_examen',
         'nombre_examen',
-        'descripcion',
+        'descripcion', 
         'parcial'
-
+ 
     ];
 
-    public function cursos()
-    {
-        return $this->belongsToMany(Cursos::class);
-    }
+    protected $primaryKey = 'codigo_examen';
+    protected $keyType = 'string';
 
 }

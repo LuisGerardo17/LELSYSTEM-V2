@@ -21,7 +21,7 @@
 							<div class="container-fluid">
 								<div class="row">
 									<div class="col-xs-12 col-md-10 col-md-offset-1">
-									    <form action="{{ url('admin/recursos/'.$datos->codigo_recurso) }}" method="POST" >
+									    <form action="{{ url('admin/recursos/'.$datos->codigo_recurso) }}" method="post" enctype="multipart/form-data">
                                             @csrf
 								            @method('PUT')
 									   <div class="form-group label-floating">

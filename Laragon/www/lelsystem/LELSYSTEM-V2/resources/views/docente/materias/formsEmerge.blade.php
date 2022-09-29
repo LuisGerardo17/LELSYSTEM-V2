@@ -7,7 +7,7 @@
                         <div>
                             <input type="text" readonly="" class="form-control" placeholder="icono clase...">
                             <input type="file">
-                        </div> 
+                        </div>
                     </div>
                     <div class="form-group label-floating">
                         <label class="control-label">descripccion</label>
@@ -69,7 +69,7 @@
                             <option value="3">word</option>
                         </select>
                     </div>
-                    <div id="imputs"> 
+                    <div id="imputs">
                     </div>
                     <center><input type="submit" class="btn-submit" value="Enviar"></center>
                 </form>
@@ -80,7 +80,7 @@
         <div class="overlay" id="overlayparcialCuatro">
             <div class="popup" id="popup5">
                 <a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup"><i class="zmdi zmdi-close"></i></a>
-                <h3>Actividades</h3> 
+                <h3>Actividades</h3>
                 <form action="{{ url('ActividadDoc')}}" method="POST">
                     @csrf
                     <div class="form-group label-floating">
@@ -107,15 +107,15 @@
             <div class="popup" id="popup4">
                 <a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup"><i class="zmdi zmdi-close"></i></a>
                 <h3>Examenes</h3>
-                <form action="">
+                <form action="{{ url('Examen') }}" method="POST">
                     @csrf
                     <div class="form-group label-floating">
                         <label class="control-label">Codigo</label>
-                        <input class="form-control" type="text" name="codigo_actividad">
+                        <input class="form-control" type="text" name="codigo_examen">
                     </div>
                     <div class="form-group label-floating">
                         <label class="control-label">Titulo</label>
-                        <input class="form-control" type="text" name="nombre_actividad">
+                        <input class="form-control" type="text" name="nombre_examen">
                     </div>
                     <div class="form-group label-floating">
                         <label class="control-label">Descripcion</label>
@@ -123,13 +123,12 @@
                     </div>
                     <div id="imputs2">
                     </div>
-                    <div class="form-group label-floating">
-                        <label class="control-label">Examen</label>
-                        <input class="form-control" type="text" name="codigo_actividad">
-                    </div>
+                    <select class="form-select" name="parcial" >
+                        <option value="Primer parcial">Primer parcial</option>
+                        <option value="Segundo parcial">Segundo parcial</option>
+                    </select>
                     <center><input type="submit" class="btn-submit" value="Enviar"></center>
                 </form>
             </div>
 
         </div>
-

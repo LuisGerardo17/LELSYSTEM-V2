@@ -62,7 +62,7 @@ class ActController extends Controller
         $act=Actividades::find($actividades);
         return view('docente.materias.actividadEdit', compact('act'));
     }
-
+ 
     /**
      * Update the specified resource in storage.
      *

@@ -111,7 +111,7 @@ function ventanaemergente(){
 const overlay = document.getElementById("overlay"),
 overlayparcialUno=document.getElementById('overlayparcialUno'),
 overlayparcialDos=document.getElementById('overlayparcialDos'),
-overlayparcialTres=document.getElementById('overlayparcialTres')
+overlayparcialTres=document.getElementById('overlayparcialTres'),
 overlayparcialCuatro=document.getElementById('overlayparcialCuatro')
 
 
@@ -119,14 +119,14 @@ overlayparcialCuatro=document.getElementById('overlayparcialCuatro')
 const popup = document.getElementById("popup"),
 popup2 = document.getElementById("popup2"),
 popup3 = document.getElementById("popup3"),
-popup4 = document.getElementById("popup4")
+popup4 = document.getElementById("popup4"),
 popup5 = document.getElementById("popup5")
 //botones
 var btnCerrarPopup = document.querySelectorAll('.btn-cerrar-popup')
 const btnAbrirPopup = document.querySelector("#edit"),
 parcialUno = document.querySelector("#parcialUno"),
 parcialDos = document.querySelector("#parcialDos"),
-parcialTres = document.querySelector("#parcialTres")
+parcialTres = document.querySelector("#parcialTres"),
 parcialCuatro = document.querySelector("#parcialCuatro")
 
 
@@ -137,9 +137,9 @@ btnCerrarPopup.forEach(e=>{
         overlay.classList.remove("active");
         overlayparcialUno.classList.remove("active");
         overlayparcialDos.classList.remove("active");
-		subirArven.classList.remove("active");
-        overlayparcialTres.classList.remove("active");
+		overlayparcialTres.classList.remove("active");
         overlayparcialCuatro.classList.remove("active");
+		subirArven.classList.remove("active");
         popup.classList.remove("active");
         popup2.classList.remove("active");
         popup3.classList.remove("active");

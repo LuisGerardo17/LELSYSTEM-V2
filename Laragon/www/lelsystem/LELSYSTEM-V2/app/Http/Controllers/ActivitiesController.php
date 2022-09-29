@@ -41,7 +41,7 @@ class ActivitiesController extends Controller
         Actividades::insert($datosActividades);
         return redirect('activities/activities');
     }
-
+ 
     /**
      * Display the specified resource.
      *
