@@ -69,13 +69,13 @@
                     </div>
                 </div>
                 <a class="edit" id="parcialTres"><i class="zmdi zmdi-plus zmdi-hc-fw"></i>Añadir</a>
-                <a class="edit" id="parcialDos" href="{{url('Act')}}"><i class="zmdi zmdi-plus zmdi-hc-fw"></i>Editar</a>
+                <a class="edit" id="parcialDos" href="{{url('Examen')}}"><i class="zmdi zmdi-plus zmdi-hc-fw"></i>Editar</a>
                 <div class="row espacio">
                     <h3>Examenes</h3>
                     <div class="flex2">
-                    @foreach ($actividad as $item)
+                    @foreach ($examen as $item)
                         <div class="campos">
-                            <a class="link" href=""><p>{{$item->descripcion}}</p></a>
+                            <a class="link" href=""><p>{{$item->nombre_examen}}</p></a>
                         </div>
 					@endforeach
                     </div>

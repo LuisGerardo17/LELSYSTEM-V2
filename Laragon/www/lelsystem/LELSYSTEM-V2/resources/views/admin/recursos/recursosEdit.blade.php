@@ -20,13 +20,13 @@
 						<div class="tab-pane fade active in" id="new">
 							<div class="container-fluid">
 								<div class="row">
-									<div class="col-xs-12 col-md-10 col-md-offset-1">
+									<div class="col-xs-12 col-md-10 col-md-offset-1"> 
 									    <form action="{{ url('admin/recursos/'.$datos->codigo_recurso) }}" method="post" enctype="multipart/form-data">
                                             @csrf
                                             {{ method_field('PATCH') }}
                                             @include('admin.recursos.recursosForm')
 
-
+ 
 									    </form>
 									</div>
 								</div>

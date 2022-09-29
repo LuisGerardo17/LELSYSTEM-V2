@@ -41,7 +41,7 @@ class ActivitiesController extends Controller
         Actividades::insert($datosActividades);
         return redirect('activities/activities');
     }
-
+ 
     /**
      * Display the specified resource.
      *
@@ -65,7 +65,7 @@ class ActivitiesController extends Controller
         //return $act;
         return view('admin.activities.activitiesEdit', compact('act'));
     }
- 
+   
     /**
      * Update the specified resource in storage.
      *

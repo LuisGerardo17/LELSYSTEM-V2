@@ -2,22 +2,21 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Recursos;
-use App\Models\TipoArchivos; 
+use App\Models\Examen;
 use Illuminate\Http\Request;
 
-class RecController extends Controller
-{
+class ExamenController extends Controller
+{ 
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
     public function index()
-    { 
-        $forms=TipoArchivos::all();
-        $recursos=Recursos::paginate(8);
-        return view('docente.materias.recursos',compact('forms','recursos'));
+    {
+        $exa=Examen::all(); 
+        notify()->preset('Actividad registrada');
+        return view('docente.materias.examen', compact('exa'));
     }
 
     /**
@@ -38,16 +37,18 @@ class RecController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $examen=Request()->except('_token');
+        Examen::insert($examen);
+        return redirect('ActividadDoc');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Recursos  $recursos
+     * @param  \App\Models\Examen  $examen
      * @return \Illuminate\Http\Response
      */
-    public function show(Recursos $recursos)
+    public function show(Examen $examen)
     {
         //
     }
@@ -55,41 +56,39 @@ class RecController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Recursos  $recursos
+     * @param  \App\Models\Examen  $examen
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit($examen)
     {
-        $datos=Recursos::find($id);
-        $forms=TipoArchivos::all();
-        return view('docente.materias.recursosEdit',compact('datos','forms'));
-    }
+        $exam=Examen::find($examen);
+        return view('docente.materias.examenEdit', compact('exam'));
+    } 
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Recursos  $recursos
+     * @param  \App\Models\Examen  $examen
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
     {
-        $datos=$request->except(['_token','_method']);
-        Recursos::where('codigo_recurso','=',$id)->update($datos);
-        notify()->preset('editartodo');
-        return redirect('Rec');
+        $exa=$request->except(['_token','_method']);
+        Examen::where('codigo_examen','=', $id)->update($exa);
+        return redirect('Examen');
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Recursos  $recursos
+     * @param  \App\Models\Examen  $examen
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
     {
-        Recursos::destroy($id);
-        notify()->preset('eliminartodo');
-        return redirect('Rec');
+        Examen::destroy($id);
+        notify()->preset('Actividad eliminada'); 
+        return redirect('Examen'); 
     }
 }

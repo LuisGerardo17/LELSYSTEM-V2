@@ -20,7 +20,7 @@
 						<div class="row">
 							<div class="col-xs-12 col-md-10 col-md-offset-1">
 								<form action="{{ url('Rec/'.$datos->codigo_actividad) }}" method="POST">
-									@csrf
+									@csrf 
 									@method('PUT')
 									<div class="form-group label-floating">
 										<label class="control-label">Codigo</label>
