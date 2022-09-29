@@ -23,6 +23,7 @@ class Cursos extends Model
         'fecha_fin',
         'estado',
         'cedula',
+        'imagen',
     ];
 
     public function cedula(){
