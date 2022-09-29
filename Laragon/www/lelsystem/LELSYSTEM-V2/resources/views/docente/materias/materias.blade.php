@@ -56,7 +56,7 @@
 					@endforeach
                     </div>
                 </div>
-                <a class="edit" id="parcialDos"><i class="zmdi zmdi-plus zmdi-hc-fw"></i>Añadir</a>
+                <a class="edit" id="parcialCuatro"><i class="zmdi zmdi-plus zmdi-hc-fw"></i>Añadir</a>
                 <a class="edit" id="parcialDos" href="{{url('Act')}}"><i class="zmdi zmdi-plus zmdi-hc-fw"></i>Editar</a>
                 <div class="row espacio">
                     <h3>Actividades</h3>
@@ -81,9 +81,12 @@
                     </div>
                 </div>
             </div>
+
+
             <div>
                 <h2 class="titulo">Parcial 2</h2>
                 <a class="edit" id="parcialUno"><i class="zmdi zmdi-plus zmdi-hc-fw"></i>Añadir</a>
+                <a class="edit" id="parcialDos" href="{{url('Rec')}}"><i class="zmdi zmdi-plus zmdi-hc-fw"></i>Editar</a>
                 <div class="row espacio">
                     <h3>Recursos</h3>
                     <div class="flex2">
@@ -121,11 +124,7 @@
                         <div class="campos">
                             <a class="link" href=""><p>{{ $item->descripcion}}</p></a>
                         </div>
-
 					@endforeach
-
-
-
                     </div>
                 </div>
             </div>

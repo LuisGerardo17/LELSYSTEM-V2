@@ -112,6 +112,7 @@ const overlay = document.getElementById("overlay"),
 overlayparcialUno=document.getElementById('overlayparcialUno'),
 overlayparcialDos=document.getElementById('overlayparcialDos'),
 overlayparcialTres=document.getElementById('overlayparcialTres')
+overlayparcialCuatro=document.getElementById('overlayparcialCuatro')
 
 
 //popus
@@ -119,12 +120,15 @@ const popup = document.getElementById("popup"),
 popup2 = document.getElementById("popup2"),
 popup3 = document.getElementById("popup3"),
 popup4 = document.getElementById("popup4")
+popup5 = document.getElementById("popup5")
 //botones
 var btnCerrarPopup = document.querySelectorAll('.btn-cerrar-popup')
 const btnAbrirPopup = document.querySelector("#edit"),
 parcialUno = document.querySelector("#parcialUno"),
 parcialDos = document.querySelector("#parcialDos"),
 parcialTres = document.querySelector("#parcialTres")
+parcialCuatro = document.querySelector("#parcialCuatro")
+
 
 
 //boton eliminar
@@ -135,10 +139,12 @@ btnCerrarPopup.forEach(e=>{
         overlayparcialDos.classList.remove("active");
 		subirArven.classList.remove("active");
         overlayparcialTres.classList.remove("active");
+        overlayparcialCuatro.classList.remove("active");
         popup.classList.remove("active");
         popup2.classList.remove("active");
         popup3.classList.remove("active");
         popup4.classList.remove("active");
+        popup5.classList.remove("active");
         });
 })
 
@@ -161,6 +167,11 @@ btnCerrarPopup.forEach(e=>{
 	parcialTres.addEventListener("click", function(){
         overlayparcialTres.classList.add("active");
         popup4.classList.add("active");
+	});
+
+	parcialCuatro.addEventListener("click", function(){
+        overlayparcialCuatro.classList.add("active");
+        popup5.classList.add("active");
 	});
 
 
