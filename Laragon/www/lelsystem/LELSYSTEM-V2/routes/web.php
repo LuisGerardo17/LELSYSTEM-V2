@@ -210,7 +210,7 @@ Route::get("estudiante", function (){
 
 Route::get('subir',function (){
     return view('estudiante.SubirArchivos');
-}); 
+});
 
 /*Route::get('activities',function(){
     return view('docente.materias.activities');
