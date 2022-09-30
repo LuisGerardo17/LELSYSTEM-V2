@@ -69,7 +69,6 @@ button{
 	color: #fff;
 	border: none;
 	font-size: 22px;
-	float: right;
 	padding-bottom: 10px;
 }
 .nav{
@@ -135,8 +134,8 @@ button{
 		<div class="Navbar-superior">
 		    <img class="logoEmpresa" width="150px" src="{{ asset('static/img/logo5.png') }}" alt="">
 			<img  class="avatar" width="100px" src="{{ asset('admin/assets/img/avatar.jpg') }}" alt="">
-			<button id="button">
-			    NOMBRE ESTUDIANTE<i class="zmdi-hc-fw zmdi zmdi-caret-down"></i>
+			<button id="button" style="float: right;">
+			    {{ session()->get('datos')['nombres'].' '.session()->get('datos')['apellidos'] }}<i class="zmdi-hc-fw zmdi zmdi-caret-down"></i>
 			</button>
 			<nav class="nav" id="nav">
 			    <ul class="ul" >
@@ -150,7 +149,7 @@ button{
 						<a class="a" href="#"><i class="zmdi zmdi-settings zmdi-hc-fw"></i> Configuración</a>
 					</li>-->
 				    <li class="li">
-						<a class="a" href="#"><i class="zmdi zmdi-long-arrow-tab zmdi-hc-fw"></i> Cerrar sessión</a>
+						<a class="a btn-exit-system" href="#"><i class="zmdi zmdi-long-arrow-tab zmdi-hc-fw"></i> Cerrar sessión</a>
 					</li>
 			    </ul>
 			</nav>	
