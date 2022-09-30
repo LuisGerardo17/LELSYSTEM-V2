@@ -15,13 +15,12 @@ class RecursosController extends Controller
      */
     public function index()
 
-    {
-
-        if(session()->has('datos') == true){
+{
+         if(session()->has('datos') == true){
             $forms=TipoArchivos::all();
             $recursos=Recursos::paginate(8);
             return view('admin.recursos.recursos',compact('forms','recursos'));
-        }else{
+         }else{
             return view('Error');
         }
 

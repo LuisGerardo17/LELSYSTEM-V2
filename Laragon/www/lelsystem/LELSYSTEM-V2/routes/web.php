@@ -87,7 +87,7 @@ Route::get('/homeadmin',function (){
     }else{
         return view('Error');
     }
-    
+
 })->name('adminHome');
 
 //admin
