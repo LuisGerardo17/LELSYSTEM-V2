@@ -23,13 +23,11 @@ use App\Http\Controllers\listaMatriculadoController;
 use App\Http\Controllers\listaCursoController;
 use App\Http\Controllers\RecursosDocController;
 use App\Http\Controllers\ActController;
-<<<<<<< Updated upstream
 use App\Http\Controllers\ExamenController;
 use App\Http\Controllers\RecController;
-=======
+
 use App\Http\Controllers\LoginController;
 
->>>>>>> Stashed changes
 
 Route::get('/',function (){return redirect('/homepage');});
 Route::get('/homepage',function (){
