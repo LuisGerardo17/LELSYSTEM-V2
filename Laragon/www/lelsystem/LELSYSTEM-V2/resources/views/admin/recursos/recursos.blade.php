@@ -10,7 +10,7 @@
 			<p class="lead">Los recursos de aprendizaje presentan muchas ventajas en la educación virtual, algunos de ellos son: la múltiple variedad de presentación multimedia en formatos animados; la facilidad para acercar al estudiante a la comprensión de procesos y acceso al mundo real; dar la oportunidad de proveer un aprendizaje al ritmo del estudiante; entre otros.</p>
 		</div>
 		<div class="container-fluid">
-			<div class="row"> 
+			<div class="row">
 				<div class="col-xs-12">
 					<ul class="nav nav-tabs" style="margin-bottom: 15px;">
 					    <li class="active"><a href="#list" data-toggle="tab">Lista</a></li>
@@ -21,19 +21,16 @@
 							<div class="container-fluid">
 								<div class="row">
 									<div class="col-xs-12 col-md-10 col-md-offset-1">
-									    <form action="{{ url('admin/recursos') }}" method="post" enctype="multipart/form-data">
-                                            @csrf
-
-                                            @include('admin.recursos.recursosForm')
-
-
+								         <form action="{{ url('admin/recursos') }}" method="POST">
+                                              @csrf
+									    	@include('admin.recursos.recursosForm')
 									    </form>
 									</div>
 								</div>
 							</div>
 						</div>
                         <x:notify-messages/>
-					  	<div class="tab-pane fade {{ ($errors->any()) ? '' : 'active in' }}" id="list">
+					<div class="tab-pane fade {{ ($errors->any()) ? '' : 'active in' }}" id="list">
 							<div class="table-responsive">
 								<table class="table table-hover text-center w-8">
 									<thead>
@@ -66,7 +63,8 @@
 
 									</tbody>
 								</table>
-								{!! $recursos->links() !!}
+                                {!! $recursos->links() !!}
+
 							</div>
 					  	</div>
 					</div>
