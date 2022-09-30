@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Actividades;
+use App\Models\Examen;
 use Illuminate\Http\Request;
 
-class ActController extends Controller
+class ExamenController extends Controller
 { 
     /**
      * Display a listing of the resource.
@@ -14,9 +14,9 @@ class ActController extends Controller
      */
     public function index()
     {
-        $actividades=Actividades::all(); 
+        $exa=Examen::all(); 
         notify()->preset('Actividad registrada');
-        return view('docente.materias.activities', compact('actividades'));
+        return view('docente.materias.examen', compact('exa'));
     }
 
     /**
@@ -37,16 +37,18 @@ class ActController extends Controller
      */
     public function store(Request $request)
     {
-        
+        $examen=Request()->except('_token');
+        Examen::insert($examen);
+        return redirect('ActividadDoc');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Actividades  $actividades
+     * @param  \App\Models\Examen  $examen
      * @return \Illuminate\Http\Response
      */
-    public function show(Actividades $actividades)
+    public function show(Examen $examen)
     {
         //
     }
@@ -54,39 +56,39 @@ class ActController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Actividades  $actividades
+     * @param  \App\Models\Examen  $examen
      * @return \Illuminate\Http\Response
      */
-    public function edit( $actividades)
-    { 
-        $act=Actividades::find($actividades);
-        return view('docente.materias.actividadEdit', compact('act'));
-    }
- 
+    public function edit($examen)
+    {
+        $exam=Examen::find($examen);
+        return view('docente.materias.examenEdit', compact('exam'));
+    } 
+
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Actividades  $actividades
+     * @param  \App\Models\Examen  $examen
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
     {
-        $datos1=$request->except(['_token','_method']);
-        Actividades::where('codigo_actividad','=',$id)->update($datos1);
-        return redirect('Act');
+        $exa=$request->except(['_token','_method']);
+        Examen::where('codigo_examen','=', $id)->update($exa);
+        return redirect('Examen');
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Actividades  $actividades
+     * @param  \App\Models\Examen  $examen
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
     {
-        Actividades::destroy($id);
+        Examen::destroy($id);
         notify()->preset('Actividad eliminada'); 
-        return redirect('Act'); 
+        return redirect('Examen'); 
     }
 }

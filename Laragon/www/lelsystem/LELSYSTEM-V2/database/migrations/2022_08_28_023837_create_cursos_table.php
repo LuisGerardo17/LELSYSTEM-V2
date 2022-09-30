@@ -19,7 +19,7 @@ class CreateCursosTable extends Migration
             $table->date('fecha_inicio');
             $table->date('fecha_fin');
             $table->string('estado');
-           // $table->string('imagen');
+            $table->string('imagen')->default('foto.jpg');
             $table->string('cedula',10);
             $table->foreign('cedula')->references('cedula')->on('docentes')->cascadeOnDelete()->cascadeOnUpdate();
             $table->timestamps();

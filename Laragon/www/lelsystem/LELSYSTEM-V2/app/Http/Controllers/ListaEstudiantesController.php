@@ -56,7 +56,7 @@ class ListaEstudiantesController extends Controller
             notify()->preset('registrado');
             return redirect('lista');
     }
-
+ 
     /**
      * Display the specified resource.
      *

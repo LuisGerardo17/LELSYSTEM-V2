@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\Models\Cursos;
 use App\Models\Docentes;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Http\Request;
 
 class CursoController extends Controller
@@ -30,10 +31,14 @@ class CursoController extends Controller
             'fecha_fin'=>'required|date',
             'estado'=>'required',
             'cedula'=>'required|max:10',
-
+            'cedula'=>'required|max:10',
+            'imagen'=>'required|mimes:jpeg,png,jpg'
         ];
 
         $request->validate($campos);
+       if($request->hasFile('imagen')){
+            $datos['imagen']=$request->file('imagen')->store('uploadCursos','public');
+        }
         Cursos::insert($datos);
         notify()->preset('registrado');
         return redirect('admin/cursos');
@@ -51,6 +56,11 @@ class CursoController extends Controller
     public function update(Request $request, $id)
     {
         $datos=$request->except(['_token','_method']);
+        if($request->hasFile('imagen')){
+            $datosimg=Cursos::find($id);
+            Storage::delete('public/'. $datosimg->imagen);
+            $datos['imagen']=$request->file('imagen')->store('uploadCursos','public');
+        }
         Cursos::where('nombre_curso','=',$id)->update($datos);
         notify()->preset('editartodo');
         return redirect('admin/cursos');
@@ -58,7 +68,9 @@ class CursoController extends Controller
 
     public function destroy($id)
     {
+        $datos=Cursos::find($id);
         Cursos::destroy($id);
+        Storage::delete('public/'.$datos->imagen);
         notify()->preset('eliminartodo');
         return redirect('admin/cursos');
 

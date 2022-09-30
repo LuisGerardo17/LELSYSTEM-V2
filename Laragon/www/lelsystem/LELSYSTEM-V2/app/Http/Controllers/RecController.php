@@ -1,12 +1,12 @@
 <?php
 
 namespace App\Http\Controllers;
- 
+
 use App\Models\Recursos;
 use App\Models\TipoArchivos;
 use Illuminate\Http\Request;
 
-class RecursosController extends Controller
+class RecController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,8 +17,8 @@ class RecursosController extends Controller
     { 
         $forms=TipoArchivos::all();
         $recursos=Recursos::paginate(8);
-        return view('admin.recursos.recursos',compact('forms','recursos'));
-    } 
+        return view('docente.materias.recursos',compact('forms','recursos'));
+    }
 
     /**
      * Show the form for creating a new resource.
@@ -27,7 +27,7 @@ class RecursosController extends Controller
      */
     public function create()
     {
-        // 
+        //
     }
 
     /**
@@ -36,22 +36,9 @@ class RecursosController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request) 
+    public function store(Request $request)
     {
-        $datos=$request->except('_token');
-        $campos=[
-            'codigo_recurso'=>'required|string',
-            'nombre_recurso'=>'required',
-            'descripcion'=>'required',
-            'id_tipo_archivo'=>'required|max:1',
-
-        ];
-
-        $request->validate($campos);
-        Recursos::insert($datos);
-        notify()->preset('registradocosas');
-        return redirect('admin/recursos');
-
+        //
     }
 
     /**
@@ -75,10 +62,9 @@ class RecursosController extends Controller
     {
         $datos=Recursos::find($id);
         $forms=TipoArchivos::all();
-        return view('admin.recursos.recursosEdit',compact('datos','forms'));
-
+        return view('docente.materias.recursosEdit',compact('datos','forms'));
     }
-  
+
     /**
      * Update the specified resource in storage.
      *
@@ -91,7 +77,7 @@ class RecursosController extends Controller
         $datos=$request->except(['_token','_method']);
         Recursos::where('codigo_recurso','=',$id)->update($datos);
         notify()->preset('editartodo');
-        return redirect('admin/recursos');
+        return redirect('Rec');
     }
 
     /**
@@ -104,7 +90,6 @@ class RecursosController extends Controller
     {
         Recursos::destroy($id);
         notify()->preset('eliminartodo');
-        return redirect('admin/recursos');
-
+        return redirect('Rec');
     }
 }

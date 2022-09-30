@@ -5,20 +5,20 @@ namespace App\Http\Controllers;
 use App\Models\Actividades;
 use Illuminate\Http\Request;
 
-class ActivitiesController extends Controller 
+class ActivitiesController extends Controller
 {
-    /**  
+    /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
-     */ 
-    public function index()  
+     */
+    public function index()
     {
-        $actividades=Actividades::all(); 
+        $actividades=Actividades::all();
         notify()->preset('Actividad registrada');
         return view('admin.activities.activities', compact('actividades'));
-    }  
- 
+    }
+
     /**
      * Show the form for creating a new resource.
      *
@@ -27,7 +27,7 @@ class ActivitiesController extends Controller
     public function create()
     {
         //
-    }   
+    }
 
     /**
      * Store a newly created resource in storage.
@@ -39,9 +39,9 @@ class ActivitiesController extends Controller
     {
         $datosActividades=Request()->except('_token');
         Actividades::insert($datosActividades);
-        return view('activities/activities');
+        return redirect('activities/activities');
     }
-
+ 
     /**
      * Display the specified resource.
      *
@@ -65,7 +65,7 @@ class ActivitiesController extends Controller
         //return $act;
         return view('admin.activities.activitiesEdit', compact('act'));
     }
- 
+
     /**
      * Update the specified resource in storage.
      *
@@ -87,12 +87,12 @@ class ActivitiesController extends Controller
      * @param  \App\Models\Actividades  $actividades
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id) 
+    public function destroy($id)
     {
         Actividades::destroy($id);
-        notify()->preset('Actividad eliminada'); 
-        return redirect('activities/activities'); 
-        
-      
+        notify()->preset('Actividad eliminada');
+        return redirect('activities/activities');
+
+
     }
 }

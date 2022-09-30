@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use App\Models\TipoArchivos;
 use App\Models\Recursos;
 use App\Models\Actividades;
+use App\Models\Examen;
 use Illuminate\Http\Request;
 
 class ActividadDocController extends Controller
@@ -18,7 +19,8 @@ class ActividadDocController extends Controller
         $forms=TipoArchivos::all();
         $recursos=Recursos::paginate(10);
         $actividad=Actividades::all();
-        return view('docente.materias.materias', compact('actividad','recursos','forms'));
+        $examen=Examen::all();
+        return view('docente.materias.materias', compact('actividad','recursos','forms','examen'));
     }
 
     /**
@@ -65,8 +67,7 @@ class ActividadDocController extends Controller
      */
     public function edit($actividades)
     {
-        $act=Actividades::find($actividades);
-        return view('docente.materias.actividadEdit', compact('act'));
+        
     }
 
     /**
@@ -78,9 +79,7 @@ class ActividadDocController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $datos1=$request->except(['_token','_method']);
-        Actividades::where('codigo_actividad','=',$id)->update($datos1);
-        return redirect('actividadEdit');
+        
     }
 
     /**
@@ -91,8 +90,6 @@ class ActividadDocController extends Controller
      */
     public function destroy($id)
     {
-        Actividades::destroy($id);
-        notify()->preset('Actividad eliminada'); 
-        return redirect('actividadEdit'); 
+       
     }
 }

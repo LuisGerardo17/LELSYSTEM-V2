@@ -1,47 +1,49 @@
-@extends('admin.layouts.admin')
-
-@section('titulo','Section')
-@section('contenido')
+@extends('docente.layouts.activitiesDoce')
+@section('titulo', 'Materias')
+@section('seccion')
 <!-- Content page -->
 <div class="container-fluid">
 	<div class="page-header">
-		<h1 class="text-titles"><i class="zmdi zmdi-book zmdi-hc-fw"></i> Actividades <small>Activities</small></h1>
+		<h1 class="text-titles"><i class="zmdi zmdi-book zmdi-hc-fw"></i> Examen <small>Examen</small></h1>
 	</div>
 	<p class="lead">Las actividades son todas aquellas tareas o labores que cada individuo ejerce diariamente, están las actividades laborales, las actividades escolares, las actividades recreativas, las actividades físicas, etc.</p>
 </div>
 <div class="container-fluid">
 	<div class="row">
-		<div class="col-xs-12">      
+		<div class="col-xs-12">
 			<ul class="nav nav-tabs" style="margin-bottom: 15px;">
-				<li class="active"><a href="#new" data-toggle="tab">New</a></li>
-				<li><a href="#list" data-toggle="tab">List</a></li>
+				<li class="active"><a href="#new" data-toggle="tab">Editar Actividad</a></li>
 			</ul>
 			<div id="myTabContent" class="tab-content">
-				<div class="tab-pane fade active in" id="new"> 
+				<div class="tab-pane fade active in" id="new">
 					<div class="container-fluid">
 						<div class="row">
 							<div class="col-xs-12 col-md-10 col-md-offset-1">
-								<form action="{{ url('activities/activities/'.$act->codigo_actividad) }}" method="POST">
-								@csrf    
-								@method('PUT')   
+								<form action="{{ url('Examen/'.$exam->codigo_examen) }}" method="POST">
+									@csrf
+									@method('PUT')
 									<div class="form-group label-floating">
 										<label class="control-label">Codigo</label>
-										<input class="form-control" type="text" name="codigo_actividad" value="{{$act->codigo_actividad}}">
+										<input class="form-control" type="text" name="codigo_examen" value="{{$exam->codigo_examen}}">
 									</div>
 									<div class="form-group label-floating">
 										<label class="control-label">Nombre</label>
-										<input class="form-control" type="text" name="nombre_actividad" value="{{$act->nombre_actividad}}">
+										<input class="form-control" type="text" name="nombre_examen" value="{{$exam->nombre_examen}}">
 									</div>
 									<div class="form-group label-floating">
 										<label class="control-label">Descripcion</label>
-										<input class="form-control" type="text" name="descripcion" value="{{$act->descripcion}}">
+										<input class="form-control" type="text" name="descripcion" value="{{$exam->descripcion}}">
 									</div>
+									<select class="form-select" name="parcial" value='{{$exam->parcial}}'>
+										<option value="Primer parcial">Primer parcial</option>
+										<option value="Segundo parcial">Segundo parcial</option>
+									</select>
 									<p class="text-center">
 										<button href="#!" class="btn btn-info btn-raised btn-sm"><i class="zmdi zmdi-floppy"></i> Guardar cambios</button>
 									</p>
 								</form>
 							</div>
-						</div>
+						</div> 
 					</div>
 				</div>
 				<div class="tab-pane fade" id="list">
