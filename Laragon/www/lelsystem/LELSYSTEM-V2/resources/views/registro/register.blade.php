@@ -66,29 +66,19 @@
 
          </div>
 
-        <div class="col-md-3">
+        <div class="col-md-6">
             <label for="validationCustom03" class="form-label">Contraseña</label>
             <input type="password" class="form-control" name="contrasena" id="validationCustom03" placeholder="Contraseña" required>
             @error('contrasena')
             <p class="alertas">*{{$message}}</p>
             @enderror
         </div>
-         <div class="col-md-3">
+         <div class="col-md-6">
             <label for="validationCustom03" class="form-label">Confirmar Contraseña</label>
             <input type="password" class="form-control" name="contrasena_confirmation" id="validationCustom03" placeholder="Contraseña" required>
             @error('contrasena_confirmation')
             <p class="alertas">*{{$message}}</p>
             @enderror
-        </div>
-        <div class="col-md-6">
-          <label for="validationCustom04" class="form-label">Rol</label>
-          <select class="form-select" name="rol" id="validationCustom04" required>
-            <option value="Estudiante">Estudiante</option>
-         </select>
-
-         @error('rol')
-         <p class="alertas">*{{$message}}</p>
-         @enderror
         </div>
 
         <div class="col-md-6">

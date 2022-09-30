@@ -27,16 +27,16 @@
 
 				<figure class="full-box">
 
-					<img src="{{ asset('admin/assets/img/avatar.jpg') }}" alt="UserIcon">
+					<img src="{{ asset('storage').'/'.session()->get('datos')['img'] }}" alt="UserIcon">
 
 				</figure>
 
-				<center><div class="text-uppercase"><p>Enrique Sebastian Mera Yela</p></div></center>
+				<center><div class="text-uppercase"><p>{{ session()->get('datos')['nombres'].' '.session()->get('datos')['apellidos'] }}</p></div></center>
 				
 				<ul class="full-box list-unstyled text-center">
 
 					<li>
-						<a href="{{route('login.destroy')}}" class="btn-exit-system">
+						<a href="#" class="btn-exit-system">
 							<i class="zmdi zmdi-power"></i>
 						</a>
 					</li>

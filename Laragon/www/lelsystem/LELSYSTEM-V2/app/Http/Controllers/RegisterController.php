@@ -54,7 +54,7 @@ public function __construct ()
 
         }else{
             notify()->preset('error');
-            return redirect('auth.login');
+            return redirect('/login');
         }
         notify()->preset('registrado');
         return redirect('login');

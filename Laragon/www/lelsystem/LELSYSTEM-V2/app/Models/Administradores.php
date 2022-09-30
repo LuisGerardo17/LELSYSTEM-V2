@@ -10,6 +10,7 @@ class Administradores extends Model
     use HasFactory;
 
     protected $table = 'administradores';
+    protected $primaryKey = 'cedula';
     
     public function user(){
         return $this->belongsTo(User::class,'cedula','cedula');

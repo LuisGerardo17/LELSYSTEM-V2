@@ -17,9 +17,14 @@ class TeacherController extends Controller
      */
     public function index()
     {
-          $docentes = Docentes::paginate(10);
-         //$docentes = DB::table('users')->select('cedula','imagen','nombres','apellidos','direccion','correo','telefono')->where('rol','Docente')->get();
-        return view('admin.teacher.teacher', compact('docentes'));
+        if(session()->has('datos') == true){
+            $docentes = Docentes::paginate(10);
+            //$docentes = DB::table('users')->select('cedula','imagen','nombres','apellidos','direccion','correo','telefono')->where('rol','Docente')->get();
+           return view('admin.teacher.teacher', compact('docentes'));
+        }else{
+            return view('Error');
+        }
+          
     }
 
     /**

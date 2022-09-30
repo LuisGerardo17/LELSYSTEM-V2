@@ -14,11 +14,24 @@ class ActivitiesController extends Controller
      */
     public function index()
     {
+<<<<<<< Updated upstream
         $actividades=Actividades::all();
         notify()->preset('Actividad registrada');
         return view('admin.activities.activities', compact('actividades'));
     }
 
+=======
+        if(session()->has('datos') == true){
+            $actividades=Actividades::all(); 
+            //notify()->preset('Actividad registrada');
+            return view('admin.activities.activities', compact('actividades'));
+        }else{
+            return view('Error');
+        }
+        
+    }  
+ 
+>>>>>>> Stashed changes
     /**
      * Show the form for creating a new resource.
      *
