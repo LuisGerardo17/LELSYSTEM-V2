@@ -26,6 +26,9 @@ use App\Http\Controllers\ActController;
 use App\Http\Controllers\ExamenController;
 use App\Http\Controllers\RecController;
 
+use App\Http\Controllers\LoginController;
+
+
 Route::get('/',function (){return redirect('/homepage');});
 Route::get('/homepage',function (){
     return view('home');
@@ -38,14 +41,22 @@ Route::resource('auth/login',SessionsController::class);
 */
 
 
-
+//Error 404
+Route::get('/Error', function (){
+    return view('Error');
+});
 
 //Register y Login
+Route::resource('login', LoginController::class);
+Route::get('cerrarSession', function () {
+    session()->forget('datos');
+    return redirect('/login');
+});
 
-Route::get('/auth.login', [SessionsController::class, 'create'])
+/*Route::get('/auth.login', [SessionsController::class, 'create'])
 ->middleware('guest')
 ->name('login');
-Route::post('/auth.login', [SessionsController::class, 'store'])->name('login.store');
+Route::post('/auth.login', [SessionsController::class, 'store'])->name('login.store');*/
 Route::get('/logout', [SessionsController::class, 'destroy'])
 ->middleware('auth')
 ->name('login.destroy');
@@ -71,7 +82,12 @@ Route::get('/docente.electricidad', [App\Http\Controllers\ElectricidadController
 
 
 Route::get('/homeadmin',function (){
-    return view('admin.home');
+    if(session()->has('datos') == true){
+        return view('admin.home');
+    }else{
+        return view('Error');
+    }
+    
 })->name('adminHome');
 
 //admin

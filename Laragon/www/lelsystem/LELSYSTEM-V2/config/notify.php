@@ -154,6 +154,13 @@ return [
             'model'   => 'toast',
             'title'   => 'Eliminado',
         ],
+        //LOGIN
+        'Errorsession' => [
+            'message' => 'Por favor, inténtelo otra vez.',
+            'type'    => 'error',
+            'model'   => 'toast',
+            'title'   => 'Acceso inválido',
+        ],
     ],
 
 ];

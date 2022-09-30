@@ -11,9 +11,14 @@ class CursoController extends Controller
 
     public function index()
     {
-        $docentes  = Docentes::all();
-        $cursos=Cursos::paginate(8);
-        return view('admin.courses.curse',compact('cursos','docentes'));
+        if(session()->has('datos') == true){
+            $docentes  = Docentes::all();
+            $cursos=Cursos::paginate(8);
+            return view('admin.courses.curse',compact('cursos','docentes'));
+        }else{
+            return view('Error');
+        }
+        
     }
 
     public function store(Request $request)

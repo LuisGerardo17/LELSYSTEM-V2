@@ -14,9 +14,14 @@ class ActivitiesController extends Controller
      */
     public function index()
     {
-        $actividades=Actividades::all();
-        notify()->preset('Actividad registrada');
-        return view('admin.activities.activities', compact('actividades'));
+        if(session()->has('datos') == true){
+            $actividades=Actividades::all();
+            //notify()->preset('Actividad registrada');
+            return view('admin.activities.activities', compact('actividades'));
+        }else{
+            return view('Error');
+        }
+
     }
 
     /**
@@ -41,7 +46,7 @@ class ActivitiesController extends Controller
         Actividades::insert($datosActividades);
         return redirect('activities/activities');
     }
- 
+
     /**
      * Display the specified resource.
      *

@@ -9,7 +9,7 @@
 
    @yield('content')
    
-   <a href="{{route('login')}}">
+   <a href="{{url('/login')}}">
     <input class="log" type="submit" value="Login">
    </a>
    <br>

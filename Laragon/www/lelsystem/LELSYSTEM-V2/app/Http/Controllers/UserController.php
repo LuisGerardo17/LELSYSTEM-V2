@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use App\Models\Docentes;
 use App\Models\Estudiantes;
-use App\Models\Matriculas;
 use App\Models\Administradores;
 
 use Illuminate\Http\Request;
@@ -14,7 +13,7 @@ class UserController extends Controller
 
 
     public function create() {
-        return view('auth.register');
+        return view('registro.register');
     }
     public function store(Request $request){
 
@@ -38,11 +37,12 @@ class UserController extends Controller
             if($request->hasFile('imagen')){
                 $datosUser['imagen']=$request->file('imagen')->store('uploadsEstudiante','public');
             }
-             if($datosUser['rol']=='Estudiante'){
+             /*if($datosUser['rol']=='Estudiante'){*/
+                $datosUser['rol']='Estudiate';
                 User::insert($datosUser);
                 Estudiantes::insert(['cedula'=>$datosUser['cedula']]);
 
-             }else if ( $datosUser['rol']=='Docente'){
+            /* }else if ( $datosUser['rol']=='Docente'){
                 User::insert($datosUser);
                 Docentes::insert(['cedula'=>$datosUser['cedula']]);
 
@@ -50,10 +50,10 @@ class UserController extends Controller
               }else if($datosUser['rol']=='Administrador'){
                 User::insert($datosUser);
                 Administradores::insert(['cedula'=>$datosUser['cedula']]);
-              }
+              }*/
 
         notify()->preset('registrado');
-        return view('auth.login');
+        return redirect('/login');
     }
 
 

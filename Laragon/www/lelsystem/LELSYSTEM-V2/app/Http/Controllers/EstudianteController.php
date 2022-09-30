@@ -11,8 +11,13 @@ class EstudianteController extends Controller
 {
     public function index(){
     
-    $estudiantes=Estudiantes::paginate(10);
-    return view('admin.estudiante.estudiante',compact('estudiantes'));
+        if(session()->has('datos') == true){
+            $estudiantes=Estudiantes::paginate(10);
+            return view('admin.estudiante.estudiante',compact('estudiantes'));
+        }else{
+            return view('Error');
+        }
+    
  
     } 
 

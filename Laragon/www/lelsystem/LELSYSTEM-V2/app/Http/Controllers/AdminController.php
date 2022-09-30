@@ -16,9 +16,14 @@ class AdminController extends Controller
      */
     public function index()
     {
+        if(session()->has('datos') == true){
+            $administradores=Administradores::paginate(5);
+            return view('admin.admin.admin',compact('administradores'));
+        }else{
+            return view('Error');
+        }
 
-        $administradores=Administradores::paginate(5);
-        return view('admin.admin.admin',compact('administradores'));
+        
     }
 
     /**

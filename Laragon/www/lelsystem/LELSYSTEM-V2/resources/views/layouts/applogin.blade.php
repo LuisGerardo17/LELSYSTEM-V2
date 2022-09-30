@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>@yield('title')- LEALSYSTEM</title>
+    @notifyCss
     <link rel="stylesheet" type="text/css" href="{{ asset('static/css/login/styles.css') }}">
+    
 </head>
 <body>
 @yield('content')
@@ -12,5 +14,6 @@
     <input class="home" type="submit" value="Homepage">
    </a>
     
+		@notifyJs
 </body>
 </html>

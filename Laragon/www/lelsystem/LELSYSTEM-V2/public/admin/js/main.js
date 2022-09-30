@@ -20,8 +20,10 @@ $(document).ready(function(){
 		  	cancelButtonColor: '#F44336',
 		  	confirmButtonText: '<i class="zmdi zmdi-run"></i> Yes, Exit!',
 		  	cancelButtonText: '<i class="zmdi zmdi-close-circle"></i> No, Cancel!'
-		}).then(function () {
-			window.location.href="/logincreadopormi";//redirigir
+		}).then((r) => {
+			if (r) {
+				window.location.href="/cerrarSession";
+			}
 		});
 	});
 	$('.btn-menu-dashboard').on('click', function(){

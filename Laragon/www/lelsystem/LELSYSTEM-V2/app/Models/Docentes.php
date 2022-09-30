@@ -11,6 +11,7 @@ class Docentes extends Model
     use HasFactory;
 
     protected $table = 'docentes';
+    protected $primaryKey = 'cedula';
      public function user(){
         return $this->belongsTo(User::class,'cedula','cedula');
         //belongsto ->pertenese ('a la tabla','con id_usuarios','es igual a id_administrador')
