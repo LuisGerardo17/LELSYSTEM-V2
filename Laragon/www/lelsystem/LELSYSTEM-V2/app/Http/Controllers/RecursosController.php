@@ -14,12 +14,6 @@ class RecursosController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-<<<<<<< Updated upstream
-    { 
-        $forms=TipoArchivos::all();
-        $recursos=Recursos::paginate(8);
-        return view('admin.recursos.recursos',compact('forms','recursos'));
-=======
     {
         if(session()->has('datos') == true){
             $forms=TipoArchivos::all();
@@ -28,8 +22,7 @@ class RecursosController extends Controller
         }else{
             return view('Error');
         }
-        
->>>>>>> Stashed changes
+
     } 
 
     /**
