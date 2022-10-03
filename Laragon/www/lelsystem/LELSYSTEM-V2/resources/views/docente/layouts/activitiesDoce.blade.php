@@ -27,9 +27,10 @@
 			<!-- SideBar User info -->
 			<div class="full-box dashboard-sideBar-UserInfo">
 
+
 				<figure class="full-box">
 
-					<img src="{{ asset('admin/assets/img/avatar.jpg') }}" alt="UserIcon">
+					<img src="{{  asset('storage').'/'.session()->get('datos')['img'] }}" alt="UserIcon">
 
 				</figure>
 
@@ -68,7 +69,7 @@
 					</ul>
 				</li>
 				<li>
- 
+
 					<a  class="btn-sideBar-SubMenu"  href="{{ url('matricula')}}">
 						<i class="zmdi zmdi-male-female zmdi-hc-fw"></i> Matriculas
 					</a>

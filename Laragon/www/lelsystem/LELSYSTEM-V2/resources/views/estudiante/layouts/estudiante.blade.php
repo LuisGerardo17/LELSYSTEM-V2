@@ -17,7 +17,7 @@
 .tilel{
     width: 300px;
 	height: 450px;
-    
+
 }
 .tile-icono{
 	bottom: 0;
@@ -33,13 +33,13 @@ p{
     color: #000;
 }
 .sup {
-    padding-bottom: 20px; 
+    padding-bottom: 20px;
 }
 img {
     padding: 5px;
 }
 .dashboard-Navbar{
-	background-color: #009688; 
+	background-color: #009688;
 	overflow: hidden;
 }
 
@@ -78,7 +78,7 @@ button{
 	position: relative;
     top: 40px;
 	left: 13%;
-    
+
 }
 .activo{
 	display: block;
@@ -108,9 +108,12 @@ button{
 
 		<div class="Navbar-superior">
 		    <img class="logoEmpresa img" width="150px" src="{{ asset('static/img/logo5.png') }}" alt="">
-			<img  class="avatar img" width="100px" src="{{ asset('admin/assets/img/avatar.jpg') }}" alt="">
+            <figure class="full-box">
 
-			<button id="button" class="center">
+                <img src="{{  asset('storage').'/'.session()->get('datos')['img'] }}" alt="UserIcon">
+
+            </figure>
+          	<button id="button" class="center">
 			    <div>NOMBRE ESTUDIANTE</div> <i class="zmdi-hc-fw zmdi zmdi-caret-down"></i>
 			</button>
 
@@ -130,7 +133,7 @@ button{
 		</div>-->
 		<!-- menu-->
 	<section class="full-box dashboard-contentPage" style="background-color: @yield('fondo')">
-	        
+
 		<div class="Navbar-superior">
 		    <img class="logoEmpresa" width="150px" src="{{ asset('static/img/logo5.png') }}" alt="">
 			<img  class="avatar" width="100px" src="{{ asset('admin/assets/img/avatar.jpg') }}" alt="">
@@ -152,7 +155,7 @@ button{
 						<a class="a btn-exit-system" href="#"><i class="zmdi zmdi-long-arrow-tab zmdi-hc-fw"></i> Cerrar sessión</a>
 					</li>
 			    </ul>
-			</nav>	
+			</nav>
 		</div>
 
         @yield('seccion')
