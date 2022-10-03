@@ -29,7 +29,7 @@ use App\Http\Controllers\RecController;
 
 use App\Http\Controllers\LoginController;
 
-
+//redirect
 Route::get('/',function (){return redirect('/login');});
 Route::get('home',function (){
     return view('home');
