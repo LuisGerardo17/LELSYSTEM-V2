@@ -83,3 +83,5 @@ $(document).ready(function(){
         });
     });
 })(jQuery);
+let array=[54,78,98,7];
+console.log(array)

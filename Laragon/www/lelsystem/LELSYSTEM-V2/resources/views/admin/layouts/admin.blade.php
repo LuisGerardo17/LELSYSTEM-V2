@@ -27,14 +27,13 @@
 
 				<figure class="full-box">
 
-					<img src="{{ asset('storage').'/'.session()->get('datos')['img'] }}" alt="UserIcon">
+					<img src="{{  asset('storage').'/'.session()->get('datos')['img'] }}" alt="UserIcon">
 
 				</figure>
 
 				<center><div class="text-uppercase"><p>{{ session()->get('datos')['nombres'].' '.session()->get('datos')['apellidos'] }}</p></div></center>
 
 				<ul class="full-box list-unstyled text-center">
-
 					<li>
 						<a href="#" class="btn-exit-system">
 							<i class="zmdi zmdi-power"></i>
@@ -99,7 +98,6 @@
 				</li>
 			</ul>
 		</nav>
-
 		@yield('contenido')
 
 		<!-- Notifications area -->
