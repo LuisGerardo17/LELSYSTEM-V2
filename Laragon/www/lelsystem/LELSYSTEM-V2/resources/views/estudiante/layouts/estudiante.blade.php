@@ -136,7 +136,7 @@ button{
 
 		<div class="Navbar-superior">
 		    <img class="logoEmpresa" width="150px" src="{{ asset('static/img/logo5.png') }}" alt="">
-            <img width="50px"src="{{  asset('storage').'/'.session()->get('datos')['img'] }}" alt="UserIcon">
+			<img  class="avatar" width="100px" src="{{ asset('storage').'/'.session()->get('datos')['img'] }}" alt="">
 
 
 			<button id="button" style="float: right;">
