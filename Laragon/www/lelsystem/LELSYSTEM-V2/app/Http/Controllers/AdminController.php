@@ -52,8 +52,9 @@ class AdminController extends Controller
             'direccion'=>'required',
             'telefono'=>'required|max:10',
             'contrasena'=>'required|confirmed|min:2|max:8',
-            'imagen'=>'required|mimes:jpeg,png,jpg'
+            'imagen'=>'mimes:jpeg,png,jpg'
         ];
+        
 
         $request->validate($campos);
         $datosAdmin=$request->except(['_token','contrasena_confirmation']);
