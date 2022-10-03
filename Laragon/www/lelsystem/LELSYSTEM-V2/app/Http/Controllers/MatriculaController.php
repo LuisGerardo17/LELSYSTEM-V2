@@ -20,13 +20,21 @@ class MatriculaController extends Controller
 
     public function index(Request $request)
     {
-          $estudiantes = Estudiantes::all();
-          $cursos = Cursos::all();
-          $matriculas = Matriculas::paginate(8);
-         // $registrados = User::select('cedula','nombres','apellidos','correo')->where('rol','Estudiante')->get();
-          $registrados = DB::table('users')->select('cedula','nombres','apellidos','correo')->where('rol','Estudiante')->get();
-          return view('docente.matricula.listamatricula', compact('matriculas','estudiantes','cursos','registrados'));
-     }
+
+
+            $estudiantes = Estudiantes::all();
+            $cursos = Cursos::all();
+            $matriculas = Matriculas::paginate(8);
+           // $registrados = User::select('cedula','nombres','apellidos','correo')->where('rol','Estudiante')->get();
+            $registrados = DB::table('users')->select('cedula','nombres','apellidos','correo')->where('rol','Estudiante')->get();
+            return view('docente.matricula.listamatricula', compact('matriculas','estudiantes','cursos','registrados'));
+
+
+    }
+
+
+
+     
 
 
 
@@ -74,7 +82,7 @@ class MatriculaController extends Controller
      */
     public function show(matriculas $matriculas)
     {
-        // 
+        //
     }
 
     /**
@@ -96,7 +104,7 @@ class MatriculaController extends Controller
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  \App\Models\matriculas  $matriculas
-     * @return \Illuminate\Http\Response 
+     * @return \Illuminate\Http\Response
      */
     public function update(Request $request,$id)
     {

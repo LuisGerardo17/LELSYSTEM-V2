@@ -5,32 +5,39 @@
 		<!-- Content page -->
 		<div class="container-fluid">
 			<div class="page-header">
-			  <h1 class="text-titles titulo">ARTE CULINARIO</h1>
+
+                        <div class="campos">
+                            <a class="link" href=""><p></p></a>
+                        </div>
+
+			 <h1 class="text-titles titulo">ARTE CULINARIO</h1>
 		    </div>
-            <a class="edit" id="edit"><i class="zmdi zmdi-edit zmdi-hc-fw"></i>Editar</a>
+            <a class="edit" id="parcialDos" href="{{url('Cursos')}}"><i class="zmdi zmdi-plus zmdi-hc-fw"></i>Editar</a>
+
             <div class="imagenPresentacion">
-                <img src="{{ asset('admin/assets/img/img.jpg') }}" alt="">
+                <img src="{{ asset('admin/assets/img/img.jpg') }}"  class="img-fluid">
             </div>
             <div class="espacio">
                 <div class="row">
                     <h2>Descripccion</h2>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consectetur similique doloremque dignissimos molestiae? Sed veniam quaerat nostrum, reiciendis quos eius deleniti. Ex optio labore nemo dignissimos nesciunt harum qui architecto?</p>
-                    <h2>Datos personales</h2>
+                    <p> Cocina tradicinal y ecuatoriana</p>
+
                 </div>
-                <center>         
+                <center>
                     <div class="row espacio flex">
                         <div class="col espacio2">
                             <h3 class="text-center">Foto</h3>
                             <img src="{{ asset('admin/assets/img/img.jpg') }}" width="250px" alt="">
                         </div>
-                        <div class="col espacio2">
-                            <h3 class="text-center">Nombre</h3>
-                            <p>Enrique Sebastian Mera Yela</p>
-                        </div>
-                        <div class="col espacio2">
-                            <h3 class="text-center">Telefono</h3>
-                            <p>+548 888 8888</p>
-                        </div>
+
+                         <div class="col espacio3">
+                            <h3 class="text-center">Fecha de Inicio</h3>
+                            <h4>3 de Coctubre del 2022 </h4>
+                       </div>
+                       <div class="col espacio3">
+                        <h3 class="text-center">Fecha de Finalización</h3>
+                        <h4> 3 de Diciembre del 2022</h4>
+                   </div>
                     </div>
                 </center>
 
@@ -43,7 +50,7 @@
                 <a class="edit" id="parcialDos" href="{{url('Rec')}}"><i class="zmdi zmdi-plus zmdi-hc-fw"></i>Editar</a>
                 <div class="row espacio">
                     <h3>Recursos</h3>
-                    <div class="flex2">
+                <div class="flex2">
                     @foreach ($recursos as $rec)
                         <div class="campos">
                             <a class="link" href=""><p>{{$rec->nombre_recurso}}</p></a>
@@ -52,10 +59,10 @@
                     @foreach ($forms as $form)
                     <div class="campos">
                             <a class="link" href=""><p>{{$form->tipo}}</p></a>
-                        </div>
+                     </div>
 					@endforeach
-                    </div>
                 </div>
+             </div>
                 <a class="edit" id="parcialCuatro"><i class="zmdi zmdi-plus zmdi-hc-fw"></i>Añadir</a>
                 <a class="edit" id="parcialDos" href="{{url('Act')}}"><i class="zmdi zmdi-plus zmdi-hc-fw"></i>Editar</a>
                 <div class="row espacio">

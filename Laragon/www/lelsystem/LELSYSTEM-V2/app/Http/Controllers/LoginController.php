@@ -30,8 +30,8 @@ class LoginController extends Controller
         }else{
             return view('registro.login');
         }
-        
-       
+
+
     }
 
     /**
@@ -53,7 +53,7 @@ class LoginController extends Controller
     public function store(Request $request)
     {
         $datos=$request->except(['_token']);
-        
+
         $user=User::where('correo','=',$datos['correo'])->where('contrasena','=',$datos['contrasena'])->get();
         if(isset($user[0]['cedula'])){
             $cedula=$user[0]['cedula'];
@@ -67,18 +67,18 @@ class LoginController extends Controller
                 session(['datos' => ['cedula'=> $user[0]['cedula'] ,'nombres'=> $user[0]['nombres'],'apellidos'=> $user[0]['apellidos'],'img'=> $user[0]['imagen'],'r'=>2]]);
                 return redirect('/homeadmin');
             }else if(isset($docente['cedula']) && $cedula==$docente['cedula']){
-                session(['datos' => ['cedula'=> $user[0]['cedula'] ,'nombres'=> $user[0]['nombres'],'apellidos'=> $user[0]['apellidos'],'img'=> $user[0]['imagen'],'r'=>3]]);
+                session(['datos' => ['cedula'=> $user[0]['cedula'] ,'nombres'=> $user[0]['nombres'],'apellidos'=> $user[0]['apellidos'],'img'=> $user[0]['imagen'],'telefono'=> $user[0]['telefono'],'r'=>3]]);
                 return redirect('/docente');
             }else{
                 dd('no');
             }
- 
+
         }else {
-            
+
             notify()->preset('Errorsession');
             return redirect('/login');
         }
-        
+
     }
 
     /**

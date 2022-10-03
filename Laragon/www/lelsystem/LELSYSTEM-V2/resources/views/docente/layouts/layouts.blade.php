@@ -32,12 +32,12 @@
 					<img src="{{ asset('admin/assets/img/avatar.jpg') }}" alt="UserIcon">
 
 				</figure>
+                <center><div class="text-uppercase"><p>{{ session()->get('datos')['nombres'].' '.session()->get('datos')['apellidos'] }}</p></div></center>
 
-				<center><div class="text-uppercase"><p>Enrique Sebastian Mera Yela</p></div></center>
-				<ul class="full-box list-unstyled text-center">
+               <ul class="full-box list-unstyled text-center">
 
 					<li>
-						<a href="{{route('login.destroy')}}" class="btn-exit-system">
+                        <a href="#" class="btn-exit-system">
 							<i class="zmdi zmdi-power"></i>
 						</a>
 					</li>
@@ -57,7 +57,7 @@
 					</a>
 					<ul class="list-unstyled full-box">
 						<li>
-							<a href="#"><i class="zmdi zmdi-font zmdi-hc-fw"></i> Matematicas</a>
+                            <a href="{{url('ActividadDoc')}}"><i class="zmdi zmdi-font zmdi-hc-fw"></i> ARTE CULINARIO</a>
 						</li>
 						<li>
 							<a href="#"><i class="zmdi zmdi-font zmdi-hc-fw"></i> Programacion</a>
@@ -68,6 +68,10 @@
                         <li>
 							<a href="#"><i class="zmdi zmdi-font zmdi-hc-fw"></i> Mecanica</a>
 						</li>
+
+
+
+                
 
 					</ul>
 				</li>

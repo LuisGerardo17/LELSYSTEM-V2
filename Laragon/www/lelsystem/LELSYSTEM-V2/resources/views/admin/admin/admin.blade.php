@@ -10,7 +10,7 @@
 			</div>
 			<p class="lead">Un administrador es una persona con visión, que es capaz de aplicar y desarrollar todos los conocimientos acerca de la planeación, organización, dirección y control empresarial, donde sus objetivos están en la misma dirección de las metas y propósitos de la institución.</p>
 		</div>
-		<div class="container-fluid"> 
+		<div class="container-fluid">
 			<div class="row">
 				<div class="col-xs-12">
 					<ul class="nav nav-tabs" style="margin-bottom: 15px;">
@@ -54,7 +54,7 @@
                                         @foreach($administradores as $admin)
                                             <tr>
                                                 <td>{{ $admin->user->cedula }}</td>
-                                                <td><img src="{{ asset('storage').'/'.$admin->user->imagen }}" alt="" width="40px"></td>
+                                                <td><img src="{{ asset('/storage').'/'.$admin->user->imagen }}" alt="" width="40px"></td>
                                                 <td>{{ $admin->user->nombres }}</td>
                                                 <td>{{ $admin->user->apellidos }}</td>
                                                 <td>{{ $admin->user->direccion }}</td>

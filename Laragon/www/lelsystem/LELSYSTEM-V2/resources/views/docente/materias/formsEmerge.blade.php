@@ -2,31 +2,31 @@
             <div class="popup" id="popup">
                 <a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup"><i class="zmdi zmdi-close"></i></a>
                 <h3>EDITAR</h3>
-                <form action="">
-                    <div class="form-group">
-                        <div>
-                            <input type="text" readonly="" class="form-control" placeholder="icono clase...">
-                            <input type="file">
+                <form action="url{{'Cursos'}}" method="post" enctype="multipart/form">
+
+                        <div class="form-group label-floating">
+                            <label class="control-label">Nombre del Curso</label>
+                            <input class="form-control" type="password" name="nombre_curso " >
                         </div>
-                    </div>
-                    <div class="form-group label-floating">
-                        <label class="control-label">descripccion</label>
-                        <input class="form-control" type="password" name="contrasena">
-                    </div>
-                    <div class="form-group label-floating">
-                        <label class="control-label">Nombre</label>
-                        <input class="form-control" type="password" name="contrasena">
-                    </div>
-                    <div class="form-group label-floating">
-                        <label class="control-label">Telefono</label>
-                        <input class="form-control" type="password" name="contrasena">
-                    </div>
-                    <div class="form-group">
-                        <div>
-                            <input type="text" readonly="" class="form-control" placeholder="Foto...">
-                            <input type="file">
+                        <div class="form-group label-floating">
+                            <label class="control-label">Descripccion</label>
+                            <input class="form-control" type="text" name="descripcion">
                         </div>
-                    </div>
+                        <div class="form-group label-floating">
+                            <label class="control-label">Fecha Inicio</label>
+                            <input class="form-control" type="text" name="descripcion">
+                        </div>
+
+
+                        <div class="form-group label-floating">
+                            <label class="control-label">Imagen del Curso</label>
+                            <input type="file" name="imagen" readonly="" class="form-control" placeholder="icono clase...">
+                        </div>
+
+
+
+
+
                     <center><input type="submit" class="btn-submit" value="Enviar"></center>
                 </form>
             </div>

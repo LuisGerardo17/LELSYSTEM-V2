@@ -32,7 +32,7 @@
 				</figure>
 
 				<center><div class="text-uppercase"><p>{{ session()->get('datos')['nombres'].' '.session()->get('datos')['apellidos'] }}</p></div></center>
-				
+
 				<ul class="full-box list-unstyled text-center">
 
 					<li>
@@ -50,7 +50,7 @@
 						<i class="zmdi zmdi-view-dashboard zmdi-hc-fw"></i> Dashboard
 					</a>
 				</li>
- 
+
 				<li>
 					<a href="{{ url('admin/admin') }}"><i class="zmdi zmdi-account zmdi-hc-fw"></i> Administrar Admin</a>
 				</li>
@@ -69,8 +69,6 @@
 				<li>
 					<a href="{{ url('admin/recursos') }}"><i class="zmdi zmdi-font zmdi-hc-fw"></i> Administrar Recursos</a>
 				</li>
-
-
 
 			</ul>
 		</div>

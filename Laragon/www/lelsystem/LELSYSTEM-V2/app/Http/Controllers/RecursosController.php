@@ -23,7 +23,7 @@ class RecursosController extends Controller
          }else{
             return view('Error');
         }
-    } 
+    }
 
 
     /**

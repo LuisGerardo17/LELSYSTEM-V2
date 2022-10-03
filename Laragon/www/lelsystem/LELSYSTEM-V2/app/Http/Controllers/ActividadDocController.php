@@ -9,18 +9,22 @@ use Illuminate\Http\Request;
 
 class ActividadDocController extends Controller
 {
-    /** 
+    /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
     public function index()
     {
+
         $forms=TipoArchivos::all();
         $recursos=Recursos::paginate(10);
         $actividad=Actividades::all();
         $examen=Examen::all();
         return view('docente.materias.materias', compact('actividad','recursos','forms','examen'));
+
+           
+
     }
 
     /**
@@ -31,8 +35,8 @@ class ActividadDocController extends Controller
     public function create()
     {
         //
-    } 
- 
+    }
+
     /**
      * Store a newly created resource in storage.
      *
@@ -41,7 +45,7 @@ class ActividadDocController extends Controller
      */
     public function store(Request $request)
     {
-        
+
         $datosActividades=Request()->except('_token');
         Actividades::insert($datosActividades);
         return redirect('ActividadDoc');
@@ -56,8 +60,8 @@ class ActividadDocController extends Controller
      */
     public function show(Actividades $actividades)
     {
-        // 
-    } 
+        //
+    }
 
     /**
      * Show the form for editing the specified resource.
@@ -67,7 +71,7 @@ class ActividadDocController extends Controller
      */
     public function edit($actividades)
     {
-        
+
     }
 
     /**
@@ -79,7 +83,7 @@ class ActividadDocController extends Controller
      */
     public function update(Request $request, $id)
     {
-        
+
     }
 
     /**
@@ -90,6 +94,6 @@ class ActividadDocController extends Controller
      */
     public function destroy($id)
     {
-       
+
     }
 }

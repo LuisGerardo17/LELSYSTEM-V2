@@ -11,7 +11,7 @@
 
 		</div>
 		<div class="container-fluid">
-			<div class="row"> 
+			<div class="row">
 				<div class="col-xs-12">
 					<ul class="nav nav-tabs" style="margin-bottom: 15px;">
 					    <li class="active"><a href="#list" data-toggle="tab">Recursos</a></li>
@@ -38,7 +38,7 @@
 											<th class="text-center">Actualizar</th>
 											<th class="text-center">Eliminar</th>
 										</tr>
-									</thead> 
+									</thead>
 									<tbody>
                                         @foreach( $recursos as $recurso )
                                             <tr>

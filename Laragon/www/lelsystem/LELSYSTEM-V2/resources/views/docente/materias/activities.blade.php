@@ -9,7 +9,7 @@
 			</div>
 			<p class="lead">Las actividades son todas aquellas tareas o labores que cada individuo ejerce diariamente, están las actividades laborales, las actividades escolares, las actividades recreativas, las actividades físicas, etc.</p>
 		</div>
-		<div class="container-fluid"> 
+		<div class="container-fluid">
 			<div class="row">
 				<div class="col-xs-12">
 					<ul class="nav nav-tabs" style="margin-bottom: 15px;">
@@ -27,15 +27,15 @@
 											<th class="text-center">Actualizar</th>
 											<th class="text-center">Eliminar</th>
 										</tr>
-									</thead> 
+									</thead>
 									<tbody>
-									@foreach ($actividades as $items)  
+									@foreach ($actividades as $items)
 										<tr>
 											<td>{{$items->codigo_actividad}}</td>
 											<td>{{$items->nombre_actividad}}</td>
 											<td>{{$items->descripcion}}</td>
 											<td>
-												<a href="{{ url('Act/') .'/'. $items->codigo_actividad . '/edit' }}" class="btn btn-success btn-raised btn-xs"><i class="zmdi zmdi-refresh"></i></a></td>
+												<a href="{{ url('Act/').'/'. $items->codigo_actividad . '/edit' }}" class="btn btn-success btn-raised btn-xs"><i class="zmdi zmdi-refresh"></i></a></td>
 											<td>
 												<form action="{{ url('Act/'.$items->codigo_actividad) }}" method="POST" class="Eliminar">
 													@csrf
