@@ -6,6 +6,7 @@ use App\Models\Estudiantes;
 use App\Models\Docentes;
 use App\Models\Administradores;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class LoginController extends Controller
 {

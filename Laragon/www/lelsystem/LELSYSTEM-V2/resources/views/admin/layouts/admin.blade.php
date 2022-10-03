@@ -100,8 +100,6 @@
 				</li>
 			</ul>
 		</nav>
-		{{ session()->get('datos')['img'] }}
-		{{ dd(file_exists(asset('storage').session()->get('datos')['img'])) }}
 		@yield('contenido')
 
 		<!-- Notifications area -->
