@@ -29,7 +29,7 @@ use App\Http\Controllers\RecController;
 
 use App\Http\Controllers\LoginController;
 
-
+//redirect
 Route::get('/',function (){return redirect('/login');});
 Route::get('home',function (){
     return view('home');
@@ -57,10 +57,10 @@ Route::get('cerrarSession', function () {
 /*Route::get('/auth.login', [SessionsController::class, 'create'])
 ->middleware('guest')
 ->name('login');
-Route::post('/auth.login', [SessionsController::class, 'store'])->name('login.store');*/
+Route::post('/auth.login', [SessionsController::class, 'store'])->name('login.store');
 Route::get('/logout', [SessionsController::class, 'destroy'])
 ->middleware('auth')
-->name('login.destroy');
+->name('login.destroy');*/
 Route::get('/auth.register', [UserController::class, 'create'])
 ->middleware('guest')
 ->name('register');

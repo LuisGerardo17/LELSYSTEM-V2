@@ -30,7 +30,7 @@ class LoginController extends Controller
         }else{
             return view('registro.login');
         }
-
+//hola perros
 
     }
 
