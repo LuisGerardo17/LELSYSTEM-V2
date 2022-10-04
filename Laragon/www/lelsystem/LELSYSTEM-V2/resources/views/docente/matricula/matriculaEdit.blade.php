@@ -1,9 +1,9 @@
-@extends('docente.layouts.activitiesDoce')
+@extends('docente.layouts.layouts')
 @section('titulo','Materias')
 @section('seccion')
 <!-- Content page -->
 <div class="container-fluid">
-	<div class="page-header"> 
+	<div class="page-header">
 		<h1 class="text-titles"><i class="zmdi zmdi-font zmdi-hc-fw"></i> Matricula <small>Estudiantes</small></h1>
 	</div>
 	<p class="lead">Las actividades son todas aquellas tareas o labores que cada individuo ejerce diariamente, están las actividades laborales, las actividades escolares, las actividades recreativas, las actividades físicas, etc.</p>
@@ -19,8 +19,8 @@
 					<div class="container-fluid">
 						<div class="row">
 							<div class="col-xs-12 col-md-10 col-md-offset-1">
- 
-						
+
+
 							</div>
 
                                 <form action="{{ url('matricula/'.$matricula->cedula) }}" method="POST">
@@ -29,8 +29,8 @@
                                     @include('docente.matricula.matriculaForm')
                               </form>
 
-                            </div>  
- 
+                            </div>
+
 						</div>
 					</div>
 				</div>
