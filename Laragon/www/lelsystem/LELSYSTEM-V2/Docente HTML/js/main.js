@@ -85,3 +85,106 @@ $(document).ready(function(){
 })(jQuery);
 let array=[54,78,98,7];
 console.log(array)
+
+function ventanaemergente(){
+	/*======= form emerge*/
+	const overlay = document.getElementById("overlay"),
+	overlayparcialUno=document.getElementById('overlayparcialUno'),
+	overlayparcialDos=document.getElementById('overlayparcialDos'),
+	overlayparcialTres=document.getElementById('overlayparcialTres'),
+	overlayparcialCuatro=document.getElementById('overlayparcialCuatro')
+	
+	
+	//popus
+	const popup = document.getElementById("popup"),
+	popup2 = document.getElementById("popup2"),
+	popup3 = document.getElementById("popup3"),
+	popup4 = document.getElementById("popup4"),
+	popup5 = document.getElementById("popup5")
+	//botones
+	var btnCerrarPopup = document.querySelectorAll('.btn-cerrar-popup')
+	const btnAbrirPopup = document.querySelector("#edit"),
+	parcialUno = document.querySelector("#parcialUno"),
+	parcialDos = document.querySelector("#parcialDos"),
+	parcialTres = document.querySelector("#parcialTres"),
+	parcialCuatro = document.querySelector("#parcialCuatro")
+	
+	
+	
+	//boton eliminar
+	btnCerrarPopup.forEach(e=>{
+			e.addEventListener("click", function(){
+			overlay.classList.remove("active");
+			overlayparcialUno.classList.remove("active");
+			overlayparcialDos.classList.remove("active");
+			overlayparcialTres.classList.remove("active");
+			overlayparcialCuatro.classList.remove("active");
+			subirArven.classList.remove("active");
+			popup.classList.remove("active");
+			popup2.classList.remove("active");
+			popup3.classList.remove("active");
+			popup4.classList.remove("active");
+			popup5.classList.remove("active");
+			});
+	})
+	
+	//eventos
+		/*btnAbrirPopup.addEventListener("click", function(){
+			overlay.classList.add("active");
+			popup.classList.add("active");
+		});*/
+	
+		parcialUno.addEventListener("click", function(){
+			overlayparcialUno.classList.add("active");
+			popup2.classList.add("active");
+		});
+	
+		parcialDos.addEventListener("click", function(){
+			overlayparcialDos.classList.add("active");
+			popup3.classList.add("active");
+		});
+	
+		parcialTres.addEventListener("click", function(){
+			overlayparcialTres.classList.add("active");
+			popup4.classList.add("active");
+		});
+	
+		parcialCuatro.addEventListener("click", function(){
+			overlayparcialCuatro.classList.add("active");
+			popup5.classList.add("active");
+		});
+	
+	
+	
+	let inputsespacio=document.getElementById('imputs')
+	let selector=document.getElementById('selector')
+	let inputsespacio2=document.getElementById('imputs2')
+	let selector2=document.getElementById('selector2')
+	let imputFecha='<div class="form-group"><label class="control-label">Fecha de entrega</label><input class="form-control" type="date"></div>'
+	let imputFile='<div class="form-group"><div><input type="text" readonly="" class="form-control" placeholder="Archivo..."><input type="file"  ></div></div>'
+	
+	selector.addEventListener('change',(e)=>{
+		let campo=e.target.value
+		if(campo==""){
+			inputsespacio.innerHTML=""
+		}else if(campo=='recursos'){
+			inputsespacio.innerHTML=imputFile
+		}else{
+			inputsespacio.innerHTML=imputFecha
+		}
+		console.log(campo)
+	})
+	
+	selector2.addEventListener('change',(e)=>{
+		let campo=e.target.value
+		if(campo==""){
+			inputsespacio2.innerHTML=""
+		}else if(campo=='recursos'){
+			inputsespacio2.innerHTML=imputFile
+		}else{
+			inputsespacio2.innerHTML=imputFecha
+		}
+		console.log(campo)
+	})
+	}
+	
