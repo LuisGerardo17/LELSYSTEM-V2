@@ -23,18 +23,14 @@
                             <input type="file" name="imagen" readonly="" class="form-control" placeholder="icono clase...">
                         </div>
 
-
-
-
-
                     <center><input type="submit" class="btn-submit" value="Enviar"></center>
                 </form>
             </div>
         </div>
 
         <!--parcial1-->
-        <div class="overlay" id="overlayparcialUno">
-            <div class="popup" id="popup2">
+        <div class="overlay" id="overlayparciala">
+            <div class="popup" id="popup6">
                 <a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup"><i class="zmdi zmdi-close"></i></a>
                 <h3>Recursos</h3>
                 <form action="{{ url('RecursosDoc' )}}" method="POST">

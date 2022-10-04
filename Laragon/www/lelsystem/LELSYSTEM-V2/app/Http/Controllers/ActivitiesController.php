@@ -14,7 +14,7 @@ class ActivitiesController extends Controller
      */
     public function index()
     {
-        if(session()->has('datos') == true){
+        if(session()->has('datos') == true){ 
             $actividades=Actividades::all();
             //notify()->preset('Actividad registrada');
             return view('admin.activities.activities', compact('actividades'));

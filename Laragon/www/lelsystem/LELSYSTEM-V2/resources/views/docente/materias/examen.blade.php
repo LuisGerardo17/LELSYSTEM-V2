@@ -7,7 +7,7 @@
 			<div class="page-header">
 			  <h1 class="text-titles"><i class="zmdi zmdi-book zmdi-hc-fw"></i> Examen <small>Examen</small></h1>
 			</div>
-			<p class="lead">Las actividades son todas aquellas tareas o labores que cada individuo ejerce diariamente, están las actividades laborales, las actividades escolares, las actividades recreativas, las actividades físicas, etc.</p>
+			<p class="lead">Los examenes son todas aquellas evaluaciones que se realizan, para asi evaluar el conocimiento adquirido por parte del estudiante.</p>
 		</div>
 		<div class="container-fluid">
 			<div class="row">

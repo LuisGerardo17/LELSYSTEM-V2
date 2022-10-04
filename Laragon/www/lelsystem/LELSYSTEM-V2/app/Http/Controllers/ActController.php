@@ -14,6 +14,7 @@ class ActController extends Controller
      */
     public function index()
     {
+        
         $actividades=Actividades::all(); 
         notify()->preset('Actividad registrada');
         return view('docente.materias.activities', compact('actividades'));
