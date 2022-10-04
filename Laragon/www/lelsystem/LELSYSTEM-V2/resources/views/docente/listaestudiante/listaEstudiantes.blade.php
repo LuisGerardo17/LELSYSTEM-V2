@@ -1,5 +1,5 @@
 
-@extends('docente.layouts.activitiesDoce')
+@extends('docente.layouts.layouts')
 @section('titulo','Docente')
 @section('seccion')
 		<!-- Content page -->
