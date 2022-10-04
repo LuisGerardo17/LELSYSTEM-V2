@@ -4,7 +4,7 @@
 		<!-- Content page -->
 		<div class="container-fluid">
 			<div class="page-header">
-			  <h1 class="text-titles"><i class="zmdi zmdi-book zmdi-hc-fw"></i> Estudiante <small>Estudiante</small></h1>
+			  <h1 class="text-titles"><i class="zmdi zmdi-book zmdi-hc-fw"></i>Lista de Estudiantes <small></small></h1>
 			</div>
 			<p class="lead">Un docente tiene planeación, organización, dirección y control estudiantil, donde sus objetivos están en la misma dirección de las metas y propósitos de la institución.</p>
 		</div>

@@ -4,9 +4,9 @@
 		<!-- Content page -->
 		<div class="container-fluid">
 			<div class="page-header">
-			  <h1 class="text-titles"><i class="zmdi zmdi-book zmdi-hc-fw"></i> Actividades <small>Activities</small></h1>
+			  <h1 class="text-titles"><i class="zmdi zmdi-book zmdi-hc-fw"></i> Asistencia <small>Asistencia</small></h1>
 			</div>
-			<p class="lead">Las actividades son todas aquellas tareas o labores que cada individuo ejerce diariamente, están las actividades laborales, las actividades escolares, las actividades recreativas, las actividades físicas, etc.</p>
+			<p class="lead">Lista de asistencias.</p>
 		</div>
 		<div class="container-fluid">
 			<div class="row">
@@ -34,8 +34,8 @@
 									<thead>
 										<tr>
 											<th class="text-center">Cedula</th>
-											<th class="text-center">Descripcion</th>
 											<th class="text-center">Fecha</th>
+											<th class="text-center">Estado de asistencia</th>
 											<th class="text-center">Actualizar</th>
 										</tr>
 									</thead>

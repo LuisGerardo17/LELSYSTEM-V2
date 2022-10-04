@@ -5,32 +5,27 @@
 		<!-- Content page -->
 		<div class="container-fluid">
 			<div class="page-header">
-			  <h1 class="text-titles titulo">INFORMATICA</h1>
+			  <h1 class="text-titles titulo">INFORMÁTICA</h1>
 		    </div>
-            <a class="edit" id="edit"><i class="zmdi zmdi-edit zmdi-hc-fw"></i>Editar</a>
+
             <div class="imagenPresentacion">
-                <img src="{{ asset('admin/assets/img/img.jpg') }}" alt="">
+                <img src="{{ asset('admin/assets/img/informatica.jpg') }}" alt="">
             </div>
             <div class="espacio">
                 <div class="row">
                     <h2>Descripccion</h2>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consectetur similique doloremque dignissimos molestiae? Sed veniam quaerat nostrum, reiciendis quos eius deleniti. Ex optio labore nemo dignissimos nesciunt harum qui architecto?</p>
-                    <h2>Datos personales</h2>
+                    <p>Curso básico de informática</p>
+
                 </div>
                 <center>
                     <div class="row espacio flex">
-                        <div class="col espacio2">
-                            <h3 class="text-center">Foto</h3>
-                            <img src="{{ asset('admin/assets/img/img.jpg') }}" width="250px" alt="">
-                        </div>
-                        <div class="col espacio2">
-                            <h3 class="text-center">Nombre</h3>
-                            <p>Enrique Sebastian Mera Yela</p>
-                        </div>
-                        <div class="col espacio2">
-                            <h3 class="text-center">Telefono</h3>
-                            <p>+548 888 8888</p>
-                        </div>
+                            <div class="col espacio3">
+                            <h3 class="text-center">Fecha de Inicio</h3>
+                            <h4>3 de Coctubre del 2022 </h4>
+                            </div>
+                            <div class="col espacio3">
+                            <h3 class="text-center">Fecha de Finalización</h3>
+                            <h4> 3 de Diciembre del 2022</h4>
                     </div>
                 </center>
 

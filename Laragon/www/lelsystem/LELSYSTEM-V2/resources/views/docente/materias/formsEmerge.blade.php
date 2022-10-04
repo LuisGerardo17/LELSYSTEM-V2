@@ -48,7 +48,7 @@
                     </div>-->
                     <div class="form-group label-floating">
                         <label class="control-label">Codigo</label>
-                        <input class="form-control" type="text" name="codigo_recurso">
+                        <input class="form-control" type="text" name="codigo_recurso" maxlength="5">
                     </div>
                     <div class="form-group label-floating">
                         <label class="control-label">Nombre</label>
@@ -83,7 +83,7 @@
                     @csrf
                     <div class="form-group label-floating">
                         <label class="control-label">Codigo</label>
-                        <input class="form-control" type="text" name="codigo_actividad">
+                        <input class="form-control" type="text" name="codigo_actividad" maxlength="5">
                     </div>
                     <div class="form-group label-floating">
                         <label class="control-label">Titulo</label>
@@ -109,7 +109,7 @@
                     @csrf
                     <div class="form-group label-floating">
                         <label class="control-label">Codigo</label>
-                        <input class="form-control" type="text" name="codigo_examen">
+                        <input class="form-control" type="text" name="codigo_examen" maxlength="5">
                     </div>
                     <div class="form-group label-floating">
                         <label class="control-label">Titulo</label>

@@ -15,10 +15,10 @@
 
 			 <h1 class="text-titles titulo">ARTE CULINARIO</h1>
 		    </div>
-            <a class="edit" id="parcialDos" href="{{url('Cursos')}}"><i class="zmdi zmdi-plus zmdi-hc-fw"></i>Editar</a>
+          
 
             <div class="imagenPresentacion">
-                <img src="{{ asset('admin/assets/img/img.jpg') }}"  class="img-fluid">
+                <img src="{{ asset('admin/assets/img/artc.jpg') }}"  class="img-fluid">
             </div>
             <div class="espacio">
                 <div class="row">
@@ -28,12 +28,7 @@
                 </div>
                 <center>
                     <div class="row espacio flex">
-                        <div class="col espacio2">
-                            <h3 class="text-center">Foto</h3>
-                            <img src="{{ asset('admin/assets/img/img.jpg') }}" width="250px" alt="">
-                        </div>
-
-                         <div class="col espacio3">
+                        <div class="col espacio3">
                             <h3 class="text-center">Fecha de Inicio</h3>
                             <h4>3 de Coctubre del 2022 </h4>
                        </div>
