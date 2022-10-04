@@ -49,8 +49,8 @@
 
             <div>
                 <h2 class="titulo">Parcial 1</h2>
-                <a class="edit" id="parcialUno" href="{{url('Rec')}}"><i class="zmdi zmdi-plus zmdi-hc-fw"></i>Añadir</a>
-                <a class="edit" id="parcialDos" href="{{url('Rec')}}"><i class="zmdi zmdi-plus zmdi-hc-fw"></i>Editar</a>
+                <a class="edit" id="parcialUno"><i class="zmdi zmdi-plus zmdi-hc-fw"></i>Añadir</a>
+                <a class="edit" href="{{url('Rec')}}"><i class="zmdi zmdi-plus zmdi-hc-fw"></i>Editar</a>
                 <div class="row espacio">
                     <h3>Recursos</h3>
                 <div class="flex2">

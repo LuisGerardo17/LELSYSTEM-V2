@@ -7,7 +7,7 @@ $(document).ready(function(){
 			SubMenu.removeClass('show-sideBar-SubMenu');
 		}else{
 			iconBtn.addClass('zmdi-hc-rotate-180');
-			SubMenu.addClass('show-sideBar-SubMenu');
+			SubMenu.addClass('show-sideBar-SubMenu'); //aaaaaaaaaaa
 		}
 	});
 	$('.btn-exit-system').on('click', function(){
@@ -151,10 +151,10 @@ btnCerrarPopup.forEach(e=>{
 })
 
 //eventos
-    btnAbrirPopup.addEventListener("click", function(){
+    /*btnAbrirPopup.addEventListener("click", function(){
         overlay.classList.add("active");
         popup.classList.add("active");
-	});
+	});*/
 
     parcialUno.addEventListener("click", function(){
         overlayparcialUno.classList.add("active");
