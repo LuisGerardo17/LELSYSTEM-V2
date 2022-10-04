@@ -1,3 +1,4 @@
+
 @extends('docente.layouts.layouts')
 @section('titulo','Docente')
 @section('seccion')

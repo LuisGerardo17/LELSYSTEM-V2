@@ -57,6 +57,7 @@
 						<i class="zmdi zmdi-folder zmdi-hc-fw"></i> Cursos <i class="zmdi zmdi-caret-down pull-right"></i>
 					</a>
 					<ul class="list-unstyled full-box">
+
 						<li>
                             <a href="{{url('ActividadDoc')}}"><i class="zmdi zmdi-font zmdi-hc-fw"></i> ARTE CULINARIO</a>
 						</li>
@@ -76,7 +77,7 @@
                     </li>
                     <li>
                         <a class="btn-sideBar-SubMenu" href="{{ url('listaMatriculado') }}"><i class="zmdi zmdi-font zmdi-hc-fw"></i> Lista de estudiantes</a>
-                     </li>
+                    </li>
 				</li>
 
 			</ul>
