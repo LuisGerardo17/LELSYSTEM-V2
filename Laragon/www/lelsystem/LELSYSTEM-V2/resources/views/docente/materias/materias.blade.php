@@ -55,11 +55,7 @@
                             <a class="link" href=""><p>{{$rec->nombre_recurso}}</p></a>
                         </div>
 					@endforeach
-                    @foreach ($forms as $form)
-                    <div class="campos">
-                            <a class="link" href=""><p>{{$form->tipo}}</p></a>
-                     </div>
-					@endforeach
+
                 </div>
              </div>
                 <a class="edit" id="parcialCuatro"><i class="zmdi zmdi-plus zmdi-hc-fw"></i>Añadir</a>
@@ -99,11 +95,6 @@
                     @foreach ($recursos as $rec)
                         <div class="campos">
                             <a class="link" href=""><p>{{$rec->nombre_recurso}}</p></a>
-                        </div>
-					@endforeach
-                    @foreach ($forms as $form)
-                    <div class="campos">
-                            <a class="link" href=""><p>{{$form->tipo}}</p></a>
                         </div>
 					@endforeach
                     </div>

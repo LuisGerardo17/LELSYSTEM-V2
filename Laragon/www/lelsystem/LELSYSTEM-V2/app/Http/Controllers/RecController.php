@@ -14,7 +14,7 @@ class RecController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
+    { 
         $forms=TipoArchivos::all();
         $recursos=Recursos::paginate(8);
         return view('docente.materias.recursos',compact('forms','recursos'));
