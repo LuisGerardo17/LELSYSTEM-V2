@@ -61,21 +61,24 @@
                             <a href="{{url('ActividadDoc')}}"><i class="zmdi zmdi-font zmdi-hc-fw"></i> ARTE CULINARIO</a>
 						</li>
 						<li>
-							<a href="#"><i class="zmdi zmdi-font zmdi-hc-fw"></i> Programacion</a>
+							<a href="{{url('mecanica')}}"><i class="zmdi zmdi-font zmdi-hc-fw"></i> MECANICA</a>
 						</li>
                         <li>
-							<a href="#"><i class="zmdi zmdi-font zmdi-hc-fw"></i> Desarrollo del pensamiento</a>
+							<a href="{{url('informatica')}}"><i class="zmdi zmdi-font zmdi-hc-fw"></i> INFORMATICA</a>
 						</li>
-                        <li>
-							<a href="#"><i class="zmdi zmdi-font zmdi-hc-fw"></i> Mecanica</a>
-						</li>
-
-
-
-
 
 					</ul>
 				</li>
+				<li>
+
+					<a  class="btn-sideBar-SubMenu"  href="{{ url('matricula')}}">
+						<i class="zmdi zmdi-male-female zmdi-hc-fw"></i> Matriculas
+					</a>
+				</li>
+				<li>
+					<a class="btn-sideBar-SubMenu" href="{{ url('listaMatriculado') }}"><i class="zmdi zmdi-font zmdi-hc-fw"></i> Lista de estudiantes</a>
+					</li>
+
 			</ul>
 		</div>
 	</section>
