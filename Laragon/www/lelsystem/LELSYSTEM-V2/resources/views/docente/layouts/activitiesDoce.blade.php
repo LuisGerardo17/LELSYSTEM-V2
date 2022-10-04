@@ -76,7 +76,7 @@
 				</li>
 				<li>
 					<a class="btn-sideBar-SubMenu" href="{{ url('listaMatriculado') }}"><i class="zmdi zmdi-font zmdi-hc-fw"></i> Lista de estudiantes</a>
-
+                 </li>
 
 			</ul>
 		</div>

@@ -19,7 +19,7 @@ class CreateCursoExamensTable extends Migration
             $table->foreign('nombre_curso')->references('nombre_curso')->on('cursos')->cascadeOnDelete()->cascadeOnUpdate();
             $table->string('codigo_examen',5);
             $table->foreign('codigo_examen')->references('codigo_examen')->on('examens')->cascadeOnDelete()->cascadeOnUpdate();
-
+            $table->timestamps();
         });
     }
 

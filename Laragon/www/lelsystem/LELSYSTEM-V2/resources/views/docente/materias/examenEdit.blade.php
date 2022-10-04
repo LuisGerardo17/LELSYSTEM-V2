@@ -1,4 +1,4 @@
-@extends('docente.layouts.activitiesDoce')
+@extends('docente.layouts.layouts')
 @section('titulo', 'Materias')
 @section('seccion')
 <!-- Content page -->
@@ -43,7 +43,7 @@
 									</p>
 								</form>
 							</div>
-						</div> 
+						</div>
 					</div>
 				</div>
 				<div class="tab-pane fade" id="list">

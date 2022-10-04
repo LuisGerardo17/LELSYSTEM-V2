@@ -1,4 +1,4 @@
-@extends('docente.layouts.activitiesDoce')
+@extends('docente.layouts.layouts')
 @section('titulo', 'Materias')
 @section('seccion')
 
@@ -91,7 +91,7 @@
                         <div class="campos">
                             <a class="link" href=""><p></p></a>
                         </div>
-			
+
 
                     </div>
                 </div>
@@ -99,12 +99,12 @@
                 <div class="row espacio">
                     <h3>Examenes</h3>
                     <div class="flex2">
-              
+
                         <div class="campos">
                             <a class="link" href=""><p></p></a>
                         </div>
 
-			
+
 
 
 
