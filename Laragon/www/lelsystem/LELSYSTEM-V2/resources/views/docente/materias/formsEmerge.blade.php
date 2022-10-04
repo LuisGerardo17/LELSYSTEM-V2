@@ -23,7 +23,9 @@
                             <input type="file" name="imagen" readonly="" class="form-control" placeholder="icono clase...">
                         </div>
 
+
                     <center><input type="submit" class="btn-submit" value="Enviar"></center>
+
                 </form>
             </div>
         </div>

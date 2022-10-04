@@ -2,6 +2,9 @@
 @section('titulo', 'Materias')
 @section('seccion')
 
+
+
+
 		<!-- Content page -->
 		<div class="container-fluid">
 			<div class="page-header">
