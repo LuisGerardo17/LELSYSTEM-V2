@@ -143,14 +143,15 @@
 					<button class="btn btn-dark"><a href="{{route('mecanica')}}">Ver más</a></button>
                 </div>
                 <div class="pricing__item">
-                    <h3 class="pricing__title">Curso Electricidad</h3>
-                    <div class="pricing__price"><span class="pricing__currency"><img src="static/img/electricidad.jpg" width="300px" height="200px"></div>
+                    <h3 class="pricing__title">Curso de Arte Culinario</h3>
+                    <div class="pricing__price"><span class="pricing__currency"><img src="{{ asset('admin/assets/img/artc.jpg') }}" width="300px" height="200px"></div>
+                       
                     <p class="pricing__sentence">Temas</p>
                     <ul class="pricing__feature-list">
-                        <li class="pricing__feature">Tableros electricos.</li>
-                        <li class="pricing__feature">Motorores electricos.</li>
-                        <li class="pricing__feature">Instalaciones electricas.</li>
-                        <li class="pricing__feature">Circuitos</li>
+                        <li class="pricing__feature">Cocina tradicional.</li>
+                        <li class="pricing__feature">Cocina Ecuatorina.</li>
+                        <li class="pricing__feature">Repostreria.</li>
+                        <li class="pricing__feature">Pateleria</li>
                     </ul>
 					<button class="btn btn-dark"><a href="{{route('electricidad')}}">Ver más</a></button>
                 </div>

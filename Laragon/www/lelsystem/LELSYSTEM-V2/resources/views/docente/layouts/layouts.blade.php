@@ -62,17 +62,17 @@
                             <a href="{{url('ActividadDoc')}}"><i class="zmdi zmdi-font zmdi-hc-fw"></i> ARTE CULINARIO</a>
 						</li>
 						<li>
-							<a href="{{url('mecanica')}}"><i class="zmdi zmdi-font zmdi-hc-fw"></i> MECANICA</a>
+							<a href="{{url('mecanica')}}"><i class="zmdi zmdi-font zmdi-hc-fw"></i> MECÁNICA</a>
 						</li>
                         <li>
-							<a href="{{url('informatica')}}"><i class="zmdi zmdi-font zmdi-hc-fw"></i> INFORMATICA</a>
+							<a href="{{url('informatica')}}"><i class="zmdi zmdi-font zmdi-hc-fw"></i> INFORMÁTICA</a>
 						</li>
 
 					</ul>
                     <li>
 
                         <a  class="btn-sideBar-SubMenu"  href="{{ url('matricula')}}">
-                            <i class="zmdi zmdi-male-female zmdi-hc-fw"></i> Matriculas
+                            <i class="zmdi zmdi-male-female zmdi-hc-fw"></i> Matrículas
                         </a>
                     </li>
                     <li>

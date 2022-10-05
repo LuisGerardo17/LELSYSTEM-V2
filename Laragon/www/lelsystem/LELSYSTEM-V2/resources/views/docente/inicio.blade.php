@@ -12,7 +12,7 @@
 		</div>
 
 		<div class="full-box text-center" >
-		<a href="arte.html">
+		<a href="{{url('ActividadDoc')}}">
 			<article class="full-box tile">
 				<div  class="full-box tile-title text-center text-titles text-uppercase">
 					Arte Culinario
@@ -22,7 +22,7 @@
 				</div>
 			</article>
 		</a>
-		<a href="control.html">
+		<a href="{{url('informatica')}}">
 			<article class="full-box tile">
 				<div class="full-box tile-title text-center text-titles text-uppercase">
 					Informática
@@ -32,7 +32,7 @@
 				</div>
 			</article>
 		</a>
-		<a href="controlist.html">
+		<a href="{{url('mecanica')}}">
 			<article class="full-box tile">
 				<div class="full-box tile-title text-center text-titles text-uppercase">
 					Mecánica
